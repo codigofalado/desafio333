@@ -1,0 +1,20 @@
+{
+  "name": "matheusalbino",
+  "version": "1.0.0",
+  "description": "Desafio 333 2019-Agosto-SASS by @is_equal (on twitch)",
+  "main": "index.js",
+  "author": "Matheus Albino",
+  "license": "CC0",
+  "private": true,
+  "scripts": {
+    "start": "parcel src/index.html --public-url=./",
+    "build": "parcel build src/index.html --public-url=./",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "autoprefixer": "^9.6.1",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.9"
+  }
+}

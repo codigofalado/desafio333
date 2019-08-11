@@ -1,0 +1,166 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  color: inherit;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Open Sans";
+}
+
+// Variables
+$color-primary: #eb007d;
+$color-white: white;
+$color-gray: hsl(0, 0%, 90%);
+$color-black: black;
+
+// Styles
+
+.frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+
+  &__background {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background: $color-black;
+    display: flex;
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    padding: 0 1em;
+    height: 5em;
+    line-height: 5em;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .header__hashtag {
+      color: $color-gray;
+      font-weight: 600;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 2px $color-black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .header__logo {
+      max-width: 80px;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .info {
+      &__title {
+        padding: 0.25em 1em 0.25em 2em;
+        background-color: $color-gray;
+        color: $color-black;
+        width: fit-content;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+
+      &__description {
+        color: $color-white;
+        padding: 0.25em 1em 0.25em 1em;
+        font-size: 3em;
+        font-weight: 600;
+        background-color: rgba($color-black, 0.8);
+      }
+
+      &__markee {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 3em;
+        line-height: 3em;
+
+        .markee {
+          &__icon {
+            width: 3em;
+            height: 3em;
+            overflow: hidden;
+            background-color: $color-white;
+            cursor: pointer;
+
+            img {
+              margin: auto;
+              display: block;
+              height: 100%;
+            }
+          }
+
+          &__news {
+            background-color: $color-primary;
+            font-size: 1.5em;
+            color: $color-white;
+            padding: 0 1em;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marquee 50s linear infinite;
+
+            &:hover {
+              animation-play-state: paused;
+            }
+          }
+
+          &__clock {
+            width: 4em;
+            font-size: 2em;
+            font-weight: 600;
+            text-align: center;
+            color: $color-white;
+            background-color: darken($color-primary, 15%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    text-indent: 100%;
+  }
+  100% {
+    text-indent: -105em;
+  }
+}
