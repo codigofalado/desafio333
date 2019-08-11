@@ -3,7 +3,7 @@
 
 <head>
   <meta charset='utf-8'>
-  <title>Desafio 333 - 2019-Agosto-SASS - matheusalbino</title>
+  <title>Desafio 333 - 2019-Agosto-SASS - @matheusalbino</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='assets/scss/main.scss'>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
@@ -28,36 +28,27 @@
     <div class="frame__footer">
       <div class="info__title">Aprendendo SASS</div>
       <div class="info__description">Conhecendo os poderes do SASS!</div>
-      <div class="info__markee">
-        <div class="markee__icon"
+      <div class="info__marquee">
+        <div class="marquee__icon"
           onclick="alert('Aqui tem coragem! Participe do Desafio 333 também! Clique na hashtag e acesse o desafio.')">
           <img alt="Código Falado" title="Código Falado" src="../../assets/avatar.png" />
         </div>
-        <div class="markee__news">
+        <div class="marquee__news">
           Desafio 333 - Agosto 2019 - Explorando o SASS, se você deseja saber mais sobre os desafios ou sobre a
           comunidade Código Falado fique ligado nas transmissões que acontecem em: https://twitch.tv/codigofalado ▪
           Desafio 333 - Agosto 2019 - Explorando o SASS, se você deseja saber mais sobre os desafios ou sobre a
           comunidade Código Falado fique ligado nas transmissões que acontecem em: https://twitch.tv/codigofalado
         </div>
-        <div class="markee__clock" onclick="alert('It\'s time to code!')">00:00</div>
+        <div class="marquee__clock" onclick="alert('It\'s time to code!')">00:00</div>
       </div>
     </div>
   </div>
-
+  <script src="assets/js/marquee.js"></script>
+  <script src="assets/js/clock.js"></script>
   <script type="text/javascript">
-    function update_clock() {
-      let current_time = new Date();
-      let current_hours = current_time.getHours();
-      let current_minutes = current_time.getMinutes();
-
-      current_hours = (current_hours < 10 ? "0" : "") + current_hours;
-      current_minutes = (current_minutes < 10 ? "0" : "") + current_minutes;
-
-      document.querySelector(".markee__clock").textContent = current_hours + ":" + current_minutes;
-    }
-
     window.addEventListener("load", () => {
-      setInterval(update_clock, 1000);
+      new Clock(document.querySelector('.marquee__clock'));
+      new Marquee(document.querySelector('.marquee__news')).play();
     });
   </script>
 </body>

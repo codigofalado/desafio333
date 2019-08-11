@@ -7,9 +7,10 @@
   "license": "CC0",
   "private": true,
   "scripts": {
-    "start": "parcel src/index.html --public-url=./",
-    "build": "parcel build src/index.html --public-url=./",
-    "predeploy": "rm -rf .cache dist && yarn build",
+    "start": "parcel src/index.html",
+    "prebuild": "rm -rf .cache dist",
+    "build": "parcel build src/index.html --public-url=.",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {

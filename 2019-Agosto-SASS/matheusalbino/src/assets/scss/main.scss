@@ -103,14 +103,14 @@ $color-black: black;
         background-color: rgba($color-black, 0.8);
       }
 
-      &__markee {
+      &__marquee {
         display: grid;
         width: 100%;
         grid-template-columns: auto 1fr auto;
         grid-template-rows: 3em;
         line-height: 3em;
 
-        .markee {
+        .marquee {
           &__icon {
             width: 3em;
             height: 3em;
@@ -131,14 +131,9 @@ $color-black: black;
             color: $color-white;
             padding: 0 1em;
             width: 100%;
-            margin: 0 auto;
             overflow: hidden;
             white-space: nowrap;
-            animation: marquee 50s linear infinite;
-
-            &:hover {
-              animation-play-state: paused;
-            }
+            text-indent: 100%;
           }
 
           &__clock {
