@@ -15,7 +15,7 @@ body {
 .top-displays {
   position: relative;
   margin-bottom: -70px;
-  margin-top: 45px;
+  margin-top: 29px;
   z-index: 99;
   span{
     text-transform: none;
@@ -78,11 +78,18 @@ body {
   margin-left: -15px;
 }
 
+.vjs-control-bar{
+  position: relative;
+  z-index: 91;
+  margin-top: -10px!important; 
+}
+
 .video-js .vjs-big-play-button {
   left: 46% !important;
   top: 41% !important;
   width: 20%;
   height: 20%;
+  z-index: 99;
 }
 
 .video-js .vjs-play-control:before {
@@ -91,7 +98,22 @@ body {
   font-size: 48px;
 }
 
+.vjs-big-play-button{
+  background-color: orangered !important;
+}
+
 .hashtag{
     height: 50px;
     align-items: center;
+}
+
+.overlay-tv{
+  position: relative;
+  z-index: 80;
+  margin-bottom: -50%;
+  img{
+    width: 1195px;
+    height: auto;
+    margin-left: 195px;
+  }
 }
