@@ -52,6 +52,14 @@ $fullHD: 1920px;
             height: 100vh;
         }
 
+        @include desktop {
+            height: 100vh;
+        }
+
+       
+        
+        
+
         .nav {
             width: $allWidth;
             display: flex;
@@ -62,7 +70,7 @@ $fullHD: 1920px;
 
 
             @include desktop {
-                margin-bottom: 460px;
+                margin-bottom: 385px;
             }
             
             a {
