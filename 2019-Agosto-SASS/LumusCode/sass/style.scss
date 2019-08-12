@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$colorGrey: #8B98AB;
+$colorBlack: #000;
+$colorWhite: #fff; 
+$bgcolorP1: #0D0E10;
+$bgcolorMarquee: #791C26;
+$allWidth: 100%;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+
+.div-main {
+    width: $allWidth;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .section-main {
+        width: $allWidth;
+        height: 770px;
+        border-top: solid 50px $colorBlack;
+        border-bottom: solid 50px $colorBlack;
+        background-image: url(/img/teste.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .nav {
+            width: $allWidth;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 490px;
+            padding: 10px;
+
+            @include desktop {
+                margin-bottom: 460px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: $colorWhite;
+                font-weight: bolder;
+                font-size: 16px;
+
+                @include desktop {
+                    font-size: 23px;
+                }
+            }
+
+            .exclusive {
+                background: rgb(156, 14, 29);
+                padding: 3px;
+                margin-top: 5px;
+                border-radius: 5px;
+                font-size: 15px;
+                color: $colorWhite;
+
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+        .container {
+            width: 95%;
+            height: 100px;
+            margin: auto;
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include desktop {
+                width: 60%;
+            }
+
+            .d1 {
+                width: 46%;
+                background: $colorWhite;
+                color: $colorBlack;
+                font-weight: bold;
+                font-size: 13px;
+                padding: 3px;
+                text-align: right;
+                padding-right: 10px;
+
+                @include tablet {
+                    width: 30%;
+                    text-align: right;
+                    font-size: 15px;
+                }
+
+                @include desktop {
+                    width: 23%;
+                    font-size: 16px;
+                }
+            }
+
+            .d2 {
+                width: $allWidth;
+                background: rgba($color: rgb(27, 29, 27), $alpha: .6);
+                color: $colorWhite;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 15px;
+
+                @include tablet {
+                    padding-left: 30px;
+                    font-size: 18px;
+                }
+
+                @include desktop {
+                    font-size: 25px;
+                }
+            }
+
+            .footer {
+                display: flex;
+                color: $colorWhite;
+                font-weight: bold;
+
+                marquee {
+                    width: 80%;
+                    background: $bgcolorMarquee;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                }
+
+                .p2 {
+                    width: 20%;
+                    background: $bgcolorP1;
+                    text-align: center;
+                }
+            }
+
+            
+        }
+
+    }
+}
