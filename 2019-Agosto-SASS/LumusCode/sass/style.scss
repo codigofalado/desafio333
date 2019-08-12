@@ -13,6 +13,7 @@ $allWidth: 100%;
 
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$fullHD: 1920px;
 
 @mixin tablet {
     @media (min-width: #{$tablet-width}) {
@@ -26,6 +27,11 @@ $desktop-width: 1024px;
     }
 }
 
+@mixin fullHD {
+    @media (min-width: #{$fullHD}) {
+        @content;
+    }
+}
 
 .div-main {
     width: $allWidth;
@@ -37,10 +43,14 @@ $desktop-width: 1024px;
         height: 770px;
         border-top: solid 50px $colorBlack;
         border-bottom: solid 50px $colorBlack;
-        background-image: url(/img/teste.jpg);
+        background-image: url(/img/bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @include fullHD {
+            height: 100vh;
+        }
 
         .nav {
             width: $allWidth;
@@ -49,6 +59,7 @@ $desktop-width: 1024px;
             align-items: center;
             margin-bottom: 490px;
             padding: 10px;
+
 
             @include desktop {
                 margin-bottom: 460px;
@@ -93,6 +104,10 @@ $desktop-width: 1024px;
                 width: 60%;
             }
 
+            @include fullHD {
+                margin-top: 800px;
+            }
+
             .d1 {
                 width: 46%;
                 background: $colorWhite;
@@ -113,6 +128,10 @@ $desktop-width: 1024px;
                     width: 23%;
                     font-size: 16px;
                 }
+
+                @include fullHD {
+                    width: 16.5%;
+                }
             }
 
             .d2 {
@@ -130,6 +149,10 @@ $desktop-width: 1024px;
 
                 @include desktop {
                     font-size: 25px;
+                }
+
+                @include fullHD {
+                    font-size: 35px;
                 }
             }
 
