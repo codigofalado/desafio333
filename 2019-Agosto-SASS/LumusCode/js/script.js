@@ -1,12 +1,11 @@
-let $relogio = document.querySelector('.p2')
+let $relogio = document.querySelector('.d3')
 
 function getHour() {
     let data = new Date()
     let h = formata(data.getHours())
     let m = formata(data.getMinutes())
-    let s = formata(data.getSeconds())
     
-    return h + ":" + m + ":" + s
+    return h + ":" + m
 }
     
 function formata(t) {

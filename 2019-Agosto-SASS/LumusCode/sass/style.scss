@@ -4,17 +4,21 @@
     box-sizing: border-box;
 }
 
+// Variáveis color
 $colorGrey: #8B98AB;
 $colorBlack: #000;
 $colorWhite: #fff; 
 $bgcolorP1: #0D0E10;
 $bgcolorMarquee: #791C26;
+$bgcolorExclusivo: rgb(141, 6, 6);
 $allWidth: 100%;
 
+// Variáveis responsive
 $tablet-width: 768px;
-$desktop-width: 1024px;
+$desktop-width: 1025px;
 $fullHD: 1920px;
 
+// Mixins responsive
 @mixin tablet {
     @media (min-width: #{$tablet-width}) {
         @content;
@@ -33,158 +37,205 @@ $fullHD: 1920px;
     }
 }
 
-.div-main {
-    width: $allWidth;
-    height: auto;
+
+body {
+    background: $colorBlack;
     font-family: Arial, Helvetica, sans-serif;
-
-    .section-main {
-        width: $allWidth;
-        height: 770px;
-        border-top: solid 50px $colorBlack;
-        border-bottom: solid 50px $colorBlack;
-        background-image: url(/img/bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        @include fullHD {
-            height: 100vh;
-        }
-
-        @include desktop {
-            height: 100vh;
-        }
-
-       
-        
-        
-
-        .nav {
-            width: $allWidth;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 490px;
-            padding: 10px;
-
-
-            @include desktop {
-                margin-bottom: 385px;
-            }
-            
-            a {
-                text-decoration: none;
-                color: $colorWhite;
-                font-weight: bolder;
-                font-size: 16px;
-
-                @include desktop {
-                    font-size: 23px;
-                }
-            }
-
-            .exclusive {
-                background: rgb(156, 14, 29);
-                padding: 3px;
-                margin-top: 5px;
-                border-radius: 5px;
-                font-size: 15px;
-                color: $colorWhite;
-
-                @include desktop {
-                    font-size: 20px;
-                }
-            }
-
-        }
-
+    
+    main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        margin: auto;
+        align-items: center;
+    
+    
         .container {
-            width: 95%;
-            height: 100px;
-            margin: auto;
-
-            @include tablet {
-                width: 80%;
-            }
-
+            width: 100%;
+            height: 80vh;
+            background-image: url(/img/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            border-top: solid $colorBlack 30px;
+            border-bottom: solid $colorBlack 30px;
+            align-self: center;
+    
             @include desktop {
-                width: 60%;
+                height: 100vh;
             }
 
-            @include fullHD {
-                margin-top: 800px;
-            }
-
-            .d1 {
-                width: 46%;
-                background: $colorWhite;
-                color: $colorBlack;
-                font-weight: bold;
-                font-size: 13px;
-                padding: 3px;
-                text-align: right;
-                padding-right: 10px;
-
-                @include tablet {
-                    width: 30%;
-                    text-align: right;
-                    font-size: 15px;
-                }
-
-                @include desktop {
-                    width: 23%;
-                    font-size: 16px;
-                }
-
-                @include fullHD {
-                    width: 16.5%;
-                }
-            }
-
-            .d2 {
-                width: $allWidth;
-                background: rgba($color: rgb(27, 29, 27), $alpha: .6);
-                color: $colorWhite;
+            .nav {
+                width: 100%;
+                height: auto;
                 padding: 10px;
-                font-weight: bold;
-                font-size: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                #rashtag, #exclusivo {
+                    color: $colorWhite;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 18px;
+
+                    &:hover {
+                        opacity: .7;
+                        transition: .3s;
+                    }
+
+                    @include desktop {
+                        font-size: 22px;
+                    }
+                }
+
+                #exclusivo {
+                    padding: 3px;
+                    text-transform: uppercase;
+                    background: $bgcolorExclusivo;
+                    border-radius: 5px;
+                    font-size: 15px;
+
+                    @include desktop {
+                        font-size: 19px;
+                    }
+                }
+            }
+
+            .section {
+                width: 90%;
+                height: 82%;
+                display: flex;
+                align-items: flex-end;
+                margin: auto;
 
                 @include tablet {
-                    padding-left: 30px;
-                    font-size: 18px;
+                    width: 80%;
                 }
 
-                @include desktop {
-                    font-size: 25px;
+                @include desktop() {
+                    width: 65%;
                 }
 
-                @include fullHD {
-                    font-size: 35px;
+                .div {
+                    width: 100%;
+                    height: auto;
+
+                    .div-p1 {
+                        width: 55%;
+                        display: flex;
+                        justify-content: flex-end;
+                        background: $colorWhite;
+                        font-size: 8px;
+
+                        @include desktop {
+                            font-size: 10px;
+                        }
+
+                        @include tablet {
+                            width: 28%;
+                        }
+
+                        .h2 {
+                            width: 80%;
+                            padding: 3px;
+                            font-weight: bold;
+
+                            @include desktop {
+                                width: 65%;
+                            }
+                        }
+                    }
+
+                    .div-p2 {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 10px;
+                        background: rgba($color: rgb(27, 29, 27), $alpha: .6);
+
+                        @include tablet {
+                            font-size: 13px;
+                        }
+
+                        @include desktop {
+                            font-size: 17px;
+                            height: 65px;
+                            align-items: center;
+                        }
+
+                        .h1 {
+                            width: 89%;
+                            padding: 3px;
+                            font-weight: bold;
+                            color: $colorWhite;
+
+                            @include tablet {
+                                width: 95%;
+                            }
+
+                            @include desktop {
+                                width: 91%;
+                            }
+                        }
+                    }
+                     
                 }
+
             }
 
             .footer {
+                width: 90%;
                 display: flex;
-                color: $colorWhite;
-                font-weight: bold;
+                align-items: center;
+                margin: auto;
+                height: auto;
 
-                marquee {
+                @include tablet {
                     width: 80%;
-                    background: $bgcolorMarquee;
-                    letter-spacing: 1px;
-                    font-size: 14px;
                 }
 
-                .p2 {
+                @include desktop() {
+                    width: 65%;
+                }
+                
+    
+                .d1{
+                    width: 10%;
+                    height: auto;
+                    background: $bgcolorMarquee;
+                    border-right: solid 1px $colorWhite;
+
+                    .p3 {
+                        padding: 3px;
+                        font-family: 'Alfa Slab One', cursive;
+                        font-size: 14px;
+                        color: $colorWhite;
+                        text-align: center;
+                    }
+                }
+
+                .d2 {
+                    width: 80%;
+                    height: 26px;
+                    background: $bgcolorMarquee;
+                    padding:5px;
+                    color: $colorWhite;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .d3 {
                     width: 20%;
-                    background: $bgcolorP1;
+                    height: 26px;
+                    background: $colorBlack;
+                    padding:5px;
+                    color: $colorWhite;
+                    font-size: 14px;
+                    font-weight: bold;
                     text-align: center;
                 }
             }
 
-            
         }
-
     }
 }
