@@ -62,6 +62,7 @@ body {
     
             @include desktop {
                 height: 100vh;
+                border: none;
             }
 
             .nav {
