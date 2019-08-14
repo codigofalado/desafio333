@@ -59,12 +59,21 @@ body {
             align-self: center;
 
             .nav {
-                width: 100%;
+                width: 90%;
                 height: auto;
-                padding: 10px;
+                margin: 30px auto;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                @include tablet {
+                    width: 80%;
+                }
+
+                @include desktop {
+                    width: 65%;
+                }
+                
 
                 #rashtag, #exclusivo {
                     color: $colorWhite;
@@ -97,7 +106,7 @@ body {
 
             .section {
                 width: 90%;
-                height: 82%;
+                height: 79%;
                 display: flex;
                 align-items: flex-end;
                 margin: auto;
@@ -168,7 +177,7 @@ body {
                             }
 
                             @include desktop {
-                                width: 91%;
+                                width: 90.2%;
                             }
                         }
                     }
@@ -194,10 +203,18 @@ body {
                 
     
                 .d1{
-                    width: 10%;
+                    width: 13.8%;
                     height: auto;
                     background: $bgcolorMarquee;
                     border-right: solid 1px $colorWhite;
+
+                    @include desktop {
+                        width: 11.5%;
+                    }
+
+                    @include fullHD {
+                        width: 11.4%;
+                    }
 
                     .p3 {
                         padding: 3px;
