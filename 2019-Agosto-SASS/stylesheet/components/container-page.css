@@ -1,0 +1,36 @@
+.container-page {
+  height: calc(100vh - 170px);
+  border: 35px solid #292929;
+  border-style: inset;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 40px;
+  background-image: url("../../assets/reporter-new.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1015px) {
+  .container-page {
+    height: calc(100vh - 124px);
+    border: 22px solid #292929;
+    border-style: inset;
+    border-style: inset;
+    padding: 30px;
+  }
+}
+@media (max-width: 860px) {
+  .container-page {
+    height: calc(100vh - 85px);
+    border: none;
+    padding: 15px;
+    background-position: 75%;
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=container-page.css.map */

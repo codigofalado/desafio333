@@ -1,0 +1,60 @@
+.header-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > .hashtag {
+    color: rgba(66, 61, 61, 0.85);
+    font-size: 18pt;
+  }
+
+  > .urgent {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 18pt;
+    background-color: rgb(247, 2, 2);
+    color: #fff;
+  }
+}
+
+@media (max-width: 1015px) {
+  .header-page {
+    > .hashtag {
+      font-size: 16pt;
+    }
+
+    > .urgent {
+      padding: 6px;
+      font-size: 16pt;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .header-page {
+    > .hashtag {
+      font-size: 14pt;
+    }
+
+    > .urgent {
+      padding: 6px;
+      font-size: 14pt;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header-page {
+    > .hashtag {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 6px;
+      border-radius: 5px;
+      font-size: 12pt;
+    }
+
+    > .urgent {
+      padding: 6px;
+      font-size: 12pt;
+    }
+  }
+}

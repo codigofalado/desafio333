@@ -1,0 +1,133 @@
+.footer-page > .sub-title {
+  background-color: #ccc;
+  display: inline-block;
+  padding: 5px;
+  padding-left: 20px;
+  font-size: 16pt;
+}
+.footer-page > .title {
+  font-size: 30pt;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+.footer-page > .informations {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  background-color: #740000;
+  color: #fff;
+  font-size: 17pt;
+}
+.footer-page > .informations > .avatar {
+  width: 35px;
+  padding: 5px;
+}
+.footer-page > .informations > .marquee {
+  align-self: center;
+  overflow: hidden;
+  white-space: nowrap;
+  border-left: 1px solid #fff;
+  padding: 8px;
+}
+.footer-page > .informations > .marquee > .text {
+  padding-left: 100%;
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+}
+.footer-page > .informations > .clock {
+  align-self: center;
+  background-color: #191919;
+  color: #fff;
+  padding: 8px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 1430px) {
+  .footer-page > .title {
+    font-size: 25pt;
+  }
+}
+@media (max-width: 1225px) {
+  .footer-page > .sub-title {
+    font-size: 14pt;
+  }
+  .footer-page > .title {
+    font-size: 20pt;
+  }
+  .footer-page > .informations {
+    font-size: 13pt;
+  }
+  .footer-page > .informations > .marquee,
+.footer-page > .informations .clock {
+    padding: 9px;
+  }
+}
+@media (max-width: 1015px) {
+  .footer-page > .sub-title {
+    font-size: 12pt;
+  }
+  .footer-page > .title {
+    font-size: 16pt;
+  }
+  .footer-page > .informations {
+    font-size: 11pt;
+  }
+  .footer-page > .informations > .avatar {
+    width: 30px;
+  }
+  .footer-page > .informations > .marquee,
+.footer-page > .informations .clock {
+    padding: 10px;
+  }
+}
+@media (max-width: 860px) {
+  .footer-page > .sub-title {
+    font-size: 10pt;
+  }
+  .footer-page > .title {
+    font-size: 13pt;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+  .footer-page > .informations {
+    font-size: 10pt;
+  }
+  .footer-page > .informations > .avatar {
+    width: 25px;
+  }
+  .footer-page > .informations > .marquee,
+.footer-page > .informations .clock {
+    padding: 8px;
+  }
+}
+@media (max-width: 750px) {
+  .footer-page > .sub-title {
+    font-size: 10pt;
+  }
+  .footer-page > .title {
+    font-size: 11pt;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 9px;
+  }
+  .footer-page > .informations {
+    font-size: 10pt;
+  }
+  .footer-page > .informations > .avatar {
+    width: 23px;
+  }
+  .footer-page > .informations > .marquee,
+.footer-page > .informations .clock {
+    padding: 8px;
+  }
+}
+
+/*# sourceMappingURL=footer-page.css.map */
