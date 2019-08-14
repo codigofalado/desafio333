@@ -9,7 +9,7 @@
   }
 
   > .urgent {
-    padding: 8px;
+    padding: 4px;
     border-radius: 5px;
     font-size: 18pt;
     background-color: rgb(247, 2, 2);
@@ -24,7 +24,6 @@
     }
 
     > .urgent {
-      padding: 6px;
       font-size: 16pt;
     }
   }
@@ -37,7 +36,6 @@
     }
 
     > .urgent {
-      padding: 6px;
       font-size: 14pt;
     }
   }
@@ -47,13 +45,12 @@
   .header-page {
     > .hashtag {
       background-color: rgba(255, 255, 255, 0.4);
-      padding: 6px;
+      padding: 4px;
       border-radius: 5px;
       font-size: 12pt;
     }
 
     > .urgent {
-      padding: 6px;
       font-size: 12pt;
     }
   }
