@@ -11,4 +11,6 @@ Em cada um deles foi concluído o respectivo requisito do desafio. Ao final fora
 - Horário dinâmico
 - Um GIF para simular uma programação real
 
+## Mockup:
+
 ![alt text](https://github.com/albertozaranza/desafio333/blob/master/2019-Agosto-SASS/albertozaranza/src/assets/screenshot.png)
