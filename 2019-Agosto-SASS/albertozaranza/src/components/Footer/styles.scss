@@ -1,0 +1,57 @@
+$default-color: #aa0000;
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+
+  h2 {
+    display: inline;
+    background: #999;
+    padding: 2px 5px 2px 20px;
+  }
+
+  h1 {
+    background: #000;
+    color: #fff;
+    opacity: 0.8;
+    padding: 10px 20px;
+  }
+}
+
+.footer-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .logo {
+    width: 45px;
+    background: $default-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    border-right: 2px solid #fff;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .marquee {
+    flex: 1;
+    background: $default-color;
+    color: #fff;
+    font-size: 26px;
+
+    span {
+      background: $default-color;
+    }
+  }
+
+  span {
+    background: #000;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 21.5px;
+  }
+}

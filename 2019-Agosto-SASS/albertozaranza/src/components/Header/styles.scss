@@ -1,0 +1,47 @@
+$default-color: #aa0000;
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 20px;
+
+  span {
+    color: #999;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .info-program {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+
+    img {
+      height: 30px;
+      position: relative;
+      left: 5px;
+    }
+
+    .alert {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      background: $default-color;
+      color: #fff;
+      font-size: 20px;
+      padding: 0 20px;
+    }
+
+    span {
+      position: relative;
+      right: 8px;
+      color: $default-color;
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+}
