@@ -12,11 +12,11 @@
     this.speed = 10;
     this.last_time = 0;
 
-    this.elm.addEventListener("mouseover", () => {
+    this.elm.addEventListener("mouseover", function() {
       this.running = false;
     });
 
-    this.elm.addEventListener("mouseout", () => {
+    this.elm.addEventListener("mouseout", function() {
       this.running = true;
     });
   }
