@@ -7,11 +7,7 @@ export default function Header() {
   return (
     <div className="header-container">
       <span>#GNewsEmPonto</span>
-      <div className="info-program">
-        <img src={logo} alt="" />
-        <div className="alert">URGENTE</div>
-        <span>NEWS</span>
-      </div>
+      <img src={logo} alt="" />
     </div>
   );
 }
