@@ -1,0 +1,121 @@
+.news {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+
+  @include medium-screen {
+    padding: 20px 60px;
+  }
+
+  @include large-screen {
+    padding: 20px 300px;
+  }
+
+  &__title {
+    color: $black;
+    background: darken($light, 10%);
+    display: inline-block;
+    font-size: 14px;
+    padding: 2px 5px 2px 20px;
+
+    @include small-screen {
+      font-size: 24px;
+      padding: 2px 5px 2px 30px;
+    }
+
+    @include medium-screen {
+      padding: 2px 15px 2px 45px;
+    }
+  }
+
+  &__subtitle {
+    background: rgba($black, .7);
+    color: $light;
+    padding: 10px 5px 10px 20px;
+    font-size: 18px;
+
+    @include small-screen {
+      font-size: 32px;
+      padding: 15px 5px 15px 30px;
+    }
+
+    @include medium-screen {
+      padding: 17px 5px 17px 45px;
+      font-size: 62px;
+    }
+  }
+  
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+
+    &-cf {
+      background: $main;
+      color: $white;
+      padding: 2px 5px;
+      font-size: 14px;
+      border-right: $white solid 2px;
+      font-family: 'Archivo Black', sans-serif;
+
+      @include small-screen {
+        font-size: 22px;
+      }
+    }
+
+    &-marquee-container {
+      overflow: hidden;
+      background: darken($main, 10%);
+      width: 100%;
+      position: relative;
+    }
+
+    &-marquee {
+      width: 700px;
+      color: $white;
+      font-size: 11px;
+      animation: marquee 40s linear infinite;
+      padding: 2px;
+      position: absolute;
+      letter-spacing: .5px;
+
+      @include small-screen {
+        font-size: 16px;
+        width: 1050px;
+        padding: 4px;
+      }
+
+      .fab {
+        margin: 0 2px;
+
+        @include small-screen {
+          margin: 0 5px;
+        }
+      }
+
+      span {
+        margin: 0 5px;
+
+        @include medium-screen {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    &-clock {
+      background: $black;
+      color: $light;
+      font-size: 14px;
+      padding: 0 10px;
+
+      @include small-screen {
+        font-size: 20px;
+        padding: 1px 10px;
+      }
+    }
+  }
+}

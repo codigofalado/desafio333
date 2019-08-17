@@ -1,0 +1,78 @@
+.header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  @include small-screen {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include medium-screen {
+    padding: 20px 60px;
+  }
+
+  @include large-screen {
+    padding: 20px 100px;
+  }
+
+  &__hashtag {
+    color: $light;
+    font-size: 20px;
+
+    @include small-screen {
+      font-size: 26px;
+    }
+  }
+
+  &__news-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 50px;
+
+    @include small-screen {
+      width: 60px;
+    }
+
+    @include medium-screen {
+      width: 70px;
+    }
+
+    @include large-screen {
+      width: 80px;
+    }
+  }
+
+  &__front-end {
+    background: $main;
+    padding: 2px 15px;
+    margin-right: -10px;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 3px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    @include small-screen {
+      font-size: 22px;
+      margin-right: -13px;
+    }
+  }
+
+  &__news {
+    text-transform: uppercase;
+    color: $main;
+    font-size: 32px;
+    position: relative;
+    font-family: 'Archivo Black', sans-serif;
+
+    @include small-screen {
+      font-size: 44px;
+    }
+  }
+}
