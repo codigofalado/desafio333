@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Variáveis
+   ========================================================================== */
+
+/*
+   Cores
+   ========================================================================== */
+
+
+/*
+   Fontes
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+   $font-open-sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/*
+   sizes variables
+   ========================================================================== */
+
+$container-width: 1280px;
+
+// Responsive & Mobile settings
+$responsive-min-width: 100px;
+$responsive-max-width: 760px;
+
+
+@mixin select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	text-overflow:'';
+	text-indent: 0.01px;
+	text-overflow: "";
+}
+
+

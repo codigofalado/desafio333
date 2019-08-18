@@ -1,1 +1,15 @@
+﻿# Ignorar arquivos espec�ficos
 .DS_Store
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+bin
+.notes
+.sass-cache
+node_modules
+npm-debug.log
+
+# Ignorar todos os diretorios e arquivos em um diretorio. ignore/*
+/node_modules/
+/bower_components/
