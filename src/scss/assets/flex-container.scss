@@ -1,0 +1,24 @@
+$red: rgb(110, 8, 8);
+
+div.flex-container {
+    display: flex;
+
+    img {
+        width: 35px;
+    }
+
+    
+    .scrolling {
+        background-color: $red;
+        padding: 5px;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .new-hour {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+    }
+}

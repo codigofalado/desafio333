@@ -1,0 +1,14 @@
+$gray-transparent: rgba(185, 184, 184, 0.856);
+
+div.sub-title {
+    padding: 10px;
+    color: whitesmoke;
+    width: 250px;
+    background-color: $gray-transparent;
+}
+
+@media (max-width: 640px) {
+    .sub-title {
+      max-width: 190px;
+    }
+  }

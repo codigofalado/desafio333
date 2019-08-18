@@ -1,0 +1,23 @@
+$black-transparent: rgba(0, 0, 0, 0.774);
+$font-color: rgb(199, 199, 199);
+
+ .title {
+    max-width: 1110px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: $black-transparent;
+    color:  $font-color;
+}
+
+@media (max-width: 640px) {
+    div.title {
+      max-width: 540px;
+      font-size: 15px;
+    }
+  }
+
+body {
+  color: rgb(182, 0, 0)
+}
+  
