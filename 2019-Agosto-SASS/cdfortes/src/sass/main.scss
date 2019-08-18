@@ -1,0 +1,146 @@
+@import 'breakpoint-sass'; // or 'breakpoint-sass' when using npm
+@import 'breakpoint-slicer';
+
+/** Variaveis */
+$slicer-breakpoints: 0 400px 600px 800px 1050px;
+$bg_geral : mediumslateblue;
+$bg_footer : rgb(24, 30, 37);
+$font-family : Roboto, sans-serif;
+$font-size : 14px;
+$body-font-weight: 300;
+$heading-font-weight: 700;
+$color-1 : #fff;
+$color-2 : lightblue;
+$color-3 : #444;
+$span-color: #5a6875;
+
+/** FIM Variaveis */
+
+/** RESET */
+
+body{
+    margin: 0;
+    padding: 25px;
+    font-family: $font-family;
+    background: url('./../images/img-bg.png') no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: $color-1;
+
+}
+
+*{
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $color-1;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/** FIM RESET */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    .hashtag{
+        color: lighten($color:  grey, $amount: 20%);
+        font-weight: 700;
+        font-size: 1.2em;
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    right: 0;
+    left: 0;
+    .title{
+        background:rgba(44, 40, 40, 0.9);
+        line-height: 90px;
+        padding-left: 50px;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        font-weight: normal;
+    }
+    .subtitle{
+        width: 20%;
+        line-height: 40px;
+     h2{
+            background:#C4C4C4;
+            color: #000;
+            padding-left: 50px;
+            text-transform: uppercase;
+        }
+    }
+    .wrapper{
+        display: flex;
+        margin-top: 0;
+
+        .marquee {
+            width: 100%;
+            line-height: 40px;
+            background-color: #A80000;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            
+            p {
+                display: inline-block;
+                animation: marquee 80s linear infinite;
+                padding-left: 100%;
+                transform: translateX(-100%);
+                font-size: 1.2em;
+                span {
+
+                    &::after{
+                        content: '';
+                        background-color: #fff;
+                        width: 10px;
+                        height: 10px;
+                        margin: auto 15px;
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+
+        .clock{
+            background: #000;
+            line-height: 40px;
+            font-size: 1.2em;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 130px;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { 
+        transform: translate(-100%, 0);
+        padding-left: -100%;
+    }
+    
+}
