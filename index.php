@@ -9,37 +9,38 @@
     <link href="assets/css/desafio-01.css" rel="stylesheet">
 
   <body>
-    <header class="n-header">
-      <div class="n-header__hastag">
-          <span>#GnewsEmPonto</span>
+    <main class="n-content">
+      <header class="n-header">
+        <div class="n-header__hastag">
+            <span>#GnewsEmPonto</span>
+        </div>
+        <h1 class="n-header__logo">
+          <a href="#" title="">
+            <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/logo.png" alt="">
+          </a>
+        </h1>
+      </header>
+
+      <div class="n-noticia">
+        <img src="assets\img\noti-01.jpg" alt="" />
       </div>
 
-      <h1 class="n-header__logo">
-        <a href="#" title="">
-          <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/logo.png" alt="">
-        </a>
-      </h1>
-    </header>
-
-    <main class="n-content">
-      <img src="" alt="">
+      <footer class="n-footer">
+          <div class="n-footer__box-top">
+            <h2>Lava jato no rio</h2>
+          </div>
+          <div class="n-footer__box-middle">
+            <h3>Eike batista volta a ser preso pela polícia federal</h3>
+          </div>
+          <div class="n-footer__box-bottom">
+            <a href="#" title="">
+              <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/avatar.png" alt="">
+            </a>
+            <p>nível no globonews play - baixe o seu aplicativo . para envio de sugestões críticas</p>
+            <span>08:16</span>
+          </div>
+      </footer>
     </main>
-
-    <footer class="n-footer">
-        <div class="n-footer__box-top">
-          <h2>Lava jato no rio</h2>
-        </div>
-        <div class="n-footer__box-middle">
-          <h3>Eike batista volta a ser preso pela polícia federal</h3>
-        </div>
-        <div class="n-footer__box-bottom">
-          <a href="#" title="">
-            <img src="" alt="">
-          </a>
-          <p>nível no globonews play - baixe o seu aplicativo . para envio de sugestões críticas</p>
-          <span>08:16</span>
-        </div>
-    </footer>
   </body>
 
   <!-- Scripts -->

@@ -8,10 +8,18 @@ body{
 .n-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #000;
     color: #fff;
+    padding: 1%;
+    z-index: 2;
+    width: 100%;
+    top: 0;
     &__hastag{
         font-size: 2em;
+    }
+    &__logo{
+        width: 200px;
     }
 }
 
@@ -20,24 +28,50 @@ body{
     height: 100vh;
 }
 
+.n-noticia{
+    position: absolute;
+    z-index: 1;
+}
+
 .n-footer{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
     &__box-top{
+        width: 10%;
+        height: 20px;
         background-color: #fff;
         color: #000;
     }
     &__box-middle{
+        height: 60px;
         background-color: #000;
         color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: 2em;
+        padding: 2%;
     }
     &__box-bottom{
+        height: 30px;
         background-color: red;
         color: #fff;
         display: flex;
         justify-content: space-between;
+        p{
+            width: 94%;
+        }
         span{
             background-color: #000;
             color: #fff;
             box-sizing: content-box;
+            width: 3%;
+        }
+        a{
+            width: 3%;
         }
     }
 }
