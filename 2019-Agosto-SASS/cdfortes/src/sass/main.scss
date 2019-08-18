@@ -26,6 +26,9 @@ body{
     background-size: cover;
     box-sizing: border-box;
     color: $color-1;
+    @include at(2){
+        background: #000;
+    }
 
 }
 
