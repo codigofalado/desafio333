@@ -16,7 +16,7 @@
 
       <h1 class="n-header__logo">
         <a href="#" title="">
-          <span>Urgente News</span>
+          <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/logo.png" alt="">
         </a>
       </h1>
     </header>

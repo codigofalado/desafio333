@@ -1,11 +1,18 @@
 /* ==========================================================================
 Noticia
 ========================================================================== */
+body{
+    font-size: 14px;
+}
+
 .n-header{
     display: flex;
     justify-content: space-between;
     background-color: #000;
     color: #fff;
+    &__hastag{
+        font-size: 2em;
+    }
 }
 
 .n-content{
