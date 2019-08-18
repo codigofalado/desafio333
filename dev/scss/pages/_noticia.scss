@@ -1,3 +1,36 @@
 /* ==========================================================================
 Noticia
 ========================================================================== */
+.n-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+
+.n-content{
+    background-color: navy;
+    height: 100vh;
+}
+
+.n-footer{
+    &__box-top{
+        background-color: #fff;
+        color: #000;
+    }
+    &__box-middle{
+        background-color: #000;
+        color: #fff;
+    }
+    &__box-bottom{
+        background-color: red;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        span{
+            background-color: #000;
+            color: #fff;
+            box-sizing: content-box;
+        }
+    }
+}
