@@ -38,7 +38,5 @@ function channelChange() {
   } else {
     secOne.style.display = 'flex';
     secTwo.style.display = 'none';
-    // video.pause();
   }
-  console.log('hre');
 }
