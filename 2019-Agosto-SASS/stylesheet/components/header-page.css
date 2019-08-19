@@ -1,7 +1,9 @@
 .header-page {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
 }
 .header-page > .hashtag {
   color: rgba(66, 61, 61, 0.85);

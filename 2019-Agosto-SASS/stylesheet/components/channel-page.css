@@ -1,0 +1,32 @@
+.channel-page {
+  height: calc(100vh - 170px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background-image: url("../../assets/reporter-new.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.channel-page.one {
+  display: none;
+}
+
+@media (max-width: 1015px) {
+  .container-page {
+    height: calc(100vh - 124px);
+    padding: 30px;
+  }
+}
+@media (max-width: 860px) {
+  .container-page {
+    height: calc(100vh - 85px);
+    padding: 15px;
+    background-position: 75%;
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=channel-page.css.map */
