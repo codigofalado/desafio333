@@ -22,12 +22,15 @@ body{
     margin: 0;
     padding: 25px;
     font-family: $font-family;
-    background: url('./../images/img-bg.png') no-repeat;
+    background: #bdc3c7;
+    //background: url('./../images/img-bg.png') no-repeat center, linear-gradient(to left, #bdc3c7, #2c3e50);
     background-size: cover;
     box-sizing: border-box;
     color: $color-1;
-    @include at(2){
-        background: #000;
+    height: 100vh;
+    @include to(4){
+        padding: 15px;
+        
     }
 
 }
@@ -60,13 +63,75 @@ img {
 
 /** FIM RESET */
 
+.container{
+
+    .crossfade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        left: -25px;
+        top: 0;
+        transform: translate(25px);
+      }
+
+    .crossfade > figure {
+        animation: imageAnimation 30s linear infinite 0s;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center center;
+        color: transparent;
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .crossfade > figure:nth-child(1) { background-image: url('https://picsum.photos/1925/950?image=1001');}
+
+        .crossfade > figure:nth-child(2) {
+        animation-delay: 6s;
+        background-image: url('https://picsum.photos/1925/950?image=1002');
+        }
+
+        .crossfade > figure:nth-child(3) {
+        animation-delay: 12s;
+        background-image: url('https://picsum.photos/1925/950?image=1003');
+        }
+
+        .crossfade > figure:nth-child(4) {
+        animation-delay: 18s;
+        background-image: url('https://picsum.photos/1925/950?image=1004');
+        }
+
+        .crossfade > figure:nth-child(5) {
+        animation-delay: 24s;
+        background-image: url('https://picsum.photos/1925/950?image=1005');
+        }
+}
+
 header{
     display: flex;
     justify-content: space-between;
     .hashtag{
-        color: lighten($color:  grey, $amount: 20%);
+        color: #97b7ce8f;
         font-weight: 700;
         font-size: 1.2em;
+        text-shadow: 2px 2px 1px rgba(150, 150, 150, 1);
+        z-index: 2;
+        @include to(4){
+            font-size: 60%;
+        }
+    }
+    .logo {
+        width: 260px;
+        z-index: 2;
+        @include to(4){
+            width: 30%;
+        }
     }
 }
 
@@ -76,27 +141,50 @@ footer{
     padding: 25px;
     right: 0;
     left: 0;
+    @include to(4){
+        padding: 15px;
+    }
     .title{
-        background:rgba(44, 40, 40, 0.9);
+        background:rgba(0, 0, 0, 0.69);
         line-height: 90px;
         padding-left: 50px;
         text-transform: uppercase;
-        font-size: 1.6em;
+        font-size: 1.5em;
         font-weight: normal;
+        @include to(4){
+            font-size: 50%;
+            line-height: 30px;
+            padding-left: 20px;
+        }
     }
     .subtitle{
-        width: 20%;
+        width: 30%;
         line-height: 40px;
-     h2{
-            background:#C4C4C4;
+        position: relative;
+        h2{
+            background:#97b7ce8f;
             color: #000;
             padding-left: 50px;
             text-transform: uppercase;
+            position: absolute;
+            padding-right: 20px;
+            bottom: 0;
+            @include to(4){
+                font-size: 50%;
+                padding-left: 20px;
+            }
+        }
+        @include to(4){
+            width: 100%;
+            line-height: 20px;
         }
     }
     .wrapper{
         display: flex;
         margin-top: 0;
+        .logofooter{
+            background-color: #A80000;
+        }
 
         .marquee {
             width: 100%;
@@ -105,6 +193,10 @@ footer{
             color: #fff;
             white-space: nowrap;
             overflow: hidden;
+            @include to(4){
+               vertical-align: center;
+                line-height: 30px;
+            }
             
             p {
                 display: inline-block;
@@ -112,6 +204,9 @@ footer{
                 padding-left: 100%;
                 transform: translateX(-100%);
                 font-size: 1.2em;
+                @include to(4){
+                    font-size: 60%;
+                }
                 span {
 
                     &::after{
@@ -121,13 +216,17 @@ footer{
                         height: 10px;
                         margin: auto 15px;
                         display:inline-block;
+                        @include to(4){
+                            width: 4px;
+                            height: 4px;
+                        }
                     }
                 }
             }
         }
 
         .clock{
-            background: #000;
+            background:rgba(0, 0, 0, 0.79);
             line-height: 40px;
             font-size: 1.2em;
             padding-left: 10px;
@@ -135,6 +234,14 @@ footer{
             width: 130px;
             text-align: center;
             font-weight: 500;
+            @include to(4){
+                font-size: 60%;
+                line-height: 30px;
+                width: 80px;
+                vertical-align: center;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
         }
     }
 }
@@ -143,7 +250,32 @@ footer{
     0%   { transform: translate(0, 0); }
     100% { 
         transform: translate(-100%, 0);
-        padding-left: -100%;
     }
     
+}
+
+@keyframes 
+    imageAnimation {  
+        0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform:scale(1);
+    
+    }
+    8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    
+    }
+    17% {
+    opacity: 1
+    }
+    25% {
+    opacity: 0;
+    transform:scale(1.1);
+    }
+    100% {
+    opacity: 0;
+    transform:scale(1.1);
+    }
 }
