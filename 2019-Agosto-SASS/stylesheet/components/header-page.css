@@ -3,6 +3,7 @@
   max-width: 1400px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 .header-page > .hashtag {
@@ -15,6 +16,14 @@
   font-size: 18pt;
   background-color: #f70202;
   color: #fff;
+}
+.header-page > .logo {
+  width: 150px;
+}
+
+.header-page.two {
+  position: fixed;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 1015px) {
@@ -42,6 +51,11 @@
   }
   .header-page > .urgent {
     font-size: 12pt;
+  }
+}
+@media (max-width: 440px) {
+  .header-page > .logo {
+    width: 100px;
   }
 }
 

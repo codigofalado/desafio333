@@ -28,4 +28,10 @@
   border-bottom: 1px solid #888;
 }
 
+@media (max-width: 860px) {
+  .controll-page {
+    margin-top: 0px;
+  }
+}
+
 /*# sourceMappingURL=controll-page.css.map */

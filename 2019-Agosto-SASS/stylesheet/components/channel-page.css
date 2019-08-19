@@ -4,28 +4,54 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
-  background-image: url("../../assets/reporter-new.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .channel-page.one {
+  background-image: url("../../assets/reporter-new.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75%;
+}
+
+.channel-page.two {
+  height: calc(100vh - 90px);
+  background-color: #191919;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-image: url("https://clips.twitch.tv/embed?clip=ScrumptiousIntelligentCobblerShazBotstix");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: none;
+}
+.channel-page.two > .bg-video {
+  right: 0;
+  bottom: 0;
+  height: 100%;
 }
 
 @media (max-width: 1015px) {
-  .container-page {
+  .channel-page {
     height: calc(100vh - 124px);
     padding: 30px;
   }
 }
 @media (max-width: 860px) {
-  .container-page {
+  .channel-page {
     height: calc(100vh - 85px);
     padding: 15px;
     background-position: 75%;
     background-size: cover;
+  }
+}
+@media (max-width: 1015px) {
+  .channel-page.two {
+    height: calc(100vh - 64px);
+  }
+}
+@media (max-width: 860px) {
+  .channel-page.two {
+    height: calc(100vh - 55px);
   }
 }
 

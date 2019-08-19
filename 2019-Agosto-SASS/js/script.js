@@ -18,3 +18,27 @@ function time(elem) {
 setInterval(() => {
   time(clock);
 }, 1000);
+
+function channelChange() {
+  const secOne = document.getElementById('channel-one');
+  const secTwo = document.getElementById('channel-two');
+  const video = document.getElementById('video');
+
+  const styleOne = window.getComputedStyle(secOne);
+  const styleTwo = window.getComputedStyle(secTwo);
+
+  if (styleOne.display == 'none') {
+    secOne.style.display = 'flex';
+    secTwo.style.display = 'none';
+    video.pause();
+  } else if (styleTwo.display == 'none') {
+    secTwo.style.display = 'flex';
+    secOne.style.display = 'none';
+    video.play();
+  } else {
+    secOne.style.display = 'flex';
+    secTwo.style.display = 'none';
+    // video.pause();
+  }
+  console.log('hre');
+}
