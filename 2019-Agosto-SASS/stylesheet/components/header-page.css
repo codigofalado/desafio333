@@ -25,6 +25,10 @@
   position: fixed;
   justify-content: space-evenly;
 }
+.header-page.two > .hashtag {
+  color: rgba(223, 223, 223, 0.85);
+  font-size: 18pt;
+}
 
 @media (max-width: 1015px) {
   .header-page > .hashtag {
