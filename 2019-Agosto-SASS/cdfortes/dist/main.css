@@ -3,16 +3,7 @@
 /** RESET */
 body {
   margin: 0;
-  padding: 25px;
-  font-family: Roboto, sans-serif;
-  background: #bdc3c7;
-  background-size: cover;
-  box-sizing: border-box;
-  color: #fff;
-  height: 100vh; }
-  @media (max-width: 1050px) {
-    body {
-      padding: 15px; } }
+  font-family: Roboto, sans-serif; }
 
 * {
   margin: 0; }
@@ -35,53 +26,57 @@ img {
   display: block; }
 
 /** FIM RESET */
-.container .crossfade {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  left: -25px;
-  top: 0;
-  transform: translate(25px); }
-
-.container .crossfade > figure {
-  -webkit-animation: imageAnimation 30s linear infinite 0s;
-          animation: imageAnimation 30s linear infinite 0s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+.container {
+  padding: 25px;
+  background: #bdc3c7;
   background-size: cover;
-  background-position: center center;
-  color: transparent;
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  z-index: -1; }
-
-.container .crossfade > figure:nth-child(1) {
-  background-image: url("https://picsum.photos/1925/950?image=1001"); }
-
-.container .crossfade > figure:nth-child(2) {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
-  background-image: url("https://picsum.photos/1925/950?image=1002"); }
-
-.container .crossfade > figure:nth-child(3) {
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
-  background-image: url("https://picsum.photos/1925/950?image=1003"); }
-
-.container .crossfade > figure:nth-child(4) {
-  -webkit-animation-delay: 18s;
-          animation-delay: 18s;
-  background-image: url("https://picsum.photos/1925/950?image=1004"); }
-
-.container .crossfade > figure:nth-child(5) {
-  -webkit-animation-delay: 24s;
-          animation-delay: 24s;
-  background-image: url("https://picsum.photos/1925/950?image=1005"); }
+  box-sizing: border-box;
+  color: #fff;
+  height: 100vh; }
+  @media (max-width: 1050px) {
+    .container {
+      padding: 15px; } }
+  .container .crossfade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: -25px;
+    top: 0;
+    transform: translate(25px); }
+    .container .crossfade > figure {
+      -webkit-animation: imageAnimation 30s linear infinite 0s;
+              animation: imageAnimation 30s linear infinite 0s;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      background-size: cover;
+      background-position: center center;
+      color: transparent;
+      height: 100%;
+      left: 0px;
+      opacity: 0;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      z-index: -1; }
+      .container .crossfade > figure:nth-child(1) {
+        background-image: url("https://picsum.photos/1925/950?image=1001"); }
+      .container .crossfade > figure:nth-child(2) {
+        -webkit-animation-delay: 6s;
+                animation-delay: 6s;
+        background-image: url("https://picsum.photos/1925/950?image=1002"); }
+      .container .crossfade > figure:nth-child(3) {
+        -webkit-animation-delay: 12s;
+                animation-delay: 12s;
+        background-image: url("https://picsum.photos/1925/950?image=1003"); }
+      .container .crossfade > figure:nth-child(4) {
+        -webkit-animation-delay: 18s;
+                animation-delay: 18s;
+        background-image: url("https://picsum.photos/1925/950?image=1004"); }
+      .container .crossfade > figure:nth-child(5) {
+        -webkit-animation-delay: 24s;
+                animation-delay: 24s;
+        background-image: url("https://picsum.photos/1925/950?image=1005"); }
 
 header {
   display: flex;
@@ -90,7 +85,7 @@ header {
     color: #97b7ce8f;
     font-weight: 700;
     font-size: 1.2em;
-    text-shadow: 2px 2px 1px #969696;
+    text-shadow: 2px 2px 1px #97b7ce;
     z-index: 2; }
     @media (max-width: 1050px) {
       header .hashtag {
@@ -164,6 +159,7 @@ footer {
         -webkit-animation: marquee 80s linear infinite;
                 animation: marquee 80s linear infinite;
         padding-left: 100%;
+        text-transform: uppercase;
         transform: translateX(-100%);
         font-size: 1.2em; }
         @media (max-width: 1050px) {
