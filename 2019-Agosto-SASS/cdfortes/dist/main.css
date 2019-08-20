@@ -1,0 +1,250 @@
+/** Variaveis */
+/** FIM Variaveis */
+/** RESET */
+body {
+  margin: 0;
+  padding: 25px;
+  font-family: Roboto, sans-serif;
+  background: #bdc3c7;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #fff;
+  height: 100vh; }
+  @media (max-width: 1050px) {
+    body {
+      padding: 15px; } }
+
+* {
+  margin: 0; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+/** FIM RESET */
+.container .crossfade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: -25px;
+  top: 0;
+  transform: translate(25px); }
+
+.container .crossfade > figure {
+  -webkit-animation: imageAnimation 30s linear infinite 0s;
+          animation: imageAnimation 30s linear infinite 0s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -1; }
+
+.container .crossfade > figure:nth-child(1) {
+  background-image: url("https://picsum.photos/1925/950?image=1001"); }
+
+.container .crossfade > figure:nth-child(2) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  background-image: url("https://picsum.photos/1925/950?image=1002"); }
+
+.container .crossfade > figure:nth-child(3) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+  background-image: url("https://picsum.photos/1925/950?image=1003"); }
+
+.container .crossfade > figure:nth-child(4) {
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
+  background-image: url("https://picsum.photos/1925/950?image=1004"); }
+
+.container .crossfade > figure:nth-child(5) {
+  -webkit-animation-delay: 24s;
+          animation-delay: 24s;
+  background-image: url("https://picsum.photos/1925/950?image=1005"); }
+
+header {
+  display: flex;
+  justify-content: space-between; }
+  header .hashtag {
+    color: #97b7ce8f;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 1px #969696;
+    z-index: 2; }
+    @media (max-width: 1050px) {
+      header .hashtag {
+        font-size: 60%; } }
+  header .logo {
+    width: 260px;
+    z-index: 2; }
+    @media (max-width: 1050px) {
+      header .logo {
+        width: 30%; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 25px;
+  right: 0;
+  left: 0; }
+  @media (max-width: 1050px) {
+    footer {
+      padding: 15px; } }
+  footer .title {
+    background: rgba(0, 0, 0, 0.69);
+    line-height: 90px;
+    padding-left: 50px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: normal; }
+    @media (max-width: 1050px) {
+      footer .title {
+        font-size: 50%;
+        line-height: 30px;
+        padding-left: 20px; } }
+  footer .subtitle {
+    width: 30%;
+    line-height: 40px;
+    position: relative; }
+    footer .subtitle h2 {
+      background: #97b7ce8f;
+      color: #000;
+      padding-left: 50px;
+      text-transform: uppercase;
+      position: absolute;
+      padding-right: 20px;
+      bottom: 0; }
+      @media (max-width: 1050px) {
+        footer .subtitle h2 {
+          font-size: 50%;
+          padding-left: 20px; } }
+    @media (max-width: 1050px) {
+      footer .subtitle {
+        width: 100%;
+        line-height: 20px; } }
+  footer .wrapper {
+    display: flex;
+    margin-top: 0; }
+    footer .wrapper .logofooter {
+      background-color: #A80000; }
+    footer .wrapper .marquee {
+      width: 100%;
+      line-height: 40px;
+      background-color: #A80000;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden; }
+      @media (max-width: 1050px) {
+        footer .wrapper .marquee {
+          vertical-align: center;
+          line-height: 30px; } }
+      footer .wrapper .marquee p {
+        display: inline-block;
+        -webkit-animation: marquee 80s linear infinite;
+                animation: marquee 80s linear infinite;
+        padding-left: 100%;
+        transform: translateX(-100%);
+        font-size: 1.2em; }
+        @media (max-width: 1050px) {
+          footer .wrapper .marquee p {
+            font-size: 60%; } }
+        footer .wrapper .marquee p span::after {
+          content: '';
+          background-color: #fff;
+          width: 10px;
+          height: 10px;
+          margin: auto 15px;
+          display: inline-block; }
+          @media (max-width: 1050px) {
+            footer .wrapper .marquee p span::after {
+              width: 4px;
+              height: 4px; } }
+    footer .wrapper .clock {
+      background: rgba(0, 0, 0, 0.79);
+      line-height: 40px;
+      font-size: 1.2em;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 130px;
+      text-align: center;
+      font-weight: 500; }
+      @media (max-width: 1050px) {
+        footer .wrapper .clock {
+          font-size: 60%;
+          line-height: 30px;
+          width: 80px;
+          vertical-align: center;
+          padding-left: 2px;
+          padding-right: 2px; } }
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-100%, 0); } }
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-100%, 0); } }
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(1); }
+  8% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0;
+    transform: scale(1.1); }
+  100% {
+    opacity: 0;
+    transform: scale(1.1); } }
+
+@keyframes imageAnimation {
+  0% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(1); }
+  8% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0;
+    transform: scale(1.1); }
+  100% {
+    opacity: 0;
+    transform: scale(1.1); } }
+
