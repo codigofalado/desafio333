@@ -1,0 +1,36 @@
+.device .buttons
+    @include apply-flex($justify: space-around)
+    width: 100%
+
+    @include tablet
+        max-width: 400px
+        width: 60%
+
+    @include desktop
+        margin-top: none
+        width: 10%
+        height: 80%
+        max-height: 450px
+        max-width: none
+        flex-flow: column
+
+    a
+        border: 1px solid #181727
+        border-radius: 50%
+        background-color: $device-button-color
+        display: block
+        height: 50px
+        width: 50px
+
+        @include tablet
+            height: 60px
+            width: 60px
+
+        @include desktop
+            box-shadow: 0 10px rgba(#000, 80%)
+            transition: all 100ms ease-in
+            height: 100px
+            width: 100px
+            &:hover
+                background-color: darken($device-button-color, 1%)
+                box-shadow: 0 6px rgba(#000, 80%)

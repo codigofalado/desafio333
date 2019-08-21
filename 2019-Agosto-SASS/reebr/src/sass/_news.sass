@@ -1,0 +1,49 @@
+.device .screen .image main .news
+    position: absolute
+    left: 2%
+    right: 2%
+    bottom: 5%
+    font-size: .8em
+
+    .subtitle,
+    .title
+        padding: 1.5px 2%
+        text-transform: uppercase
+
+    .subtitle
+        background: rgba(#fff, 70%)
+        color: #000
+        display: inline-block
+        font-size: .8em
+    .title
+        background: rgba(#000, 70%)
+        color: rgba(#fff, 80%)
+        font-size: 1.2em
+    .footer
+        @include apply-flex
+        width: 100%
+
+        .logo,
+        .last-news,
+        .clock
+            line-height: 20px
+
+        .logo
+            @include apply-flex
+            background: rgba(#fff, 70%)
+            height: 20px
+            img
+                height: 100%
+        .last-news
+            background: rgba(#dcbb00, 70%)
+            font-size: .8em
+            padding: 0 2%
+            overflow: hidden
+            white-space: nowrap
+            width: 100%
+            .text
+                animation: marquee 40s linear infinite
+        .clock
+            background: rgba(#000, 90%)
+            color: rgba(#fff, 80%)
+            padding: 0 5%
