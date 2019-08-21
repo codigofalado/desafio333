@@ -5,10 +5,20 @@
     bottom: 5%
     font-size: .8em
 
+    @include tablet
+        left: 6%
+        right: 6%
+
+    @include desktop
+        left: 20%
+        right: 20%
+        min-width: 500px
+
     .subtitle,
     .title
         padding: 1.5px 2%
         text-transform: uppercase
+        @include no-selection
 
     .subtitle
         background: rgba(#fff, 70%)
@@ -19,6 +29,10 @@
         background: rgba(#000, 70%)
         color: rgba(#fff, 80%)
         font-size: 1.2em
+        @include tablet
+            font-size: 1.6em
+        @include desktop
+            font-size: 2em
     .footer
         @include apply-flex
         width: 100%
@@ -27,22 +41,32 @@
         .last-news,
         .clock
             line-height: 20px
+            @include no-selection
+            @include tablet
+                line-height: 30px
 
         .logo
             @include apply-flex
             background: rgba(#fff, 70%)
             height: 20px
+            @include tablet
+                height: 30px
             img
                 height: 100%
+                
         .last-news
             background: rgba(#dcbb00, 70%)
             font-size: .8em
+            @include tablet
+                font-size: 1em
             padding: 0 2%
             overflow: hidden
             white-space: nowrap
             width: 100%
             .text
                 animation: marquee 40s linear infinite
+                @include tablet
+                    animation: marquee 80s linear infinite
         .clock
             background: rgba(#000, 90%)
             color: rgba(#fff, 80%)

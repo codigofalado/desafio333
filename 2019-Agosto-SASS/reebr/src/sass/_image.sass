@@ -26,23 +26,36 @@
             width: 100%
             @include no-selection
             @include tablet
-                max-height: 60vh
+                max-height: 70vh
 
         > .logo,
         .hashtag
             height: 40px
+            @include tablet
+                height: 80px
+
             position: absolute
             top: 3.5%
             @include no-selection
 
         > .logo
             right: 3.5%
+            @include tablet
+                right: 6%
+            @include desktop
+                right: 20%
             img
                 height: 100%
 
         .hashtag
             left: 3.5%
             line-height: 40px
+            @include tablet
+                left: 6%
+                line-height: 80px
+                font-size: 1.2em
+            @include desktop
+                left: 20%
             color: rgba(#fff, 80%)
             text-shadow: 1px 1px 2px rgba(0, 0, 0, .4)
             font-size: .9em
