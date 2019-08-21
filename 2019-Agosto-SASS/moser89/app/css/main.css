@@ -33,7 +33,10 @@
     font-size: 20px; }
     @media screen and (min-width: 700px) {
       .header__hashtag {
-        font-size: 26px; } }
+        font-size: 28px; } }
+    @media screen and (min-width: 1200px) {
+      .header__hashtag {
+        font-size: 32px; } }
   .header__news-container {
     display: flex;
     align-items: center; }
@@ -51,12 +54,12 @@
   .header__front-end {
     background: #EB007D;
     padding: 2px 15px;
-    margin-right: -10px;
+    margin-right: -9px;
     text-transform: uppercase;
     color: #FFF;
     border-radius: 3px;
     font-weight: 900;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1px; }
     @media screen and (min-width: 700px) {
       .header__front-end {
         font-size: 22px;
@@ -66,10 +69,12 @@
     color: #EB007D;
     font-size: 32px;
     position: relative;
-    font-family: 'Archivo Black', sans-serif; }
+    font-family: 'Archivo Black', sans-serif;
+    top: 1px; }
     @media screen and (min-width: 700px) {
       .header__news {
-        font-size: 44px; } }
+        font-size: 42px;
+        top: 0; } }
 
 .news {
   position: absolute;
@@ -129,9 +134,10 @@
       overflow: hidden;
       background: #b80062;
       width: 100%;
-      position: relative; }
+      position: relative;
+      padding: 1px 0; }
     .news__details-marquee {
-      width: 700px;
+      width: 750px;
       color: #FFF;
       font-size: 11px;
       -webkit-animation: marquee 40s linear infinite;
@@ -158,11 +164,13 @@
       background: #000;
       color: #BFD0E1;
       font-size: 14px;
-      padding: 0 10px; }
+      padding: 1px 10px; }
       @media screen and (min-width: 700px) {
         .news__details-clock {
-          font-size: 20px;
-          padding: 1px 10px; } }
+          font-size: 20px; } }
+      @media screen and (min-width: 1200px) {
+        .news__details-clock {
+          padding: 2px 10px; } }
 
 @-webkit-keyframes marquee {
   0% {
@@ -191,12 +199,12 @@
 @media screen and (min-width: 1200px) {
   @-webkit-keyframes marquee {
     0% {
-      transform: translateX(110%); }
+      transform: translateX(115%); }
     100% {
       transform: translateX(-100%); } }
   @keyframes marquee {
     0% {
-      transform: translateX(110%); }
+      transform: translateX(115%); }
     100% {
       transform: translateX(-100%); } } }
 

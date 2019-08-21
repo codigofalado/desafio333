@@ -72,10 +72,11 @@
       background: darken($main, 10%);
       width: 100%;
       position: relative;
+      padding: 1px 0;
     }
 
     &-marquee {
-      width: 700px;
+      width: 750px;
       color: $white;
       font-size: 11px;
       animation: marquee 40s linear infinite;
@@ -110,11 +111,14 @@
       background: $black;
       color: $light;
       font-size: 14px;
-      padding: 0 10px;
-
+      padding: 1px 10px;
+  
       @include small-screen {
         font-size: 20px;
-        padding: 1px 10px;
+      }
+
+      @include medium-screen {
+        padding: 2px 10px;
       }
     }
   }
