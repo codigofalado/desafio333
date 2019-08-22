@@ -1,11 +1,10 @@
 .device
-    @include apply-flex($justify: space-evenly)
-    background: $device-color
-    box-shadow: 0 0 100px rgba(#000, 80%) inset
-    flex-flow: column
-    height: 100vh
-    width: 100vw
+  @include apply-flex($justify: space-evenly)
+  @include size(100vh, 100vw)
+  background: $device-color
+  box-shadow: 0 0 100px rgba(#000, 80%) inset
+  flex-flow: column
 
-    @include desktop
-        flex-flow: row
-        justify-content: space-around
+  @include desktop
+    flex-flow: row
+    justify-content: space-around

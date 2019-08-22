@@ -1,11 +1,10 @@
 .device 
-    .screen
-        @include apply-flex
-        border: 2px solid #171a3f
-        background-color: $device-screen-border-color
-        box-shadow: 0 0 50px rgba(#000, 80%) inset
-        height: 85%
-        width: 95%
+  .screen
+    @include apply-flex
+    @include size(85%, 95%)
+    border: 2px solid #171a3f
+    background-color: $device-screen-border-color
+    box-shadow: 0 0 50px rgba(#000, 80%) inset
 
-        @include desktop
-            width: 80%
+    @include desktop
+      width: 80%
