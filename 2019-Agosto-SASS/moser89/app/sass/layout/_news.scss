@@ -20,15 +20,15 @@
     background: darken($light, 10%);
     display: inline-block;
     font-size: 14px;
-    padding: 2px 5px 2px 20px;
+    padding: 4px 5px 2px 20px;
 
     @include small-screen {
-      font-size: 24px;
-      padding: 2px 5px 2px 30px;
+      font-size: 22px;
+      padding: 4px 5px 2px 30px;
     }
 
     @include medium-screen {
-      padding: 2px 15px 2px 45px;
+      padding: 4px 15px 2px 45px;
     }
   }
 
@@ -39,7 +39,7 @@
     font-size: 18px;
 
     @include small-screen {
-      font-size: 32px;
+      font-size: 38px;
       padding: 15px 5px 15px 30px;
     }
 
@@ -65,6 +65,10 @@
       @include small-screen {
         font-size: 22px;
       }
+
+      @include medium-screen {
+        padding: 3px 5px;
+      }
     }
 
     &-marquee-container {
@@ -80,7 +84,7 @@
       color: $white;
       font-size: 11px;
       animation: marquee 40s linear infinite;
-      padding: 2px;
+      padding: 1.5px;
       position: absolute;
       letter-spacing: .5px;
 
@@ -88,6 +92,10 @@
         font-size: 16px;
         width: 1050px;
         padding: 4px;
+      }
+
+      @include medium-screen {
+        padding: 5px;
       }
 
       .fab {
@@ -115,10 +123,11 @@
   
       @include small-screen {
         font-size: 20px;
+        padding: 2px 10px;
       }
 
       @include medium-screen {
-        padding: 2px 10px;
+        padding: 3px 10px;
       }
     }
   }
