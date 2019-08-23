@@ -1,0 +1,1 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");.header{display:flex;justify-content:space-between;align-items:center}.header img{width:15%}@media (max-width: 640px){.header img{width:calc(25% - 10px)}}.header p{font-family:'Roboto', sans-serif;font-size:18px;font-weight:bold;color:rgba(245,245,245,0.781)}
