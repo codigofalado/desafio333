@@ -1,4 +1,5 @@
 $red: rgb(110, 8, 8);
+$gray-transparent: rgba(29, 29, 29, 0.897);
 
 div.flex-container {
     display: flex;
@@ -16,7 +17,7 @@ div.flex-container {
     }
     
     .new-hour {
-        background-color: black;
+        background-color: $gray-transparent;
         color: white;
         font-weight: bold;
         padding: 5px;

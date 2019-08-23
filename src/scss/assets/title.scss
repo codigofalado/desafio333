@@ -1,12 +1,12 @@
-$black-transparent: rgba(0, 0, 0, 0.774);
+$gray-transparent: rgba(15, 15, 15, 0.774);
 $font-color: rgb(199, 199, 199);
 
  .title {
     max-width: 1110px;
-    padding: 15px;
+    padding: 25px;
     font-size: 25px;
     font-weight: 600;
-    background-color: $black-transparent;
+    background-color: $gray-transparent;
     color:  $font-color;
 }
 
@@ -14,6 +14,7 @@ $font-color: rgb(199, 199, 199);
     div.title {
       max-width: 540px;
       font-size: 15px;
+      padding: 15px;
     }
   }
 

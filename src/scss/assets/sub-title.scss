@@ -1,8 +1,9 @@
-$gray-transparent: rgba(185, 184, 184, 0.856);
+$gray-transparent: rgba(173, 171, 171, 0.74);
 
 div.sub-title {
     padding: 10px;
-    color: whitesmoke;
+    border-radius: 2px;
+    color: rgb(94, 92, 92);
     width: 250px;
     background-color: $gray-transparent;
 }
