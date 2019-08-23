@@ -4,4 +4,4 @@
 
 **Discord:** Tiago Corrêa#2807
 
-**Minha resolução do desafio:** [www.desafio333.com](https://quirky-mcnulty-39cbe5.netlify.com/)
+**Minha resolução do desafio:** [www.desafio333.com](https://desafio333v6.netlify.com)
