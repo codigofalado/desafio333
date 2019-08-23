@@ -4,7 +4,7 @@ let $relogio = document.querySelector('.new-hour')
     let data = new Date()
     let h = formata(data.getHours())
     let m = formata(data.getMinutes())
-
+    
      return h + ":" + m
 }
 
