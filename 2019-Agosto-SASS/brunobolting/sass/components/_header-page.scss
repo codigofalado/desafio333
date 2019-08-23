@@ -1,0 +1,80 @@
+.header-page {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+  > .hashtag {
+    color: rgba(66, 61, 61, 0.85);
+    font-size: 18pt;
+  }
+
+  > .urgent {
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 18pt;
+    background-color: rgb(247, 2, 2);
+    color: #fff;
+  }
+
+  > .logo {
+    width: 150px;
+  }
+}
+
+.header-page.two {
+  position: fixed;
+  > .hashtag {
+    color: rgba(223, 223, 223, 0.85);
+    font-size: 18pt;
+  }
+}
+
+@media (max-width: 1015px) {
+  .header-page {
+    > .hashtag {
+      font-size: 16pt;
+    }
+
+    > .urgent {
+      font-size: 16pt;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .header-page {
+    > .hashtag {
+      font-size: 14pt;
+    }
+
+    > .urgent {
+      font-size: 14pt;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header-page {
+    > .hashtag {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 4px;
+      border-radius: 5px;
+      font-size: 12pt;
+    }
+
+    > .urgent {
+      font-size: 12pt;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .header-page {
+    > .logo {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.controll-page {
+  margin-top: -35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  height: 50px;
+  background-color: #292929;
+  border: 2px solid #191919;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+  > .ch {
+    border: 0;
+    border-radius: 3px;
+    border-right: 3px solid #888;
+    border-bottom: 3px solid #888;
+    color: #fff;
+    padding: 5px;
+    background-color: #191919;
+    cursor: pointer;
+  }
+
+  .ch:active {
+    border: 0;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+  }
+}
+
+@media (max-width: 860px) {
+  .controll-page {
+    margin-top: 0px;
+  }
+}

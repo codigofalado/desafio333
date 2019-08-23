@@ -1,0 +1,172 @@
+.footer-page {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  > .sub-title {
+    background-color: #ccc;
+    display: inline-block;
+    padding: 5px;
+    padding-left: 20px;
+    font-size: 16pt;
+  }
+
+  > .title {
+    font-size: 30pt;
+    color: #ddd;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+  }
+
+  > .informations {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    background-color: rgb(116, 0, 0);
+    // height: 50px;
+    color: #fff;
+    font-size: 17pt;
+
+    > .avatar {
+      width: 35px;
+      padding: 5px;
+    }
+
+    > .marquee {
+      align-self: center;
+      // height: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      border-left: 1px solid #fff;
+      padding: 8px;
+
+      > .text {
+        padding-left: 100%;
+        display: inline-block;
+        animation: marquee 35s linear infinite;
+      }
+    }
+
+    > .clock {
+      align-self: center;
+      background-color: #191919;
+      color: #fff;
+      padding: 8px;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1430px) {
+  .footer-page {
+    > .title {
+      font-size: 25pt;
+    }
+  }
+}
+
+@media (max-width: 1225px) {
+  .footer-page {
+    > .sub-title {
+      font-size: 14pt;
+    }
+    > .title {
+      font-size: 20pt;
+    }
+
+    > .informations {
+      font-size: 13pt;
+
+      > .marquee,
+      .clock {
+        padding: 9px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1015px) {
+  .footer-page {
+    > .sub-title {
+      font-size: 12pt;
+    }
+    > .title {
+      font-size: 16pt;
+    }
+
+    > .informations {
+      font-size: 11pt;
+
+      > .avatar {
+        width: 30px;
+      }
+
+      > .marquee,
+      .clock {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-page {
+    > .sub-title {
+      font-size: 10pt;
+    }
+    > .title {
+      font-size: 13pt;
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+
+    > .informations {
+      font-size: 10pt;
+
+      > .avatar {
+        width: 25px;
+      }
+
+      > .marquee,
+      .clock {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .footer-page {
+    > .sub-title {
+      font-size: 10pt;
+    }
+    > .title {
+      font-size: 11pt;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-right: 9px;
+    }
+
+    > .informations {
+      font-size: 10pt;
+
+      > .avatar {
+        width: 23px;
+      }
+
+      > .marquee,
+      .clock {
+        padding: 8px;
+      }
+    }
+  }
+}
