@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100vh; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem; }
+
+.wrapper {
+  background-image: url("https://www.spacex.com/sites/spacex/files/styles/featured_news_widget_image/public/field/image/crs-18_ppf_dsc_9935_website.jpg?itok=kzDr-az5");
+  height: 100vh;
+  background-size: cover;
+  width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+.tv-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 24px; }
+  .tv-container .tv-header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 24px;
+    padding: 12px 0; }
+    .tv-container .tv-header .hashtag {
+      color: #ffffff;
+      font-size: 22px; }
+    .tv-container .tv-header .logo img {
+      width: 184px; }
+  .tv-container .tv-text {
+    text-transform: uppercase;
+    bottom: 24px;
+    position: absolute;
+    width: 100%; }
+    .tv-container .tv-text .subtitle {
+      background: #ffffff;
+      color: black;
+      width: 200px;
+      padding: 8px 12px; }
+    .tv-container .tv-text .title {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 18px 12px;
+      color: #fff;
+      font-weight: 100; }
+    .tv-container .tv-text .footer {
+      background: red;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 17px; }
+      .tv-container .tv-text .footer-logo {
+        background: red; }
+        .tv-container .tv-text .footer-logo img {
+          width: 50px;
+          height: 100%; }
+      .tv-container .tv-text .footer-slide {
+        background: red;
+        padding: 12px;
+        width: 100%; }
+      .tv-container .tv-text .footer-clock {
+        background: black;
+        color: #fFF;
+        padding: 12px;
+        height: 100%; }
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: block; }
+
+.marquee p {
+  display: inline-block;
+  text-indent: 0;
+  overflow: hidden;
+  transition: 30s;
+  animation: effmarquee 30s linear infinite; }
+
+@keyframes effmarquee {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-100%, 0); } }
+
+/*# sourceMappingURL=style.css.map */
