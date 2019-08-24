@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Desafio #333 👨‍💻</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="main-wrap">
+      <!-- Backgrounds Wrap-->
+      <div class="manage-content__background-wrap">
+        <div class="manage-content__background-video hidden">
+          <video
+            src="assets/background-default.mp4"
+            loop
+            autoplay
+            muted
+          ></video>
+        </div>
+        <div class="manage-content__background-image">
+          <img src="assets/background-default.jpg" alt="background image" />
+        </div>
+      </div>
+      <!-- End Background Wrap -->
+
+      <div class="ui-container g1__interface">
+        <!-- Left hash -->
+        <div class="g1__left-hash">#Desafio333</div>
+        <!-- Bottom Block -->
+        <div class="g1__bottom-block">
+          <div class="g1__subtitle">Outro Rato faz Sucesso</div>
+          <div class="g1__title">
+            Um grande e gordo rato Amarelo dança e faz sucesso em Hollywood
+          </div>
+          <div class="g1__footer">
+            <div class="g1__icon">
+              <img src="assets/g1-icon.svg" alt="g1-icon" />
+            </div>
+            <div class="g1__marquee">
+              <div class="g1__marquee-inner">
+                Depois de Ratatouille outro rato se destaca em Hollywood
+                mostrando que ratos estão em alta no mercado.
+                &nbsp;&#9632;&nbsp; Ratos Brasileiros argumentam que tem pouca
+                visibilidade no mercado local. &nbsp;&#9632;&nbsp; Apresentador
+                Ratinho mostra sua Indignação.
+              </div>
+            </div>
+            <div class="g1__time">13:40</div>
+          </div>
+        </div>
+        <!-- End Bottom Block -->
+        <!-- Top Right-->
+        <div class="g1__top-right">
+          <!-- g1 Urgent -->
+          <div class="g1__urgent">
+            <img
+              class="g1__globo-icon"
+              src="assets/globo-icon.svg"
+              alt="globo-icon"
+            />
+
+            <span class="g1__text">urgente</span>
+
+            <img
+              class="g1__news-icon"
+              src="assets/news-icon.svg"
+              alt="globo-news-icon"
+            />
+          </div>
+          <!-- End g1 Urgent -->
+          <!-- g1 globo news icon -->
+          <div class="g1__globonews-icon hidden">
+            <img src="assets/globonews-icon.svg" alt="globo-news-icon" />
+          </div>
+          <!-- end g1 globo news icon-->
+          <div class="g1__live-block">
+            <div class="g1__header">
+              <span>ao vivo</span>
+            </div>
+            <div class="g1__location">
+              <span>Los Angeles,<br />Califórnia.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Top Right-->
+      <!-- Left Menu -->
+      <div class="left-menu__toggle-show-button"></div>
+      <div class="left-menu-toggle-button">
+        <button class="left-menu__toggle">
+          <img src="assets/settings.svg" alt="settings" />
+          editar
+        </button>
+      </div>
+      <div class="left-menu-wrap">
+        <div class="left-menu">
+          <!-- Left Menu Header -->
+          <div class="left-menu__header">
+            <h3>Desafio #333 👨‍💻</h3>
+          </div>
+          <div class="left-menu__tabs">
+            <a href="#" data-key="info">Info</a>
+            <a href="#" data-key="background">Fundo</a>
+            <a href="#" data-key="content">Conteúdo</a>
+            <a href="#" data-key="debug">Debug</a>
+          </div>
+          <!-- Left Menu Content -->
+          <div class="left-menu__content">
+            <div class="left-menu__tab tab_info" data-key="info">
+              <h3>Informações</h3>
+              <p class="center">
+                <img src="assets/macaco-zen.png" alt="codigo falado" />
+              </p>
+              <p>
+                Nesse desafio proposto pelo Código Falado, toda parte de estilo
+                visual foi criada utilizando a tecnologia SASS, para deixar o
+                código mais <i>"puro"</i> possível sem utilizar nenhuma outra
+                biblioteca ou framework, para dar interatividade foi usado
+                apenas Javascript Vanilla*.
+              </p>
+
+              <p>Toque na tela para mostrar/esconder o botão de edição.</p>
+
+              <p>
+                Através desse menu você pode mudar o fundo, para uma imagem,
+                seja um default, do seu próprio computador/celular ou um link**.
+                Ou mudar para um vídeo, seja um default, do seu computador ou
+                utilizando sua câmera através dos recursos
+                <i>"MediaDevices"</i> e
+                <i>"getUserMedia"</i>
+                do próprio Javascript, no celular é possível escolher se deseja
+                utilizar a câmera frontal ou traseira.
+              </p>
+              <p>
+                Na parte de Conteúdo você pode modificar o texto de todas as
+                partes da interface, e mudar de <i>"urgente"</i> para
+                <i>"normal"</i>. Já em debug você tem acesso a algumas
+                modificações visuais apenas para ver melhor algumas animações da
+                aplicação.
+              </p>
+              <p>Qualquer duvida ou sugestão estamos a disposição 👍👊</p>
+              <p class="ps">
+                * Uma ressalva, como algumas tecnologias do atual Javascript não
+                são totalmente compartilhadas por todos os navegadores, a
+                biblioteca Babel foi adicionada ao projeto para compilar uma
+                versão de Javascript mais compatível com todos.
+              </p>
+              <p class="ps">
+                ** Lembrando que dependendo do Link a imagem pode não carregar
+                por problemas de CORS.
+              </p>
+            </div>
+            <!-- Tab Background -->
+            <div class="left-menu__tab" data-key="background">
+              <h4>Editar Background</h4>
+              <!-- Background Selection -->
+              <div class="manage-content__background-selection">
+                <p>
+                  <label>Selecione o tipo do Background</label>
+                  <select class="manage-content__background-type">
+                    <option value="image-default">Imagem Padrão</option>
+                    <option value="image-user">Minha Imagem</option>
+                    <option value="image-url">Link de Imagem</option>
+                    <option value="video-default" selected>Video Padrão</option>
+                    <option value="video-user">Meu Video</option>
+                    <option value="video-cam">Usar Camera</option>
+                  </select>
+                </p>
+                <p class="type" data-key="image-default">
+                  <button class="manage-content__bg-restore-image">
+                    Utilizar Imagem Padrão
+                  </button>
+                </p>
+                <p class="type" data-key="image-user">
+                  <button class="manage-content__bg-image-user">
+                    Selecionar Imagem
+                  </button>
+                  <input
+                    type="file"
+                    class="manage-content__bg-file-image"
+                    accept="image/*"
+                    data-type="image"
+                  />
+                </p>
+                <p class="type" data-key="image-url">
+                  <label>Selecionar imagem do link</label>
+                  <input class="manage-content__bg-image-url" type="text" />
+                  <button class="manage-content__bg-use-image-url">
+                    Carregar Link
+                  </button>
+                </p>
+                <p class="type" data-key="video-default">
+                  Utilizar Video Padrão<br />
+                  <button class="manage-content__bg-restore-video">
+                    Retornar Padrão
+                  </button>
+                </p>
+                <p class="type" data-key="video-user">
+                  <button class="manage-content__bg-video-user">
+                    Selecionar video
+                  </button>
+                  <input
+                    type="file"
+                    class="manage-content__bg-file-video"
+                    accept="video/mp4,video/x-m4v,video/*"
+                    data-type="video"
+                  />
+                </p>
+                <p class="type" data-key="video-cam">
+                  <label>Utilizar Device Camera</label>
+                  <button class="manage-content__bg-video-cam-face">
+                    Frontal
+                  </button>
+                  <button class="manage-content__bg-video-cam-env">
+                    Traseira
+                  </button>
+                  <br />
+                  <button class="manage-content__bg-video-cam-stop">
+                    Parar Captura
+                  </button>
+                  <span class="manage-content__bg-error-cam hidden"></span>
+                </p>
+                <!-- Background Selection Preview-->
+                <div class="manage-content__bg-image-preview-wrap">
+                  <img
+                    class="manage-content__bg-image-preview"
+                    src="assets/background-default.jpg"
+                  />
+                  <label>Imagem Atual</label>
+                </div>
+                <!-- End Background Selection Preview-->
+                <!-- Video Controls -->
+                <div class="manage-content__bg-video-controls">
+                  <label>Controle Video</label>
+                  <p>
+                    <button class="manage-content__bg-video-pause">
+                      Pause
+                    </button>
+                    <button class="manage-content__bg-video-play">
+                      Play
+                    </button>
+                  </p>
+                </div>
+                <!-- End Background Selection Preview-->
+              </div>
+              <!-- End Background Selection -->
+            </div>
+            <div class="left-menu__tab" data-key="content">
+              <h4>Editar Conteudo</h4>
+              <div class="manage-content__inputs">
+                <p class="input-urgent">
+                  <label>Urgente</label>
+                  <input type="checkbox" checked />
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="left-hash" />
+                  <label>Hashtag</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="subtitle" />
+                  <label>Sub-título</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="title" />
+                  <label>Título</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="marquee-inner" />
+                  <label>Texto Rotativo (<i>Marquee</i>)</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="location_1" />
+                  <label>Localização</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="location_2" />
+                  <label>Localização segunda linha</label>
+                </p>
+                <p>
+                  <button class="manage-content__button-update">
+                    Update Interface
+                  </button>
+                </p>
+              </div>
+            </div>
+            <div class="left-menu__tab" data-key="debug">
+              <h4>Debug Visual</h4>
+              <ul class="manage-content__debug-items">
+                <li>
+                  <label>Mostrar/Esconder G1 Interface</label>
+                  <button class="manage-content__debug-interface">
+                    Interface
+                  </button>
+                </li>
+                <li>
+                  <label>Mostra/Esconde Live Bloco</label>
+                  <button class="manage-content__debug-live-block">
+                    Toggle Live Item
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Left Menu Footer -->
+          <div class="left-menu__footer">
+            <button class="left-menu__cancel">Fechar Menu</button>
+          </div>
+        </div>
+      </div>
+      <!-- End Left Menu -->
+    </div>
+    <!-- End Main Wrap -->
+
+    <!-- Scripts -->
+    <script src="js/left-menu.js"></script>
+    <script src="js/manage-content.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+@import 'helpers/variables', 'helpers/placeholders', 'helpers/mixins',
+  'helpers/basic', 'helpers/media', 'helpers/animations', 'components/left-menu',
+  'components/g1-interface';
+
+.manage-content {
+  $prefix: &;
+
+  &__background-wrap {
+    @extend %full-screen-absolute;
+
+    background-color: #333;
+
+    & > * {
+      @extend %full-screen-absolute;
+    }
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: ani-fade-in 0.3s ease-in-out;
+    }
+  }
+  &__background-selection {
+    input[type='file'] {
+      visibility: hidden;
+    }
+  }
+  &__bg-image-preview-wrap {
+    text-align: center;
+    img {
+      max-width: 90%;
+      margin: 10px auto;
+    }
+  }
+
+  &__background-selection {
+    text-align: center;
+    label {
+      display: block;
+      text-align: left;
+    }
+    button {
+      margin-top: 10px;
+      padding: 0.5em 1.2em;
+    }
+    select {
+      width: 90%;
+      margin: 1.5em auto;
+      padding: 5px;
+    }
+    input[type='text'] {
+      width: 100%;
+      padding: 5px;
+    }
+    #{$prefix} {
+      &__bg-image-preview-wrap {
+        margin-top: 2em;
+        border: 1px dashed lightgrey;
+        padding: 0.4em;
+        font-size: 0.8em;
+        label {
+          text-align: center;
+          color: #aaa;
+        }
+      }
+      &__bg-error-cam {
+        display: block;
+        margin: 20px;
+        border: 1px solid lightcoral;
+        color: red;
+        font-size: 0.9em;
+        line-height: 1.3em;
+      }
+    }
+  }
+}

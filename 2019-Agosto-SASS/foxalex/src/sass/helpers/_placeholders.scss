@@ -1,0 +1,26 @@
+%full-screen {
+  width: 100%;
+  height: 100%;
+}
+%full-screen-absolute {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%pseudo-visible {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  content: ' ';
+}

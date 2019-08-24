@@ -1,0 +1,28 @@
+{
+  "name": "desafio333",
+  "version": "1.0.0",
+  "description": "Desafio proposto por Codigo Falado",
+  "main": "index.js",
+  "scripts": {
+    "server": "gulp",
+    "build": "gulp build",
+    "sass": "gulp sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alex Campos Fox",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
