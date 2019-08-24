@@ -7,25 +7,26 @@
     <title>Desafio 01</title>
     <!-- Styles -->
     <link href="assets/css/desafio-01.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <body data-spy="scroll" data-target=".sidebar" data-offset="200">
+  <body>
     <main class="n-content">
       <header class="n-header">
         <div class="n-header__hastag">
-            <span>#GnewsEmPonto</span>
+            <span data-aos="fade-down">#GnewsEmPonto</span>
         </div>
         <h1 class="n-header__logo">
           <a href="#" title="">
-            <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/logo.png" alt="">
+            <img data-aos="fade-left" src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/logo.png" alt="">
           </a>
         </h1>
       </header>
 
-      <div class="n-noticia">
-        <!-- <img id="23" src="assets\img\noti-01.jpg" alt="" /> -->
+      <div data-aos="zoom-in-down" class="n-noticia">
+          <img src="assets/img/noti-01.jpg" id="img-noticia" alt="" />
       </div>
 
-      <footer class="n-footer">
+      <footer data-aos="zoom-in" class="n-footer">
           <div class="n-footer__box-top">
             <h2>Lava jato no rio</h2>
           </div>
@@ -36,19 +37,14 @@
             <a href="#" title="">
               <img src="https://raw.githubusercontent.com/naldowebdeveloper/desafio333/master/2019-Agosto-SASS/assets/avatar.png" alt="">
             </a>
-            <p>nível no globonews play - baixe o seu aplicativo . para envio de sugestões críticas</p>
-            <span>08:16</span>
+            <p><marquee>nível no globonews play - baixe o seu aplicativo . para envio de sugestões críticas</marquee></p>
+            <span id="relogio"></span>
           </div>
       </footer>
     </main>
-
-    <div id="bg">
-      <div style="background-image: url(https://ednaldobrito.com.br/wp-content/themes/ednaldobrito/assets/img/bg01.jpg);background-position: center center;"></div>
-      <div class="visible" style="https://ednaldobrito.com.br/wp-content/themes/ednaldobrito/assets/img/bg02.jpg);background-position: center center;"></div>
-      <div style="background-image: url(https://ednaldobrito.com.br/wp-content/themes/ednaldobrito/assets/img/bg03.jpg);background-position: center center;" class="visible top"></div>
-    </div>
   </body>
 
   <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/desafio-01.js"></script>
 </html>

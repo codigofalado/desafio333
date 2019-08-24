@@ -1,9 +1,17 @@
 /* ==========================================================================
 Noticia
 ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700&display=swap');
+
 body{
     font-size: 14px;
     background-color: #000;
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    @media (max-width: 500px){
+        font-size: 10px;
+    }
 }
 
 .n-header{
@@ -27,12 +35,18 @@ body{
 
 .n-content{
     height: 100vh;
+    @media (max-width: 500px){
+        .n-noticia{
+            img{
+                object-fit: cover;
+                object-position: 50% 0;
+                width: 300vh;
+                height: 100vh;
+            }
+        }
+    }
 }
 
-.n-noticia{
-    position: absolute;
-    z-index: 1;
-}
 
 .n-footer{
     width: 100%;
@@ -41,9 +55,11 @@ body{
     bottom: 0;
     border-right: 20px solid transparent;
     border-left: 20px solid transparent;
+    text-transform: uppercase;
+    padding-bottom: 20px;
     &__box-top{
-        width: 10%;
-        height: 20px;
+        width: 150px;
+        padding: 10px;
         background-color: #e6e6e6;
         color: #000;
     }
@@ -57,164 +73,34 @@ body{
         padding: 2%;
     }
     &__box-bottom{
-        height: 30px;
+        height: 40px;
         color: #fff;
         display: flex;
         justify-content: space-between;
         p{
             width: 94%;
             background-color: #eb007d;
+            marquee{
+                padding: 10px;
+            }
         }
         span{
             background-color: #9f0054;
             color: #fff;
             box-sizing: content-box;
-            width: 3%;
+            padding: 10px;
+            text-align: center;
         }
         a{
             width: 3%;
             background-color: #fff;
+            display: flex;
+            align-items: center;
         }
     }
 }
 
-#bg {
-    -moz-transition: opacity 2s ease-in-out;
-    -webkit-transition: opacity 2s ease-in-out;
-    -ms-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
-    height: 100%;
-    left: 0;
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-}
 
-
-    #bg div {
-        -moz-transition: opacity 3s ease, visibility 3s;
-        -webkit-transition: opacity 3s ease, visibility 3s;
-        -ms-transition: opacity 3s ease, visibility 3s;
-        transition: opacity 3s ease, visibility 3s;
-        background-size: cover;
-        height: 100%;
-        left: 0;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        visibility: hidden;
-        width: 150%;
-    }
-
-        #bg div.visible {
-            -moz-animation: bg 45s linear infinite;
-            -webkit-animation: bg 45s linear infinite;
-            -ms-animation: bg 45s linear infinite;
-            animation: bg 45s linear infinite;
-            opacity: 0.8;
-            visibility: visible;
-            z-index: 1;
-        }
-
-            #bg div.visible.top {
-                z-index: 2;
-            }
-
-            @media screen and (max-width: 1280px) {
-
-                #bg div.visible {
-                    -moz-animation: bg 29.25s linear infinite;
-                    -webkit-animation: bg 29.25s linear infinite;
-                    -ms-animation: bg 29.25s linear infinite;
-                    animation: bg 29.25s linear infinite;
-                }
-
-            }
-
-            @media screen and (max-width: 736px) {
-
-                #bg div.visible {
-                    -moz-animation: bg 18s linear infinite;
-                    -webkit-animation: bg 18s linear infinite;
-                    -ms-animation: bg 18s linear infinite;
-                    animation: bg 18s linear infinite;
-                }
-
-            }
-
-        #bg div:only-child {
-            -moz-animation-direction: alternate !important;
-            -webkit-animation-direction: alternate !important;
-            -ms-animation-direction: alternate !important;
-            animation-direction: alternate !important;
-        }
-
-    body.is-loading #bg {
-        opacity: 0;
-    }
-
-@-moz-keyframes bg {
-    0% {
-        -moz-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -moz-transform: translateX(-25%);
-        -webkit-transform: translateX(-25%);
-        -ms-transform: translateX(-25%);
-        transform: translateX(-25%);
-    }
-}
-
-@-webkit-keyframes bg {
-    0% {
-        -moz-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -moz-transform: translateX(-25%);
-        -webkit-transform: translateX(-25%);
-        -ms-transform: translateX(-25%);
-        transform: translateX(-25%);
-    }
-}
-
-@-ms-keyframes bg {
-    0% {
-        -moz-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -moz-transform: translateX(-25%);
-        -webkit-transform: translateX(-25%);
-        -ms-transform: translateX(-25%);
-        transform: translateX(-25%);
-    }
-}
-
-@keyframes bg {
-    0% {
-        -moz-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -moz-transform: translateX(-25%);
-        -webkit-transform: translateX(-25%);
-        -ms-transform: translateX(-25%);
-        transform: translateX(-25%);
-    }
+body[data-aos-duration="400"] [data-aos]{
+    transition-duration: 2s!important;
 }
