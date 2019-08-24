@@ -126,6 +126,23 @@ $animation-menu-open-name: 'opened';
     &.tab_info {
       img {
         max-width: 60%;
+        @include animation('monkey', '5s ease-in-out infinite') {
+          0% {
+            transform: translateY(0px);
+          }
+          25% {
+            transform: translateY(10px);
+          }
+          50% {
+            transform: translateY(5px);
+          }
+          75% {
+            transform: translateY(10px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
       }
       p {
         text-align: justify;
