@@ -1,0 +1,283 @@
+@import 'breakpoint-sass'; // or 'breakpoint-sass' when using npm
+@import 'breakpoint-slicer';
+
+/** Variaveis */
+$slicer-breakpoints: 0 400px 600px 800px 1050px;
+$red:#A80000;
+$white: #fff;
+$black: #000;
+$grey:#97b7ce8f;
+$bg-color: #bdc3c7;
+
+$padding-25:25px;
+$padding-15:15px;
+
+$font-family : Roboto, sans-serif;
+$font-size : 14px;
+$font-weight-300: 300;
+$font-weight: 700;
+
+$span-color: #5a6875;
+
+/** FIM Variaveis */
+
+/** RESET */
+
+body{
+    margin: 0;
+    font-family: $font-family;
+
+}
+
+*{
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/** FIM RESET */
+
+.container{
+    padding: $padding-25;
+    
+    background: $bg-color;
+    //background: url('./../images/img-bg.png') no-repeat center, linear-gradient(to left, #bdc3c7, #2c3e50);
+    background-size: cover;
+    box-sizing: border-box;
+    color: $white;
+    height: 100vh;
+    @include to(4){
+        padding: $padding-15;
+    }
+
+    .crossfade {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        left: -25px;
+        top: 0;
+        transform: translate(25px);
+
+        > figure {
+            animation: imageAnimation 30s linear infinite 0s;
+            backface-visibility: hidden;
+            background-size: cover;
+            background-position: center center;
+            color: transparent;
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+            &:nth-child(1) { background-image: url('https://picsum.photos/1925/950?image=1001');}
+
+            &:nth-child(2) {
+                animation-delay: 6s;
+                background-image: url('https://picsum.photos/1925/950?image=1002');
+            }
+
+            &:nth-child(3) {
+                animation-delay: 12s;
+                background-image: url('https://picsum.photos/1925/950?image=1003');
+            }
+
+            &:nth-child(4) {
+                animation-delay: 18s;
+                background-image: url('https://picsum.photos/1925/950?image=1004');
+            }
+
+            &:nth-child(5) {
+                animation-delay: 24s;
+                background-image: url('https://picsum.photos/1925/950?image=1005');
+            }
+        }
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    .hashtag{
+        color: $grey;
+        font-weight: $font-weight;
+        font-size: 1.2em;
+        text-shadow: 2px 2px 1px rgba($grey, 1);
+        z-index: 2;
+        @include to(4){
+            font-size: 60%;
+        }
+    }
+    .logo {
+        width: 260px;
+        z-index: 2;
+        @include to(4){
+            width: 30%;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: $padding-25;
+    right: 0;
+    left: 0;
+    @include to(4){
+        padding: $padding-15;
+    }
+    .title{
+        background:rgba($black, 0.69);
+        line-height: 90px;
+        padding-left: 50px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: normal;
+        @include to(4){
+            font-size: 50%;
+            line-height: 30px;
+            padding-left: 20px;
+        }
+    }
+    .subtitle{
+        width: 30%;
+        line-height: 40px;
+        position: relative;
+        h2{
+            background:$grey;
+            color: $black;
+            padding-left: 50px;
+            text-transform: uppercase;
+            position: absolute;
+            padding-right: 20px;
+            bottom: 0;
+            @include to(4){
+                font-size: 50%;
+                padding-left: 20px;
+            }
+        }
+        @include to(4){
+            width: 100%;
+            line-height: 20px;
+        }
+    }
+    .wrapper{
+        display: flex;
+        margin-top: 0;
+        .logofooter{
+            background-color: $red ;
+        }
+
+        .marquee {
+            width: 100%;
+            line-height: 40px;
+            background-color: $red;
+            color: $white;
+            white-space: nowrap;
+            overflow: hidden;
+            @include to(4){
+               vertical-align: center;
+                line-height: 30px;
+            }
+            
+            p {
+                display: inline-block;
+                animation: marquee 80s linear infinite;
+                padding-left: 100%;
+                text-transform: uppercase;
+                transform: translateX(-100%);
+                font-size: 1.2em;
+                @include to(4){
+                    font-size: 60%;
+                }
+                span {
+
+                    &::after{
+                        content: '';
+                        background-color: $white;
+                        width: 10px;
+                        height: 10px;
+                        margin: auto 15px;
+                        display:inline-block;
+                        @include to(4){
+                            width: 4px;
+                            height: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .clock{
+            background:rgba($black, 0.79);
+            line-height: 40px;
+            font-size: 1.2em;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 130px;
+            text-align: center;
+            font-weight: 500;
+            @include to(4){
+                font-size: 60%;
+                line-height: 30px;
+                width: 80px;
+                vertical-align: center;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% {transform: translate(-100%, 0);}
+
+}
+
+@keyframes imageAnimation {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform:scale(1);
+
+    }
+    8% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0;
+        transform:scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform:scale(1.1);
+    }
+}
