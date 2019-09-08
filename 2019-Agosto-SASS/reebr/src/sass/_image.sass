@@ -1,0 +1,61 @@
+.device .screen .image
+  @include apply-flex
+  @include size(95%, 90%)
+  background: #000
+  border-radius: 84% / 5%
+  position: relative
+
+  &::after
+    background: inherit
+    border-radius: 6% / 6%
+    bottom: 2%
+    content: ''
+    left: -2.5%
+    position: absolute
+    right: -2.5%
+    top: 2%
+
+  main
+    position: relative
+    z-index: 999
+    @include tablet
+      width: 100%
+
+    video
+      width: 100%
+      @include no-selection
+      @include tablet
+          max-height: 70vh
+
+    > .logo,
+    .hashtag
+      @include no-selection
+      height: 40px
+      position: absolute
+      top: 3.5%
+
+      @include tablet
+        height: 80px
+
+    > .logo
+      right: 3.5%
+      @include tablet
+        right: 6%
+      @include desktop
+        right: 20%
+      img
+        height: 100%
+
+    .hashtag
+      color: rgba(#fff, 80%)
+      font-size: .9em
+      left: 3.5%
+      line-height: 40px
+      text-shadow: 2px 2px 6px rgba(#000, 80%)
+      @include tablet
+        left: 6%
+        line-height: 80px
+        font-size: 1.2em
+      @include desktop
+        left: 20%
+      

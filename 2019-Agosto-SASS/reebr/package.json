@@ -1,0 +1,21 @@
+{
+  "name": "desafio-333-agosto",
+  "version": "1.0.0",
+  "license": "MIT",
+
+  "author": {
+    "name": "Renan Gomes",
+    "url": "https://github.com/reebr"
+  },
+
+  "scripts": {
+    "dev": "parcel src/index.pug --no-cache",
+    "build": "parcel build src/index.pug --no-cache --detailed-report --no-source-maps --no-content-hash --experimental-scope-hoisting"
+  },
+  
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.4",
+    "sass": "^1.22.10"
+  }
+}

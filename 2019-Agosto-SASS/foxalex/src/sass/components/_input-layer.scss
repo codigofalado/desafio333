@@ -1,0 +1,53 @@
+$input-layer-label-top: 17px;
+$input-layer-input-margin: 6px;
+$input-layer-font-size: 20px;
+$input-layer-font-size-min: 12px;
+
+.input-layer {
+  position: relative;
+  padding-top: $input-layer-label-top;
+  margin: 10px auto;
+  input {
+    margin-top: $input-layer-input-margin;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    min-width: 180px;
+    width: 90%;
+    font-size: $input-layer-font-size;
+    transition: all 0.3s ease-out;
+    &:focus {
+      border-bottom: 2px solid $primary-color;
+      & + label {
+        font-size: $input-layer-font-size-min;
+        margin-top: 0;
+        color: gray;
+      }
+    }
+    &:not(:placeholder-shown) + label {
+      font-size: $input-layer-font-size-min;
+      margin-top: 0;
+      color: gray;
+    }
+    &::placeholder {
+      color: transparent;
+    }
+  }
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: $input-layer-label-top;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/** Hack Fix to Edge... For a change...*/
+@supports (-ms-ime-align: auto) {
+  .input-layer {
+    label {
+      margin-top: -4px;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Desafio #333</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/canvas.css" />
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="background-wrap">
+        <div class="main-video-wrap">
+          <video id="main-video" autoplay></video>
+        </div>
+        <div class="main-canvas-wrap">
+          <canvas id="main-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Left Menu -->
+      <div class="left-menu__toggle-show-button"></div>
+      <div class="left-menu-toggle-button">
+        <button class="left-menu__toggle">
+          <img src="assets/settings.svg" alt="settings" />
+          editar
+        </button>
+      </div>
+      <div class="canvas-content__record-wrap">
+        <button class="canvas-content__record">
+          <span class="ball"></span>
+          <span class="text">gravar</span>
+        </button>
+      </div>
+      <div class="left-menu-wrap">
+        <div class="left-menu">
+          <!-- Left Menu Header -->
+          <div class="left-menu__header">
+            <h3>Desafio #333 - Bonus</h3>
+          </div>
+          <div class="left-menu__tabs">
+            <a href="#" data-key="info">Info</a>
+            <a href="#" data-key="cam">Camera</a>
+            <a href="#" data-key="content">Conteudo</a>
+          </div>
+          <!-- Left Menu Content -->
+          <div class="left-menu__content canvas-content__menu-wrap">
+            <div class="left-menu__tab tab_info" data-key="info">
+              <h3>Informações</h3>
+              <p class="center">
+                <img src="assets/macaco-zen.png" alt="codigo falado" />
+              </p>
+              <p>
+                Essa versão segue o desafio do Código Falado, visualizando o
+                resultado do desafio principalmente utilizando a câmera do
+                device, pensei numa forma de gravar o resultado visual da tela e
+                salvar em vídeo. Contudo não é possível gravar conteúdo ou
+                animações visuais do CSS/SASS, apenas se estiverem em um Canvas.
+              </p>
+              <p>
+                Sendo assim eu remontei toda interface do desafio para dentro de
+                um Canvas junto com a Stream do vídeo para montar um canvas com
+                todo esse conteúdo, que, esse sim, pode ser salvo utilizando
+                algumas funções do Javascript, que podem ser vistas no arquivo
+                “recorder.js”.
+              </p>
+              <p>Alguns avisos;</p>
+              <p>
+                - Não são todos os navegadores/aparelhos que tem as funções
+                requeridas para poder gravar.
+              </p>
+              <p>
+                - O formato de gravação/arquivo está setado para pegar como
+                default <i>"video/webm;codecs=h264"</i>, que foi o que teve
+                melhor performance nos testes quer realizei, uma implementação
+                futura seria interessante colocar a opção de o usuário escolher
+                qual formato disponível ele gostaria de utilizar. (Mude no
+                arquivo recorder.js para outros formatos e veja qual melhor
+                funciona para você).
+              </p>
+              <p>
+                - Os testes foram realizados em um celular Motorola G com Chrome
+                atualizado.
+              </p>
+              <p>
+                - Importante dizer que, você tem que permitir que o navegador
+                tenha acesso a câmera para que ela seja utilizada pelo
+                aplicativo.
+              </p>
+              <p>Qualquer duvida ou sugestão estamos a disposição 👍👊</p>
+            </div>
+            <!-- Tab Background -->
+            <div
+              class="left-menu__tab canvas-content__cam-control"
+              data-key="cam"
+            >
+              <h4>Selecionando Camera</h4>
+              <p class="canvas-content__error-cam hidden"></p>
+              <p>
+                <Label>Selecione uma camera</Label>
+                <button class="canvas-content__cam-face">
+                  Frontal
+                </button>
+                <button class="canvas-content__cam-env">
+                  Traseira
+                </button>
+                <br />
+              </p>
+              <p>
+                <label>Opções do Streaming</label>
+                <button class="canvas-content__cam-stop">
+                  Parar Captura
+                </button>
+              </p>
+            </div>
+            <div class="left-menu__tab" data-key="content">
+              <h4>Editar Conteudo</h4>
+              <div class="canvas-content__inputs">
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="hash" />
+                  <label>Hashtag</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="subtitle" />
+                  <label>Sub-título</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="title" />
+                  <label>Título</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="marquee" />
+                  <label>Texto Rotativo (<i>Marquee</i>)</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="location_1" />
+                  <label>Localização</label>
+                </p>
+                <p class="input-layer">
+                  <input type="text" placeholder=" " data-key="location_2" />
+                  <label>Localização segunda linha</label>
+                </p>
+                <p>
+                  <button class="canvas-content__button-update">
+                    Update Interface
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Menu Footer -->
+          <div class="left-menu__footer">
+            <button class="left-menu__cancel">Visualizar</button>
+          </div>
+        </div>
+      </div>
+      <!-- End Left Menu -->
+    </div>
+    <script src="js/recorder.js"></script>
+    <script src="js/canvas-elements.js"></script>
+    <script src="js/left-menu.js"></script>
+    <script src="js/canvas.js"></script>
+  </body>
+</html>
