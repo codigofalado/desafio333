@@ -36,10 +36,17 @@ Você precisa ganhar o voto popular e a sua criatividade é o fator mais importa
 
 ### Já enviei meu Pull Request e gostaria de fazer alterações. Posso ?
 
-Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (24/08/2019) para fazer quantas edições você achar necessário. 
+Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (24/08/2019) para fazer quantas edições você achar necessário.
 
 ###
 
 Veja o [README](../README.md) principal para mais detalhes.
 
 **Caso tenha dúvidas, edite este arquivo e adiciona sua pergunta no FAQ**
+
+## Vencedores
+
+1 - reebr (16)
+2 - foxalex (11)
+3 - cdfortes - (11)
+4 - brunobolting (11)
