@@ -1,5 +1,5 @@
 <h1 align="center">Desafio333</h1>
-<h2 align="center"><a  href="2019-Setembro-Tailwind/README.md">Mês de Agosto</a></h2>
+<h2 align="center"><a  href="2019-Setembro-Tailwind/README.md">Mês de Setembro</a></h2>
 
 O #Desafio333 é um desafio mensal SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
 A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Setembro, a tecnologia abordada será o [Tailwind CSS](https://tailwindcss.com).
