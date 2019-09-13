@@ -1,0 +1,15 @@
+//Aplica flex com alinhamento vertical/horizontal especificado.
+@mixin apply-flex($align: center, $justify: center)
+  align-items: $align
+  display: flex
+  justify-content: $justify
+
+// Desabilita a seleção no elemento.
+@mixin no-selection
+  user-select: none
+  pointer-events: none
+
+// Define o tamanho do elemento.
+@mixin size($height: 100%, $width: 100%)
+  height: $height
+  width: $width

@@ -1,0 +1,61 @@
+// Fade In
+@include globalAnimation('fade-in') {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include globalAnimation('fade-in-bottom') {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@include globalAnimation('fade-in-top') {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@include globalAnimation('fade-in-left') {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@include globalAnimation('fade-in-right') {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@include globalAnimation('slide-in-left') {
+  from {
+    transform: translateX(-101%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

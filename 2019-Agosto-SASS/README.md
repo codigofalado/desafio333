@@ -7,7 +7,7 @@ Este é o mockup que você precisa reproduzir de forma responsiva no navegador u
 
 ![Mockup Globo News](2019-agosto-sass-mockup.jpg)
 
-## Detalhes do Mockup
+<h2 id="detalhes">Detalhes do Mockup</h2>
 
 ![Mockup Globo News](2019-agosto-sass-mockup-detalhes.jpg)
 
@@ -26,16 +26,27 @@ Este é o mockup que você precisa reproduzir de forma responsiva no navegador u
 - O texto (8) precisa rolar horizontalmente na tela (efeito "marquee").
 - A data limite para o seu Pull Request é **24/08/2019 às 17hs**.
 - Você pode usar o Stack que quiser e a forma de desenvolver que achar melhor. A única obrigação é o uso de SASS (SCSS).
-- No seu Pull Request, descreva detalhes sobre o que você fez e, se possível, adicione um screenshot e um link para visualizar o seu trabalho no navegador (pode usar Codepen, Github Pages, CodeSandbox ou o que achar melhor). Quanto melhor for sua descrição, maiores as chances de receber votos da comunidade.
+- No seu Pull Request, descreva detalhes sobre o que você fez e, se possível, adicione um screenshot e um link para visualizar o seu trabalho no navegador (pode usar [CodePen](https://codepen.io/), [GitHub Pages](https://pages.github.com/), [CodeSandbox](https://codesandbox.io/) ou o que achar melhor). Quanto melhor for sua descrição, maiores as chances de receber votos da comunidade.
 
 ## FAQ
 
 ### Tenho que fazer uma representação perfeita do que está no Mockup (mesma hashtag, mesmas images, etc) ?
 
-Você precisa ganhar o voto popular e a sua criatividade é o fator mais importante no desafio. Faça como achar melhor, desde que o produto final esteja resolvendo os 9 problemas apresentados nos detalhes do mockup de forma responsiva.
+Você precisa ganhar o voto popular e a sua criatividade é o fator mais importante no desafio. Faça como achar melhor, desde que o produto final esteja resolvendo os [9 problemas](#detalhes) apresentados nos detalhes do mockup de forma responsiva.
+
+### Já enviei meu Pull Request e gostaria de fazer alterações. Posso ?
+
+Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (24/08/2019) para fazer quantas edições você achar necessário.
 
 ###
 
 Veja o [README](../README.md) principal para mais detalhes.
 
 **Caso tenha dúvidas, edite este arquivo e adiciona sua pergunta no FAQ**
+
+## Vencedores
+
+1 - reebr (16)
+2 - foxalex (11)
+3 - cdfortes - (11)
+4 - brunobolting (11)

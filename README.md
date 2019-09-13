@@ -1,7 +1,8 @@
-# Desafio333
+<h1 align="center">Desafio333</h1>
+<h2 align="center"><a  href="2019-Setembro-Tailwind/README.md">Mês de Setembro</a></h2>
 
 O #Desafio333 é um desafio mensal SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
-A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Agosto, a tecnologia abordada será o [SASS](http://sass-lang.com/).
+A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Setembro, a tecnologia abordada será o [Tailwind CSS](https://tailwindcss.com).
 
 ## Como Participar
 
@@ -18,11 +19,13 @@ Não é preciso se cadastrar. Os participantes terão 2 semanas para enviar suas
 
 Após as 2 semanas de espera para os Pull Requests, abriremos votação no Github e compartilharemos os participantes nas Redes Sociais.
 
+**Em caso de empate, o desempate será feito via votação no Twitch na Live de apresentação dos Vencedores**
+
 ## Premiação
 
 1. O vencedor leva trezentos e trinta e três reais na sua conta bancária.
-2. O segundo colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete pago.
-3. O terceiro colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete pago.
+2. O segundo colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete grátis.
+3. O terceiro colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete grátis.
 
 ## Regras
 

@@ -1,0 +1,33 @@
+// Createa a Global Animation
+@mixin globalAnimation($animation-name) {
+  $name: unquote('ani-#{$animation-name}');
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Execute a "Secure" Animation in Element...
+// prevent hide elements in old Browsers
+// @content - Code to Init the Element
+//@mixin securePreAnimation($animation-name, $animation-settings) {
+@mixin securePreAnimation() {
+  @at-root {
+    @supports (transform: translateX(-20px)) and (animation-fill-mode: forwards) {
+      & {
+        @content;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+// Generate Element Animation
+@mixin animation($animation-name, $animation-settings) {
+  $name: unquote('ani-#{$animation-name}');
+  animation: unquote('#{$name} #{$animation-settings}');
+  @at-root {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+}

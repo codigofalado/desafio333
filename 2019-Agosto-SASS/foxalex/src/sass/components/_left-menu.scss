@@ -1,0 +1,197 @@
+@import 'input-layer';
+
+$left-menu-time: 0.3s;
+$animation-menu-open-name: 'opened';
+
+.left-menu__toggle-show-button {
+  position: absolute;
+  top: 10%;
+  height: 80%;
+  width: 100%;
+  content: ' ';
+}
+.left-menu-toggle-button {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  button {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    transition: all $left-menu-time ease-in-out;
+    &.#{$animation-menu-open-name} {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    outline: none;
+    img {
+      width: 4em;
+      @include animation('gear-rotate', '3s ease-in-out infinite') {
+        0% {
+          transform: rotateZ(0);
+        }
+        25% {
+          transform: rotateZ(0);
+        }
+        75% {
+          transform: rotateZ(90deg);
+        }
+        100% {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+  &.not-visible {
+    button {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+}
+
+.left-menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  transition: transform $left-menu-time ease-in-out;
+
+  transform: translateX(-101%);
+  &.#{$animation-menu-open-name} {
+    transform: translateX(0%);
+  }
+}
+
+.left-menu {
+  $prefix: &;
+
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  & > * {
+    padding: 10px;
+  }
+
+  &__header {
+    position: relative;
+    &:before {
+      @extend %pseudo-visible;
+      height: 20%;
+      width: 15px;
+      left: -15px;
+      background-color: $primary-color;
+    }
+  }
+
+  &__tabs {
+    padding: 0;
+    border: 1px solid #ccc;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      color: #aaa;
+      text-decoration: none;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+      border-bottom: 2px solid transparent;
+      &.selected {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+  &__tab {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    display: none;
+    &.visible {
+      display: block;
+    }
+    animation: ani-fade-in-top 0.3s ease-in-out;
+
+    &.tab_info {
+      img {
+        max-width: 60%;
+        @include animation('monkey', '5s ease-in-out infinite') {
+          0% {
+            transform: translateY(0px);
+          }
+          25% {
+            transform: translateY(10px);
+          }
+          50% {
+            transform: translateY(5px);
+          }
+          75% {
+            transform: translateY(10px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+      }
+      p {
+        text-align: justify;
+      }
+      .center {
+        text-align: center;
+      }
+      .ps {
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 0;
+    flex: 1;
+    border: 1px dashed #e0e0e0;
+    border-top: none;
+    overflow-y: auto;
+    position: relative;
+    p {
+      padding: 10px 0;
+    }
+  }
+
+  &__footer {
+    button {
+      padding: 0.3em 0.9em;
+      border: 1px solid #ddd;
+      background-color: transparent;
+      color: #aaa;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #999;
+        color: #fff;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    li {
+      label {
+        display: block;
+      }
+      padding: 10px 5px;
+    }
+  }
+}
