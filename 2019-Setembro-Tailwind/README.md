@@ -50,7 +50,7 @@ Já alterações de conteúdo (adicionar novas seções, trazer aquele seu carro
 
 ### Já enviei meu Pull Request e gostaria de fazer mais alterações. Posso ?
 
-Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (24/08/2019) para fazer quantas edições você achar necessário.
+Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (**28/09/2019**) para fazer quantas edições você achar necessário.
 
 ## Saiba Mais
 
