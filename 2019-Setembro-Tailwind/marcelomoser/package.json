@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "tailwindcss": "^1.1.2"
+  },
+  "name": "marcelomoser",
+  "version": "1.0.0",
+  "description": "app startup site with TailwindCSS",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo Moser",
+  "license": "ISC"
+}
