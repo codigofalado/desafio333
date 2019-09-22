@@ -1,0 +1,11 @@
+.header {
+  @apply border-b-2 border-pink-700 mb-8 fixed w-full bg-white;
+
+  &__nav {
+    @apply h-16 px-2 flex flex-row-reverse justify-between items-center;
+  }
+}
+
+/* .header__nav {
+  @apply h-16 px-2 flex flex-row-reverse justify-between items-center;
+} */
