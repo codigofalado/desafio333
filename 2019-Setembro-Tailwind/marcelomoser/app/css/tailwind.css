@@ -1,11 +1,3 @@
-/* @tailwind base;
-
-@tailwind components;
-
-@import './header.css';
-
-@tailwind utilities; */
-
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";

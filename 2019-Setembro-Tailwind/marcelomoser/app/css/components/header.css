@@ -1,11 +1,15 @@
 .header {
-  @apply border-b-2 border-pink-700 mb-8 fixed w-full bg-white;
+  @apply border-primary shadow-md fixed w-full bg-white;
+
+  &__img {
+    @apply w-24; 
+  }
+
+  &__btn-menu {
+    @apply my-2 fill-current text-primary;
+  }
 
   &__nav {
     @apply h-16 px-2 flex flex-row-reverse justify-between items-center;
   }
 }
-
-/* .header__nav {
-  @apply h-16 px-2 flex flex-row-reverse justify-between items-center;
-} */

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Código Falado APP, Um Blog, Um Log, Um Vlog com Você-ê-ê</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
@@ -13,43 +13,46 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header>
+    <header class="header">
       <div>
-        <a href="#main">Pular para o Conteúdo</a>
+        <a class="hidden"ref="#main">Pular para o Conteúdo</a>
         <!-- Navigation Start -->
-        <nav>
+        <nav class="header__nav">
           <!-- Logo Start-->
-          <a href="#" title="Código Falado">
-            <img
-              src="../../assets/logo.svg"
-              alt="Código Falado APP"
-            />
-          </a>
+          <button>
+            <a href="#" title="Código Falado">
+              <img
+                class="header__img" 
+                src="img/logo.svg"
+                alt="Código Falado APP"
+              />
+            </a>
+          </button>
           <!-- Logo End-->
           <!-- Global Menu Start -->
-          <div>
-            <ul>
-              <li>
-                <a href="#">Recursos</a>
+          <div class="hidden">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Recursos</a>
               </li>
-              <li>
-                <a href="#">Preços</a>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Preços</a>
               </li>
-              <li>
-                <a href="#">Contato</a>
+              <li class="header__nav-item">
+                <a class="header__nav-link"  href="#">Contato</a>
               </li>
-              <li>
-                <a href="#">Login</a>
+              <li class="header__nav-item">
+                <a class="header__nav-link"  href="#">Login</a>
               </li>
-              <li>
-                <a href="#">Download</a>
+              <li class="header__nav-item">
+                <a class="header__nav-link"  href="#">Download</a>
               </li>
             </ul>
           </div>
           <!-- Global Menu End -->
           <!-- Mobile Toggle Menu Start -->
           <div>
-            <button type="button" aria-expanded="false" aria-label="Menu">
+            <button class="header__btn-menu" type="button" aria-expanded="false" aria-label="Menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -76,21 +79,23 @@
     <div id="main">
       <!-- Sections Start -->
       <!-- Hero Area Start -->
-      <section>
+      <section class="bg-white">
         <div>
-          <div>
-            <h1>
-              Use Nosso Aplicativo Para Gerar Bitcoins à Partir das Lágrimas do
-              Seu Unicórnio Favorito!
+          <div class="pt-24 px-5">
+            <h1 class="">
+              Gere Bitcoins com as lágrimas do
+              seu unicórnio!
             </h1>
             <h2>
               Usando uma tecnologia revolucionária de Machine Beating™️, nós
               surramos unicórnios para extrair Bitcoin em um processo totalmente
               indolor que chamamos de Beatcoin®
             </h2>
-            <a href="#" target="_self" title="Comece a bater"
-              >Comece Agora GRÁTIS</a
-            >
+            <div class="text-center">
+              <a class="p-2 shadow-2xl text-white bg-primary" href="#" target="_self" title="Comece a bater"
+                >Comece Agora GRÁTIS</a
+              >
+            </div>
           </div>
           <div>
             <img
@@ -102,81 +107,81 @@
       </section>
       <!-- Hero Area End -->
       <!-- Clients Start -->
-      <section>
+      <section class="bg-secundary">
         <div>
           <h2>
             As maiores empresas do MUNDO usam nossas soluções
           </h2>
-          <div>
+          <div class="flex">
             <div>
               <img
-                src="../../assets/logos/1.svg"
+                src="img/logos/1.svg"
                 alt="Client 01"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/2.svg"
+                src="img/logos/2.svg"
                 alt="Client 02"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/3.svg"
+                src="img/logos/3.svg"
                 alt="Client 03"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/4.svg"
+                src="img/logos/4.svg"
                 alt="Client 04"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/5.svg"
+                src="img/logos/5.svg"
                 alt="Client 05"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/6.svg"
+                src="img/logos/6.svg"
                 alt="Client 06"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/7.svg"
+                src="img/logos/7.svg"
                 alt="Client 07"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/8.svg"
+                src="img/logos/8.svg"
                 alt="Client 08"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/9.svg"
+                src="img/logos/9.svg"
                 alt="Client 09"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/10.svg"
+                src="img/logos/10.svg"
                 alt="Client 010"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/11.svg"
+                src="img/logos/11.svg"
                 alt="Client 011"
               />
             </div>
             <div>
               <img
-                src="../../assets/logos/12.svg"
+                src="img/logos/12.svg"
                 alt="Client 012"
               />
             </div>
@@ -196,7 +201,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_Booked_j7rj.svg"
+                    src="img/illustrations/undraw_Booked_j7rj.svg"
                     alt="Mantenha o Controle dos Controláveis"
                   />
                   <h4>
@@ -213,7 +218,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_chore_list_iof3.svg"
+                    src="img/illustrations/undraw_chore_list_iof3.svg"
                     alt="Verifique a sua Autoestima"
                   />
                   <h4>
@@ -230,7 +235,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_detailed_examination_joef.svg"
+                    src="img/illustrations/undraw_detailed_examination_joef.svg"
                     alt="Exclusivo Sistema Anti-Desespero"
                   />
                   <h4>
@@ -248,7 +253,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_female_avatar_l3ey.svg "
+                    src="img/illustrations/undraw_female_avatar_l3ey.svg "
                     alt="Avatar Feminino Incluso"
                   />
                   <h4>
@@ -265,7 +270,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_energizer_2224.svg"
+                    src="img/illustrations/undraw_energizer_2224.svg"
                     alt="Entenda a Importância de Beber Água"
                   />
                   <h4>
@@ -283,7 +288,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_feedback_h2ft.svg"
+                    src="img/illustrations/undraw_feedback_h2ft.svg"
                     alt="Sistema de Avaliação de Mágicas"
                   />
                   <h4>
@@ -318,14 +323,14 @@
             <a href="#">O que você está esperando?</a>
           </div>
           <img
-            src="../../assets/illustrations/undraw_to_the_moon_v1mv.svg"
+            src="img/illustrations/undraw_to_the_moon_v1mv.svg"
             alt="Astronauta Decolando"
           />
         </div>
       </section>
       <!-- Second Call To Action End -->
       <!-- Testimonials Start -->
-      <section>
+      <section class="bg-light">
         <div>
           <div>
             <div>
@@ -349,7 +354,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_male_avatar_323b.svg"
+                    src="img/illustrations/undraw_male_avatar_323b.svg"
                   />
                 </div>
                 <div>
@@ -379,7 +384,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_male_avatar_323b.svg"
+                    src="img/illustrations/undraw_male_avatar_323b.svg"
                   />
                 </div>
                 <div>
@@ -408,7 +413,7 @@
               <div>
                 <div>
                   <img
-                    src="../../assets/illustrations/undraw_male_avatar_323b.svg"
+                    src="img/illustrations/undraw_male_avatar_323b.svg"
                   />
                 </div>
                 <div>
@@ -473,16 +478,16 @@
       <!-- Signup Form End-->
 
       <!-- Sections End -->
-    </div>
+    </divc>
     <!-- Content End -->
     <!-- Footer Start -->
-    <footer>
+    <footer class="bg-dark text-light">
       <div>
         <div>
           <!-- Logo Start-->
           <a href="#" title="Código Falado">
             <img
-              src="../../assets/icon.svg"
+              src="img/icon.svg"
               alt="Código Falado APP"
             />
           </a>
