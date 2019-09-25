@@ -3,17 +3,18 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    colors: {
+      'primary': '#EB007D',
+      'secondary':  '#4a5568', //'#d53f8c',
+      'background':   '#edf2f7', // '#4a5568',
+      'white': '#FFFfff',
+    },
     extend: {
       // perdao as gambiarras, primeiro projeto sempre tem que ter uma, se não não é o primeiro projeto 
       maxWidth:{
         'xxxs': '12rem',
         'xxs': '18rem',
         'ssm': '26rem',
-      },
-      colors: {
-        'primary': '#EB007D',
-        'secondary':  '#4a5568', //'#d53f8c',
-        'background':   '#edf2f7', // '#4a5568',
       },
       height: {
         sm: '40px',
