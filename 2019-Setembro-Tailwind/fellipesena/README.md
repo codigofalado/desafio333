@@ -19,11 +19,11 @@ https://fellipesena.github.io/desafio333/2019-Setembro-Tailwind/fellipesena/publ
 ## Alguns prints do resultado:
 
 ### Desktop:
-![Pagina Codigo Falado](/prints/pagina1.png)
+![Pagina Codigo Falado](pagina1.png)
 
 ### Mobile:
-![Pagina Codigo Falado](/prints/pagina2.png)
+![Pagina Codigo Falado](pagina2.png)
 
 ### Tablet:
-![Pagina Codigo Falado](/prints/pagina3.png)
+![Pagina Codigo Falado](pagina3.png)
 
