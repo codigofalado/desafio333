@@ -1,8 +1,8 @@
-.header {
-  @apply border-primary shadow-md fixed w-full bg-white;
+/* .header {
+  @apply border-primary shadow-md fixed w-screen bg-white;
 
   &__img {
-    @apply w-24; 
+    @apply w-32 mr-2; 
   }
 
   &__btn-menu {
@@ -10,6 +10,6 @@
   }
 
   &__nav {
-    @apply h-16 px-2 flex flex-row-reverse justify-between items-center;
+    @apply h-16 px-4 flex flex-row-reverse justify-between items-center;
   }
-}
+} */

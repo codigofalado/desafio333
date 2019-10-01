@@ -5,54 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Código Falado APP, Um Blog, Um Log, Um Vlog com Você-ê-ê</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/styles.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
     />
   </head>
-  <body>
+  <body id="body" class="">
     <!-- Header Start -->
-    <header class="header">
-      <div>
+    <header id="header-scroll" class="fixed shadow-primary bg-white h-16 flex items-center md:h-20">
+      <div class="">
         <a class="hidden"ref="#main">Pular para o Conteúdo</a>
         <!-- Navigation Start -->
-        <nav class="header__nav">
+        <div>
+        <nav class="header__nav w-screen flex justify-between items-center">
           <!-- Logo Start-->
-          <button>
+          <div class="flex mx-auto items-center w-screen justify-between sm:w-11/12 2xl:w-4/5 3xl:w-3/5">
             <a href="#" title="Código Falado">
               <img
-                class="header__img" 
+                class="header__img w-24 ml-2 sm:-ml-2 sm:w-32 md:w-40" 
                 src="img/logo.svg"
                 alt="Código Falado APP"
               />
             </a>
-          </button>
-          <!-- Logo End-->
-          <!-- Global Menu Start -->
-          <div class="hidden">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Recursos</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link" href="#">Preços</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link"  href="#">Contato</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link"  href="#">Login</a>
-              </li>
-              <li class="header__nav-item">
-                <a class="header__nav-link"  href="#">Download</a>
-              </li>
-            </ul>
+            <!-- Logo End-->
+            <!-- Global Menu Start -->
+            <div id="toggle-content" class="mt-40 bg-white w-screen absolute shadow-primary hidden sm:mt-0 sm:flex sm:shadow-none sm:w-auto sm:relative sm:-mr-10 md:-mr-10 sm:bg-transparent">
+              <ul class=" header__nav-list flex p-10 flex-col items-center font-semibold text-primary sm:flex-row sm:bg-transparent">
+                <li class="header__nav-item hover:text-primaryDark hover:border-primaryDark transition mb-3 sm:mb-0 sm:mx-2 md:mx-4">
+                  <a class="header__nav-link" href="#">Recursos</a>
+                </li>
+                <li class="header__nav-item hover:text-primaryDark mb-3 sm:mb-0 sm:mx-2 md:mx-4">
+                  <a class="header__nav-link" href="#">Preços</a>
+                </li>
+                <li class="header__nav-item hover:text-primaryDark mb-3 sm:mb-0 sm:mx-2 md:mx-4">
+                  <a class="header__nav-link"  href="#">Contato</a>
+                </li>
+                <li class="header__nav-item hover:text-primaryDark mb-3 sm:mb-0 sm:mx-2 md:mx-4">
+                  <a class="header__nav-link"  href="#">Login</a>
+                </li>
+                <li id="download-scroll" class="header__nav-item text-primary bg-primary text-light mb-3 sm:mb-0 sm:bg-white sm:text-primary transition hover:border-primaryDark hover:bg-primaryDark hover:text-white cursor-pointer border-2 rounded-sm py-1 px-4 border-primary sm:mx-2 md:mx-4">
+                  <a class="header__nav-link href="#">Download</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- Global Menu End -->
           <!-- Mobile Toggle Menu Start -->
           <div>
-            <button class="header__btn-menu" type="button" aria-expanded="false" aria-label="Menu">
+            <button id="toggle-menu" class="header__btn-menu text-primary fill-current mt-2 mr-6 sm:hidden" type="button" aria-expanded="false" aria-label="Menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -79,27 +81,28 @@
     <div id="main">
       <!-- Sections Start -->
       <!-- Hero Area Start -->
-      <section class="bg-white">
-        <div>
-          <div class="pt-24 px-5">
-            <h1 class="">
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto flex 3xl:justify-between">
+          <div class="mt-32 w-2/3">
+            <h1 class="text-5xl leading-tight text-secundaryDark font-bold mb-10">
               Gere Bitcoins com as lágrimas do
-              seu unicórnio!
+              seu unicórnio favorito!
             </h1>
-            <h2>
+            <h2 class="text-xl w-11/12 mb-32 text-secundaryDark">
               Usando uma tecnologia revolucionária de Machine Beating™️, nós
               surramos unicórnios para extrair Bitcoin em um processo totalmente
               indolor que chamamos de Beatcoin®
             </h2>
-            <div class="text-center">
-              <a class="p-2 shadow-2xl text-white bg-primary" href="#" target="_self" title="Comece a bater"
+            <div class=" mt-4">
+              <a class="tracking-wide px-8 py-4 text-xl rounded-sm font-bold text-white transition bg-primary hover:bg-primaryDark" href="#" target="_self" title="Comece a bater"
                 >Comece Agora GRÁTIS</a
               >
             </div>
           </div>
-          <div>
+          <div class="w-2/6">
             <img
-              src="../../assets/unicorn.png"
+              class="mt-20 "
+              src="img/unicorn.png"
               alt="Unicórnio Chorando um Pouco"
             />
           </div>
@@ -107,107 +110,112 @@
       </section>
       <!-- Hero Area End -->
       <!-- Clients Start -->
-      <section class="bg-secundary">
-        <div>
-          <h2>
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
+          <h2 class="text-center text-secundaryDark mb-16 text-2xl font-bold">
             As maiores empresas do MUNDO usam nossas soluções
           </h2>
-          <div class="flex">
-            <div>
-              <img
-                src="img/logos/1.svg"
-                alt="Client 01"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/2.svg"
-                alt="Client 02"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/3.svg"
-                alt="Client 03"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/4.svg"
-                alt="Client 04"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/5.svg"
-                alt="Client 05"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/6.svg"
-                alt="Client 06"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/7.svg"
-                alt="Client 07"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/8.svg"
-                alt="Client 08"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/9.svg"
-                alt="Client 09"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/10.svg"
-                alt="Client 010"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/11.svg"
-                alt="Client 011"
-              />
-            </div>
-            <div>
-              <img
-                src="img/logos/12.svg"
-                alt="Client 012"
-              />
-            </div>
+          <div class="flex flex-wrap justify-between items-center">
+            <!-- <div class="flex items-center mb-8 justify-between mb-12" > -->
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img 
+                  class=""
+                  src="img/logos/1.svg"
+                  alt="Client 01"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/2.svg"
+                  alt="Client 02"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/3.svg"
+                  alt="Client 03"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/4.svg"
+                  alt="Client 04"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/5.svg"
+                  alt="Client 05"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/6.svg"
+                  alt="Client 06"
+                />
+              </div>
+            <!-- </div>
+            <div class="flex items-center justify-between"> -->
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/7.svg"
+                  alt="Client 07"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/8.svg"
+                  alt="Client 08"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/9.svg"
+                  alt="Client 09"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/10.svg"
+                  alt="Client 010"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img class=""
+                  src="img/logos/11.svg"
+                  alt="Client 011"
+                />
+              </div>
+              <div class="w-1/2 sm:w-1/4 xl:w-1/6 px-4 mb-10">
+                <img cjustify-center lass=""
+                  src="img/logos/12.svg"
+                  alt="Client 012"
+                />
+              </div>
+            <!-- </div> -->
           </div>
         </div>
       </section>
       <!-- Clients End -->
       <!-- Features Start -->
-      <section>
-        <div>
-          <div>
-            <h2>
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
+          <div class="lg:-mx-8">
+            <h2 class="text-center text-secundaryDark mb-16 text-2xl font-bold">
               Conheça os benefícios de <strong>implementar o Beatcoin®</strong>
             </h2>
-            <div>
+            <div class="flex flex-wrap">
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_Booked_j7rj.svg"
                     alt="Mantenha o Controle dos Controláveis"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Mantenha o Controle dos Controláveis
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Os unicórnios feridos controlam sua agenda e te avisam
                     quando há novo Beatcoin® na sua carteira
                   </p>
@@ -215,16 +223,16 @@
               </div>
               <!-- Feature End -->
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_chore_list_iof3.svg"
                     alt="Verifique a sua Autoestima"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Verifique a sua Autoestima
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Nossa interface é rica em checkboxes para mostrar que tudo
                     sempre está positivo e operante em nossa plataforma
                   </p>
@@ -232,34 +240,35 @@
               </div>
               <!-- Feature End -->
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_detailed_examination_joef.svg"
                     alt="Exclusivo Sistema Anti-Desespero"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Exclusivo Sistema Anti-Desespero
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Com os Bitcoins gerados à partir das lágrimas dos
                     Unicórnios, você poderá usufruir da mais moderna tecnologia
                     que deleta todo e qualquer tipo de indício de desespero
+              
                   </p>
                 </div>
               </div>
               <!-- Feature End -->
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_female_avatar_l3ey.svg "
                     alt="Avatar Feminino Incluso"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Avatar Feminino Incluso
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Porque os nossos designers sabem que as mulheres são
                     superiores ao homens em 100% dos quesitos não fálicos.
                   </p>
@@ -267,16 +276,16 @@
               </div>
               <!-- Feature End -->
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_energizer_2224.svg"
                     alt="Entenda a Importância de Beber Água"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Entenda a Importância de Beber Água
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Antes que comecemos a apelar para o Loren Ipsun, é
                     importante frisar que a água, enquanto molhada, serve para
                     saciar a sede daqueles que a necessitam.
@@ -285,20 +294,20 @@
               </div>
               <!-- Feature End -->
               <!-- Feature Start -->
-              <div>
-                <div>
-                  <img
+              <div class="flex w-1/2 px-2 mb-20">
+                <div class="flex flex-col">
+                  <img class="h-64 mb-8"
                     src="img/illustrations/undraw_feedback_h2ft.svg"
                     alt="Sistema de Avaliação de Mágicas"
                   />
-                  <h4>
+                  <h4 class="mb-2 text-center text-lg font-semibold text-secundaryDark">
                     Sistema de Avaliação de Mágicas
                   </h4>
-                  <p>
+                  <p class="px-10 text-secundaryDark">
                     Usando POM (Programação Orientada a Mágica), nossos sistemas
                     geram cO2 o suficiente para substituir os Bitcoins da
                     carteira empresarial arcaica do eleitorado sensorial pela
-                    flexibilidade paranormal do rabo da lagartixa do Saara.
+                    exibilidade paranormal do rabo da lagartixa do Saara.
                   </p>
                 </div>
               </div>
@@ -309,20 +318,22 @@
       </section>
       <!-- Features End -->
       <!-- Second Call To Action Start -->
-      <section>
-        <div>
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto flex items-center">
           <div>
-            <h2>
+            <h2 class="text-4xl leading-tight text-secundaryDark font-bold">
               Seus Bitcoins Nunca Mais Serão os Mesmos
             </h2>
-            <p>
+            <p class="text-xl w-11/12 py-8 text-secundaryDark">
               Depois de começar a usar o nosso sistema maravilhoso, você passará
               a ter mais saúde, mais sorte, mais dinheiro e muito mais
               Jabuticabas!
             </p>
-            <a href="#">O que você está esperando?</a>
+            <div class="mt-16">
+              <a class="px-8 py-4 text-xl rounded-sm font-bold text-white transition bg-primary hover:bg-primaryDark" href="#">O que você está esperando?</a>
+            </div>
           </div>
-          <img
+          <img class="w-5/12"
             src="img/illustrations/undraw_to_the_moon_v1mv.svg"
             alt="Astronauta Decolando"
           />
@@ -330,21 +341,21 @@
       </section>
       <!-- Second Call To Action End -->
       <!-- Testimonials Start -->
-      <section class="bg-light">
-        <div>
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
           <div>
             <div>
-              <h2>
+              <h2 class="text-center text-2xl mb-16 text-secundaryDark font-bold">
                 Veja o que a galerinha do mal está falando sobre a gente
               </h2>
             </div>
           </div>
-          <div>
+          <div class="flex">
             <!-- Single Testimonial Start -->
-            <div>
-              <div>
-                <div>
-                  <p>
+            <div class="mx-6 px-4 py-4 border-t-4 border-primaryDark shadow-lg rounded w-11/12 flex flex-col justify-between">
+              <div class="">
+                <div class="">
+                  <p class="mb-4 text-secundaryDark tracking-wide">
                     “Minha vida nunca mais foi a mesma depois de começar a usar
                     o sisteminha do Código Falado, só sei dizer que agora todos
                     os meus boletos estão automaticamente pagos!”
@@ -352,27 +363,29 @@
                 </div>
               </div>
               <div>
-                <div>
-                  <img
-                    src="img/illustrations/undraw_male_avatar_323b.svg"
-                  />
-                </div>
-                <div>
-                  <h4>
-                    Mané da Esquina
-                  </h4>
-                  <p>
-                    Pipoqueiro
-                  </p>
+                <div class="flex items-center ">
+                  <div>
+                    <img class="w-24 mr-6"
+                     src="img/illustrations/undraw_male_avatar_323b.svg"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secundaryDark">
+                      Mané da Esquina
+                    </h4>
+                    <p class="text-primaryDark">
+                      Pipoqueiro
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- Single Testimonial End -->
             <!-- Single Testimonial Start -->
-            <div>
-              <div>
-                <div>
-                  <p>
+            <div class="mx-6 px-4 py-4 border-t-4 border-primaryDark shadow-lg rounded w-11/12 flex flex-col justify-between">
+              <div class="">
+                <div class="">
+                  <p class="mb-4 text-secundaryDark tracking-wide">
                     “Antes de usar o sistema do Código Falado, minhas pilhas não
                     funcionavam. Agora, funcionam que é uma beleza! Parabéns a
                     todos os envolvidos no desenvolvimento desse sistema
@@ -382,27 +395,29 @@
                 </div>
               </div>
               <div>
-                <div>
-                  <img
-                    src="img/illustrations/undraw_male_avatar_323b.svg"
-                  />
-                </div>
-                <div>
-                  <h4>
-                    João Galo
-                  </h4>
-                  <p>
-                    Cantor
-                  </p>
+                <div class="flex items-center ">
+                  <div>
+                    <img class="w-24 mr-6"
+                      src="img/illustrations/undraw_male_avatar_323b.svg"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secundaryDark">
+                      João Galo
+                    </h4>
+                    <p class="text-primaryDark">
+                      Cantor
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- Single Testimonial End -->
             <!-- Single Testimonial Start -->
-            <div>
-              <div>
-                <div>
-                  <p>
+            <div class="mx-6 px-4 py-4 border-t-4 border-primaryDark shadow-lg rounded w-11/12 flex flex-col justify-between">
+              <div class="">
+                <div class="">
+                  <p class="mb-4 text-secundaryDark tracking-wide">
                     “Eu tenho algo a dizer, e explicar pra você. Só não garanto,
                     porém, que engraçado eu serei desta vez. Para os manos
                     daqui, para os manos de lá, se você se considera negro, pra
@@ -411,18 +426,20 @@
                 </div>
               </div>
               <div>
-                <div>
-                  <img
-                    src="img/illustrations/undraw_male_avatar_323b.svg"
-                  />
-                </div>
-                <div>
-                  <h4>
-                    Mano Brown
-                  </h4>
-                  <p>
-                    Racionais BMX
-                  </p>
+                <div class="flex items-center ">
+                  <div>
+                    <img  class="w-24 mr-6"
+                      src="img/illustrations/undraw_male_avatar_323b.svg"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-secundaryDark">
+                      Mano Brown
+                    </h4>
+                    <p class="text-primaryDark">
+                      Racionais BMX
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -432,19 +449,20 @@
       </section>
       <!-- Testimonials End -->
       <!-- Signup Form Start-->
-      <section>
-        <div>
+      <section class="py-16">
+        <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
           <div>
-            <div>
-              <h2>Teste grátis por 14 dias!</h2>
+            <div class="text-center">
+              <h2 class="text-3xl mb-12 font-bold text-secundaryDark">Teste grátis por 14 dias!</h2>
             </div>
             <div>
-              <div>
+              <div class="">
                 <form action="#" accept-charset="UTF-8" method="post">
                   <fieldset>
-                    <div>
-                      <div>
-                        <input
+                    <div class="border-2 border-primary rounded transition flex w-6/12 mx-auto flex-wrap justify-center hover:border-primaryDark">
+                      <div class="px-4 py-2 w-8/12 ">
+                        <input 
+                          class="appearance-none w-full  bg-white focus:bg-white leading-tight border-none focus:outline-none text-secundaryDark"
                           type="email"
                           name="email"
                           placeholder="Seu Endereço de E-mail"
@@ -453,7 +471,7 @@
                         />
                       </div>
                       <div>
-                        <button type="button">
+                        <button class="px-4 py-2 tracking-wide rounded-sm font-bold text-white transition bg-primary hover:bg-primaryDark" type="button">
                           <span>Crie Sua Conta</span>
                         </button>
                       </div>
@@ -461,7 +479,7 @@
 
                     <div>
                       <div>
-                        <p>
+                        <p class="text-center mt-10 text-secundary">
                           Ao criar a conta, você aceitará os
                           <a href="#">Termos e Condições</a>
                           do site
@@ -481,8 +499,8 @@
     </divc>
     <!-- Content End -->
     <!-- Footer Start -->
-    <footer class="bg-dark text-light">
-      <div>
+    <footer class="bg-secundaryDark text-white py-16">
+      <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
         <div>
           <!-- Logo Start-->
           <a href="#" title="Código Falado">
@@ -517,7 +535,7 @@
           <!-- Nav End -->
         </div>
       </div>
-      <div>
+      <div class="px-6 sm:w-11/12 sm:px-0 2xl:w-4/5 3xl:w-3/5 mx-auto">
         <div>
           <ul>
             <li><a href="#">Privacidade</a></li>
@@ -586,5 +604,6 @@
       </div>
     </footer>
     <!-- Footer End -->
+    <script src="js/main.js"></script>
   </body>
 </html>
