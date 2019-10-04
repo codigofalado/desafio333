@@ -2,65 +2,25 @@
   @apply fixed shadow-primary bg-white flex items-center h-16;
 
   @media(min-width: theme('screens.sm')) {
-    @aplly shadow-none;
+    @apply shadow-none;
   }
 
   @media(min-width: theme('screens.md')) {
-    @aplly h-20;
-  }
-
-  &__img {
-    @apply
+    @apply h-20;
   }
 
   &__nav {
     @apply w-screen flex justify-between items-center;
 
     &-img {
-      @aplly w-24 ml-2
+      @apply w-24 ml-2;
 
       @media(min-width: theme('screens.sm')) {
-        @aplly -ml-2 w-32;
+        @apply -ml-2 w-32;
       }
       
       @media(min-width: theme('screens.md')) {
-        @aplly w-40;
-      }
-    }
-
-    &__list {
-      @apply flex p-10 flex-col items-center font-semibold text-primary;
-
-       @media(min-width: theme('screens.sm')) {
-        @aplly flex-row bg-transparent;
-      }
-    }
-
-    &__item {
-      @apply transition mb-3;
-
-      &:hover {
-        @apply text-primaryDark border-primaryDark 
-      }
-
-      @media(min-width: theme('screens.sm')) {
-        @aplly mb-0 mx-2;
-      }
-
-      @media(min-width: theme('screens.md')) {
-        @aplly mx-4;
-      }
-
-      &--download {
-        @apply text-primary bg-primary text-light cursor-pointer border-2 rounded-sm py-1 px-4 border-primary;
-
-        &:hover {
-          @apply border-primaryDark bg-primaryDark text-white
-        }
-
-        @media(min-width: theme('screens.sm')) {
-          @aplly bg-white text-primary;
-        }
+        @apply w-40;
       }
     }
 
@@ -68,28 +28,64 @@
       @apply flex mx-auto items-center w-screen justify-between;
 
       @media(min-width: theme('screens.sm')) {
-        @aplly w-11/12;
+        @apply w-11/12;
       }  
 
       @media(min-width: theme('screens.2xl')) {
-        @aplly w-4/5;
+        @apply w-4/5;
       } 
 
       @media(min-width: theme('screens.3xl')) {
-        @aplly w-3/5;
+        @apply w-3/5;
       }     
     }
 
     &-content {
-      @apply mt-40 bg-white w-screen absolute shadow-primary hidden; 
+      @apply mt-40 bg-white w-screen absolute shadow-primary;
 
       @media(min-width: theme('screens.sm')) {
-        @aplly mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
+        @apply mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
       }  
 
        @media(min-width: theme('screens.md')) {
         @apply -mr-10;
       }  
+
+      &-list {
+        @apply flex p-10 flex-col items-center font-semibold text-primary;
+
+        @media(min-width: theme('screens.sm')) {
+          @apply flex-row bg-transparent;
+        }
+      }
+
+      &-item {
+        @apply transition mb-3;
+
+        &:hover {
+          @apply text-primaryDark border-primaryDark; 
+        }
+
+        @media(min-width: theme('screens.sm')) {
+          @apply mb-0 mx-2;
+        }
+
+        @media(min-width: theme('screens.md')) {
+          @apply mx-4;
+        }
+
+        &--download {
+          @apply text-primary bg-primary text-light cursor-pointer border-2 rounded-sm py-1 px-4 border-primary;
+
+          &:hover {
+            @apply border-primaryDark bg-primaryDark text-white;
+          }
+
+          @media(min-width: theme('screens.sm')) {
+            @apply bg-white text-primary;
+          }
+        }
+      }
     }
   }
   
@@ -101,7 +97,7 @@
     }
 
     @media(min-width: theme('screens.sm')) {
-      @aplly hidden;
+      @apply hidden;
     } 
   }
 }

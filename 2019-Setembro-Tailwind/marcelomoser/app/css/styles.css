@@ -653,14 +653,17 @@ video {
 }
 
 @media(min-width: 640px) {
-    @aplly shadow-none;
+
+.header {
+    box-shadow: none
+}
   }
 
 @media(min-width: 768px) {
-    @aplly h-20;
-  }
 
-.header__img {
+.header {
+    height: 5rem
+}
   }
 
 .header__nav {
@@ -671,71 +674,25 @@ video {
   }
 
 .header__nav-img {
-      @aplly w-24 ml-2
-
-      @media(min-width: 640px) {
-        @aplly -ml-2 w-32;
-      }
-    }
-
-@media(min-width: 768px) {
-        @aplly w-40;
-      }
-
-.header__nav__list {
-      display: flex;
-      padding: 2.5rem;
-      flex-direction: column;
-      align-items: center;
-      font-weight: 600;
-      color: #EB007D;
+      width: 6rem;
+      margin-left: 0.5rem;
     }
 
 @media(min-width: 640px) {
-        @aplly flex-row bg-transparent;
-      }
 
-.header__nav__item {
-      transition: all ease .3s;
-      margin-bottom: 0.75rem;
+.header__nav-img {
+        margin-left: -0.5rem;
+
+        width: 8rem
     }
-
-.header__nav__item:hover {
-        color: #BC0064;
-        border-color: #BC0064
-      }
-
-@media(min-width: 640px) {
-        @aplly mb-0 mx-2;
       }
 
 @media(min-width: 768px) {
-        @aplly mx-4;
+
+.header__nav-img {
+        width: 10rem
+    }
       }
-
-.header__nav__item--download {
-        color: #EB007D;
-        background-color: #EB007D;
-        color: #F9FAFA;
-        cursor: pointer;
-        border-width: 2px;
-        border-radius: 0.125rem;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        border-color: #EB007D;
-      }
-
-.header__nav__item--download:hover {
-          border-color: #BC0064;
-          background-color: #BC0064;
-          color: #fff
-        }
-
-@media(min-width: 640px) {
-          @aplly bg-white text-primary;
-        }
 
 .header__nav-img-container {
       display: flex;
@@ -747,15 +704,24 @@ video {
     }
 
 @media(min-width: 640px) {
-        @aplly w-11/12;
+
+.header__nav-img-container {
+        width: 91.666667%
+    }
       }
 
 @media(min-width: 1438px) {
-        @aplly w-4/5;
+
+.header__nav-img-container {
+        width: 80%
+    }
       }
 
 @media(min-width: 1680px) {
-        @aplly w-3/5;
+
+.header__nav-img-container {
+        width: 60%
+    }
       }
 
 .header__nav-content {
@@ -764,11 +730,25 @@ video {
       width: 100vw;
       position: absolute;
       box-shadow: 0 3px 3px -1px rgba(157,157,154,.3);;
-      display: none;
     }
 
 @media(min-width: 640px) {
-        @aplly mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
+
+.header__nav-content {
+        margin-top: 0;
+
+        display: flex;
+
+        box-shadow: none;
+
+        width: auto;
+
+        position: relative;
+
+        margin-right: -2.5rem;
+
+        background-color: transparent
+    }
       }
 
 @media(min-width: 768px) {
@@ -777,6 +757,83 @@ video {
         margin-right: -2.5rem
     }
       }
+
+.header__nav-content-list {
+        display: flex;
+        padding: 2.5rem;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        color: #EB007D;
+      }
+
+@media(min-width: 640px) {
+
+.header__nav-content-list {
+          flex-direction: row;
+
+          background-color: transparent
+      }
+        }
+
+.header__nav-content-item {
+        transition: all ease .3s;
+        margin-bottom: 0.75rem;
+      }
+
+.header__nav-content-item:hover {
+          color: #BC0064;
+          border-color: #BC0064;
+        }
+
+@media(min-width: 640px) {
+
+.header__nav-content-item {
+          margin-bottom: 0;
+
+          margin-left: 0.5rem;
+
+          margin-right: 0.5rem
+      }
+        }
+
+@media(min-width: 768px) {
+
+.header__nav-content-item {
+          margin-left: 1rem;
+
+          margin-right: 1rem
+      }
+        }
+
+.header__nav-content-item--download {
+          color: #EB007D;
+          background-color: #EB007D;
+          color: #F9FAFA;
+          cursor: pointer;
+          border-width: 2px;
+          border-radius: 0.125rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          border-color: #EB007D;
+        }
+
+.header__nav-content-item--download:hover {
+            border-color: #BC0064;
+            background-color: #BC0064;
+            color: #fff;
+          }
+
+@media(min-width: 640px) {
+
+.header__nav-content-item--download {
+            background-color: #fff;
+
+            color: #EB007D
+        }
+          }
 
 .header__btn-menu {
     color: #EB007D;
@@ -790,7 +847,10 @@ video {
     }
 
 @media(min-width: 640px) {
-      @aplly hidden;
+
+.header__btn-menu {
+      display: none
+  }
     }
 
 .sr-only {

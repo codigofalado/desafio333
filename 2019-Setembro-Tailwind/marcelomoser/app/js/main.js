@@ -1,10 +1,11 @@
 'use strtic';
 
 //Toggle-Menu 
-document.getElementById('toggle-menu').addEventListener('click', function(){
+document.getElementById('toggle-menu').addEventListener('click', function() {
   document.getElementById('toggle-content').classList.toggle('hidden');
 })
 
+//Scroll-Effect
 window.addEventListener('scroll', function() {
   if(window.scrollY > 30) {
     document.getElementById('download-scroll').classList.add('sm:text-light', 'sm:bg-primary', 'transition');
