@@ -16,6 +16,7 @@ Através do link - <a href="https://cdfortes.github.io/desafio333/2019-Setembro-
  - [TailwindCSS Plugin-examples](https://github.com/tailwindcss/plugin-examples)
 
 
+
 ## Prints do resultado:
 
 ### Desktop:
