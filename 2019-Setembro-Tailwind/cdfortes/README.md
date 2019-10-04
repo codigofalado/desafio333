@@ -26,4 +26,4 @@ Através do link - <a href="https://cdfortes.github.io/desafio333/2019-Setembro-
 ![mobile](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/mobile.png "Mobile")
 
 ### Tablet:
-![tablet](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/mobile.png "Tablet")
+![tablet](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/tablet.png "Tablet")
