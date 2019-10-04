@@ -9,6 +9,9 @@ module.exports = {
         light: '#F9FAFA',
         dark: '#111017',
       },
+      margin: {
+        '72': '20rem',
+      },
       boxShadow: {
         primary: '0 3px 3px -1px rgba(157,157,154,.3);',
       },

@@ -1,5 +1,5 @@
 .header {
-  @apply fixed shadow-primary bg-white flex items-center h-16;
+  @apply fixed shadow-primary bg-white w-screen flex items-center h-16;
 
   @media(min-width: theme('screens.sm')) {
     @apply shadow-none;
@@ -41,7 +41,8 @@
     }
 
     &-content {
-      @apply mt-40 bg-white w-screen absolute shadow-primary;
+      @apply mt-48 bg-white absolute w-screen shadow-primary;
+      /* mt-40 bg-white absolute w-screen */
 
       @media(min-width: theme('screens.sm')) {
         @apply mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
@@ -60,7 +61,7 @@
       }
 
       &-item {
-        @apply transition mb-3;
+        @apply transition mb-6;
 
         &:hover {
           @apply text-primaryDark border-primaryDark; 
