@@ -20,10 +20,10 @@ Através do link - <a href="https://cdfortes.github.io/desafio333/2019-Setembro-
 ## Prints do resultado:
 
 ### Desktop:
-![desktop](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/assets/prints/desktop.png "Desktop")
+![desktop](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/desktop.png "Desktop")
 
 ### Mobile:
-![mobile](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/assets/prints/mobile.png "Mobile")
+![mobile](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/mobile.png "Mobile")
 
 ### Tablet:
-![tablet](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/assets/prints/mobile.png "Tablet")
+![tablet](https://cdfortes.github.io/desafio333/2019-Setembro-Tailwind/cdfortes/public/assets/prints/mobile.png "Tablet")
