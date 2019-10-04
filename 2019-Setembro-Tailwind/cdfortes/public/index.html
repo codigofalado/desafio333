@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body class="body leading-normal tracking-normal text-gray-900">
+<body class="body leading-normal tracking-normal text-gray-900 ">
   <a href="#main" class="hidden">Pular para o Conteúdo</a>
   <!-- Header Start -->
   <header class="">
@@ -20,7 +20,7 @@
 
     <!-- Navigation Start -->
     <nav id="header" class="fixed w-full z-30 top-0 text-white py-5 bounce transition-slow1 uppercase bg-white">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 md:pl-2 md:pr-2">
         <!-- Logo Start-->
         <a href="#" title="Código Falado" class=" no-underline hover:no-underline ">
           <img id="logo" src="./assets/logo.svg" alt="Código Falado APP"
@@ -61,7 +61,7 @@
               <a href="#"
                 class="inline-block text-black no-underline hover:text-gray-600 hover:text-underline py-2 px-4 transition-slow1">Login</a>
             </li>
-            <li class="mr-3 mt-4 md:mt-0 ">
+            <li class="mr-3 mt-4 lg:mt-0 ">
               <a href="#" id="download" class="mx-auto lg:mx-0 hover:bg-pink-500 hover:text-white border border-pink-500 font-bold rounded mt-8 lg:mt-0 py-4 px-8 shadow opacity-30
                  text-pink-500 transition-slow1">Download</a>
             </li>
@@ -80,24 +80,24 @@
   <div id="main" class="">
     <!-- Sections Start -->
     <!-- Hero Area Start -->
-    <section
-      class="sm:pt-12 md:pt-24 pt-12 pb-20 items-center container  mx-auto flex flex-wrap flex-col md:flex-row items-center">
+    <section class=" lg:pt-24 pt-12 pb-20 items-center container mx-auto flex flex-wrap flex-col md:flex-row
+      items-center md:pl-2 md:pr-2">
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div class="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left">
-          <h1 class="my-4 text-3xl md:text-5xl font-bold leading-tight">
+          <h1 class=" my-4 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
             Use Seu Chorão Favorito!
           </h1>
-          <h2 class="leading-normal text-xl md:text-2xl mb-8">
+          <h2 class="leading-normal text-xl md:text-1xl lg:text-2xl mb-8">
             Usando uma tecnologia revolucionária de Machine Beating™️, nós
             surramos unicórnios para extrair Bitcoin em um processo totalmente
             indolor que chamamos de Beatcoin®
           </h2>
           <a href="#" target="_self" title="Comece a bater"
-            class=" group mx-auto lg:mx-0 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded my-6 py-4 px-8 shadow-lg transition-slow1">Comece
+            class="mx-auto md:mx-0 xl:mx-0 lg:mx-0 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded my-6 py-4 px-12 md:px-8 lg:px-8 shadow-lg transition-slow1">Comece
             Agora GRÁTIS</a>
         </div>
         <div class="w-full md:w-1/2 ">
-          <img class="w-full md:pl-24 pl-8 z-50 group-hover:shake" src="./assets/unicorn.png"
+          <img class="w-full lg:pl-24 pl-8 z-50 " src="./assets/unicorn.png"
             alt="Unicórnio Chorando um Pouco" />
         </div>
       </div>
@@ -106,12 +106,13 @@
     <!-- Clients Start -->
     <section
       class="bg-purple-100 py-20 items-center  md:px-0  mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <div class="container mx-auto ">
-        <h2 class="w-full mb-12 text-xl md:text-3xl font-medium leading-tight text-center text-gray-800 ">
+      <div class="container mx-auto  md:px-2">
+        <h2
+          class="w-full mb-12 text-xl md:text-3xl lg:text-2xl px-3 font-medium leading-tight text-center text-gray-800 ">
           As maiores empresas do MUNDO usam nossas soluções
         </h2>
-        <div
-          class=" grid md:grid-columns-5 md:grid-gap-3 md:grid-columns-6 md:grid-gap-4 grid-columns-3 justify-center  items-center px-8  mx-auto">
+        <div class=" grid  md:grid-gap-8 lg:grid-columns-6 lg:grid-gap-4 grid-columns-3 justify-center
+          items-center md:px-32 px-32 mx-auto">
           <div
             class="rounded-full md:h-32 md:w-32 h-20 w-20 flex items-center justify-center bg-gray-300 hover:shadow cursor-pointer focus:outline-none transition-slow1 focus:shadow-outline hover:bg-gray-400 hover:shadow cursor-pointer focus:outline-none transition-slow1 focus:shadow-outline hover:bg-gray-400 mx-2 my-2 ">
             <img class="md:w-32 w-20 p-4 fill-current text-black" src="./assets/logos/1.svg" alt="Client 01" />
@@ -165,13 +166,14 @@
     </section>
     <!-- Clients End -->
     <!-- Features Start -->
-    <section class="bg-white py-20 items-center container  mx-auto flex flex-wrap flex-col md:flex-row items-center ">
+    <section
+      class=" md:pl-2 md:pr-2 bg-white py-20 items-center container  mx-auto flex flex-wrap flex-col md:flex-row items-center ">
       <div>
         <div>
           <h2 class="w-full  my-2 md:text-4xl text-3xl font-medium leading-tight text-center text-gray-800">
             Conheça os benefícios de <strong>implementar o Beatcoin®</strong>
           </h2>
-          <div class="container md:px-24 ">
+          <div class="container lg:px-24 ">
             <!-- Feature Start -->
             <div class="flex flex-wrap flex-col-reverse sm:flex-row">
               <div class="w-full sm:w-1/2 p-6 mt-6">
@@ -302,7 +304,7 @@
     <!-- Features End -->
     <!-- Second Call To Action Start -->
     <section class="bg-mono-circle py-20 items-center   mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <div class="w-full container mx-auto text-center">
+      <div class="w-full container mx-auto text-center md:px-4">
         <div class="w-full flex justify-content flex-wrap p-4 md:p-0">
           <div class="flex flex-col w-full md:w-1/2 justify-center items-start text-center md:text-left">
             <h2 class="w-full mb-8 text-3xl font-medium leading-tight  text-gray-800">
@@ -314,11 +316,11 @@
               a ter mais saúde, mais sorte, mais dinheiro e muito mais
               Jabuticabas!
             </p>
-            <a class="mx-auto lg:mx-0 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded my-6 py-4 px-8 shadow-lg transition-slow1"
+            <a class="mx-auto md:mx-0 lg:mx-0 bg-pink-600 hover:bg-pink-700 text-white font-bold rounded my-6 py-4 px-8 shadow-lg transition-slow1"
               href="#">O que você está esperando?</a>
           </div>
           <div class="w-full md:w-1/2 ">
-            <img class="md:max-w-xs lg:max-w-md mx-auto py-2 px-3 text-center hover:shake  transition-slow"
+            <img class="lg:max-w-md mx-auto py-2 px-3 text-center hover:shake  transition-slow"
               src="./assets/illustrations/undraw_to_the_moon_v1mv.svg" alt="Astronauta Decolando" />
           </div>
 
@@ -339,13 +341,13 @@
           </h2>
 
         </div>
-        <div>
+        <div class="w-full mx-auto md:px-20">
           <!-- Single Testimonial Start -->
-          <div class="grid md:grid-columns-3 grid-gap-8 grid-columns-1 m-4">
+          <div class="grid lg:grid-columns-3 grid-gap-8 grid-columns-1 m-4 mx-auto w-full">
 
             <div class="w-full p-8 rounded-t rounded-b-none overflow-hidden shadow bg-gray-300 border-pink-400 border-b-4
               hover:bg-gray-100 hover:shadow-xl transition-slow1">
-              <div class="flex-1 h-32 ">
+              <div class="flex-1   ">
                 <div>
                   <p class="text-gray-900 mb-8 max-w-md mx-auto  text-sm text-center">
                     “Minha vida nunca mais foi a mesma depois de começar a usar
@@ -374,7 +376,7 @@
             <!-- Single Testimonial Start -->
             <div class="w-full p-8 rounded-t rounded-b-none overflow-hidden shadow bg-gray-300 border-pink-400 border-b-4
               hover:bg-gray-100 hover:shadow-xl transition-slow1">
-              <div class="flex-1 h-32">
+              <div class="flex-1 ">
                 <div>
                   <p class="text-gray-900 mb-8 max-w-md mx-auto  text-sm text-center">
                     “Antes de usar o sistema do Código Falado, minhas pilhas não
@@ -403,8 +405,8 @@
             <!-- Single Testimonial Start -->
             <div class="w-full p-8 rounded-t rounded-b-none overflow-hidden shadow bg-gray-300 border-pink-400 border-b-4
               hover:bg-gray-100 hover:shadow-xl transition-slow1">
-              <div class="flex-1 h-32 ">
-                <div>
+              <div class="flex-1  ">
+                <div class="">
                   <p class="text-gray-900 mb-8 max-w-lg mx-auto  text-sm text-center">
                     “Eu tenho algo a dizer, e explicar pra você. Só não garanto,
                     porém, que engraçado eu serei desta vez. Para os manos
@@ -413,7 +415,7 @@
                   </p>
                 </div>
               </div>
-              <div class="flex justify-center items-center">
+              <div class="flex justify-center items-center pb-1 mb-0">
                 <div>
                   <img class="max-w-md w-20 pr-3" src="./assets/illustrations/undraw_male_avatar_323b.svg" />
                 </div>
@@ -435,7 +437,7 @@
     <!-- Testimonials End -->
     <!-- Signup Form Start-->
     <section class="bg-tcfalado my-0 py-12 items-center   mx-auto flex flex-wrap flex-col md:flex-row items-center">
-      <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center md:pl-2 md:pr-2">
         <div class="w-full">
           <div class="w-full mx-auto text-center">
             <h2 class="w-full mb-8 text-4xl font-medium leading-tight text-center text-white">Teste grátis por 14 dias!
@@ -452,9 +454,9 @@
                         type="email" name="email" placeholder="Seu Endereço de E-mail" autocomplete="email"
                         required="required" />
                     </div>
-                    <div class="w-full md:w-3/12 lg::w-3/12 xl:w-3/12 px-2 text-left">
+                    <div class="w-full md:w-4/12 lg:w-3/12 xl:w-3/12 px-2 text-left">
                       <button
-                        class="border-white w-full hover:bg-white hover:text-pink-500 transition-slow1 border mx-auto lg:mx-0  font-bold rounded mt-4 lg:mt-0 py-4 px-8 shadow text-white"
+                        class="border-white w-full hover:bg-white hover:text-pink-500 transition-slow1 border mx-auto lg:mx-0  font-bold rounded mt-4 md:mt-0 lg:mt-0 py-4 px-8 shadow text-white"
                         type="button">
                         <span>Crie Sua Conta</span>
                       </button>
@@ -484,7 +486,7 @@
   <!-- Content End -->
   <!-- Footer Start -->
   <footer class="bg-gray-800">
-    <div class="container mx-auto  ">
+    <div class="container mx-auto md:pl-2 md:pr-2 ">
       <div class="w-full flex flex-col md:flex-row py-2 md:justify-between justify-center">
         <!-- Logo Start-->
         <a href="#" title="Código Falado"
@@ -496,19 +498,19 @@
         <nav role="navigation" class="flex md:justify-end justify-center w-full">
           <div class="w-full flex md:justify-end justify-center text-gray-500">
             <ul class="flex flex-row items-center text-center">
-              <li class="pr-4 hover:text-pink-600 ">
+              <li class="pr-4 hover:text-gray-600 ">
                 <a href="#">Recursos</a>
               </li>
-              <li class="pr-4 hover:text-pink-600">
+              <li class="pr-4 hover:text-gray-600">
                 <a href="#">Preços</a>
               </li>
-              <li class="pr-4 hover:text-pink-600">
+              <li class="pr-4 hover:text-gray-600">
                 <a href="#">Contato</a>
               </li>
-              <li class="pr-4 hover:text-pink-600">
+              <li class="pr-4 hover:text-gray-600">
                 <a href="#">Login</a>
               </li>
-              <li class=" hover:text-pink-600">
+              <li class=" hover:text-gray-600">
                 <a href="#">Download</a>
               </li>
             </ul>
