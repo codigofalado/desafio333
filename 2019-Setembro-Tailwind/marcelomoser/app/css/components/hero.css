@@ -66,7 +66,7 @@
   }
 
   &__subtitle {
-    @apply mb-12 text-md text-secundaryDark;
+    @apply mb-12 text-secundaryDark;
 
     @media(min-width: theme('screens.sm')) {
       @apply mb-16 text-xl;
@@ -90,7 +90,11 @@
   }
 
   &__btn {
-    @apply px-8 py-4 text-md rounded-sm font-bold text-white transition bg-primary hover:bg-primaryDark;
+    @apply px-8 py-4 rounded-sm font-bold text-white transition bg-primary;
+
+    &:hover {
+      @apply bg-primaryDark
+    }
 
     @media(min-width: theme('screens.sm')) {
       @apply text-xl;
@@ -128,9 +132,9 @@
       @apply mt-32;
     }
 
-    @media(min-width: theme('screens.2xl')) {
+    /* @media(min-width: theme('screens.2xl')) {
       @apply mt-30;
-    }
+    } */
 
     @media(min-width: theme('screens.3xl')) {
       @apply mt-20;
