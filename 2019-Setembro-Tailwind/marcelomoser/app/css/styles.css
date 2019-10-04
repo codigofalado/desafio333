@@ -1080,12 +1080,9 @@ video {
   }
     }
 
-@media(min-width: 768px) {
-
-.hero__img {
-      margin-top: 10rem
-  }
-    }
+/* @media(min-width: theme('screens.md')) {
+      @apply mt-20;
+    } */
 
 @media(min-width: 1024px) {
 

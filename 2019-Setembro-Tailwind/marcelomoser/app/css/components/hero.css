@@ -36,17 +36,9 @@
       @apply mt-32;
     }
 
-    /* @media(min-width: theme('screens.xl')) {
-      @apply w-8/12;
-    } */
-
     @media(min-width: theme('screens.2xl')) {
       @apply w-2/3;
     }
-
-    /* @media(min-width: theme('screens.3xl')) {
-      @apply w-2/3;
-    } */
   }
 
   &__title {
@@ -124,17 +116,9 @@
       @apply mt-20;
     }
 
-    @media(min-width: theme('screens.md')) {
-      @apply mt-40;
-    }
-
     @media(min-width: theme('screens.lg')) {
       @apply mt-32;
     }
-
-    /* @media(min-width: theme('screens.2xl')) {
-      @apply mt-30;
-    } */
 
     @media(min-width: theme('screens.3xl')) {
       @apply mt-20;

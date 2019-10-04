@@ -42,7 +42,6 @@
 
     &-content {
       @apply mt-48 bg-white absolute w-screen shadow-primary;
-      /* mt-40 bg-white absolute w-screen */
 
       @media(min-width: theme('screens.sm')) {
         @apply mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
