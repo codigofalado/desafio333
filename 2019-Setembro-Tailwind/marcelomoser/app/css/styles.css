@@ -733,8 +733,6 @@ video {
       box-shadow: 0 3px 3px -1px rgba(157,157,154,.3);;
     }
 
-/* mt-40 bg-white absolute w-screen */
-
 @media(min-width: 640px) {
 
 .header__nav-content {
@@ -908,9 +906,6 @@ video {
     margin-top: 4rem;
     text-align: center;
     width: 100%;
-    /* @media(min-width: theme('screens.3xl')) {
-      @apply w-2/3;
-    } */
   }
 
 @media(min-width: 640px) {
@@ -933,10 +928,6 @@ video {
       margin-top: 8rem
   }
     }
-
-/* @media(min-width: theme('screens.xl')) {
-      @apply w-8/12;
-    } */
 
 @media(min-width: 1438px) {
 
@@ -1080,20 +1071,12 @@ video {
   }
     }
 
-/* @media(min-width: theme('screens.md')) {
-      @apply mt-20;
-    } */
-
 @media(min-width: 1024px) {
 
 .hero__img {
       margin-top: 8rem
   }
     }
-
-/* @media(min-width: theme('screens.2xl')) {
-      @apply mt-30;
-    } */
 
 @media(min-width: 1680px) {
 
@@ -1106,6 +1089,99 @@ video {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.section__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+@media(min-width: 640px) {
+
+.section__container {
+      padding-left: 0;
+
+      padding-right: 0;
+
+      width: 91.666667%
+  }
+    }
+
+@media(min-width: 1438px) {
+
+.section__container {
+      width: 80%
+  }
+    }
+
+@media(min-width: 1680px) {
+
+.section__container {
+      width: 60%
+  }
+    }
+
+.section__title {
+    text-align: center;
+    color: #2F2E41;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+@media(min-width: 640px) {
+
+.section__title {
+      margin-bottom: 4rem;
+
+      font-size: 1.5rem
+  }
+    }
+
+.brands__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.brands__img-container {
+    width: 50%;
+    margin-bottom: 2.5rem;
+  }
+
+@media(min-width: 640px) {
+
+.brands__img-container {
+      width: 25%
+  }
+    }
+
+@media(min-width: 768px) {
+
+.brands__img-container {
+      margin-bottom: 2rem
+  }
+    }
+
+@media(min-width: 1024px) {
+
+.brands__img-container {
+      margin-bottom: 4rem
+  }
+    }
+
+@media(min-width: 1280px) {
+
+.brands__img-container {
+      width: 16.666667%
+  }
+    }
+
+.brands__img {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 
 .sr-only {
   position: absolute;
