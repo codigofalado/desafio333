@@ -20,6 +20,7 @@ Vence a página que a comunidade julgar ser a mais bonita.
 - Não crie/edite nada fora da pasta do seu usuário. Crie uma pasta com seu nome de usuário dentro de `2019-Setembro-Tailwind`, copie o arquivo [index.html](index.html) para esta nova pasta e faça seu desafio lá.
 - A data limite para o seu Pull Request é **28/09/2019 às 17hs**.
 - No seu Pull Request, descreva detalhes sobre o que você fez e, se possível, adicione um screenshot e um link para visualizar o seu trabalho no navegador (pode usar [CodePen](https://codepen.io/), [GitHub Pages](https://pages.github.com/), [CodeSandbox](https://codesandbox.io/) ou o que achar melhor). Quanto melhor for sua descrição, maiores as chances de receber votos da comunidade.
+- **Você pode alterar o conteúdo APENAS da tag H1. Coloque o título que você quiser.**
 
 ## FAQ
 
@@ -46,11 +47,11 @@ Conseguindo levar o Tailwind CSS para o seu SASS/LESS/Stylus, sim.
 ### Posso editar o markup padrão deste seu HTML aí?
 
 Sim, **alterações estruturais** são permitidas.
-Já alterações de conteúdo (adicionar novas seções, trazer aquele seu carrossel esperto) estão proibidas.
+Já alterações de conteúdo (adicionar novas seções, trazer aquele seu carrossel esperto) estão proibidas, **com exceção da tag H1**.
 
 ### Já enviei meu Pull Request e gostaria de fazer mais alterações. Posso ?
 
-Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (24/08/2019) para fazer quantas edições você achar necessário.
+Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request. Então você tem até a data limite (**05/10/2019**) para fazer quantas edições você achar necessário.
 
 ## Saiba Mais
 
