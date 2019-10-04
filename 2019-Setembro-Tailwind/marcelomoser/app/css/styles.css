@@ -1183,6 +1183,77 @@ video {
     padding-right: 1.5rem;
   }
 
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features__container {
+    display: flex;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+@media(min-width: 640px) {
+
+.features__container {
+      margin-bottom: 5rem
+  }
+    }
+
+@media(min-width: 1024px) {
+
+.features__container {
+      width: 50%
+  }
+    }
+
+.features__img-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.features__img {
+    height: 16rem;
+    margin-bottom: 0.5rem;
+  }
+
+@media(min-width: 640px) {
+
+.features__img {
+      margin-bottom: 2rem
+  }
+    }
+
+.features__title {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #2F2E41;
+  }
+
+@media(min-width: 640px) {
+
+.features__title {
+      font-size: 1.125rem
+  }
+    }
+
+.features__subtitle {
+    color: #2F2E41;
+  }
+
+@media(min-width: 640px) {
+
+.features__subtitle {
+      padding-left: 2.5rem;
+
+      padding-right: 2.5rem
+  }
+    }
+
 .sr-only {
   position: absolute;
   width: 1px;

@@ -26,33 +26,3 @@
   }
 }
 
-.brands {
-  &__container {
-    @apply flex flex-wrap justify-between items-center;
-  }
-
-  &__img-container {
-    @apply w-1/2 mb-10;
-
-    @media(min-width: theme('screens.sm')) {
-      @apply w-1/4;
-    }
-
-    @media(min-width: theme('screens.md')) {
-      @apply mb-8;
-    }
-
-    @media(min-width: theme('screens.lg')) {
-      @apply mb-16;
-    }
-
-    @media(min-width: theme('screens.xl')) {
-      @apply w-1/6;
-    }
-  }
-
-  &__img {
-    @apply px-6;
-  }
-}
-

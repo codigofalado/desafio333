@@ -1,0 +1,43 @@
+.features {
+  @apply flex flex-wrap;
+
+  &__container {
+    @apply flex w-full px-2 mb-12;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mb-20;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply w-1/2;
+    }
+  }
+
+  &__img-container {
+    @apply flex flex-col;
+  }
+
+  &__img {
+    @apply h-64 mb-2;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mb-8;
+    }
+  }
+
+  &__title {
+    @apply mb-2 text-center font-semibold text-secundaryDark;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply text-lg;
+    }
+  }
+
+  &__subtitle {
+    @apply text-secundaryDark;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply px-10;
+    }
+  }
+}
