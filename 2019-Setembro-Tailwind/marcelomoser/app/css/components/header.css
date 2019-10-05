@@ -13,10 +13,10 @@
     @apply w-screen flex justify-between items-center;
 
     &-img {
-      @apply w-24 ml-2;
+      @apply w-32 ml-2;
 
       @media(min-width: theme('screens.sm')) {
-        @apply -ml-2 w-32;
+        @apply -ml-2;
       }
       
       @media(min-width: theme('screens.md')) {

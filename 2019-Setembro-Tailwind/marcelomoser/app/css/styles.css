@@ -676,16 +676,14 @@ video {
   }
 
 .header__nav-img {
-      width: 6rem;
+      width: 8rem;
       margin-left: 0.5rem;
     }
 
 @media(min-width: 640px) {
 
 .header__nav-img {
-        margin-left: -0.5rem;
-
-        width: 8rem
+        margin-left: -0.5rem
     }
       }
 
