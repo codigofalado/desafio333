@@ -1173,6 +1173,7 @@ video {
 
 .section__title {
     text-align: center;
+    font-size: 1.25rem;
     color: #2F2E41;
     margin-bottom: 2rem;
     font-weight: 700;

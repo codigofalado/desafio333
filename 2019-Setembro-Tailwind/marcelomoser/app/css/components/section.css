@@ -30,7 +30,7 @@
   }
 
   &__title {
-    @apply text-center text-secundaryDark mb-8 font-bold;
+    @apply text-center text-xl text-secundaryDark mb-8 font-bold;
 
     @media(min-width: theme('screens.sm')) {
       @apply mb-16 text-2xl;
