@@ -1638,9 +1638,17 @@ video {
 .signup__notice {
     text-align: center;
     margin-top: 2.5rem;
-    color: #3F3D56;
+    color: #BC0064;
     margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
+
+.signup__notice-link {
+      color: #2F2E41;
+      border-bottom-width: 1px;
+      border-color: #2F2E41;
+    }
 
 .footer {
   background-color: #2F2E41;

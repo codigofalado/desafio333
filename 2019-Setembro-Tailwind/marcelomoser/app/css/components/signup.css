@@ -66,6 +66,10 @@
   }
 
   &__notice {
-    @apply text-center mt-10 text-secundary mb-12;
+    @apply text-center mt-10 text-primaryDark mb-12 px-6;
+
+    &-link {
+      @apply text-secundaryDark border-b border-secundaryDark;
+    }
   }
 }
