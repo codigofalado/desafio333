@@ -24,8 +24,8 @@ Após as 2 semanas de espera para os Pull Requests, abriremos votação no Githu
 ## Premiação
 
 1. O vencedor leva trezentos e trinta e três reais na sua conta bancária.
-2. O segundo colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete grátis.
-3. O terceiro colocado leva um livro sobre o assunto principal do desafio. Entregue em sua casa, com o frete grátis.
+2. O segundo colocado leva setenta reais na sua conta bancária.
+3. O terceiro colocado leva cinquenta na sua conta bancária.
 
 ## Regras
 
