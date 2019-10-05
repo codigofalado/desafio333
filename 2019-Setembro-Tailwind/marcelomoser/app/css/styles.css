@@ -770,6 +770,28 @@ video {
 .header__nav-content-list {
           flex-direction: row;
 
+          background-color: transparent;
+
+          margin-right: 2rem
+      }
+        }
+
+@media(min-width: 768px) {
+
+.header__nav-content-list {
+          flex-direction: row;
+
+          background-color: transparent;
+
+          margin-right: 1.5rem
+      }
+        }
+
+@media(min-width: 1438px) {
+
+.header__nav-content-list {
+          flex-direction: row;
+
           background-color: transparent
       }
         }
