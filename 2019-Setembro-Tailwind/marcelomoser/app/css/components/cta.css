@@ -1,0 +1,68 @@
+.cta {
+
+  &__container {
+    @media(min-width: theme('screens.lg')) {
+      @apply flex items-center;
+    }
+  }
+
+  &__text-container {
+    @apply text-center;
+     
+    @media(min-width: theme('screens.lg')) {
+      @apply text-left;
+    }
+  }
+
+  &__title {
+    @apply text-xl leading-tight text-secundaryDark font-bold;
+
+    @media(min-width: theme('screens.md')) {
+      @apply text-4xl;
+    }
+  }
+
+  &__subtitle {
+    @apply w-11/12 py-8 text-secundaryDark;
+
+    @media(min-width: theme('screens.md')) {
+      @apply text-xl;
+    }
+  }
+
+  &__btn-container {
+    @apply mt-6;
+
+    @media(min-width: theme('screens.md')) {
+      @apply mt-16;
+    }
+  }
+
+  &__btn {
+    @apply px-4 py-4 text-sm rounded-sm font-bold text-white transition bg-primary; 
+
+    &:hover {
+      @apply bg-primaryDark;
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply px-8 text-lg;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply text-xl;
+    }
+  }
+
+  &__img {
+    @aplly mx-auto w-full mt-12;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply w-6/12;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply w-5/12 mt-0;
+    }
+  }
+}
