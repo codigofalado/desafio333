@@ -55,7 +55,7 @@
         @apply flex flex-col items-center text-lg font-semibold text-primary;
 
         @media(min-width: theme('screens.sm')) {
-          @apply flex-row bg-transparent mr-8;
+          @apply flex-row text-base bg-transparent mr-8;
         }
 
         @media(min-width: theme('screens.md')) {

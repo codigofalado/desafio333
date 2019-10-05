@@ -769,6 +769,8 @@ video {
 .header__nav-content-list {
           flex-direction: row;
 
+          font-size: 1rem;
+
           background-color: transparent;
 
           margin-right: 2rem
