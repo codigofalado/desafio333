@@ -1597,8 +1597,6 @@ video {
 @media(min-width: 1438px) {
 
 .footer__container {
-      /* @apply w-4/5; */
-
       max-width: 42rem
   }
     }
@@ -1606,11 +1604,123 @@ video {
 @media(min-width: 1680px) {
 
 .footer__container {
-      /* @apply w-3/5; */
-
       max-width: 48rem
   }
     }
+
+.footer__nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+@media(min-width: 640px) {
+
+.footer__nav {
+      flex-direction: row;
+
+      margin-right: 1rem
+  }
+    }
+
+.footer__nav-list {
+      flex-direction: row;
+      margin-right: 1rem;
+    }
+
+.footer__contact {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+@media(min-width: 640px) {
+
+.footer__contact {
+      flex-direction: row
+  }
+    }
+
+.footer__contact-items {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+@media(min-width: 640px) {
+
+.footer__contact-items {
+        margin-bottom: 0;
+
+        justify-content: flex-start
+    }
+      }
+
+.footer__contact-items-list {
+        margin-right: 1.5rem;
+      }
+
+@media(min-width: 640px) {
+
+.footer__contact-items-list {
+          margin-left: 1rem
+      }
+        }
+
+.footer__contact-social {
+      display: flex;
+      justify-content: center;
+    }
+
+@media(min-width: 640px) {
+
+.footer__contact-social {
+        margin-right: 1rem;
+
+        justify-content: flex-end
+    }
+      }
+
+.footer__contact-social-list {
+        display: flex;
+        margin-right: 1.5rem;
+        transition: all ease .3s;
+      }
+
+.twitter,
+.facebook,
+.youtube,
+.linkedin {
+  transition: all ease .3s;
+  color: #fff;
+  fill: currentColor;
+}
+
+.twitter:hover {
+  color: #1DA1F2;
+  fill: currentColor;
+}
+
+.facebook:hover {
+  color: #4267B2;
+  fill: currentColor;
+}
+
+.youtube:hover {
+  color: #FF0000;
+  fill: currentColor;
+}
+
+.linkedin:hover {
+  color: #0077B4;
+  fill: currentColor;
+}
 
 .sr-only {
   position: absolute;

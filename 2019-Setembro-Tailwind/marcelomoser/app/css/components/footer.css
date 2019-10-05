@@ -68,8 +68,31 @@
       }
 
       &-list {
-        @apply flex mr-6;
+        @apply flex mr-6 transition;
       }
     }
   }
+}
+
+.twitter,
+.facebook,
+.youtube,
+.linkedin {
+  @apply transition text-white fill-current;
+} 
+
+.twitter:hover {
+  @apply text-colorTwitter fill-current;
+}
+
+.facebook:hover {
+  @apply text-colorFacebook fill-current;
+}
+
+.youtube:hover {
+  @apply text-colorYoutube fill-current;
+}
+
+.linkedin:hover {
+  @apply text-colorLinkedin fill-current;
 }
