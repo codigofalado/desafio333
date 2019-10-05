@@ -52,7 +52,7 @@
       }  
 
       &-list {
-        @apply flex flex-col items-center font-semibold text-primary;
+        @apply flex flex-col items-center text-lg font-semibold text-primary;
 
         @media(min-width: theme('screens.sm')) {
           @apply flex-row bg-transparent mr-8;
