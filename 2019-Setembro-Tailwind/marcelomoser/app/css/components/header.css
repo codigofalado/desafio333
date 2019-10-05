@@ -41,10 +41,10 @@
     }
 
     &-content {
-      @apply mt-48 bg-white absolute w-screen shadow-primary;
+      @apply mt-80 bg-white absolute w-screen;
 
       @media(min-width: theme('screens.sm')) {
-        @apply mt-0 flex shadow-none w-auto relative -mr-10 bg-transparent;
+        @apply mt-0 flex w-auto relative -mr-10 bg-transparent;
       }  
 
        @media(min-width: theme('screens.md')) {
@@ -52,7 +52,7 @@
       }  
 
       &-list {
-        @apply flex p-10 flex-col items-center font-semibold text-primary;
+        @apply flex  flex-col items-center font-semibold text-primary;
 
         @media(min-width: theme('screens.sm')) {
           @apply flex-row bg-transparent;
@@ -60,7 +60,7 @@
       }
 
       &-item {
-        @apply transition mb-6;
+        @apply transition mb-4;
 
         &:hover {
           @apply text-primaryDark border-primaryDark; 
@@ -75,14 +75,14 @@
         }
 
         &--download {
-          @apply text-primary bg-primary text-light cursor-pointer border-2 rounded-sm py-1 px-4 border-primary;
+          @apply text-primary bg-primary text-light cursor-pointer border-2 rounded-sm mb-16 py-1 px-4 border-primary;
 
           &:hover {
             @apply border-primaryDark bg-primaryDark text-white;
           }
 
           @media(min-width: theme('screens.sm')) {
-            @apply bg-white text-primary;
+            @apply bg-white mb-0 text-primary;
           }
         }
       }

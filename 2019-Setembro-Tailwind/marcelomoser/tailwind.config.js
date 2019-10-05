@@ -13,13 +13,16 @@ module.exports = {
         colorYoutube: '#FF0000',
         colorLinkedin: '#0077B4',
       },
+      spacing: {
+        '80': '22.5rem',
+      },
       boxShadow: {
         primary: '0 3px 3px -1px rgba(157,157,154,.3);',
       },
       screens: {
         '2xl' : '1438px',
         '3xl' : '1680px',
-      }
+      },
     }
   },
   variants: {},

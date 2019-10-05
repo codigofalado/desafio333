@@ -3,6 +3,8 @@
 //Toggle-Menu 
 document.getElementById('toggle-menu').addEventListener('click', function() {
   document.getElementById('toggle-content').classList.toggle('hidden');
+  document.getElementById('main').classList.toggle('hidden');
+  document.getElementById('footer').classList.toggle('hidden');
 })
 
 //Scroll-Effect
