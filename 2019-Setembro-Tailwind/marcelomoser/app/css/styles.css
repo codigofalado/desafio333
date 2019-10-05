@@ -1087,9 +1087,36 @@ video {
     }
 
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
+
+@media(min-width: 768px) {
+
+.section {
+    padding-top: 2.5rem;
+
+    padding-bottom: 2.5rem
+}
+  }
+
+@media(min-width: 1024px) {
+
+.section {
+    padding-top: 3rem;
+
+    padding-bottom: 3rem
+}
+  }
+
+@media(min-width: 1438px) {
+
+.section {
+    padding-top: 4rem;
+
+    padding-bottom: 4rem
+}
+  }
 
 .section__container {
     padding-left: 1.5rem;
@@ -1319,7 +1346,6 @@ video {
     padding-right: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 0.875rem;
     border-radius: 0.125rem;
     font-weight: 700;
     color: #fff;
@@ -1354,6 +1380,7 @@ video {
     margin-right: auto;
     width: 100%;
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
 @media(min-width: 640px) {
@@ -1506,16 +1533,21 @@ video {
 @media(min-width: 768px) {
 
 .signup__form {
-      width: 66.666667%
+      width: 58.333333%
+  }
+    }
+
+@media(min-width: 1024px) {
+
+.signup__form {
+      width: 50%
   }
     }
 
 @media(min-width: 1680px) {
 
 .signup__form {
-      width: 58.333333%;
-
-      width: 100%
+      width: 58.333333%
   }
     }
 
@@ -1524,27 +1556,17 @@ video {
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    text-align: center;
-  }
-
-@media(min-width: 640px) {
-
-.signup {
-    text-align: left
-}
-  }
-
-@media(min-width: 768px) {
-
-.signup {
-    width: 66.666667%
-}
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .signup__input {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #fff;
     line-height: 1.25;
     border-style: none;
@@ -1556,10 +1578,43 @@ video {
       outline: 0;
     }
 
+.signup__btn {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    position: relative;
+    border-radius: 0.125rem;
+    font-weight: 700;
+    color: #fff;
+    transition: all ease .3s;
+    background-color: #EB007D;
+  }
+
+.signup__btn:hover {
+      background-color: #BC0064
+    }
+
+@media(min-width: 640px) {
+
+.signup__btn {
+      padding-left: 1rem;
+
+      padding-right: 1rem
+  }
+    }
+
+@media(min-width: 1024px) {
+
+.signup__btn {
+      font-size: 1.125rem
+  }
+    }
+
 .signup__notice {
     text-align: center;
     margin-top: 2.5rem;
     color: #3F3D56;
+    margin-bottom: 3rem;
   }
 
 .footer {

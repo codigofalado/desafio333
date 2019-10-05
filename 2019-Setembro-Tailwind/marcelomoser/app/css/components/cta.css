@@ -39,7 +39,7 @@
   }
 
   &__btn {
-    @apply px-4 py-4 text-sm rounded-sm font-bold text-white transition bg-primary; 
+    @apply px-4 py-4 rounded-sm font-bold text-white transition bg-primary; 
 
     &:hover {
       @apply bg-primaryDark;
@@ -55,7 +55,7 @@
   }
 
   &__img {
-    @apply mx-auto w-full mt-12;
+    @apply mx-auto w-full my-12;
 
     @media(min-width: theme('screens.sm')) {
       @apply w-6/12;
