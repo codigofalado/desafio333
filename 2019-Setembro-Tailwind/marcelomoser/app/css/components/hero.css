@@ -69,7 +69,7 @@
     }
 
     @media(min-width: theme('screens.lg')) {
-      @apply mb-20;
+      @apply mb-20 w-10/12;
     }
 
     @media(min-width: theme('screens.3xl')) {

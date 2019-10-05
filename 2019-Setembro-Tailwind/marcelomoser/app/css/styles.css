@@ -996,7 +996,9 @@ video {
 @media(min-width: 1024px) {
 
 .hero__subtitle {
-      margin-bottom: 5rem
+      margin-bottom: 5rem;
+
+      width: 83.333333%
   }
     }
 
