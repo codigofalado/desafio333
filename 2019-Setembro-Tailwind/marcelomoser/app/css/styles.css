@@ -1371,6 +1371,78 @@ video {
   }
     }
 
+.testimonials__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+
+@media(min-width: 1024px) {
+
+.testimonials__container {
+      flex-direction: row
+  }
+    }
+
+.testimonials__single {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-top-width: 4px;
+    border-color: #BC0064;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.25rem;
+    width: 91.666667%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+@media(min-width: 1024px) {
+
+.testimonials__single {
+      margin-bottom: 0
+  }
+    }
+
+.testimonials__text {
+    margin-bottom: 1.5rem;
+    color: #2F2E41;
+  }
+
+.testimonials__img-container {
+    display: flex;
+    align-items: center
+  }
+
+.testimonials__img {
+    @pply w-20 mr-4;
+  }
+
+@media(min-width: 768px) {
+
+.testimonials__img {
+      width: 6rem
+  }
+    }
+
+.testimonials__name {
+    font-weight: 600;
+    color: #2F2E41;
+  }
+
+.testimonials__metier {
+    color: #BC0064;
+  }
+
 .sr-only {
   position: absolute;
   width: 1px;
