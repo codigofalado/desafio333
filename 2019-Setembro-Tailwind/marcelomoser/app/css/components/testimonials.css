@@ -1,0 +1,42 @@
+.testimonials {
+  
+  &__container {
+    @apply flex flex-col w-full mx-auto -mx-3;
+
+    @media(min-width: theme('screens.lg')) {
+      @apply flex-row;
+    }
+  }
+
+  &__single {
+    @apply mx-6 px-4 py-4 mb-8 border-t-4 border-primaryDark shadow-md rounded w-11/12 flex flex-col justify-between;
+
+    @media(min-width: theme('screens.lg')) {
+      @apply mb-0;
+    }
+  }
+
+  &__text {
+    @apply mb-6 text-secundaryDark;
+  }
+
+  &__img-container {
+    @apply flex items-center 
+  }
+
+  &__img {
+    @pply w-20 mr-4;
+
+    @media(min-width: theme('screens.md')) {
+      @apply w-24;
+    }
+  }
+
+  &__name {
+    @apply font-semibold text-secundaryDark;
+  }
+
+  &__metier {
+    @apply text-primaryDark;
+  }
+}

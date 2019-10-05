@@ -55,7 +55,7 @@
   }
 
   &__img {
-    @aplly mx-auto w-full mt-12;
+    @apply mx-auto w-full mt-12;
 
     @media(min-width: theme('screens.sm')) {
       @apply w-6/12;
