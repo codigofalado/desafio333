@@ -8,9 +8,10 @@ module.exports = {
         secundaryDark: '#2F2E41',
         light: '#F9FAFA',
         dark: '#111017',
-      },
-      margin: {
-        '72': '20rem',
+        colorTwitter: '#1DA1F2',
+        colorFacebook: '#4267B2',
+        colorYoutube: '#FF0000',
+        colorLinkedin: '#0077B4',
       },
       boxShadow: {
         primary: '0 3px 3px -1px rgba(157,157,154,.3);',
