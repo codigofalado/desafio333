@@ -1,4 +1,5 @@
 var scrollpos = window.scrollY;
+var body = document.getElementById('body');
 var header = document.getElementById('header');
 var navcontent = document.getElementById('nav-content');
 var navaction = document.getElementById('navAction');
@@ -10,7 +11,8 @@ document.addEventListener('scroll', function() {
 	/*Apply classes for slide in bar*/
 	scrollpos = window.scrollY;
 
-	if (scrollpos > 100) {
+	if (scrollpos > 20) {
+		body.classList.add('pt-20');
 		header.classList.add('fixed');
 		header.classList.add('shadow');
 		logo.classList.add('md:w-32');
@@ -24,6 +26,7 @@ document.addEventListener('scroll', function() {
 		btnDown.classList.remove('hover:text-white');
 		btnDown.classList.remove('text-pink-500');
 	} else {
+		body.classList.remove('pt-20');
 		header.classList.remove('fixed');
 		header.classList.remove('shadow');
 		logo.classList.add('md:w-40');
