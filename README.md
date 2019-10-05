@@ -23,9 +23,9 @@ Após as 2 semanas de espera para os Pull Requests, abriremos votação no Githu
 
 ## Premiação
 
-1. O vencedor leva trezentos e trinta e três reais na sua conta bancária.
-2. O segundo colocado leva setenta reais na sua conta bancária.
-3. O terceiro colocado leva cinquenta reais na sua conta bancária.
+1. O vencedor leva R$ 333 ***reais*** na sua conta bancária.
+2. O segundo colocado leva R$ 70 ***pila*** na sua conta bancária.
+3. O terceiro colocado leva R$ 50 ***conto*** na sua conta bancária.
 
 ## Regras
 
