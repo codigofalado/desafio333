@@ -1,4 +1,5 @@
 .signup {
+  @apply w-full mx-auto;
 
   &__title {
     @apply text-xl mb-8 text-center font-bold text-secundaryDark;
@@ -28,7 +29,7 @@
     }
 
     @media(min-width: theme('screens.3xl')) {
-      @apply w-7/12;
+      @apply w-7/12 w-full;
     }
   }
 

@@ -1,0 +1,75 @@
+.footer {
+  @apply bg-secundaryDark text-white py-4;
+
+  &__container {
+    @apply px-6 mx-auto;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply px-0 w-11/12;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply max-w-md;
+    }
+
+    @media(min-width: theme('screens.2xl')) {
+      @apply max-w-2xl;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply max-w-3xl;
+    }
+  }
+
+  &__nav-container {
+    @apply flex items-center justify-between;
+  }
+
+  &__nav {
+    @apply flex flex-col;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply flex-row mr-4;
+    }
+
+    &-list {
+      @apply flex-row mr-4;
+    }
+  }
+
+  &__contact {
+    @apply mb-4 flex flex-col justify-between;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply flex-row;
+    }
+
+    &-items {
+      @apply flex justify-center mb-4;
+
+      @media(min-width: theme('screens.sm')) {
+        @apply mb-0 justify-start;
+      }
+
+      &-list {
+        @apply mr-6;
+        
+        @media(min-width: theme('screens.sm')) {
+          @apply ml-4;
+        }
+      }
+    }
+
+    &-social {
+      @apply flex justify-center;
+
+      @media(min-width: theme('screens.sm')) {
+        @apply mr-4 justify-end;
+      }
+
+      &-list {
+        @apply flex mr-6;
+      }
+    }
+  }
+}

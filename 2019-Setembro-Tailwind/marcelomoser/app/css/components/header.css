@@ -1,5 +1,5 @@
 .header {
-  @apply fixed shadow-primary bg-white w-screen flex items-center h-16;
+  @apply fixed z-10 shadow-primary bg-white w-screen flex items-center h-16;
 
   @media(min-width: theme('screens.sm')) {
     @apply shadow-none;
