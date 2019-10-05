@@ -1,0 +1,58 @@
+.signup {
+
+  &__title {
+    @apply text-xl mb-8 text-center font-bold text-secundaryDark;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply text-2xl mb-12;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply text-3xl;
+    }
+  }
+
+  &__form {
+    @apply border-2 border-primary rounded transition mx-auto flex flex-col;
+
+    &:hover {
+      @apply border-primaryDark; 
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply w-11/12 flex-row justify-end items-center;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply w-8/12;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply w-7/12;
+    }
+  }
+
+  &__input-container {
+    @apply px-4 py-2 text-center;
+  }
+
+  @media(min-width: theme('screens.sm')) {
+    @apply text-left;
+  }
+
+  @media(min-width: theme('screens.md')) {
+    @apply w-8/12;
+  }
+
+  &__input {
+    @apply appearance-none bg-white leading-tight border-none text-secundaryDark;
+
+    &:focus {
+      @apply bg-white outline-none;
+    }
+  }
+
+  &__notice {
+    @apply text-center mt-10 text-secundary;
+  }
+}

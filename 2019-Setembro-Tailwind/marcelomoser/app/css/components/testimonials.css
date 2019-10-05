@@ -25,7 +25,7 @@
   }
 
   &__img {
-    @pply w-20 mr-4;
+    @apply w-20 mr-4;
 
     @media(min-width: theme('screens.md')) {
       @apply w-24;

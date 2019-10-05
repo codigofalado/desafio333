@@ -1424,7 +1424,8 @@ video {
   }
 
 .testimonials__img {
-    @pply w-20 mr-4;
+    width: 5rem;
+    margin-right: 1rem;
   }
 
 @media(min-width: 768px) {
@@ -1441,6 +1442,115 @@ video {
 
 .testimonials__metier {
     color: #BC0064;
+  }
+
+.signup__title {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: #2F2E41;
+  }
+
+@media(min-width: 640px) {
+
+.signup__title {
+      font-size: 1.5rem;
+
+      margin-bottom: 3rem
+  }
+    }
+
+@media(min-width: 768px) {
+
+.signup__title {
+      font-size: 1.875rem
+  }
+    }
+
+.signup__form {
+    border-width: 2px;
+    border-color: #EB007D;
+    border-radius: 0.25rem;
+    transition: all ease .3s;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+.signup__form:hover {
+      border-color: #BC0064;
+    }
+
+@media(min-width: 640px) {
+
+.signup__form {
+      width: 91.666667%;
+
+      flex-direction: row;
+
+      justify-content: flex-end;
+
+      align-items: center
+  }
+    }
+
+@media(min-width: 768px) {
+
+.signup__form {
+      width: 66.666667%
+  }
+    }
+
+@media(min-width: 1680px) {
+
+.signup__form {
+      width: 58.333333%
+  }
+    }
+
+.signup__input-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+
+@media(min-width: 640px) {
+
+.signup {
+    text-align: left
+}
+  }
+
+@media(min-width: 768px) {
+
+.signup {
+    width: 66.666667%
+}
+  }
+
+.signup__input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: #fff;
+    line-height: 1.25;
+    border-style: none;
+    color: #2F2E41;
+  }
+
+.signup__input:focus {
+      background-color: #fff;
+      outline: 0;
+    }
+
+.signup__notice {
+    text-align: center;
+    margin-top: 2.5rem;
+    color: #3F3D56;
   }
 
 .sr-only {
