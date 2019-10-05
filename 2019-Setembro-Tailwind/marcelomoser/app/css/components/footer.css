@@ -33,7 +33,7 @@
     }
 
     &-list {
-      @apply flex-row mr-4;
+      @apply flex-row mr-4 mb-1;
     }
   }
 

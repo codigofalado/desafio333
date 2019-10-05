@@ -1707,6 +1707,7 @@ video {
 .footer__nav-list {
       flex-direction: row;
       margin-right: 1rem;
+      margin-bottom: 0.25rem;
     }
 
 .footer__contact {
