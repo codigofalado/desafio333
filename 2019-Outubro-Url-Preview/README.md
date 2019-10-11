@@ -9,18 +9,18 @@ Vamos simular que um cliente precisa de uma API para responder a requisições q
 Sua API deverá responder a uma requisição do tipo **POST** contendo o seguinte parâmetro:
 
 ```
-url: "https://challenge-stats.netlify.com"
+url: https://challenge-stats.netlify.com
 ```
 
 Seu script irá retornar um **JSON** contendo **no mínimo** os seguintes dados:
 
 ```
 {
-    domain: "challenge-stats.netlify.com",
-    sitename: "Challenge Stats",
-    title: "Challenge Stats · Desafio333 · CodigoFalado",
-    description: "Aplicação para obter informações relacionadas aos participantes do #desafio333 criado pelo canal @codigofalado. ",
-    thumbnail: "https://challenge-stats.netlify.com/image.jpg"
+    "domain": "challenge-stats.netlify.com",
+    "sitename": "Challenge Stats",
+    "title": "Challenge Stats · Desafio333 · CodigoFalado",
+    "description": "Aplicação para obter informações relacionadas aos participantes do #desafio333 criado pelo canal @codigofalado. ",
+    "thumbnail": "https://challenge-stats.netlify.com/image.jpg"
 }
 ```
 
