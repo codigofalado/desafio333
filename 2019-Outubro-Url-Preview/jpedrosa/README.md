@@ -93,7 +93,7 @@ diversidade de ferramentas disponíveis.
 - [x] Fazer uma ferramenta de linha de comando para testar o scraping
 - [x] Fazer o fork do desafio333 e começar a enviar o código
 - [ ] Documentar o projeto
-- [ ] Fazer o servidor
-- [ ] Enviar o servidor para o Heroku
-- [ ] Testar tudo
+- [x] Fazer o servidor
+- [x] Enviar o servidor para o Heroku
+- [x] Testar tudo
 - [ ] Enviar o pull request para o [Desafio333.](https://github.com/codigofalado/desafio333)
