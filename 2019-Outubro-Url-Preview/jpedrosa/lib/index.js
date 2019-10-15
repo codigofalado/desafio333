@@ -63,6 +63,11 @@ fastify.get('/index.html', (req, reply) => {
     reply.view('/templates/index.html.ejs')
 });
 
+fastify.get('/', (req, reply) => {
+    reply.view('/templates/index.html.ejs')
+});
+
+
 // Página de interface simples para o serviço de scraper.
 fastify.get('/scrape', (req, reply) => {
     reply.view('/templates/scrape.ejs')
