@@ -4,7 +4,7 @@
   "description": "Projeto de scraper para o desafio de outubro de 2019 do desafio333.",
   "main": "src/main.js",
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "node lib/index.js"
   },
   "author": "Joao Pedrosa <joaopedrosa@gmail.com>",
   "license": "ISC",
