@@ -75,7 +75,6 @@ function requestCallback(err, res, body) {
         console.error(err);
         process.exit(1);
     } else if (res.statusCode === 200) {
-        console.log("received the body.");
         let o = body;
         if (typeof o === "string") {
             o = JSON.parse(o);

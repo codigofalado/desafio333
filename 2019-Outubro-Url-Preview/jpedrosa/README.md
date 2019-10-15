@@ -92,8 +92,105 @@ diversidade de ferramentas disponíveis.
 - [x] Implementar o scraping
 - [x] Fazer uma ferramenta de linha de comando para testar o scraping
 - [x] Fazer o fork do desafio333 e começar a enviar o código
-- [ ] Documentar o projeto
+- [x] Documentar o projeto
 - [x] Fazer o servidor
 - [x] Enviar o servidor para o Heroku
 - [x] Testar tudo
 - [ ] Enviar o pull request para o [Desafio333.](https://github.com/codigofalado/desafio333)
+
+# Teste
+
+A versão live do servidor pode ser acessada em
+[https://scrape333.herokuapp.com/](https://scrape333.herokuapp.com/)
+
+Para acessar a interface cliente do serviço, só ir para a página
+[https://scrape333.herokuapp.com/scrape](https://scrape333.herokuapp.com/scrape)
+
+Para efetuar uma requisição para o serviço se você estiver rodando ele
+localmente, só executar um comando semelhante a este que usa a biblioteca
+Request do NodeJS:
+
+```javascript
+    const request = require("request");
+    
+    request.post({url: "http://127.0.0.1:8333/scrape",
+        json: {url: "http://127.0.0.1:8333/frutas"}},
+        (err, res, body) => {
+            if (err) {
+                throw err;
+            }
+            if (res.statusCode === 200) {
+                console.log(JSON.stringify(body));
+            } else {
+                throw `Error: Something went wrong!\n${res}\n${body}`;
+            }
+        });
+```
+
+Também é possível acessar a API do site ao vivo assim:
+
+```javascript
+    const request = require("request");
+
+    request.post({url: "https://scrape333.herokuapp.com/scrape",
+        json: {url: "http://pudim.com.br/"}},
+        (err, res, body) => {
+            if (err) {
+                throw err;
+            }
+            if (res.statusCode === 200) {
+                console.log(JSON.stringify(body));
+            } else {
+                throw `Error: Something went wrong!\n${res}\n${body}`;
+            }
+        });
+```
+
+# Instalação
+
+Após clonar este repositório, basta rodar o comando "npm install" no
+diretório. Então é possível iniciar o servidor com o comando "npm start" ou
+"node lib/index.js" que funciona do mesmo jeito. Dá para brincar com uns dois
+programas dentro do diretório bin também.
+
+Exemplo de instalação:
+
+```
+> git clone https://github.com/jpedrosa/desafio333.git
+[...]
+> cd .\desafio333\2019-Outubro-Url-Preview\jpedrosa\
+> npm install
+> npm start
+```
+
+Pronto. O servidor deverá iniciar e é só ir em uma aba do browser colocando
+algo como http://127.0.0.1:8333/ no endereço.
+
+Ferramentas de linha de comando:
+
+```
+> node .\bin\request.js
+[...]
+> node .\bin\scrape.js
+[...]
+> node .\bin\request.js --server_url https://scrape333.herokuapp.com/scrape --url http://pudim.com.br/
+{ title: 'Pudim',
+  thumbnail: 'http://pudim.com.br/pudim.jpg',
+  images: [ 'http://pudim.com.br/pudim.jpg' ] }
+> node .\bin\scrape.js --file .\sample\frutas.html
+{ title: 'Imagens de frutas para exemplo.',
+  description: 'Página contendo imagens e metadados para exemplo.',
+  keywords: 'frutas,ejs,fastify,desafio333',
+  author: 'Joao Pedrosa',
+  'og:title': 'Exemplo para o Desafio333 contendo imagens e metadados.',
+  'og:description':
+   'A descrição mais detalhada o possível deste exemplo de imagens e metadados.',
+  'og:site_name': 'Scrape333',
+  thumbnail: '.\\sample/../static/imagens/banana_150.png',
+  images:
+   [ '.\\sample/../static/imagens/banana_150.png',
+     '.\\sample/../static/imagens/melancia_150.png',
+     '.\\sample/../static/imagens/uva_150.png' ] }
+Elapsed: 25 ms
+```
+
