@@ -28,7 +28,7 @@ const args = arg({
 const mode = args["--mode"];
 const output = args["--output"];
 
-function doScrape(s) {
+function doScrape(s, url) {
     if (output === "rawHtml") {
         console.log(s);
         return;
@@ -36,11 +36,11 @@ function doScrape(s) {
     const startAt = new Date();
     let results;
     if (mode === "loose") {
-        results = scrape.scrapeLoose(s);
+        results = scrape.scrapeLoose(s, url);
     } else if (mode === "parse5") {
-        results = scrape.scrape(s);
+        results = scrape.scrape(s, url);
     } else {
-        results = scrape.cheerioScrape(s);
+        results = scrape.cheerioScrape(s, url);
     }
     const ms = new Date() - startAt;
     
@@ -55,12 +55,12 @@ function doScrape(s) {
     }
 }
 
-if (mode !== undefined && mode !== "parse5" && mode !== "cheerio" && 
+if (mode && mode !== "parse5" && mode !== "cheerio" && 
     mode !== "loose") {
     console.error(`Error! Unknown mode "${mode}". Try running node ` +
         "bin/scrape.js --help to see the available modes.");
     process.exit(1);
-} else if (output !== undefined && output !== "debug" && output !== "json" && 
+} else if (output && output !== "debug" && output !== "json" && 
     output !== "rawHtml") {
     console.error(`Error! Unknown output "${output}". Try running node ` +
         "bin/scrape.js --help to see the available outputs.");
@@ -71,6 +71,7 @@ function printHelp() {
     console.log(`
 Usage: node bin/scrape.js [--url <http://abc.com> | --file <sample/Pudim.html>]
 Options:
+    * --help : This help.
     * --url  | -u  <url> : url pointing to html page to be scraped.
     * --file | -f <file> : file pointing to html page to be scraped.
     * --mode | -m <parse5|cheerio|loose>: parse5 is the default mode.
@@ -84,22 +85,26 @@ Options:
 
 if (args["--help"]) {
     printHelp();
-} else if (args["--file"] !== undefined) {
+} else if (args["--file"]) {
     let f = args["--file"];
     if (fs.existsSync(f)) {
         const s = fs.readFileSync(f, "utf8");
-        doScrape(s);
+        doScrape(s, f);
     }
-} else if (args["--url"] !== undefined) {
+} else if (args["--url"]) {
     const request = require('request');
+    // Normalize the URL so that it includes a trailing slash (/) at least.
+    // E.g. from http://pudim.com.br to http://pudim.com.br/
+    // This is used when normalizing image src that includes joining paths.
+    const url = new URL(args["--url"]).toString(); 
 
-    request(args["--url"], 
+    request(url, 
         (err, res, body) => {
         if (err) { 
             console.error(err);
             process.exit(1);
         } else if (res.statusCode === 200) {
-            doScrape(body);
+            doScrape(body, url);
         } else {
             console.error("Error. Could not process the server response with " +
                 `a status code of "${res.statusCode}"`);

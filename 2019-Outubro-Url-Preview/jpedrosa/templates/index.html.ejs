@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bem-vindo ao projeto do Desafio333 de Outubro de 2019.</title>
+        <meta name="author" content="Joao Pedrosa">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <%- include("navigation") %>
+        <h1>Projeto do <a href="https://github.com/codigofalado/desafio333">Desafio333</a> de Outubro de 2019.</h1>
+        A idéia do projeto era fazer um scraper de página de HTML. Parte do
+        projeto era um servidor de web que respondesse a uma requisição do
+        tipo post. A resposta retornaria um objeto JSON com os resultados do scraper
+        de uma determinada página da web.
+        <h2><a href="scrape">Scrape</a></h2>
+        Este site inclui outras duas páginas. Uma delas é uma interface para o
+        <a href="scrape">Scrape</a> deste projeto. A <a href="frutas">outra</a> é uma página de exemplo
+        que inclui imagens de frutas para entreter e servir de cobaia.
+        <h1>Exemplo de requisição</h1>
+        O código a seguir usa a famosa biblioteca do NodeJS chamada Request.
+        Duas URLs são utilizadas. A primeira para o serviço de scraping. A
+        segunda é a URL da página a ser examinada pelo scraper.
+        <p>
+<pre style='color:#000000;background:#ffffff;'>
+        <span style='color:#800000; font-weight:bold; '>const</span> request <span style='color:#808030; '>=</span> require<span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>request</span><span style='color:#800000; '>"</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        
+        request<span style='color:#808030; '>.</span>post<span style='color:#808030; '>(</span><span style='color:#800080; '>{</span>url<span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://127.0.0.1:8333/scrape</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>
+            json<span style='color:#800080; '>:</span> <span style='color:#800080; '>{</span>url<span style='color:#800080; '>:</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>http://127.0.0.1:8333/frutas</span><span style='color:#800000; '>"</span><span style='color:#800080; '>}</span><span style='color:#800080; '>}</span><span style='color:#808030; '>,</span>
+            <span style='color:#808030; '>(</span>err<span style='color:#808030; '>,</span> res<span style='color:#808030; '>,</span> body<span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>></span> <span style='color:#800080; '>{</span>
+                <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>err<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+                    <span style='color:#800000; font-weight:bold; '>throw</span> err<span style='color:#800080; '>;</span>
+                <span style='color:#800080; '>}</span>
+                <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>res<span style='color:#808030; '>.</span>statusCode <span style='color:#808030; '>===</span> <span style='color:#008c00; '>200</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+                    console<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>log</span><span style='color:#808030; '>(</span><span style='color:#797997; '>JSON</span><span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>stringify</span><span style='color:#808030; '>(</span>body<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+                <span style='color:#800080; '>}</span> <span style='color:#800000; font-weight:bold; '>else</span> <span style='color:#800080; '>{</span>
+                    <span style='color:#800000; font-weight:bold; '>throw</span><span style='color:#800000; '> `</span><span style='color:#0000e6; '>Error: Something went wrong!</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>${</span><span style='color:#797997; '>res</span><span style='color:#800000; '>}</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>${</span><span style='color:#797997; '>body</span><span style='color:#800000; '>}</span><span style='color:#800000; '>`</span><span style='color:#800080; '>;</span>
+                <span style='color:#800080; '>}</span>
+            <span style='color:#800080; '>}</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        </pre>
+        <!--Created using ToHtml.com on 2019-10-15 08:52:26 UTC -->            
+        </p>
+    </body>
+</html>

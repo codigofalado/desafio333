@@ -5,7 +5,37 @@ const htmlparser2 = require("htmlparser2");
 const parse5 = require("parse5");
 const cheerio = require("cheerio");
 const util = require("util"); // Usado pela função util.inspect para depurar.
+const path = require("path"); // Usado pela função util.inspect para depurar.
 
+
+const reURLStart = new RegExp("^([hH][tT][tT][pP][sS]?://|[fF][iI][lL][eE]:///)");
+
+function uriDir(url) {
+    return url.endsWith("/") ? url : path.dirname(url);
+}
+
+function joinUri(a, b) {
+    return (a.endsWith("/") || b.startsWith("/")) ? `${a}${b}` : `${a}/${b}`;
+}
+
+function doNormalizeSrc(src, url) {
+    if (!url || reURLStart.test(src)) {
+        return src;
+    } else {
+        return joinUri(url, src); //path.posix.join(url, src);
+    }
+}
+
+function normalizeSrc(images, url) {
+    if (url) {
+        url = uriDir(url);
+    } else {
+        return;
+    }
+    for (let i = 0, len = images.length; i < len; i++) {
+        images[i] = doNormalizeSrc(images[i], url);
+    }
+}
 
 /// Esta função baseada na biblioteca Cheerio é semelhante a API de uma
 /// biblioteca muito famosa chamada jQuery. Enquanto ela economiza no código
@@ -15,7 +45,7 @@ const util = require("util"); // Usado pela função util.inspect para depurar.
 /// https://github.com/cheeriojs/cheerio
 ///
 /// @param {string} s - HTML string.
-function cheerioScrape(s) {
+function cheerioScrape(s, url) {
     let results = {};
     let images = [];
     let $ = cheerio.load(s);
@@ -39,10 +69,11 @@ function cheerioScrape(s) {
         }
     }
     $("img").each((_, e) => {
-        if (e.attribs.src !== undefined) {
+        if (e.attribs.src) {
             images.push(e.attribs.src);
         }
     });
+    normalizeSrc(images, url);
     estampaThumbnail(results, images);
     return results;
 }
@@ -74,7 +105,7 @@ function searchBody(el, images) {
 /// https://github.com/inikulin/parse5/
 ///
 /// @param {string} s - HTML string.
-function scrape(s) {
+function scrape(s, url) {
     let results = {};
     let images = [];
     const tree = parse5.parse(s);
@@ -127,6 +158,7 @@ function scrape(s) {
         }
     }
 
+    normalizeSrc(images, url);
     estampaThumbnail(results, images);
     return results;
 }
@@ -137,7 +169,7 @@ function scrape(s) {
 /// https://github.com/fb55/htmlparser2
 ///
 /// @param {bytes[]|string} s - HTML bytes ou string.
-function scrapeLoose(s) {
+function scrapeLoose(s, url) {
     let collectText = "";
     let results = {};
     let images = [];
@@ -190,6 +222,7 @@ function scrapeLoose(s) {
     parser.write(s);
     parser.end();
 
+    normalizeSrc(images, url);
     estampaThumbnail(results, images);
     return results;
 }
@@ -202,7 +235,7 @@ function scrapeLoose(s) {
 /// @param {array} images - Imagens.
 function estampaThumbnail(results, images) {
     const ogimg = results["og:image"];
-    if (ogimg !== undefined) {
+    if (ogimg) {
         results["thumbnail"] = ogimg;
     } else if (images.length > 0) {
         results["thumbnail"] = images[0];

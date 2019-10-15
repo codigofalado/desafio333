@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imagens de frutas para exemplo.</title>
+        <meta name="description" content="Página contendo imagens e metadados para exemplo.">
+        <meta name="keywords" content="frutas,ejs,fastify,desafio333">
+        <meta name="author" content="Joao Pedrosa">
+        <meta property="og:title" content="Exemplo para o Desafio333 contendo imagens e metadados.">
+        <meta property="og:description" content="A descrição mais detalhada o possível deste exemplo de imagens e metadados.">
+        <meta property="og:site_name" content="Scrape333">
+        <!-- <meta property="og:image" content="Scrape333.png"> -->
+        <link rel="stylesheet" href="styles.css">
+        <script>
+
+function escapeHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function el(id) {
+    return document.getElementById(id);
+}
+
+function getFrutasURL() {
+    const re = new RegExp("/[^/]*$");
+    let s = window.location.href;
+    return s.replace(re, "/frutas");
+}
+
+function presentResults(s) {
+    const o = JSON.parse(s);
+    const divEl = el("results");
+    let z = "";
+    let images;
+    let thumbnail;
+    for (let [key, value] of Object.entries(o)) {
+        key = escapeHtml(key);
+        // Check whether it's the array of image srcs or not.
+        if (typeof value === "string") {
+            value = escapeHtml(value);
+        }
+        if (key === "images") {
+            images = value;
+        } else if (key === "thumbnail") {
+            thumbnail = value;
+        } else {
+            z += `<span class="resultsKey">${key}:</span> ` +
+                `<span class="resultsValue">${value}</span><br />`;
+        }
+    }
+    if (thumbnail) {
+        z += '<span class="resultsKey">thumbnail:</span><br />' +
+            `<img src="${thumbnail}"><br />`;
+    }
+    if (images) {
+        const a = images.map((src) => {
+            return `${escapeHtml(src)}\n`;
+            }).join("");
+        z += '<span class="resultsKey">images:</span><br />' +
+            `<textarea class="resultsImages">${a}</textarea>`;
+    }
+    divEl.innerHTML = z;
+}
+
+function scrape(url, jsonReqType) {
+    var xhttp = new XMLHttpRequest();
+    var serverUrl = window.location.href;
+    xhttp.open('POST', serverUrl, true);
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+            // console.log("response " + xhttp.responseText);
+            presentResults(xhttp.responseText);
+        }
+    }
+    if (jsonReqType) {
+        const params = {url: url};
+        xhttp.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+        xhttp.send(JSON.stringify(params));
+    } else {
+        const params = `url=${encodeURI(url)}`;
+        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp.send(params);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const formEl = el("scrapeForm");
+    const urlEl = el("urlInput");
+    const jsonReqTypeEl = el("jsonRequestType");
+    urlEl.value = getFrutasURL();
+    formEl.addEventListener("submit", (ev) => {
+        // Interrompe o browser de tentar lidar com o form submit.
+        ev.preventDefault();
+        scrape(urlEl.value.trim(), jsonReqTypeEl.checked);
+        // console.log("checked" + jsonReqTypeEl.checked);
+        // console.log(window.location.href);
+        // console.log(getFrutasURL());
+        // console.log("value " + urlEl.value);
+    });
+});
+
+
+        </script>
+    </head>
+    <body>
+        <%- include("navigation") %>
+        <h1>Scrape</h1>
+        <form id="scrapeForm">
+            <input id="urlInput" type="text" size="40" />
+            <input type="submit" value="Scrape! 🔍" />
+            Request type:
+            <input id="jsonRequestType" type="radio" name="requestType" value="json" checked> JSON
+            <input type="radio" name="requestType" value="form"> Form            
+        </form>
+        <div id="results" class="resultsPanel"></div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+
+body {
+    font-size:140%;
+}
+
+.resultsPanel {
+    border-radius: 10px;
+    border: 5px solid #e5e5e5;
+    padding: 10px;
+}
+
+.resultsKey {
+    font-weight: bold;
+}
+
+.resultsImages {
+    width: 500px;
+    height: 100px;
+}

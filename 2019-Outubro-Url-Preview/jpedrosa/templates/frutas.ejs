@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imagens de frutas para exemplo.</title>
+        <meta name="description" content="Página contendo imagens e metadados para exemplo.">
+        <meta name="keywords" content="frutas,ejs,fastify,desafio333">
+        <meta name="author" content="Joao Pedrosa">
+        <meta property="og:title" content="Exemplo para o Desafio333 contendo imagens e metadados.">
+        <meta property="og:description" content="A descrição mais detalhada o possível deste exemplo de imagens e metadados.">
+        <meta property="og:site_name" content="Scrape333">
+        <!-- <meta property="og:image" content="Scrape333.png"> -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <%- include("navigation") %>
+        <div style="padding-left:40px">
+<% for (let i = 0; i < frutas.length; i += 2) { %>
+    <h1><%= frutas[i] %></h1>
+    <a href="https://pt.wikipedia.org/wiki/<%= frutas[i] %>"><img src="/imagens/<%= frutas[i + 1] %>"></a>
+<% } %>
+        </div>
+    </body>
+</html>
