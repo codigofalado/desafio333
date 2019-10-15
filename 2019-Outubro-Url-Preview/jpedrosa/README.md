@@ -96,7 +96,7 @@ diversidade de ferramentas disponíveis.
 - [x] Fazer o servidor
 - [x] Enviar o servidor para o Heroku
 - [x] Testar tudo
-- [ ] Enviar o pull request para o [Desafio333.](https://github.com/codigofalado/desafio333)
+- [x] Enviar o pull request para o [Desafio333.](https://github.com/codigofalado/desafio333)
 
 # Teste
 

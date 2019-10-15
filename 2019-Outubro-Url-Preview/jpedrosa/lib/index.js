@@ -1,4 +1,5 @@
 
+"use strict";
 
 const fastify = require('fastify')()
 const scrape = require('./scrape')
