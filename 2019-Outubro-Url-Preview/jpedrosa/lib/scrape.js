@@ -7,13 +7,18 @@ const cheerio = require("cheerio");
 const util = require("util"); // Usado pela função util.inspect para depurar.
 const path = require("path"); // Usado pela função util.inspect para depurar.
 
-
+// RegEx para checar o início do URL.
+// Serve para testar se começa com http:// https:// file:///
 const reURLStart = new RegExp("^([hH][tT][tT][pP][sS]?://|[fF][iI][lL][eE]:///)");
 
+// Se o URL apontar para um arquivo, isto é, sem terminar com um slash (/),
+// então esta função retornaria o diretório do arquivo.
 function uriDir(url) {
     return url.endsWith("/") ? url : path.dirname(url);
 }
 
+// Une dois fragmentos de URL de forma a preservar ao máximo a estrutura
+// restante.
 function joinUri(a, b) {
     return (a.endsWith("/") || b.startsWith("/")) ? `${a}${b}` : `${a}/${b}`;
 }
@@ -26,6 +31,16 @@ function doNormalizeSrc(src, url) {
     }
 }
 
+// As imagens às vezes usam um caminho relativo, assim: ../dir/pict.png
+// Na hora de usar realmente o link das imagens como no caso do thumbnail
+// gerado a partir da primeira imagem, se faz necessário unir o caminho da URL
+// ao fragmento do caminho da imagem. Por exemplo, no site pudim.com.br, a
+// única imagem só tem um caminho "pudim.png". Na hora de colocar essa imagem
+// no meu site de scraper o caminho ficaria quebrado. Assim que identifiquei
+// o problema.
+// 
+// Esta função ajuda com o problema, produzindo o caminho mais completo das
+// imagens. No caso do pudim.com.br ficaria http://pudim.com.br/pudim.png
 function normalizeSrc(images, url) {
     if (url) {
         url = uriDir(url);
@@ -37,14 +52,17 @@ function normalizeSrc(images, url) {
     }
 }
 
-/// Esta função baseada na biblioteca Cheerio é semelhante a API de uma
-/// biblioteca muito famosa chamada jQuery. Enquanto ela economiza no código
-/// baseado em seletores de CSS, essas abstrações extras fazem com que ela
-/// seja a mais lenta das apresentadas aqui.
-///
-/// https://github.com/cheeriojs/cheerio
-///
-/// @param {string} s - HTML string.
+/**
+ *  Esta função baseada na biblioteca Cheerio é semelhante a API de uma
+ * biblioteca muito famosa chamada jQuery. Enquanto ela economiza no código
+ * baseado em seletores de CSS, essas abstrações extras fazem com que ela
+ * seja a mais lenta das apresentadas aqui.
+ *
+ * https://github.com/cheeriojs/cheerio
+ *
+ * @param {string} s - HTML string.
+ * @param {string} url - URL string.
+ */
 function cheerioScrape(s, url) {
     let results = {};
     let images = [];
@@ -98,13 +116,16 @@ function searchBody(el, images) {
 }
 
 
-/// Esta função valida mais a árvore do HTML ao extair os dados, usando para
-/// isso a biblioteca parse5. Ela chega a ser quase duas vezes mais lenta que
-/// a função scrapeLoose que usa htmlparse5.
-///
-/// https://github.com/inikulin/parse5/
-///
-/// @param {string} s - HTML string.
+/**
+ *  Esta função valida mais a árvore do HTML ao extair os dados, usando para
+ * isso a biblioteca parse5. Ela chega a ser quase duas vezes mais lenta que
+ * a função scrapeLoose que usa htmlparse5.
+ *
+ * https://github.com/inikulin/parse5/
+ *
+ * @param {string} s - HTML string.
+ * @param {string} url - URL string.
+ */
 function scrape(s, url) {
     let results = {};
     let images = [];
@@ -163,12 +184,15 @@ function scrape(s, url) {
     return results;
 }
 
-/// Esta função não se importa com a posição dos elementos no arquivo ou se
-/// a árvore do HTML está bem formada. Ela é mais rápida assim.
-///
-/// https://github.com/fb55/htmlparser2
-///
-/// @param {bytes[]|string} s - HTML bytes ou string.
+/**
+ *  Esta função não se importa com a posição dos elementos no arquivo ou se
+ * a árvore do HTML está bem formada. Ela é mais rápida assim.
+ *
+ * https://github.com/fb55/htmlparser2
+ *
+ * @param {bytes[]|string} s - HTML bytes ou string.
+ * @param {string} url - URL string.
+ */
 function scrapeLoose(s, url) {
     let collectText = "";
     let results = {};
@@ -228,11 +252,13 @@ function scrapeLoose(s, url) {
 }
 
 
-/// Uma alternativa à imagem de thumbnail. Se og:image não existir, usa
-/// a primeira imagem encontrada no body como thumbnail.
-///
-/// @param {hashmap} results - Resultado do scrape em um hashmap.
-/// @param {array} images - Imagens.
+/**
+ *  Uma alternativa à imagem de thumbnail. Se og:image não existir, usa
+ * a primeira imagem encontrada no body como thumbnail.
+ *
+ * @param {hashmap} results - Resultado do scrape em um hashmap.
+ * @param {array} images - Imagens.
+ */
 function estampaThumbnail(results, images) {
     const ogimg = results["og:image"];
     if (ogimg) {
