@@ -1,0 +1,75 @@
+.signup {
+  @apply w-full mx-auto;
+
+  &__title {
+    @apply text-xl mb-8 text-center font-bold text-secundaryDark;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply text-2xl mb-12;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply text-3xl;
+    }
+  }
+
+  &__form {
+    @apply border-2 border-primary rounded transition mx-auto flex flex-col;
+
+    &:hover {
+      @apply border-primaryDark; 
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply w-11/12 flex-row justify-end items-center;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply w-7/12;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply w-6/12;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply w-7/12;
+    }
+  }
+
+  &__input-container {
+    @apply px-4 py-2 mx-auto;
+  }
+
+  &__input {
+    @apply appearance-none w-full mx-auto bg-white leading-tight border-none text-secundaryDark;
+
+    &:focus {
+      @apply bg-white outline-none;
+    }
+  }
+
+  &__btn {
+    @apply py-2 w-full relative rounded-sm font-bold text-white transition bg-primary;
+
+    &:hover {
+      @apply bg-primaryDark
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply px-4;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply text-lg;
+    }
+  }
+
+  &__notice {
+    @apply text-center mt-10 text-primaryDark mb-12 px-6;
+
+    &-link {
+      @apply text-secundaryDark border-b border-secundaryDark;
+    }
+  }
+}
