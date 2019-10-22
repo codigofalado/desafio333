@@ -39,6 +39,10 @@ Para testar o projeto, você pode ir ao
 de Scrape permite fazer scraping de qualquer página, embora por padrão use a
 [página de teste](https://scrape333.herokuapp.com/frutas) do próprio projeto.
 
+Um sistema de [URL Preview](https://scrape333.herokuapp.com/url_preview) foi
+adicionado e pode ser usado para teste deste projeto e de outros baseados na
+mesma API do desafio.
+
 Outras informações se encontram no
 [README padrão do projeto.](https://github.com/jpedrosa/scrape333)
 
@@ -105,15 +109,12 @@ mais se forem feitas centenas ou milhares de requisições.
 # Resultados retornados pelo scraping
 
 * domain - Ex: "pudim.com.br"
+* sitename
 * title
-* meta description
-* meta keywords
-* meta author
-* meta og:title
-* meta og:description
-* meta og:site_name
-* meta og:image
+* description
 * thumbnail
+* keywords
+* author
 * images
 
 # Instalação
