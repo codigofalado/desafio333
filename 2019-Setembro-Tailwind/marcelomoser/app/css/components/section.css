@@ -1,0 +1,40 @@
+.section {
+  @apply py-6;
+
+  @media(min-width: theme('screens.md')) {
+    @apply py-10;
+  }
+
+  @media(min-width: theme('screens.lg')) {
+    @apply py-12;
+  }
+
+  @media(min-width: theme('screens.2xl')) {
+    @apply py-16;
+  }
+
+  &__container {
+    @apply px-6 mx-auto;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply px-0 w-11/12;
+    }
+
+    @media(min-width: theme('screens.2xl')) {
+      @apply w-4/5;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply w-3/5;
+    }
+  }
+
+  &__title {
+    @apply text-center text-xl text-secundaryDark mb-8 font-bold;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mb-16 text-2xl;
+    }
+  }
+}
+

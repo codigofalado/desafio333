@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Código Falado APP, Um Blog, Um Log, Um Vlog com Você-ê-ê</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="build/tailwind.css">
+
+</head>
+
+<body class="text-base font-sans bg-background text-secondary">
+  <!-- Header Start -->
+  <header class="bg-background fixed w-full z-99 top-0">
+    <a class="overflow-hidden absolute p-0 h-px -m-px" href="#main">Pular para o Conteúdo</a>
+    <!-- Navigation Start -->
+    <nav id="nav-menu"
+      class="max-w-4xl lg:max-w-6xl  mx-auto flex flex-wrap justify-between mt-0 p-4 border-b border-solid border-primary">
+      <div class="flex w-full lg:w-40 items-center justify-between">
+        <!-- Logo Start-->
+        <a href="#" title="Código Falado">
+          <img class="w-32 md:w-36" src="../assets/logo.svg" alt="Código Falado APP" />
+        </a>
+        <!-- Logo End-->
+        <!-- Mobile Toggle Menu Start -->
+        <div class="my-auto block lg:hidden">
+          <button id="nav-toggle" type="button" aria-expanded="false" aria-label="Menu"
+            class="flex items-center px-3 py-2 text-secondary hover:text-primary focus:outline-none">
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              height="24" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="24"
+              xml:space="preserve">
+              <path
+                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Toggle Menu End -->
+      </div>
+      <!-- Global Menu Start -->
+      <div id="nav-content" class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Recursos</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Preços</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Contato</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Login</a>
+          </li>
+          <li class="mr-3 lg:border lg:rounded lg:border-solid border-background hover:border-primary lg:bg-primary">
+
+            <!--text-white bg-primary flex mt-8 p-5 border-solid border-background border-2 rounded-lg hover:border-primary  focus:outline-none-->
+            <a class="inline-block py-2 px-4 text-primary lg:text-white" href="#">Download</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Global Menu End -->
+    </nav>
+    <!-- Navigation End -->
+  </header>
+  <!-- Header End -->
+  <!-- Content Start -->
+  <div id="main">
+    <!-- Sections Start -->
+    <!-- Hero Area Start -->
+    <section class="w-full mt-16 sm:mt-24 md:mt-24 lg:mt-32">
+      <div class="flex justify-between flex-wrap max-w-4xl lg:max-w-6xl p-8 mx-auto">
+        <div class="mx-auto md:ml-0 max-w-lg md:max-w-xs lg:max-w-md">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl text-center md:text-left text-primary">
+            Gere Bitcoins à partir das Lágrimas do seu Unicórnio Favorito!
+          </h1>
+          <h2 class="text-base lg:text-lg text-center md:text-left mt-8 sm:mt-12 ">
+            Usando uma tecnologia revolucionária de Machine Beating™️,
+            nós surramos unicórnios para extrair Bitcoin em um processo totalmente indolor que chamamos de Beatcoin®.
+          </h2>
+          <button
+            class="mx-auto md:ml-0 text-white bg-primary flex mt-8 p-3 lg:p-5 border-solid border-background border-2 rounded-lg hover:border-primary  focus:outline-none">
+            <a href="#" target="_self" title="Comece a bater">
+              Comece Agora GRÁTIS
+            </a>
+          </button>
+        </div>
+        <div class="mx-auto mt-8 md:mt-0 md:mr-0">
+          <img class="h-64 sm:h-xxxl md:h-xxxxl" src="../assets/unicorn.png" alt="Unicórnio Chorando um Pouco" />
+        </div>
+      </div>
+    </section>
+    <!-- Hero Area End -->
+    <!-- Clients Start -->
+    <section class="w-full mt-12 sm:mt-16 md:mt-24 lg:mt-32">
+      <div class="max-w-4xl lg:max-w-6xl px-6 mx-auto">
+        <h2 class="text-base lg:text-lg text-center mt-8">
+          As maiores empresas do MUNDO usam nossas soluções
+        </h2>
+        <div class="mt-4 flex flex-wrap justify-between">
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/1.svg" alt="Client 01" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/2.svg" alt="Client 02" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/3.svg" alt="Client 03" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/4.svg" alt="Client 04" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/5.svg" alt="Client 05" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/6.svg" alt="Client 06" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/7.svg" alt="Client 07" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/8.svg" alt="Client 08" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/9.svg" alt="Client 09" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2 md:mx-4">
+            <img class="my-auto" src="../assets/logos/10.svg" alt="Client 010" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2">
+            <img class="my-auto" src="../assets/logos/11.svg" alt="Client 011" />
+          </div>
+          <div class="flex m-4 w-16 h-10 sm:w-20 sm:h-16 lg:w-32 lg:h-24 my-2 mx-2">
+            <img class="my-auto" src="../assets/logos/12.svg" alt="Client 012" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients End -->
+    <!-- Features Start -->
+    <section class="w-full mt-12 sm:mt-24 md:mt-24 lg:mt-32">
+      <div class="max-w-4xl lg:max-w-6xl px-4  mx-auto">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl text-center mx-auto mt-8 text-primary">
+          Conheça os benefícios de implementar o Beatcoin®
+        </h2>
+        <div class="flex flex-wrap justify-between">
+          <!--Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs md:max-w-xs mt-12 md:mt-20 mx-2 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_Booked_j7rj.svg" alt="Mantenha o Controle dos Controláveis" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Mantenha o Controle dos Controláveis
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Os unicórnios feridos controlam sua agenda e te avisam
+              quando há novo Beatcoin® na sua carteira
+            </p>
+          </div>
+          <!-- Feature End -->
+          <!--Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs  md:max-w-xs mt-12 md:mt-20 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_chore_list_iof3.svg" alt="Verifique a sua Autoestima" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Verifique a sua Autoestima
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Nossa interface é rica em checkboxes para mostrar que tudo
+              sempre está positivo e operante em nossa plataforma
+            </p>
+          </div>
+          <!-- Feature End -->
+          <!-- Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs  md:max-w-xs mt-12 md:mt-20 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_detailed_examination_joef.svg"
+                alt="Exclusivo Sistema Anti-Desespero" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Exclusivo Sistema Anti-Desespero
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Com os Bitcoins gerados à partir das lágrimas dos
+              Unicórnios, você poderá usufruir da mais moderna tecnologia
+              que deleta todo e qualquer tipo de indício de desespero
+            </p>
+          </div>
+          <!-- Feature End -->
+          <!-- Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs  md:max-w-xs mt-12 md:mt-20 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_female_avatar_l3ey.svg " alt="Avatar Feminino Incluso" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Avatar Feminino Incluso
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Porque os nossos designers sabem que as mulheres são
+              superiores ao homens em 100% dos quesitos não fálicos.
+            </p>
+          </div>
+          <!-- Feature End -->
+          <!-- Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs  md:max-w-xs mt-12 md:mt-20 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_energizer_2224.svg" alt="Entenda a Importância de Beber Água" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Entenda a Importância de Beber Água
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Antes que comecemos a apelar para o Loren Ipsun, é
+              importante frisar que a água, enquanto molhada, serve para
+              saciar a sede daqueles que a necessitam.
+            </p>
+          </div>
+          <!-- Feature End -->
+          <!-- Feature Start -->
+          <div class="mx-auto max-w-xs sm:max-w-xxs  md:max-w-xs mt-20 lg:mx-1">
+            <div class="flex h-64">
+              <img src="../assets/illustrations/undraw_feedback_h2ft.svg" alt="Sistema de Avaliação de Mágicas" />
+            </div>
+            <h4 class="text-lg text-left ml-3 mt-4 text-primary">
+              Sistema de Avaliação de Mágicas
+            </h4>
+            <p class="text-base text-left mx-3 mt-2 text-secondary">
+              Usando POM (Programação Orientada a Mágica), nossos sistemas
+              geram cO2 o suficiente para substituir os Bitcoins da
+              carteira empresarial arcaica do eleitorado sensorial pela
+              flexibilidade paranormal do rabo da lagartixa do Saara.
+            </p>
+          </div>
+          <!-- Feature End -->
+        </div>
+      </div>
+    </section>
+    <!-- Features End -->
+    <!-- Second Call To Action Start -->
+    <section class="w-full mt-12 md:mt-16">
+      <div class="flex flex-wrap max-w-4xl px-8 lg:max-w-6xl  mx-auto">
+        <div class="md:max-w-xs lg:max-w-md mx-auto md:ml-0">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl text-center md:text-left sm:mt-16 lg:mt-24 text-primary">
+            Seus Bitcoins Nunca Mais Serão os Mesmos
+          </h2>
+          <p class="text-base md:text-md lg:text-lg text-center md:text-left  mt-8">
+            Depois de começar a usar o nosso sistema maravilhoso, você passará
+            a ter mais saúde, mais sorte, mais dinheiro e muito mais Jabuticabas!
+          </p>
+          <button
+            class="mx-auto md:ml-0 text-background bg-primary flex mt-8 p-3 md:p-4 lg:p-5 border-solid border-background border-2 rounded-lg hover:border-primary focus:outline-none">
+            <a href="#">O que você está esperando?</a>
+          </button>
+        </div>
+        <img class="h-64 md:h-astronauta lg:h-astronauta2 md:mr-0 mx-auto "
+          src="../assets/illustrations/undraw_to_the_moon_v1mv.svg" alt="Astronauta Decolando" />
+      </div>
+    </section>
+    <!-- Second Call To Action End -->
+    <!-- Testimonials Start -->
+    <section class="w-full mt-16 sm:mt-24 md:mt-24 lg:mt-32 sm:mt-48">
+      <div class="max-w-4xl lg:max-w-6xl px-8 mx-auto">
+        <div class="w-full text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl text-center text-primary">
+            Veja o que a galerinha do mal está falando sobre a gente
+          </h2>
+        </div>
+        <div class="mt-12 flex flex-wrap mx-auto justify-between">
+          <!-- Single Testimonial Start -->
+          <div class="sm:flex mx-auto sm:mt-8 mt-0 md:mt-0 block md:block md:max-w-xxxs lg:max-w-xxs mx-2">
+            <div>
+              <img class="mx-auto sm:h-lg h-xl md:h-xl lg:h-xxl" src="../assets/illustrations/undraw_male_avatar_323b.svg" />
+            </div>
+            <div>
+              <div class="ml-auto sm:max-w-md max-w-xs md:max-w-xs">
+                <p class="mt-4 sm:ml-6 ml-0 md:ml-0 md:mt-8">
+                  “Minha vida nunca mais foi a mesma depois de começar a usar
+                  o sisteminha do Código Falado, só sei dizer que agora todos
+                  os meus boletos estão automaticamente pagos!”
+                </p>
+              </div>
+              <div>
+                <h4 class="text-primary text-left md:text-left sm:text-right mt-3 md:mt-8">
+                  Mané da Esquina
+                </h4>
+                <p class="text-left md:text-left sm:text-right"> 
+                  Pipoqueiro
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Testimonial End -->
+          <!-- Single Testimonial Start -->
+
+          <div class="sm:flex mx-auto sm:mt-8 mt-8 md:mt-0 block md:block md:max-w-xxxs lg:max-w-xxs mx-2">
+            <div>
+              <img class="mx-auto sm:h-lg h-xl md:h-xl lg:h-xxl" src="../assets/illustrations/undraw_male_avatar_323b.svg" />
+            </div>
+            <div>
+              <div class="ml-auto sm:max-w-md max-w-xs md:max-w-xss">
+                <p class="mt-4 sm:ml-6 md:ml-0 md:mt-8">
+                  “Antes de usar o sistema do Código Falado, minhas pilhas não
+                  funcionavam. Agora, funcionam que é uma beleza! Parabéns a
+                  todos os envolvidos no desenvolvimento desse sistema
+                  maravilhoso que revolucionou a indústria da música por fita
+                  K7.”
+                </p>
+              </div>
+              <div class="ml-auto sm:max-w-md md:max-w-xs">
+                <h4 class="text-primary md:text-left sm:text-right mt-3 md:mt-8">
+                  João Galo
+                </h4>
+                <p class="md:text-left sm:text-right">
+                  Cantor
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Single Testimonial End -->
+          <!-- Single Testimonial Start -->
+          <div class="sm:flex mx-auto sm:mt-8 mt-8 md:mt-0 block md:block md:max-w-xxxs lg:max-w-xxs mx-2">
+            <div>
+              <img class="mx-auto sm:h-lg h-xl md:h-xl lg:h-xxl" src="../assets/illustrations/undraw_male_avatar_323b.svg" />
+            </div>
+            <div>
+              <div class="mt-4 ml-auto sm:max-w-md max-w-xs md:max-w-xs">
+                <p class="sm:ml-6 md:ml-0 md:mt-8">
+                  “Eu tenho algo a dizer, e explicar pra você. Só não garanto,
+                  porém, que engraçado eu serei desta vez. Para os manos
+                  daqui, para os manos de lá, se você se considera negro, pra
+                  negro será MANO!”
+                </p>
+              </div>
+              <div>
+                <h4 class="text-primary md:text-left sm:text-right mt-3 md:mt-8">
+                  Mano Brown
+                </h4>
+                <p class="md:text-left sm:text-right">
+                  Racionais BMX
+                </p>
+              </div>
+            </div>
+            <!-- Single Testimonial End -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials End -->
+    <!-- Signup Form Start-->
+    <section class="w-full mt-12 sm:mt-16 md:mt-24">
+      <div class="max-w-4xl lg:max-w-6xl mx-auto text-center px-8">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl text-primary">Teste grátis por 14 dias!</h2>
+        <div class="mt-8">
+          <form action="#" accept-charset="UTF-8" method="post">
+            <fieldset>
+              <div class="flex">
+                <div class="m-auto sm:flex border-2 items-center border-gray-500 rounded hover:border-secondary">
+                  <div>
+                    <input
+                      class="
+                      bg-background 
+                      text-sm 
+                      sm:text-base 
+                      text-center 
+                      sm:text-left 
+                      px-8 py-2 
+                      sm:pl-2  sm:pl-3 sm:pr-16 
+                      md:pr-32 md:pl-6 md:py-4 
+                      text-secondary 
+                      focus:outline-none"
+                      type="email" name="email" placeholder="Seu Endereço de E-mail" autocomplete="email"
+                      required="required" />
+                  </div>
+                  <div>
+                    <button type="button"
+                      class="text-sm md:text-base text-background bg-primary sm:flex h-full py-1 text-center w-full sm:p-3 md:p-4 border-solid border-none border rounded hover:bg-background hover:text-secondary focus:outline-none">
+                      <span>Crie Sua Conta</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 text-xs">
+                <p>
+                  Ao criar a conta, você aceitará os
+                  <a class="text-primary hover:underline" href="#">Termos e Condições</a>
+                  do site.
+                </p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Signup Form End-->
+    <!-- Sections End -->
+  </div>
+  <!-- Content End -->
+  <!-- Footer Start -->
+  <footer class="mt-12 sm:mt-24 w-full z-99">
+    <!-- Nav Start -->
+    <nav class="max-w-4xl lg:max-w-6xl  mx-auto flex flex-wrap justify-between mt-0 p-4" role="navigation">
+      <!-- Logo Start-->
+      <a href="#" title="Código Falado">
+        <img class="h-md" src="../assets/icon.svg" alt="Código Falado APP" />
+      </a>
+      <!-- Logo End-->
+      <div class="w-full flex-grow flex lg:items-center sm:w-auto sm:block pt-6 lg:pt-0">
+        <ul class="sm:flex justify-end items-center">
+          <li>
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Recursos</a>
+          </li>
+          <li>
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Preços</a>
+          </li>
+          <li>
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Contato</a>
+          </li>
+          <li>
+            <a class="inline-block py-2 px-4 hover:text-primary" href="#">Login</a>
+          </li>
+          <li>
+            <a class="inline-block py-2 pl-4 hover:text-primary" href="#">Download</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Nav End -->
+    <div class="max-w-4xl lg:max-w-6xl px-4 mx-auto pb-2 sm:mt-20">
+      <div class="w-full flex-wrap block sm:flex lg:items-center lg:w-auto pt-6 lg:pt-0">
+        <ul class="sm:flex items-center">
+          <li><a class="inline-block py-2 px-4 hover:text-primary" href="#">Privacidade</a></li>
+          <li><a class="inline-block py-2 px-4 hover:text-primary" href="#">Contato</a></li>
+        </ul>
+        <ul class="flex ml-auto">
+          <li class="mx-3 my-2">
+            <a class="hover:text-primary" title="Twitter" target="_blank" href="#"><svg class="fill-current" width="20"
+                height="20" version="1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.993 6.077c-1.177.523-2.44.876-3.77 1.033 1.355-.812 2.396-2.098 2.887-3.63-1.27.75-2.673 1.3-4.168 1.592C25.744 3.797 24.038 3 22.15 3c-3.626 0-6.563 2.938-6.563 6.563 0 .514.057 1.016.17 1.496C10.3 10.783 5.464 8.17 2.227 4.2c-.565.97-.89 2.098-.89 3.3 0 2.28 1.16 4.287 2.92 5.465-1.076-.035-2.088-.33-2.973-.82v.08c0 3.182 2.26 5.835 5.264 6.438-.55.15-1.13.23-1.73.23-.423 0-.833-.04-1.233-.117.834 2.606 3.26 4.504 6.13 4.558-2.245 1.76-5.075 2.81-8.15 2.81-.53 0-1.053-.03-1.566-.09C2.905 27.914 6.355 29 10.062 29c12.072 0 18.675-10 18.675-18.675 0-.284-.008-.568-.02-.85 1.283-.925 2.395-2.08 3.276-3.398z">
+                </path>
+              </svg></a>
+          </li>
+          <li class="mx-3 my-2">
+            <a class="hover:text-primary" target="_blank" title="Facebook" href="#"><svg class="fill-current" width="20"
+                height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.115 0H.885A.883.883 0 0 0 0 .885v14.23c0 .49.395.885.885.885h7.659V9.803h-2.09v-2.4h2.09V5.62c0-2.069 1.27-3.189 3.104-3.189.875 0 1.643.053 1.867.096v2.155h-1.291c-1.003 0-1.184.469-1.184 1.173v1.547h2.379l-.31 2.4H11.04V16h4.075c.49 0 .885-.395.885-.885V.885A.883.883 0 0 0 15.115 0z"
+                  fill-rule="evenodd"></path>
+              </svg></a>
+          </li>
+          <li class="mx-3 my-2">
+            <a class="hover:text-primary" title="YouTube" target="_blank" href="#"><svg class="fill-current" version="1"
+                width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.67 9.18s-.312-2.354-1.27-3.39c-1.218-1.358-2.58-1.366-3.206-1.443C22.717 4 16.002 4 16.002 4h-.015s-6.715 0-11.19.347c-.626.077-1.988.085-3.206 1.443C.635 6.826.32 9.18.32 9.18S0 11.94 0 14.7v2.59c0 2.762.32 5.522.32 5.522s.312 2.352 1.27 3.386c1.22 1.358 2.816 1.317 3.528 1.46 2.56.26 10.877.342 10.877.342s6.722-.012 11.2-.355c.624-.08 1.987-.088 3.204-1.446.956-1.036 1.27-3.388 1.27-3.388s.32-2.76.32-5.523V14.7c0-2.76-.32-5.522-.32-5.522z">
+                </path>
+                <path fill="#FFF" d="M12 10v12l10-6"></path>
+              </svg></a>
+          </li>
+          <li class="ml-3 mt-2">
+            <a class="hover:text-primary" title="LinkedIn" target="_blank" href="#"><svg class="fill-current" width="20"
+                height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.816 0C15.466 0 16 .512 16 1.152v13.696c0 .63-.533 1.152-1.184 1.152H1.184C.534 16 0 15.477 0 14.848V1.152C0 .512.533 0 1.184 0zM3.563 4.96a1.382 1.382 0 0 0 0-2.763c-.768 0-1.376.619-1.376 1.376 0 .768.608 1.387 1.376 1.387zm10.069 4.49c0-2.058-.437-3.637-2.848-3.637-1.152 0-1.92.63-2.24 1.227h-.032V5.995H6.24v7.637h2.368V9.856c0-.992.181-1.963 1.419-1.963 1.216 0 1.237 1.142 1.237 2.027v3.712h2.368zM2.368 13.633h2.379V5.995H2.368z"
+                  fill-rule="evenodd"></path>
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  <!-- Scripts Start -->
+  <script src="../scripts/menu_button.js"></script>
+
+  <!-- Scripts End -->
+
+</body>
+
+</html>

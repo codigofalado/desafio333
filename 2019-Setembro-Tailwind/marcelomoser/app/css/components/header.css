@@ -1,0 +1,111 @@
+.header {
+  @apply fixed z-10 shadow-primary bg-white w-screen flex items-center h-16;
+
+  @media(min-width: theme('screens.sm')) {
+    @apply shadow-none;
+  }
+
+  @media(min-width: theme('screens.md')) {
+    @apply h-20;
+  }
+
+  &__nav {
+    @apply w-screen flex justify-between items-center;
+
+    &-img {
+      @apply w-32 ml-2;
+
+      @media(min-width: theme('screens.sm')) {
+        @apply -ml-2;
+      }
+      
+      @media(min-width: theme('screens.md')) {
+        @apply w-40;
+      }
+    }
+
+    &-img-container {
+      @apply flex mx-auto items-center w-screen justify-between;
+
+      @media(min-width: theme('screens.sm')) {
+        @apply w-11/12;
+      }  
+
+      @media(min-width: theme('screens.2xl')) {
+        @apply w-4/5;
+      } 
+
+      @media(min-width: theme('screens.3xl')) {
+        @apply w-3/5;
+      }     
+    }
+
+    &-content {
+      @apply mt-80 bg-white absolute w-screen;
+
+      @media(min-width: theme('screens.sm')) {
+        @apply mt-0 flex w-auto relative -mr-10 bg-transparent;
+      }  
+
+       @media(min-width: theme('screens.md')) {
+        @apply -mr-10;
+      }  
+
+      &-list {
+        @apply flex flex-col items-center text-lg font-semibold text-primary;
+
+        @media(min-width: theme('screens.sm')) {
+          @apply flex-row text-base bg-transparent mr-8;
+        }
+
+        @media(min-width: theme('screens.md')) {
+          @apply flex-row bg-transparent mr-6;
+        }
+
+        @media(min-width: theme('screens.2xl')) {
+          @apply flex-row bg-transparent;
+        }
+      }
+
+      &-item {
+        @apply transition mb-4;
+
+        &:hover {
+          @apply text-primaryDark border-primaryDark; 
+        }
+
+        @media(min-width: theme('screens.sm')) {
+          @apply mb-0 mx-2;
+        }
+
+        @media(min-width: theme('screens.md')) {
+          @apply mx-4;
+        }
+
+        &--download {
+          @apply text-primary bg-primary text-light cursor-pointer border-2 rounded-sm mb-16 py-1 px-4 border-primary;
+
+          &:hover {
+            @apply border-primaryDark bg-primaryDark text-white;
+          }
+
+          @media(min-width: theme('screens.sm')) {
+            @apply bg-white mb-0 text-primary;
+          }
+        }
+      }
+    }
+  }
+  
+  &__btn-menu {
+    @apply text-primary fill-current mt-2 mr-6;
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply hidden;
+    } 
+  }
+}

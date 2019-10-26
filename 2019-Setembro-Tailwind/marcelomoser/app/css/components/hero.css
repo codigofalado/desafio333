@@ -1,0 +1,127 @@
+.hero {
+  @apply py-16;
+
+  &__container {
+    @apply px-6 mx-auto flex flex-col;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply w-11/12 px-0;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply flex-row justify-between;
+    }
+
+    @media(min-width: theme('screens.2xl')) {
+      @apply w-4/5;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply w-3/5;
+    }
+  }
+
+  &__text-container {
+    @apply mt-16 text-center w-full;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply text-left;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply w-8/12;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply mt-32;
+    }
+
+    @media(min-width: theme('screens.2xl')) {
+      @apply w-2/3;
+    }
+  }
+
+  &__title {
+    @apply mb-4 text-2xl leading-tight text-secundaryDark font-bold;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mb-12 text-3xl;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply mb-4 text-4xl;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply mb-10 text-5xl;
+    }
+  }
+
+  &__subtitle {
+    @apply mb-12 text-secundaryDark;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mb-16 text-xl;
+    }
+
+    @media(min-width: theme('screens.md')) {
+      @apply mb-10;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply mb-20 w-10/12;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply mb-32;
+    }
+  }
+
+  &__btn-container {
+    @apply mt-4;
+  }
+
+  &__btn {
+    @apply px-8 py-4 rounded-sm font-bold text-white transition bg-primary;
+
+    &:hover {
+      @apply bg-primaryDark
+    }
+
+    @media(min-width: theme('screens.sm')) {
+      @apply text-xl;
+    }
+  }
+
+  &__img-container {
+    @apply w-6/12 mx-auto;
+
+    @media(min-width: theme('screens.md')) {
+      @apply w-4/12;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply w-3/12;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply w-4/12;
+    }
+  }
+
+  &__img {
+    @apply mt-10;
+
+    @media(min-width: theme('screens.sm')) {
+      @apply mt-20;
+    }
+
+    @media(min-width: theme('screens.lg')) {
+      @apply mt-32;
+    }
+
+    @media(min-width: theme('screens.3xl')) {
+      @apply mt-20;
+    }
+  }
+}
