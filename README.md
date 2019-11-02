@@ -1,8 +1,8 @@
 <h1 align="center">Desafio333</h1>
-<h2 align="center"><a  href="2019-Outubro-Url-Preview/README.md">Mês de Outubro</a></h2>
+<h2 align="center"><a  href="2019-Novembro-WebSocket/README.md">Mês de Novembro</a></h2>
 
 O #Desafio333 é um desafio mensal SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
-A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Outubro, a tecnologia abordada será o **Backend - API URL Preview**.
+A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Novembro, a tecnologia abordada será o **WebSocket**.
 
 ## Como Participar
 
