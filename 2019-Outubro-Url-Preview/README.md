@@ -83,3 +83,5 @@ Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request.
 Veja o [README](../README.md) principal para mais detalhes.
 
 **Caso tenha dúvidas, edite este arquivo e adicione sua pergunta no FAQ**
+
+**Tchau!**
