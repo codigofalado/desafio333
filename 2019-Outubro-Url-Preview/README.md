@@ -1,5 +1,13 @@
 # Desafio333 - Outubro 2019 - API URL Preview
 
+**Tecnologia:** Livre
+**Áreas:** Back-End + Opcional Front-End
+**Data de Lançamento:** 10/10/2019
+**Data Limite para Participação:** 26/10/2019
+**Data de Anúncio dos Vencedores:** 14/11/2019
+**Vencedores:**
+
+
 O desafio do mês de Outubro é focado em Back-End e será possível usar **qualquer linguagem de programação**.
 
 Vamos simular que um cliente precisa de uma API para responder a requisições que retornarão dados necessários para gerar uma pré-visualização de uma URL.
