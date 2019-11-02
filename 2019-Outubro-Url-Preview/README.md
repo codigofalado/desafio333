@@ -7,7 +7,6 @@
 **Data de Anúncio dos Vencedores:** 14/11/2019
 **Vencedores:**
 
-
 O desafio do mês de Outubro é focado em Back-End e será possível usar **qualquer linguagem de programação**.
 
 Vamos simular que um cliente precisa de uma API para responder a requisições que retornarão dados necessários para gerar uma pré-visualização de uma URL.
@@ -32,7 +31,7 @@ Seu script irá retornar um **JSON** contendo **no mínimo** os seguintes dados:
 }
 ```
 
-*(Os dados usados tanto na requisição quanto no retorno deste README são EXEMPLOS, sua API deverá retornar um JSON com os dados da URL fornecida no POST).*
+_(Os dados usados tanto na requisição quanto no retorno deste README são EXEMPLOS, sua API deverá retornar um JSON com os dados da URL fornecida no POST)._
 
 ### Tipo de dados retornados em cada chave:
 
@@ -55,14 +54,13 @@ Diferente dos desafios anteriores, neste mês você não vai desenvolver o desaf
 - Sua implementação será testada (tente facilitar ao máximo os testes) pela comunidade, portanto pense em várias possibilidades fora do comum.
 - A data limite para o seu Pull Request é **26/10/2019 às 17hs**.
 - No seu Pull Request, descreva detalhes sobre o que você fez e, se possível, adicione links para testes. Quanto melhor for sua descrição, maiores as chances de receber votos da comunidade.
-- *Moderadores da Comunidade Código Falado estão LIBERADOS para concorrer aos prêmios deste desafio.*
+- _Moderadores da Comunidade Código Falado estão LIBERADOS para concorrer aos prêmios deste desafio._
 
 ## Tarefas Opcionais
 
 - Sua API poderá retornar mais dados, fazendo com que a preview de URL seja mais detalhada/completa.
 - Você poderá publicar sua API em serviços gratuitos que forneçam processamento de Back-End ([AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/), [Heroku](https://www.heroku.com), etc) para permitir que o @CodigoFalado teste sua API ao vivo com a galerinha.
 - Você pode desenvolver um Front-End simples para consumir a sua API e assim deixar o "cliente" felizão :)
-
 
 ## FAQ
 
@@ -83,5 +81,3 @@ Todos os commits que você adicionar no seu Fork vão parar no seu Pull Request.
 Veja o [README](../README.md) principal para mais detalhes.
 
 **Caso tenha dúvidas, edite este arquivo e adicione sua pergunta no FAQ**
-
-**Tchau!**
