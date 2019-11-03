@@ -1,10 +1,10 @@
 # Desafio333 - Novembro 2019 - WebSocket
 
-**Tecnologia:** WebSocket
-**Áreas:** Back-End, Front-End e Criatividade
-**Data de Lançamento:** 02/11/2019
-**Data Limite para Participação:** 05/12/2019
-**Data de Anúncio dos Vencedores:** 19/12/2019
+**Tecnologia:** WebSocket <br>
+**Áreas:** Back-End, Front-End e Criatividade <br>
+**Data de Lançamento:** 02/11/2019 <br>
+**Data Limite para Participação:** 05/12/2019 <br>
+**Data de Anúncio dos Vencedores:** 19/12/2019 <br>
 **Vencedores:**
 
 O desafio do mês de Novembro é focado em WebSockets e será possível usar **qualquer linguagem de programação**, juntamente com **qualquer framework**.
