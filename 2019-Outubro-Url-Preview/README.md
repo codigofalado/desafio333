@@ -5,7 +5,7 @@
 **Data de Lançamento:** 10/10/2019 <br>
 **Data Limite para Participação:** 26/10/2019 <br>
 **Data de Anúncio dos Vencedores:** 14/11/2019 <br>
-**Vencedores:**
+**Vencedores:** marcopandolfo, foxalex, jpedrosa. 
 
 O desafio do mês de Outubro é focado em Back-End e será possível usar **qualquer linguagem de programação**.
 
