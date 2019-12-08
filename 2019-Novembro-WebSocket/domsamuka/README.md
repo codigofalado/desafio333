@@ -64,7 +64,7 @@ Comandos para Inicialização:
 ```
 node server.js
 ```
-6. Acesso no seu navegador o seu o `LocalHost` usando a `Porta 3000`, assim => `http://localhost:3000/` para usar o modo cliente, ou assim => `http://localhost:3000/admin` para o modo administrador do servidor.
+6. Acesso no seu navegador o seu o `LocalHost` usando a `Porta 3333`, assim => `http://localhost:3333/` para usar o modo cliente, ou assim => `http://localhost:3333/admin` para o modo administrador do servidor.
 
 ## Créditos => Código Falado:
 
