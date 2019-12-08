@@ -20,7 +20,7 @@ Desenvolvi um pequeno Game Multiplayer usando no Node.JS com Socket.IO em uma ID
 
 Fiz esse `Jogo Multiplayer` usando um tutorial do **[Filipe Deschamps](https://www.youtube.com/channel/UCU5JicSrEM5A63jkJ2QvGYw/videos)** no **[Github](https://github.com/filipedeschamps/meu-primeiro-jogo-multiplayer)** e assistindo alguns **[Vídeos no Youtube](https://www.youtube.com/playlist?list=PLMdYygf53DP5SVQQrkKCVWDS0TwYLVitL)**.
 
-O objetivo desse pequenino `Jogo Multiplayer` é coletar o máximo de `Cerejas` possíveis, em uma competição frenética com multiplos jogadores online quem conseguir as primeiras `100 cerejas` será o `vencedor!`... 
+O objetivo desse pequenino `Jogo Multiplayer` é coletar o máximo de `Cerejas` possíveis, em uma competição frenética com multiplos jogadores online quem conseguir as primeiras `100 cerejas` será o `vencedor` e irá tocar um som de quando se ganha uma vida do Game Super Mário!... 
 
 Um `Smile de óculos preto` é o seu personagem principal e os `fantamas com a língua de fora` são os outros jogadores concorrentes que estão online no jogo com você.
 
@@ -30,9 +30,15 @@ Caso você esteja testando sozinho, para ver os multiplos usuários basta abrir 
 
 Essa foi a minha `primeira experiência com Node.JS e GitHub` que estou `estudando a apenas uma semana`. Achei tudo muito divertido e empolgante. Ótimo desafio, que venham outros como esse!... 
 
+## Testar Node.JS => Servidor Online => Herokuapp:
+
+#### Testando no Modo Gamer => Cliente: **[Clique Aqui](https://desafio333.herokuapp.com/)**
+
+#### Testando no Modo Admin => Servidor: **[Clique Aqui](https://desafio333.herokuapp.com/admin)**
+
 ## Testar Node.JS => **[GiPod](https://gitpod.io/#https://github.com/domsamuka/Desafio333-Nov_2019-WebSocket-Game_Multiplayer.git)** Servidor Online:
 
-Para testar esse projeto desenvolvido no Desafio333 basta seguir os passos abaixo:
+** Para testar esse projeto desenvolvido no Desafio333 basta seguir os passos abaixo!**
 
 1. Caso você queira só testar o código de forma rápida para ver o jogo rodando, **[clique aqui](https://gitpod.io/#https://github.com/domsamuka/Desafio333-Nov_2019-WebSocket-Game_Multiplayer.git)** para ele clonar o meu workspace com o meu repositório. O acesso ao Gitpod é gratuito e ele vai pedir para você se conectar com a sua conta do Github.
 2. Caso queira desenvolver sua própria versão ou modificação, faça um `Fork` deste repositório para dentro da sua conta no Github.
@@ -44,24 +50,19 @@ Para testar esse projeto desenvolvido no Desafio333 basta seguir os passos abaix
 
 1. Faça o download ou Clone URL do Repositório.
 2. Extraia ou Importe para o Diritóeio Local no Seu Computador.
-3. É preciso instalar os pacotes: `default` + `express` + `socket.io`, e para fazer isso você deve extrair o arquivo `install.bat` de dentro do `install.rar` e clicar no arquivo para instalar automaticamente.
+3. É preciso instalar os pacotes: `default` + `socket.io`, e para fazer isso você deve extrair o arquivo `install.bat` de dentro do `install.rar` e clicar no arquivo para instalar automaticamente.
 4. Se tudo estiver instalado corretamente basta clicar no arquivo `index.bat` para iniciar. 
 5. Caso prefira instalar e executar manualmente, logo abaixo deixo todos os comandos para o executar via Shell ou CMD.
 
 Comandos para Instalação:
 ```
 npm install --save
-npm install express --save
 npm install socket.io --save
 ```
 
 Comandos para Inicialização:
 ```
-npm start
-```
-ou
-```
-nodemon server.js
+node server.js
 ```
 6. Acesso no seu navegador o seu o `LocalHost` usando a `Porta 3000`, assim => `http://localhost:3000/` para usar o modo cliente, ou assim => `http://localhost:3000/admin` para o modo administrador do servidor.
 
