@@ -100,7 +100,7 @@ Alguns projetos terão intenções comerciais, mas mesmo assim tudo será feito 
 **[Portfólio](https://ferna.ndo.io/portfolio.php)** 
 
 Desenvolvedor web Full Stack do Brasil e tem mais de 15 anos de experiência em desenvolvimento web. Uma forte força motriz para melhorar o desempenho, escalabilidade, usabilidade e confiabilidade dos projetos de desenvolvimento.
-Em 2003, financiou uma pequena agência web (**[Mastop](http://www.mastop.com.br/)** ) => **[Github](https://github.com/mastop)**. Liderou a empresa até 2013, quando decidiu fechar o escritório em São Paulo e trabalha no Home Office desde então.
+Em 2003, financiou uma pequena agência web ( **[Mastop](http://www.mastop.com.br/)** ) => **[Github](https://github.com/mastop)**. Liderou a empresa até 2013, quando decidiu fechar o escritório em São Paulo e trabalha no Home Office desde então.
 Em 2019, iniciou um canal para realizar sessões de codificação ao vivo duas vezes por semana como @CodigoFalado. Está transmitindo simultaneamente para 4 plataformas (Twitch, Facebook, YouTube e Twitter / Periscópio). 
 Tem como objetivo criar uma comunidade de desenvolvedores onde todos possamos aprender e crescer juntos.
 
