@@ -1,7 +1,7 @@
 <h1 align="center">Desafio333</h1>
 <h2 align="center"><a  href="2019-Novembro-WebSocket/README.md">Mês de Novembro</a></h2>
 
-O #Desafio333 é um desafio mensal SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
+O #Desafio333 é um desafio bimestral SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
 A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Novembro, a tecnologia abordada será o **WebSocket**.
 
 ## Como Participar
@@ -23,9 +23,9 @@ Após as 2 semanas de espera para os Pull Requests, abriremos votação no Githu
 
 ## Premiação
 
-1. O vencedor leva R$ 333 ***reais*** na sua conta bancária.
-2. O segundo colocado leva R$ 70 ***pila*** na sua conta bancária.
-3. O terceiro colocado leva R$ 50 ***conto*** na sua conta bancária.
+1. O vencedor leva R\$ 333 **_reais_** na sua conta bancária.
+2. O segundo colocado leva R\$ 70 **_pila_** na sua conta bancária.
+3. O terceiro colocado leva R\$ 50 **_conto_** na sua conta bancária.
 
 ## Regras
 
