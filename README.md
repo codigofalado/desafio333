@@ -2,7 +2,7 @@
 <h2 align="center"><a  href="2019-Novembro-WebSocket/README.md">Mês de Novembro</a></h2>
 
 O #Desafio333 é um desafio bimestral SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
-A cada mês, o desafio girará em torno de uma tecnologia diferente. Neste mês de Novembro, a tecnologia abordada será o **WebSocket**.
+A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. Neste mês de Novembro, a tecnologia abordada será o **WebSocket**.
 
 ## Como Participar
 
@@ -29,8 +29,8 @@ Após as 2 semanas de espera para os Pull Requests, abriremos votação no Githu
 
 ## Regras
 
-- Os vencedores do mês atual, não poderão ganhar premiação no mês seguinte, mas poderão participar.
-- Moderadores da Comunidade Código Falado não poderão vencer Desafios IMPARES (mês sim, mês não).
+- Os vencedores do mês atual, não poderão ganhar premiação no desafio seguinte, mas poderão participar.
+- Moderadores da Comunidade Código Falado não poderão vencer Desafios que ajudarem a criar.
 - Os dados dos vencedores serão solicitados privadamente via Twitch, então para participar, é necessário **seguir @CodigoFalado** no [Twitch](https://www.twitch.tv/codigofalado).
 - O principal objetivo do desafio é o incentivo ao estudo. Então não usaremos critérios demasiadamente técnicos para avaliar o produto entregue.
 - O desafio é totalmente desburocratizado visando facilitar a participação de todos. Mas abusos (bots, copiar código de outros participantes, etc) denunciados serão analisados e desclassificados.
