@@ -1,9 +1,13 @@
 # Desafio333 - Janeiro 2020 - Leitura Orgânica
 
 **Tecnologia:** HTML - CSS - Javascript
+
 **Áreas:** Front-End, Criatividade
+
 **Data de Lançamento:** 11/01/2020
+
 **Data Limite para Participação:** 05/03/2020
+
 **Data de Anúncio dos Vencedores:** 19/03/2020
 
 **Vencedores:**
