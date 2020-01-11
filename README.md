@@ -1,12 +1,12 @@
 <h1 align="center">Desafio333</h1>
-<h2 align="center"><a  href="2019-Novembro-WebSocket/README.md">Mês de Novembro</a></h2>
+<h2 align="center"><a  href="2020-Janeiro-Leitura-Organica/README.md">Mês de Janeiro</a></h2>
 
 O #Desafio333 é um desafio bimestral SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
-A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. Neste mês de Novembro, a tecnologia abordada será o **WebSocket**.
+A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. Neste mês de Janeiro, a tecnologia abordada será o **Front-End**.
 
 ## Como Participar
 
-Lançaremos um desafio novo no **primeiro sábado** de cada mês.
+Lançaremos um desafio novo no **primeiro sábado** do mês (a cada 2 meses).
 Não é preciso se cadastrar. Os participantes terão 2 semanas para enviar suas versões.
 
 1. Faça um Fork deste repositório.
