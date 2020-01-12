@@ -40,6 +40,7 @@ Antes de iniciar a leitura ela precisará dar um “Start”, que irá começar 
 Em seguida, o sistema divide o número de palavras do texto pelo tempo que a pessoa levou (em minutos) e chega a velocidade de leitura em PPM.
 Ao final, o usuário poderá:
 
+- saber seu atual PPM
 - refazer o teste
 - compartilhar sua velocidade de leitura
 - enviar o resultado para seu email
