@@ -47,11 +47,34 @@ main .title {
   margin-top: 100px;
 }
 
+main .divChronometer {
+  width: 15%;
+}
+
+main #addon-wrapping .img-temp {
+  width: 25px;
+}
+
 .sectionText span {
-  font-size: 13px;
+  font-size: 14px;
   color: #6c757d;
   margin-bottom: 17px;
-  display: block;
+  
+}
+
+.sectionText #chronometer {
+  text-align: center;
+  font-size: 17px;
+  color: #6c757d;
+}
+
+.sectionText button {
+  width: 9%;
+}
+
+.sectionText #text-alert {
+  font-size: 16px;
+  display: none;
 }
 
 footer {
@@ -68,5 +91,13 @@ footer {
 
   main .title {
     margin-top: 70px;
+  }
+
+  main .divChronometer {
+    width: 50%;
+  }
+
+  .sectionText button {
+    width: 100%;
   }
 }

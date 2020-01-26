@@ -135,17 +135,35 @@
       </p>
       <span>Cole o seu texto abaixo</span>
       <textarea class="form-control" id="text-area" rows="10" cols="200" maxlength="1000" minlength="600"></textarea>
-      <p class="text-alert text-danger mt-2 mb-0"></p>
+
+      <div>
+        <span class="mt-2 mb-0" id="max-characters">Valor maxímo de <span id="span"></span> palavras</span>
+        <span class="mb-5" id="min-characters">Valor minímo de <span id="spanMinCharacters"></span><span>
+            palavras</span>
+      </div>
+
+      <div class="input-group flex-nowrap mt-3 divChronometer">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">
+            <img class="img-temp" src="img/tempo.svg" alt="">
+          </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Cronômetro" aria-label="Username"
+          aria-describedby="addon-wrapping" id="chronometer" disabled>
+      </div>
+
+      <span class="text-danger mb-3" id="text-alert">Por favor preencha o valor minímo de palavras</span>
+
       <div id="demo"></div>
-      <button class="btn btn-success mt-2 start" title="Iniciar contagem do tempo" id="inicio">Iniciar</button>
-      <button class="btn btn-danger mt-2" title="Pausar contagem do tempo"> Pausar </button>
-      <button class="btn btn-danger mt-2" title="Zerar contagem do tempo"> Zerar </button>
+      <button class="btn btn-success mt-2 start" title="Iniciar contagem do tempo" id="startButton">Iniciar</button>
+      <button class="btn btn-primary mt-2" title="Pausar contagem do tempo" id="pauseButton"> Pausar </button>
+      <button class="btn btn-primary mt-2" title="Zerar contagem do tempo" id="clearButton"> Zerar </button>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="page-footer font-small blue bg-light">
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3">© <span id="year"></span> Copyright:
       <a href="https://www.leituraorganica.com.br/"> Leitura Orgânica</a>
     </div>
   </footer>
@@ -154,6 +172,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/textArea.js"></script>
   <script src="js/chronometer.js"></script>
+  <script src="js/footer.js"></script>
 </body>
 
 </html>
