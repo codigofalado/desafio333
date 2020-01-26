@@ -19,7 +19,7 @@ function calculatorCharacters() {
     const calculatorMax = maxLenght - maxCharacter;
 
     if (calculatorMin <= 0) {
-      minCharacters.textContent = "Valor minímo de palavras atingido você já pode cálcular sua velocidade de leitura";
+      minCharacters.textContent = "Valor minímo de palavras atingido você já pode calcular sua velocidade de leitura";
       minCharacters.classList.add("text-success");
     } else {
       spanMinCharacters.textContent = calculatorMin;

@@ -23,9 +23,11 @@
 
   pause.addEventListener('click', () => {
     pauseChronometer();
-
     const numberWords = textAreaValue.value.length;
     const temp = parseFloat(chronometer.value);
+    const calculate = numberWords / temp;
+    calculate.toFixed();
+    console.log(calculate);
   });
   clear.addEventListener('click', stop);
 
@@ -66,10 +68,10 @@
   }
 
   function startChronometer(tempoDecorrido) {
-    var _ms = tempoDecorrido || 0;
+    let _ms = tempoDecorrido || 0;
     interval = setInterval(function () {
-      var msAgora = Date.now();
-      var diferenca = msAgora - millisecondStart;
+      let msAgora = Date.now();
+      let diferenca = msAgora - millisecondStart;
       chronometer.value = formatMillisecons(diferenca + _ms);
     }, 100)
   }
@@ -79,12 +81,12 @@
     if (ms < 1000) {
       return ms;
     } else if (ms < minute) {
-      var s = ms / 1000;
+      let s = ms / 1000;
       s = parseInt(s);
-      var c = ms - (s * 1000);
+      let c = ms - (s * 1000);
       return s + ':' + c;
     } else {
-      var m = ms / minute;
+      let m = ms / minute;
       m = parseInt(m);
       return m + ":" + formatMillisecons(ms - m * minute);
     }
