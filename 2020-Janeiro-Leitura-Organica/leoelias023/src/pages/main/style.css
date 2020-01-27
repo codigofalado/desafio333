@@ -123,3 +123,19 @@
 .remake-btn {
     background-color: rgb(33, 155, 17);
 }
+
+.animationAmpulheta {
+    animation: viraAmpulheta 1s;
+}
+
+@keyframes viraAmpulheta {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}

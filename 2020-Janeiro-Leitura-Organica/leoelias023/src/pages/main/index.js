@@ -11,6 +11,13 @@ function MainContent() {
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     
+    function viraAmpulheta() {
+        const hourglass = document.getElementById('hourglass-icon');
+        console.log(hourglass);
+        
+    }
+
+    viraAmpulheta();
 
     function incrementTime() {
         const warning = document.getElementById('section-warning');
@@ -81,7 +88,7 @@ function MainContent() {
                 </div>
             </div>  
             <div id="contentAfter">
-                <i className="fas fa-smile-beam health-reading health-color"></i>
+                <i id="hourglass-icon" className="fas fa-smile-beam health-reading health-color"></i>
                 <h4 className="health-title">Parabéns sua velocidade de leitura é: <span className="health-color">Excelente</span>!</h4>
                 <span className="desc">
                     Quer saber mais sobre leitura orgânica e melhorar suas skills de
