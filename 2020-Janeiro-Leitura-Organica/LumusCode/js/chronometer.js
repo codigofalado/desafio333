@@ -10,15 +10,9 @@
   const textAreaValue = document.querySelector("textarea");
   const spanAlert = document.querySelector("#text-alert");
 
-  if (!chronometer.value) {
-    pause.removeAttribute("data-target");
-  } else {
-    pause.setAttribute("data-target", "#exampleModal")
-  }
-
   start.addEventListener('click', () => {
 
-    if (textAreaValue.value.length < 600) {
+    if (textAreaValue.value.split(" ").length < 576) {
       spanAlert.style.display = "block";
       setTimeout(() => {
         spanAlert.style.display = "none";
@@ -30,8 +24,14 @@
   });
 
   pause.addEventListener('click', () => {
+    if (!chronometer.value) {
+      pause.removeAttribute("data-target");
+    } else {
+      pause.setAttribute("data-target", "#exampleModal");
+    }
+
     pauseChronometer();
-    const numberWords = textAreaValue.value.length;
+    const numberWords = textAreaValue.value.split(" ").length;
     const temp = parseFloat(chronometer.value);
     const calculate = numberWords / temp;
 
