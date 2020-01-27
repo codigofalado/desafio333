@@ -138,12 +138,12 @@
         leitura de um texto.
       </p>
       <span>Cole o seu texto abaixo</span>
-      <textarea class="form-control" id="text-area" rows="10" cols="200" maxlength="1000" minlength="600"></textarea>
+      <textarea class="form-control" id="text-area" rows="10" cols="200" maxlength=""></textarea>
 
       <div>
-        <span class="mt-2 mb-0" id="max-characters">Valor maxímo de <span id="span"></span> palavras</span>
-        <span class="mb-5" id="min-characters">Valor minímo de <span id="spanMinCharacters"></span><span>
-            palavras</span>
+        <span class="mt-2 mb-0">Valor máximo de </span><span id="max-characters"> </span><span class="mr-4">
+          palavras.</span>
+        <span class="mt-2 mb-0">Quantidade de palavras: <span id="span">
       </div>
 
       <div class="input-group flex-nowrap mt-3 divChronometer">
@@ -156,13 +156,33 @@
           aria-describedby="addon-wrapping" id="chronometer" disabled>
       </div>
 
-      <span class="text-danger mb-3" id="text-alert">Por favor preencha o valor minímo de palavras</span>
+      <span class="text-danger mb-3" id="text-alert">Valor mínimo de 600 palavras</span>
 
       <div id="demo"></div>
       <button class="btn btn-success mt-2 start" title="Iniciar contagem do tempo" id="startButton">Iniciar</button>
-      <button class="btn btn-primary mt-2" title="Pausar contagem do tempo" id="pauseButton"> Finalizar </button>
+      <button class="btn btn-primary mt-2" title="Pausar contagem do tempo" id="pauseButton" data-toggle="modal"
+        data-target="#exampleModal"> Finalizar </button>
       <button class="btn btn-primary mt-2" title="Zerar contagem do tempo" id="clearButton"> Zerar </button>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Velocidade de leitura em PPM</h5>
+          </div>
+          <div class="modal-body" id="result-ppm">
+            Sua velocidade de leitura é de <span id="speedreading-speed"></span> PPM
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btn-close">Parar</button>
+            <button type="button" class="btn btn-primary" id="btn-continue" data-dismiss="modal">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->

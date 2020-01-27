@@ -4,9 +4,17 @@
   const start = document.querySelector('#startButton');
   const pause = document.querySelector('#pauseButton');
   const clear = document.querySelector('#clearButton');
+  const btnClose = document.querySelector("#btn-close");
+  const btnContinue = document.querySelector("#btn-continue");
 
   const textAreaValue = document.querySelector("textarea");
   const spanAlert = document.querySelector("#text-alert");
+
+  if (!chronometer.value) {
+    pause.removeAttribute("data-target");
+  } else {
+    pause.setAttribute("data-target", "#exampleModal")
+  }
 
   start.addEventListener('click', () => {
 
@@ -26,10 +34,16 @@
     const numberWords = textAreaValue.value.length;
     const temp = parseFloat(chronometer.value);
     const calculate = numberWords / temp;
-    calculate.toFixed();
-    console.log(calculate);
+
+    const speedreadingSpeed = document.querySelector("#speedreading-speed");
+    speedreadingSpeed.textContent = calculate.toFixed(2);
   });
+
   clear.addEventListener('click', stop);
+
+  btnClose.addEventListener("click", stop);
+
+  btnContinue.addEventListener("click", pauseChronometer);
 
   let interval = null;
   let millisecondStart = 0;
