@@ -1,0 +1,57 @@
+.sobre-full {
+    height: auto;
+    background-color: rgb(139, 51, 197);
+    color: #fff;
+    width: 100%;
+}
+
+.sobre-margin {
+    padding: 30px 0;
+    width: 80%;
+    margin: 0 10%;
+    z-index: 1;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-about {
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.ondas {
+    width: 100%;
+    background-size: 100% 50%;
+    height: 200px;
+    background-image: url('../../images/onda.png');
+}
+
+.sobre-margin p {
+    margin-bottom: 20px;
+}
+
+.btn-discover {
+    background-color: rgb(255, 255, 255);
+    margin-top: 40px;
+    padding: 15px 30px;
+    text-align: center;
+    color: #333;
+    transition: width .2s;
+    width: 40%;
+}
+
+.btn-discover:hover{
+    width: 100%;
+}
+
+.center-btn {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-margin span {
+    font-weight: 900;
+}

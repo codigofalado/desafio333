@@ -1,0 +1,125 @@
+.textWord {
+    width: 90%;
+    max-width: 90%;
+    height: 300px;
+    background-color: #ebebeb;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.textWord:focus {
+    border: 3.5px solid rgb(216, 106, 42);
+}
+
+.blockCode {
+    margin-top: 50px;
+    width: 100%;
+    height: 659px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity .2s, height 1s;
+    align-items: center;
+}
+
+.block-title {
+    color: #fff;
+    margin: 20px 0px 10px 0;
+}
+
+.section-warning {
+    margin: 20px 0px 30px 0;
+    color: rgb(192, 192, 192);
+}
+
+.warning-item {
+    display: flex;
+    flex-direction: row;
+    animation: sliceSuggar 1s;
+    padding: 10px 20px;
+    opacity: 1;
+    height: auto;
+    transition: height .5s;
+}
+
+@keyframes sliceSuggar{
+    0% {
+        height: 0px;
+        opacity: 0;
+        background-color: rgb(61, 61, 61);
+        transform: translateY(15px);
+    }
+}
+
+.cube-color {
+    width: 17px;
+    height: 17px;
+    background-color: rgb(0, 255, 191);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.beforeTest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closedTime {
+    opacity: 0;
+    height: 0px;
+}
+
+#contentAfter {
+    margin-top: 20px;
+    width: 80%;
+    display: none;
+    color: #fff;
+    height: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10%;
+}
+
+.health-reading {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.health-color {
+    color: rgb(102, 180, 39);
+}
+
+.desc {
+    margin-top: 30px;
+}
+
+.health-title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.btn-acesso {
+    margin-top: 30px;
+    background-color: rebeccapurple;
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.btn-acesso:hover {
+    transform: translateY(-5px);
+}
+
+.central-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.remake-btn {
+    background-color: rgb(33, 155, 17);
+}

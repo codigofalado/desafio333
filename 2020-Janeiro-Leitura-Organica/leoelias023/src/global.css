@@ -1,0 +1,13 @@
+button {
+    transition: transform 0.2s;
+    padding: 14px 20px;
+    font-weight: 800;
+    background-color: rgb(127, 52, 197);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

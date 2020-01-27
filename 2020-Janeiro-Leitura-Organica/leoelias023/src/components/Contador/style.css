@@ -1,0 +1,38 @@
+.boxCont {
+    margin-top: 20px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    color: rgb(144, 144, 144);
+}
+
+.hourglass-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.hour-text {
+    font-size: 1.3em;
+}
+
+.inputHour {
+    width: 50px;
+    text-align: center;
+    background: none;
+    border: none;    
+    color: rgb(144, 144, 144);
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.separa {
+    font-size: 2em;
+}
+
+.btn-pause {
+    margin-left: 30px;
+    background-color: rgb(26, 173, 34);
+}
