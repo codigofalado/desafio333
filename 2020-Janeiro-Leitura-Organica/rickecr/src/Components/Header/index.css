@@ -1,0 +1,28 @@
+.div-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9EDFA1;
+    height: 75px;
+}
+
+.div-logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.div-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 259px;
+}
+
+
