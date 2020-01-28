@@ -36,3 +36,13 @@
     margin-left: 30px;
     background-color: rgb(26, 173, 34);
 }
+
+.animationColored {
+    animation: colored 1s;
+}
+
+@keyframes colored {
+    0%{
+        color: red;
+    }
+}

@@ -6,6 +6,22 @@
     font-size: 1.1em;
     padding: 10px;
     border-radius: 5px;
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(80, 80, 80);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(183, 0, 255);
+    border-radius: 10px;
 }
 
 .textWord:focus {
@@ -24,7 +40,10 @@
 
 .block-title {
     color: #fff;
-    margin: 20px 0px 10px 0;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    margin: 20px 30px 10px 30px;
+    text-align: center;
 }
 
 .section-warning {
@@ -125,17 +144,17 @@
 }
 
 .animationAmpulheta {
-    animation: viraAmpulheta 1s;
+    animation: viraAmpulheta 2s infinite;
 }
 
 @keyframes viraAmpulheta {
     0% {
-        transform: rotateX(0deg);
+        transform: rotateZ(0deg);
     }
     50% {
-        transform: rotateX(90deg);
+        transform: rotateZ(360deg);
     }
     100% {
-        transform: rotateX(0deg);
+        transform: rotateZ(0deg);
     }
 }

@@ -6,6 +6,7 @@ import React from 'react';
 // Pages
   import MainContent from './pages/main/index';
   import Sobre from './pages/sobre/index';
+  import Footer from './pages/Footer/index';
 
 // Css 
   import './reset.css';
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <MainContent />
       <Sobre />
+      <Footer />
     </>
   );
 }

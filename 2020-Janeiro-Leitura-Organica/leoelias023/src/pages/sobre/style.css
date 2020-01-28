@@ -1,6 +1,7 @@
 .sobre-full {
     height: auto;
     background-color: rgb(139, 51, 197);
+    padding-bottom: 40px;
     color: #fff;
     width: 100%;
 }

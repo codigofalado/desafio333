@@ -1,0 +1,13 @@
+.footer-full {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+    color: rgb(133, 133, 133);
+    background-color: rgb(224, 224, 224);
+}
+
+.codigo-falado {
+    color: rgb(255, 45, 168);
+}

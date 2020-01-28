@@ -1,29 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './style.css';
+
+import api from '../../services/apiText';
 
 import Contador from '../../components/Contador/index';
 
 function MainContent() {
     const [textUser, setTextUser] = useState("");
 
+    async function randomApi() {
+        const resp = await api.get('/lorem/p-1/1-650');
+        const text = resp.data.text_out;
+        setTextUser(text.replace('<p>' , '').replace('</p>' , ''));
+    }
+
+    useEffect(() => {
+        randomApi();
+    } , [])
+
     const [isOn, setIsOn] = useState(false);
     const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
-    
+    const [ppm, setPpm] = useState(0);
+
     function viraAmpulheta() {
-        const hourglass = document.getElementById('hourglass-icon');
-        console.log(hourglass);
-        
+        if(isOn === true && textUser.length > 300) {
+            document.getElementById('hourglass-icon').classList.add('animationAmpulheta');
+        } else {
+            document.getElementById('hourglass-icon').classList.remove('animationAmpulheta');
+        }
     }
 
-    viraAmpulheta();
+    useEffect(viraAmpulheta, [isOn]);
 
     function incrementTime() {
         const warning = document.getElementById('section-warning');
         warning.innerHTML = " ";
-        if(isOn === true && seconds < 59) {
+        if(isOn === true && textUser.length > 300 && seconds < 59) {
             setSeconds(seconds + 1);
+        } else if(isOn === true && textUser.length < 300) {
+            warning.innerHTML = "<div class='warning-item'><div class='cube-color'></div><span>Aviso: O texto deve ter no mínimo 300 caracteres</span></div>"
         }
         if(seconds === 59) {
             setSeconds(0);
@@ -34,23 +51,30 @@ function MainContent() {
     function incrementMinute() {
         if( seconds === 59) {
             setMinutes(minutes + 1);
-            console.log(minutes);
         }
     }
 
-    setTimeout(incrementTime, 100);
+    setTimeout(incrementTime, 1000);
 
     function pauseTime(e) {
         const warning = document.getElementById('section-warning');
-        if (seconds !== 0 ) {
+        if (seconds !== 0 && textUser.length > 300) {
             setIsOn(false);
             const test = document.getElementById("contentBefore");
             test.classList.add('closedTime');
             const after = document.getElementById("contentAfter");
             after.style.display = "flex";
+            // Calcular ppm
+                const palavras = textUser.split(" ");
+                const tempo = minutes + (seconds/60);
+                setPpm(palavras.length/tempo);
             warning.innerHTML += " ";
-        } else {
-            warning.innerHTML = "<div class='warning-item'><div class='cube-color'></div><span>Aviso: Você deve inicializar a contagem para finalizar o teste</span></div>"
+        } 
+        else if(textUser.length < 300){
+            warning.innerHTML = "<div class='warning-item'><div class='cube-color'></div><span>Aviso: O texto deve ter no mínimo 300 caracteres</span></div>"
+        } 
+        else if(seconds === 0) {
+            warning.innerHTML = "<div class='warning-item'><div class='cube-color'></div><span>Aviso: O contador deve ser inicializado!</span></div>"
         }
     }
 
@@ -66,7 +90,7 @@ function MainContent() {
     return (
         <>
             <div id="contentBefore" className="blockCode">
-                <h2 className="block-title" >Digite o texto:</h2>
+                <h2 className="block-title" >Você ja leu hoje? Teste sua velocidade de leitura.</h2>
                 <textarea 
                     spellCheck="false"
                     className="textWord"
@@ -88,8 +112,8 @@ function MainContent() {
                 </div>
             </div>  
             <div id="contentAfter">
-                <i id="hourglass-icon" className="fas fa-smile-beam health-reading health-color"></i>
-                <h4 className="health-title">Parabéns sua velocidade de leitura é: <span className="health-color">Excelente</span>!</h4>
+                <i className="fas fa-smile-beam health-reading health-color"></i>
+                    <h4 className="health-title">Parabéns sua velocidade de leitura é: <span className="health-color">{ppm.toFixed(2)}</span>!</h4>
                 <span className="desc">
                     Quer saber mais sobre leitura orgânica e melhorar suas skills de
                     produtividade em leitura?

@@ -7,6 +7,7 @@ function Contador(prop) {
     const [displayMin, setDisplayMin] = useState("");
     const [displaySec, setDisplaySec] = useState("");
 
+
     function condition() {
         if(prop.min < 10) {
             setDisplayMin("0"+prop.min);
@@ -24,7 +25,7 @@ function Contador(prop) {
 
     return (
         <div className="boxCont">
-            <i className="fas fa-hourglass-half hourglass-icon"></i>
+            <i id="hourglass-icon" className="fas fa-hourglass-half hourglass-icon"></i>
             <span id="hour-txt" className="hour-text">
                 <input 
                     type="text"
