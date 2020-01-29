@@ -5,13 +5,20 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 
 import TextCard from "../TextCard";
+import ResultDialog from "../ResultDialog";
 
 import './index.css';
 
 function Main() {
     const [isTestInit, setIsTestInit] = useState(false);
+    const [open, setOpen] = React.useState(false);
 
-    const theme = createMuiTheme({
+    const handleClose = () => {
+        setIsTestInit(false);
+        setOpen(false);
+    };
+
+    const themeButton = createMuiTheme({
         palette: {
             primary: green,
         },
@@ -30,7 +37,7 @@ function Main() {
             </div>
 
             <div className="div-btn">
-                <ThemeProvider theme={theme}>
+                <ThemeProvider theme={themeButton}>
                     <Button href="#div-text" variant="contained" color="primary" onClick={() => setIsTestInit(true)}>Começar</Button>
                 </ThemeProvider>
             </div>
@@ -39,10 +46,12 @@ function Main() {
                 <div className="div-text" id="div-text">
                     <TextCard></TextCard>
                     <div className="div-btn">
-                        <Button className="btn-result" variant="contained" color="secondary" onClick={() => {}}>Terminei</Button>
+                        <Button className="btn-result" variant="contained" color="secondary" onClick={() => {setOpen(true)}}>Terminei</Button>
                     </div>
                 </div>
             }
+
+            {open && <ResultDialog onClosed={handleClose} open={open} />}
         </div>
     );
 }
