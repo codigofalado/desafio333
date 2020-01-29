@@ -1,0 +1,83 @@
+
+body{
+    background-image:url(../img/images.png);
+    background-attachment: fixed;
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.jumbotron{
+    background-image: url(../img/leitura-organica-logo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-style: inherit;
+    text-align: center;
+    text-decoration: overline;
+    position: absolute;
+    width: 1140px;
+}
+#row1{
+    background-color: rgba(235, 234, 225, 0.658);
+    margin-top: 255px;
+    padding: 50px;
+}
+#titulo{
+    background-color: rgb(124, 146, 102);
+    border-radius: 100px;
+}
+#p1{
+    font-size: 30px;
+}
+#btn1{
+    background-color: black;
+    color: white;
+    width: 350px;
+    font-size: 30px;
+    font-family: monospace;
+    border-radius: 90px;
+}
+.container2{
+    background-image: url(../img/leitura-organica-logo.png);
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    color: white;
+    height: 200px;
+    width: 1500px;
+}
+.leitura{
+    font-size: 25px;
+    width: 1000px;
+    height: 250px;
+    overflow: auto;
+    background-color: whitesmoke;
+
+}
+.cronometro, #cronometro{
+    background-color: rgb(175, 196, 148);
+    border-radius: 90px;
+}
+#home{
+    color: white;
+    background-color: black;
+}
+#hora, #minuto, #segundo{ 
+    display: inline;
+    color: rgb(224, 166, 166);
+    background-color: grey;
+    font-size: 20px;
+    width: 100px;
+}
+#resultado{
+    width: 100px;
+    height: 100px;
+    display: inline;
+    color: rgb(29, 29, 13);
+    background-color: rgb(153, 131, 131);
+    border-radius: 100px;
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+}
