@@ -15,14 +15,9 @@
 .div-buttons {
     display: flex;
     flex-direction: row;
+    margin-right: 25px;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 95px;
-    width: 259px;
+.btn-result {
+    color: green;
 }
-
-

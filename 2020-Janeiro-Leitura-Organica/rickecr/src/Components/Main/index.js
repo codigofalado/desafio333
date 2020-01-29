@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Button from "@material-ui/core/Button";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+
+import TextCard from "../TextCard";
 
 import './index.css';
 
 function Main() {
+    const [isTestInit, setIsTestInit] = useState(false);
+
+    const theme = createMuiTheme({
+        palette: {
+            primary: green,
+        },
+    });
+
     return(
         <div className="div-main">
             <div className="div-info" id="div-info">
@@ -16,24 +30,19 @@ function Main() {
             </div>
 
             <div className="div-btn">
-                <button className="btn-result" onClick={() => {}}>Começar</button>
+                <ThemeProvider theme={theme}>
+                    <Button href="#div-text" variant="contained" color="primary" onClick={() => setIsTestInit(true)}>Começar</Button>
+                </ThemeProvider>
             </div>
 
-            <div className="div-text" id="div-text">
-                <h1 className="text">Text</h1>
-
-                <text className="text">
-                    Em pleno século XXI é salutar refletir sobre a importância de preservação do meio ambiente bem como atuar em prol de uma sociedade mais consciente e limpa.
-                    Já ficou mais que claro que a maioria dos problemas os quais enfrentamos atualmente nas grandes cidades, foram gerados pela ação humana.
-                    De tal modo, podemos pensar nas grandes construções, alicerçadas na urbanização desenfreada, ou no simples ato de jogar lixo nas ruas.
-                    A poluição gerada e impregnada nas grandes cidades foi em grande parte fruto da urbanização desenfreada ou da atuação de indústrias; porém, deveres não cumpridos pelos homens também proporcionaram toda essa "sujidade". Nesse sentido, vale lembrar que pequenos atos podem produzir grandes mudanças se realizados por todos os cidadãos.
-                    Portanto, um conselho deveras importante: ao invés de jogar o lixo (seja um papelzinho de bala, ou uma anotação de um telefone) nas ruas, guarde-o no bolso e atire somente quando encontrar uma lixeira. Seja um cidadão consciente! Não Jogue lixo nas ruas!
-                </text>
-
-                <div className="div-btn">
-                    <button className="btn-result" onClick={() => {}}>Terminei</button>
+            {isTestInit &&
+                <div className="div-text" id="div-text">
+                    <TextCard></TextCard>
+                    <div className="div-btn">
+                        <Button className="btn-result" variant="contained" color="secondary" onClick={() => {}}>Terminei</Button>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     );
 }

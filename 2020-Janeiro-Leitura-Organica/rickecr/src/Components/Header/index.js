@@ -1,5 +1,8 @@
 import React from "react";
 
+import Button from "@material-ui/core/Button";
+import ButtonGroup from '@material-ui/core/ButtonGroup';
+
 import './index.css';
 
 function Header() {
@@ -12,8 +15,10 @@ function Header() {
             </div>
 
             <div className="div-buttons">
-                <a className="btn sobre" href="#div-info">Sobre</a>
-                <a className="btn ppm" href="#div-ppm">Calcular PPM</a>
+                <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
+                    <Button href="#div-info">Sobre</Button>
+                    <Button href="#div-ppm">Calcular PPM</Button>
+                </ButtonGroup>
             </div>
         </div>
     );
