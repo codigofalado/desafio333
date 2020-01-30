@@ -1,0 +1,7 @@
+[[redirects]]
+  from = "/inde.html"
+  to = "/www.leiturorgantesteread8767362.com.br"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Language = ["pt-br"], Country = ["BR"], Role = ["admin"]}
