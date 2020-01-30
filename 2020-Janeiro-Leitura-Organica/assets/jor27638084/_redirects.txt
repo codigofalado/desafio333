@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/inde.html"
-  to = "/www.leiturorgantesteread8767362.com.br"
+  from = "/http://www.leiturorgantesteread8767362.com.br/*"
+  to = "/http://www.leiturorgantesteread8767362.com.br/:splat 301!"
   status = 301
   force = false
   query = {path = ":path"}
