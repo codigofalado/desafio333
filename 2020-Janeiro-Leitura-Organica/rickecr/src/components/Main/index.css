@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+    color: #72a1d6;
+    font-size: 48px;
+    padding-top: 75px;
+}
+
+.text {
+    display: flex;
+    color: #72a1d6;
+    font-size: 24px;
+    margin-left: 53px;
+    margin-right: 53px;
+    margin-top: 68px;
+}

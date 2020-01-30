@@ -6,12 +6,21 @@
 }
 
 body {
-    background-color: #3F3F3F;
+    background-color: #f8f8f8;
     margin-bottom: 25px;
 }
 
 body, button, a {
     font-family: Lato, sans-serif;
+}
+
+button {
+  
+    cursor: pointer;
+}
+
+.div-header + .div-main {
+    padding-top: calc(25px + 5vw);
 }
 
 a {
