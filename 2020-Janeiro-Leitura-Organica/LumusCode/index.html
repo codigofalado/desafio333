@@ -113,6 +113,61 @@
       </div>
     </div>
 
+    <!-- Section Phrases -->
+    <section class="section-phrases mt-5 mb-5">
+      <h4 class="mb-4">Escolha um texto para ler</h4>
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush list-phrases">
+          <li class="list-group-item listitem1" data-toggle="modal">Frases de Einstein</li>
+          <li class="list-group-item listitem2" data-toggle="modal">Frases de Harry Potter</li>
+          <li class="list-group-item listitem3" data-toggle="modal">Frases de Senhor Dos Aneis</li>
+        </ul>
+      </div>
+
+      <div class="modal fade modalPhrases" tabindex="-1" role="dialog" id="modalPhrases">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+              <p class="paragraph1"></p>
+              <p class="paragraph2"></p>
+              <p class="paragraph3"></p>
+            </div>
+            <div class="modal-footer d-flex justify-content-start">
+              <!-- Chronometer -->
+              <div class="input-group flex-nowrap divPhrases">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">
+                    <img class="img-phrases" src="img/tempo.svg" alt="">
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Cronômetro" aria-label="Username"
+                  aria-describedby="addon-wrapping" id="chronometerPhrases" disabled>
+              </div>
+              <!-- Buttons -->
+              <button class="btn btn-success" title="Iniciar contagem do tempo" id="btnStartPhrases">Iniciar</button>
+              <button
+                class="btn btn-primary btnClearPhrasesEinstein btnClearPhrasesHarryPotter btnClearPhrasesLordOfTheRings"
+                title="Iniciar contagem do tempo" id="btnSopPhrases">Finalizar</button>
+              <button class="btn btn-primary" title="Iniciar contagem do tempo" id="btnClearPhrases">Zerar</button>
+            </div>
+            <div class="p-2">
+              <div class="container alert alert-light text-ppm">
+                <h5 class="h4">Velocidade de Leitura em PPM</h5>
+                <p class="lead">Sua velocidade de leitura é de <span id="textPPM"></span> PPM.</p>
+                <a class="btn btn-primary mb-2" href="#" role="button">Refazer teste</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="collapse" id="collapseExample">
       <div class="card card-body">
         <p>
@@ -195,6 +250,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/textArea.js"></script>
+  <script src="js/modalPhrases.js"></script>
   <script src="js/chronometer.js"></script>
   <script src="js/footer.js"></script>
 </body>

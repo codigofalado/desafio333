@@ -48,11 +48,93 @@ main .title {
 }
 
 main .divChronometer {
-  width: 18%;
+  width: 20%;
+}
+
+main .section-phrases .divPhrases {
+  width: 35%;
 }
 
 main #addon-wrapping .img-temp {
-  width: 25px;
+  width: 24px;
+}
+
+main .section-phrases .img-phrases {
+  width: 20px;
+}
+
+main .list-phrases li {
+  cursor: pointer;
+  transition: .3s;
+}
+
+main .list-phrases li:hover {
+  background-color: #f2f2ff;
+}
+
+main #chronometerText {
+  width: 35%;
+}
+
+main .imgChronometer {
+  width: 20px;
+}
+
+main #chronometer {
+  text-align: center;
+}
+
+.section-phrases .text-ppm {
+  display: none;
+}
+
+.modalBodyImage1 {
+  background-image: url(../img/einstein.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-weight: bold;
+  opacity: .9;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.modalBodyImage2 {
+  background-image: url(../img/harry-potter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-weight: bold;
+  opacity: .9;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+.modalBodyImage3 {
+  background-image: url(../img/senhos-dos-aneis.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  color: #fff;
+  font-weight: bold;
+  opacity: .9;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+main  #modalBody {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+main .modalPhrases {
+  width: 100%;
+  overflow: hidden;
+}
+
+main .modal-content {
+  width: 100%;
+  display: block;
+  margin: auto;
 }
 
 .sectionText span {
@@ -62,7 +144,7 @@ main #addon-wrapping .img-temp {
   
 }
 
-.sectionText #chronometer {
+.sectionText .chronometer {
   text-align: center;
   font-size: 17px;
   color: #6c757d;
