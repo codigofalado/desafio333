@@ -12,10 +12,6 @@ header {
   color: white;
 }
 
-textarea {
-  width: 100%;
-}
-
 #textoo, #titulo, #relogio {
     color: white;
     font-family: 'Montserrat', sans-serif;
