@@ -1,0 +1,9 @@
+.MuiDialog-paperWidthSm {
+    max-width: 900px;
+    width: 850px;
+}
+
+.buttons-options {
+    display: flex;
+    flex-direction: column;
+}

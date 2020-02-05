@@ -9,6 +9,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
+import ButtonsShare from "../ButtonsShare";
+
+import './index.css';
+
 function ResultDialog({ onClosed, open }) {
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -25,16 +29,11 @@ function ResultDialog({ onClosed, open }) {
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>Parabéns, seu PPM é: 192 PPM</DialogContentText>
-                <div>
+                <div className="buttons-options">
                     <Button onClick={onClosed} color="primary">
                         Refazer
                     </Button>
-                    <Button onClick={onClosed} color="primary">
-                        Compartilhar
-                    </Button>
-                    <Button onClick={onClosed} color="primary">
-                        E-mail
-                    </Button>
+                    <ButtonsShare />
                 </div>
                 </DialogContent>
         </Dialog>

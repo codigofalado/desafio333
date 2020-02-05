@@ -1,0 +1,13 @@
+.buttons-share {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-share * {
+    margin-right: 5px;
+}
+
+.icon-button {
+    border-radius: 25px;
+
+}
