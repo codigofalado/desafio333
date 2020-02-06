@@ -5,7 +5,7 @@ import './style.css';
 function Footer() {
     return(
         <footer className="footer-full">
-            <span>Obrigado <span className="codigo-falado">CódigoFalado</span> pela oportunidade!</span>
+            <span>Muitíssimo obrigado <a className="codigo-falado" href="http://github.com/codigofalado">CódigoFalado</a> pela oportunidade!</span>
         </footer>
     );
 }

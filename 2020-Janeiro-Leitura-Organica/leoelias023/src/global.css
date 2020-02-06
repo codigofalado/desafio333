@@ -2,10 +2,11 @@ button {
     transition: transform 0.2s;
     padding: 14px 20px;
     font-weight: 800;
-    background-color: rgb(127, 52, 197);
+    background-color: #6E36CA;
     border: none;
     color: #fff;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {

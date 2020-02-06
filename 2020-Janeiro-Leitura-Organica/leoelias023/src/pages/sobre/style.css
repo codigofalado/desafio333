@@ -1,9 +1,10 @@
 .sobre-full {
     height: auto;
-    background-color: rgb(139, 51, 197);
+    background-color: #6E36CA;
     padding-bottom: 40px;
     color: #fff;
     width: 100%;
+    z-index: 1000;
 }
 
 .sobre-margin {
@@ -24,8 +25,7 @@
 .ondas {
     width: 100%;
     background-size: 100% 50%;
-    height: 200px;
-    background-image: url('../../images/onda.png');
+    height: 100px;
 }
 
 .sobre-margin p {
@@ -35,7 +35,7 @@
 .btn-discover {
     background-color: rgb(255, 255, 255);
     margin-top: 40px;
-    padding: 15px 30px;
+    padding: 15px 0px;
     text-align: center;
     color: #333;
     transition: width .2s;

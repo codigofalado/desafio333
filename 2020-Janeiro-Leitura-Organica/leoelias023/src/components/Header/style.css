@@ -6,7 +6,7 @@
     align-items: center;
     padding: 10px;
     color: #fff;
-    background-color: rgb(139, 51, 197);
+    background-color: #6E36CA;
     z-index: 1;
 }
 
@@ -24,9 +24,6 @@ body {
     transition: transform 0.2s;
 }
 
-.cube-icon:hover {
-    transform: rotateZ(90deg);
-}
 
 .title-header {
     letter-spacing: 1px;
@@ -36,15 +33,16 @@ body {
 .header-mobile {
     overflow: hidden;
     height: 0px;
+    margin-top: -2px;
     transition: height 1s;
-    background-color: rgb(139, 51, 197);
+    background-color: #6E36CA;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .list-nav  a{
-    color: rgb(139, 51, 197);
+    color: #6E36CA;
 }
 .list-nav a {
     transition: width 0.2s;

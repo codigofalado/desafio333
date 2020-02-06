@@ -5,9 +5,17 @@
     justify-content: flex-end;
     padding-right: 30px;
     color: rgb(133, 133, 133);
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(31, 31, 31);
 }
 
 .codigo-falado {
     color: rgb(255, 45, 168);
+}
+
+
+@media (max-width: 500px) {
+    .footer-full {
+        justify-content: center;
+        padding: 20px;
+    }
 }

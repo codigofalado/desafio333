@@ -4,24 +4,25 @@
     height: 300px;
     background-color: #ebebeb;
     font-size: 1.1em;
-    padding: 10px;
+    padding: 20px 20px;
     border-radius: 5px;
     border: none;
+    transition: border 0.2s;
+    border-top: 20px solid rgb(51, 51, 51);
+    letter-spacing: 0.2px;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 11px;
     cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(80, 80, 80);
-    border-radius: 3px;
+    background-color: rgba(228, 228, 228, 0.548);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(183, 0, 255);
-    border-radius: 10px;
+    background-color: rgba(255, 107, 21, 0.747);
 }
 
 .textWord:focus {
@@ -29,9 +30,10 @@
 }
 
 .blockCode {
+    transition: opacity 1s,height 1s, padding 1s;
     margin-top: 50px;
     width: 100%;
-    height: 659px;
+    padding: 30px 0px 130px 0px;
     display: flex;
     flex-direction: column;
     transition: opacity .2s, height 1s;
@@ -82,11 +84,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 70%;
 }
 
 .closedTime {
     opacity: 0;
     height: 0px;
+    padding: 0px !important;
+    margin-top: 0px;
 }
 
 #contentAfter {
@@ -99,6 +104,14 @@
     justify-content: center;
     align-items: center;
     margin: 20px 10%;
+    animation: surgir 1s;
+    padding: 30px 0px 130px 0px;
+}
+
+@keyframes surgir {
+    0% {
+        transform: translateY(100%)
+    }
 }
 
 .health-reading {
@@ -119,9 +132,16 @@
     text-align: center;
 }
 
+.btn-section {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .btn-acesso {
     margin-top: 30px;
-    background-color: rebeccapurple;
+    background-color: #6E36CA;
     padding: 12px 20px;
     border-radius: 30px;
     color: #fff;
@@ -135,7 +155,7 @@
 .central-button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80%;
 }
 
@@ -157,4 +177,13 @@
     100% {
         transform: rotateZ(0deg);
     }
+}
+
+.btn-switch-text {
+    background-color: rgb(255, 72, 0);
+}
+
+
+.btn-pool {
+    margin: 0px 10px;
 }

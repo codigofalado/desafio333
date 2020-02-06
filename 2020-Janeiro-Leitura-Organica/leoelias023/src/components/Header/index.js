@@ -25,7 +25,7 @@ function Header() {
             <div className="header-full">
                 <h1 className="title-header">Organic Read</h1>
                 <div className="cube-icon" onClick={openMenu}>
-                    <i id="icon-nav" className="fas fa-bars icon-nav"></i>
+                    <i id="icon-nav" className="fas fa-arrow-down icon-nav"></i>
                 </div>
             </div>
             <div id="header-mobile" className="header-mobile list-nav">
