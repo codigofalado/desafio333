@@ -96,6 +96,7 @@
 
 #contentAfter {
     width: 80%;
+    height: 90vh;
     display: none;
     color: #fff;
     flex-direction: column;
