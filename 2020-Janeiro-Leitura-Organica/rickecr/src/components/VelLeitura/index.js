@@ -3,18 +3,18 @@ import React, { useState } from 'react';
 import TextCard from '../TextCard';
 import ResultDialog from '../ResultDialog';
 
- import './index.css';
+import './index.css';
 
 export default function VelLeitura() {
 	const [isTestInit, setIsTestInit] = useState(false);
 	const [open, setOpen] = React.useState(false);
 
 	const handleClose = () => {
-        setIsTestInit(false);
-        setOpen(false);
-    };
+		setIsTestInit(false);
+		setOpen(false);
+	};
 
-  	return (
+	return (
 		<div className="div-text">
 			<div className="div-btn">
 				<a href="#div-text">
@@ -24,7 +24,7 @@ export default function VelLeitura() {
 
 			{isTestInit &&
 			<div id="div-text">
-				<TextCard/>
+				<TextCard />
 				<div className="div-btn">
 					<button className="btn" onClick={() => {setOpen(true)}}>Terminei</button>
 				</div>
@@ -34,5 +34,5 @@ export default function VelLeitura() {
 			{open && <ResultDialog onClosed={handleClose} open={open} />}
 
 		</div>
-  	);
+	);
 }
