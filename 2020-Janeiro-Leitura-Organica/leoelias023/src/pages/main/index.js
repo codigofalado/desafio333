@@ -41,7 +41,6 @@ function MainContent() {
     const [statusPpm, setStatusPpm] = useState({
         status: '',
         desc: '',
-        ajuda: ''
     });
     
     function viraAmpulheta() {
@@ -83,6 +82,9 @@ function MainContent() {
             setIsOn(false);
             const test = document.getElementById("contentBefore");
             test.classList.add('closedTime');
+            setTimeout(() => {
+                test.style.display = "none";
+            } , 1000);
             const after = document.getElementById("contentAfter");
             after.style.display = "flex";
             // Calcular ppm
@@ -118,22 +120,25 @@ function MainContent() {
         if(ppm <= 50) {
             setStatusPpm({
                 status: 'Recêm alfabetizado',
+                imageStatus: "health-reading health-color-red fas fa-sad-tear",
                 desc: 'Esse é o nível de leitores recem alfabetizados, caso você não seja precisas melhorar em sua velocidade de leitura!',
-                ajuda: 'Acesse o curso para saber mais'
             })
         } else if(ppm > 50 && ppm <= 150) {
             setStatusPpm({
                 status: 'Bom',
+                imageStatus: "health-reading health-color fas fa-smile-beam",
                 desc: 'Esse é o nível dentro do padrão global de leitores, você é um intermediario.'
             })
         } else if(ppm > 150 && ppm <= 600) {
             setStatusPpm({
                 status: 'Excelente',
+                imageStatus: "health-reading health-color fas fa-laugh-beam",
                 desc: 'Você esta na categoria dos leitores dinâmicos, ou seja, estudantes e profissionais que conseguem obter alta performance nas atividades que exigem leitura.'
             })
         } else {
             setStatusPpm({
                 status: 'Sobrenatural',
+                imageStatus: "health-reading health-color fas fa-laugh-beam",
                 desc: 'Que isso?! Tudo isso? Parabéns',
             })
         }
@@ -169,8 +174,8 @@ function MainContent() {
                 </div>
             </div>  
             <div id="contentAfter">
-                <i className="fas fa-smile-beam health-reading health-color"></i>
-                    <h4 className="health-title">Parabéns sua velocidade de leitura é: <span className="health-color">{statusPpm.status}</span>!</h4>
+                <i className={statusPpm.imageStatus}></i>
+                    <h4 className="health-title">Parabéns sua velocidade de leitura é: <span>{statusPpm.status}</span>!</h4>
                 <span className="desc">
                     {statusPpm.desc}<br />
                     Quer saber mais sobre leitura orgânica e melhorar suas skills de

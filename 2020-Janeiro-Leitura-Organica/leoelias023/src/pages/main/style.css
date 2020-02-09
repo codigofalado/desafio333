@@ -95,11 +95,9 @@
 }
 
 #contentAfter {
-    margin-top: 20px;
     width: 80%;
     display: none;
     color: #fff;
-    height: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -110,7 +108,7 @@
 
 @keyframes surgir {
     0% {
-        transform: translateY(100%)
+        transform: translateY(-20px);
     }
 }
 
@@ -121,6 +119,10 @@
 
 .health-color {
     color: rgb(102, 180, 39);
+}
+
+.health-color-red {
+    color: rgb(204, 42, 42);
 }
 
 .desc {
