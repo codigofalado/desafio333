@@ -25,14 +25,19 @@ const Header: FC = () => {
       <ExternalAnchor href="https://www.leituraorganica.com.br/">
         <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
       </ExternalAnchor>
-      <ul>
-        <li>
-          <a href="#sobre">Sobre</a>
-        </li>
-        <li>
-          <a href="#teste">Realizar teste</a>
-        </li>
-      </ul>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#teste">Realizar Teste</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+        </ul>
+      </nav>
     </Container>
   );
 };

@@ -13,6 +13,10 @@ export const Container = styled.header`
     align-items: center;
   }
 
+  nav {
+    font-size: 1.125rem;
+  }
+
   li + li {
     margin-left: 32px;
   }
@@ -24,6 +28,7 @@ export const ExternalAnchor = styled(ExternalLink)`
   div {
     width: 134px;
     height: 62px;
+    user-select: none;
   }
 
   &:hover {

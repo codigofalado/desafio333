@@ -24,7 +24,7 @@ export default createGlobalStyle`
 
     &::selection {
       background-color: ${({ theme }) => theme.colors.active};
-      color: ${({ theme }) => theme.colors.primaryText};;
+      color: ${({ theme }) => theme.colors.backgound};;
     }
   }
 
@@ -33,7 +33,7 @@ export default createGlobalStyle`
   }
 
   html, body {
-    font: 16px 'Roboto', sans-serif;
+    font: 100% 'Roboto', sans-serif;
     font-weight: 400;
 
     background-color: ${({ theme }) => theme.colors.backgound};
@@ -51,7 +51,7 @@ export default createGlobalStyle`
   }
 
   #gatsby-focus-wrapper {
-    padding: 0 32px;
+    padding: 0 48px;
     margin: 0 auto;
     max-width: 1536px;
     min-height: 100%;
