@@ -33,8 +33,8 @@ export default createGlobalStyle`
   }
 
   html, body {
-    font: 16px 'Raleway', sans-serif;
-    font-weight: 300;
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 400;
 
     background-color: ${({ theme }) => theme.colors.backgound};
     color: ${({ theme }) => theme.colors.primaryText};
@@ -51,12 +51,15 @@ export default createGlobalStyle`
   }
 
   #gatsby-focus-wrapper {
+    padding: 0 32px;
+    margin: 0 auto;
+    max-width: 1536px;
     min-height: 100%;
   }
 
   button {
-    font: 16px 'Raleway', sans-serif;
-    font-weight: 300;
+    font: 16px 'Roboto', sans-serif;
+    font-weight: 400;
 
     background: transparent;
     border: none;

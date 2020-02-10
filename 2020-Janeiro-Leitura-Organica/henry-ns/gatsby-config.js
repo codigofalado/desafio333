@@ -5,7 +5,7 @@ const siteMetadata = require('./config/metadata');
 module.exports = {
   siteMetadata,
   plugins: [
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-helmet-async',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -21,10 +21,10 @@ module.exports = {
         name: 'Collab Branch',
         short_name: 'Collab Branch',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#3198AF',
+        theme_color: '#3198AF',
         display: 'minimal-ui',
-        // icon: 'src/assets/gatsby-icon.png',
+        icon: 'src/assets/icon.png',
       },
     },
     {
@@ -35,7 +35,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    // 'gatsby-plugin-preload-fonts',
+    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',

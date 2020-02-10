@@ -1,18 +1,40 @@
 import React, { FC } from 'react';
 
-import logo from '~/assets/logo.png';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
-import { Container } from './styles';
+import { Container, ExternalAnchor } from './styles';
 
-const Header: FC = () => (
-  <Container>
-    <img src={logo} alt="Leitura Orgânica" />
-    <ul>
-      <li>Leitura Orgânica</li>
-      <li>Sobre</li>
-      <li>Realizar teste</li>
-    </ul>
-  </Container>
-);
+const Header: FC = () => {
+  const { image } = useStaticQuery(
+    graphql`
+      query {
+        image: file(relativePath: { eq: "logo.png" }) {
+          sharp: childImageSharp {
+            fluid(maxHeight: 62, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  );
+
+  return (
+    <Container>
+      <ExternalAnchor href="https://www.leituraorganica.com.br/">
+        <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
+      </ExternalAnchor>
+      <ul>
+        <li>
+          <a href="#sobre">Sobre</a>
+        </li>
+        <li>
+          <a href="#teste">Realizar teste</a>
+        </li>
+      </ul>
+    </Container>
+  );
+};
 
 export default Header;
