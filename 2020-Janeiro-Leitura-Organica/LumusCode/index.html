@@ -29,7 +29,7 @@
       </div>
     </nav>
     <a href="https://www.leituraorganica.com.br/" target="_blank">
-      <img class="img-fluid banner mt-4" src="img/banner.png" alt="" title="Curso de Leitura Online">
+      <img class="img-fluid banner mt-4" src="img/banner.png" alt="" title="Curso de Leitura Orgânica">
     </a>
   </header>
 
@@ -100,11 +100,14 @@
               minuto (p.p.m.).
             </p>
             <p>
-              Entretanto, como você pode saber se leu rápido ou não? É simples! Logo abaixo você colocará o texto que
+              Entretanto, como você pode saber se leu rápido ou não? É simples! Logo abaixo você irá escolher o texto
+              que
               deseja ler, esse texto terá no mínimo 600 palavras e, no máximo, 1000 palavras.
-              Antes de iniciar a leitura, você precisa clicar no botão iniciar que irá começar a contar o tempo. Ao
+              Antes de iniciar a leitura, você precisa clicar no botão iniciar que irá começar a contar o tempo.
+              <strong>É importante notar que para saber sua velocidade de leitura em PPM de forma correta, é preciso ler
+                o texto durante 3 minutos no mínimo.</strong> Ao
               terminar,
-              você clicará no botão finalizar que irá pausar o tempo. Após isso aparecerá uma mensagem na tela mostrando
+              você clicará no botão finalizar que irá mostra
               qual é a sua velocidade de leitura em
               PPM.
             </p>
@@ -129,7 +132,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close closeReload" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -139,6 +142,7 @@
               <p class="paragraph3"></p>
             </div>
             <div class="modal-footer d-flex justify-content-start">
+              <p class="spanText">Leia o texto durante 3 minutos no mínimo</p>
               <!-- Chronometer -->
               <div class="input-group flex-nowrap divPhrases">
                 <div class="input-group-prepend">
@@ -153,14 +157,15 @@
               <button class="btn btn-success" title="Iniciar contagem do tempo" id="btnStartPhrases">Iniciar</button>
               <button
                 class="btn btn-primary btnClearPhrasesEinstein btnClearPhrasesHarryPotter btnClearPhrasesLordOfTheRings"
-                title="Iniciar contagem do tempo" id="btnSopPhrases">Finalizar</button>
-              <button class="btn btn-primary" title="Iniciar contagem do tempo" id="btnClearPhrases">Zerar</button>
-            </div>
-            <div class="p-2">
-              <div class="container alert alert-light text-ppm">
-                <h5 class="h4">Velocidade de Leitura em PPM</h5>
-                <p class="lead">Sua velocidade de leitura é de <span id="textPPM"></span> PPM.</p>
-                <a class="btn btn-primary mb-2" href="#" role="button">Refazer teste</a>
+                title="Finalizar contagem do tempo" id="btnSopPhrases">Finalizar</button>
+              <button class="btn btn-primary" title="Zerar contagem do tempo" id="btnClearPhrases">Zerar</button>
+              <div class="p-2">
+                <div class="container alert alert-info text-ppm">
+                  <h5 class="h4">Velocidade de Leitura em PPM</h5>
+                  <p class="lead">Sua velocidade de leitura é de <span id="textPPM"></span> PPM.</p>
+                  <a class="btn btn-primary mb-2 btn-remake-test" href="#" role="button">Refazer
+                    teste</a>
+                </div>
               </div>
             </div>
           </div>
@@ -189,10 +194,14 @@
     <section class="sectionText">
       <h3>Calculadora do tempo de leitura</h3>
       <p class="h6">
-        Quantos minutos demora ler um texto? Em modo de discurso ou para uma locução/narração calcule o tempo para
+        Quantos minutos demora ler um texto?
+      </p>
+      <p>
+        Em modo de discurso ou para uma locução/narração calcule o tempo para
         leitura de um texto.
       </p>
       <span>Cole o seu texto abaixo</span>
+      <p class="spanText">Leia o texto durante 3 minutos no mínimo</p>
       <textarea class="form-control" id="text-area" rows="10" cols="50" maxlength=""></textarea>
 
       <div>
@@ -215,7 +224,7 @@
 
       <div id="demo"></div>
       <button class="btn btn-success mt-2 start" title="Iniciar contagem do tempo" id="startButton">Iniciar</button>
-      <button class="btn btn-primary mt-2" title="Pausar contagem do tempo" id="pauseButton" data-toggle="modal"
+      <button class="btn btn-primary mt-2" title="Finalizar contagem do tempo" id="pauseButton" data-toggle="modal"
         data-target="#exampleModal"> Finalizar </button>
       <button class="btn btn-primary mt-2" title="Zerar contagem do tempo" id="clearButton"> Zerar </button>
     </section>

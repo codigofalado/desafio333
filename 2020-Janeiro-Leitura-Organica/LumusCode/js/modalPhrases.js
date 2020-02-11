@@ -11,8 +11,8 @@ const listItem2 = document.querySelector("ul .listitem2");
 const listItem3 = document.querySelector("ul .listitem3");
 
 const paragraph1 = document.querySelector(".paragraph1");
-const paragraph2 = document.querySelector(".paragraph1");
-const paragraph3 = document.querySelector(".paragraph1");
+const paragraph2 = document.querySelector(".paragraph2");
+const paragraph3 = document.querySelector(".paragraph3");
 
 const modalBody = document.querySelector("#modalBody");
 const modalTtile = document.querySelector(".modal-title");
@@ -28,6 +28,18 @@ const btnClearPhrasesEinstein = document.querySelector(".btnClearPhrasesEinstein
 const btnClearPhrasesHarryPotter = document.querySelector(".btnClearPhrasesHarryPotter");
 const btnClearPhrasesLordOfTheRings = document.querySelector(".btnClearPhrasesLordOfTheRings");
 
+const btnRemakeTest = document.querySelector(".btn-remake-test");
+
+
+function reaload() {
+
+  const closeReload = document.querySelector(".closeReload");
+
+  closeReload.addEventListener("click", () => {
+    location.reload();
+  });
+}
+
 listItem1.addEventListener("click", () => {
   listItem1.setAttribute("data-target", "#modalPhrases");
   modalTtile.textContent = "Albert Einstein";
@@ -37,21 +49,33 @@ listItem1.addEventListener("click", () => {
   paragraph1.textContent = phrasesEinstein;
   modalBody.classList.add("modalBodyImage1");
 
-  btnClearPhrasesEinstein.addEventListener("click", event => {
+  btnClearPhrasesEinstein.addEventListener("click", () => {
 
     const chronometerPhrasesValue = parseFloat(chronometerPhrases.value);
 
     if (chronometerPhrasesValue) {
       const phrases = phrasesEinstein.split(" ").filter(words => words && words).length
-      const calc = (phrases / chronometerPhrasesValue);
+      const calc = phrases / chronometerPhrasesValue;
 
       textPPM.textContent = calc.toFixed(2);
-      btnSopPhrases.textContent = "Continuar";
       divHidden.classList.remove("text-ppm");
 
     }
 
   });
+
+  btnRemakeTest.addEventListener("click", () => {
+
+    const phrasesEinstein2 = `${frases.einstein2}`;
+    paragraph1.textContent = phrasesEinstein2;
+
+    divHidden.classList.add("text-ppm");
+
+    chronometerPhrases.value = "";
+
+  });
+
+  reaload();
 
 });
 
@@ -60,26 +84,37 @@ listItem2.addEventListener("click", () => {
   listItem2.setAttribute("data-target", "#modalPhrases");
   modalTtile.textContent = "Harry Potter";
 
-  console.log(phrasesHarryPotter.split(" ").filter(words => words && words).length);
-
   paragraph2.textContent = phrasesHarryPotter;
   modalBody.classList.add("modalBodyImage2");
 
-  btnClearPhrasesHarryPotter.addEventListener("click", event => {
+  btnClearPhrasesHarryPotter.addEventListener("click", () => {
 
     const chronometerPhrasesValue = parseFloat(chronometerPhrases.value);
 
     if (chronometerPhrasesValue) {
       const phrases = phrasesHarryPotter.split(" ").filter(words => words && words).length
-      const calc = (phrases / chronometerPhrasesValue);
+      const calc = phrases / chronometerPhrasesValue;
 
       textPPM.textContent = calc.toFixed(2);
-      btnSopPhrases.textContent = "Continuar";
+
       divHidden.classList.remove("text-ppm");
 
     }
 
   });
+
+  btnRemakeTest.addEventListener("click", () => {
+
+    const phrasesHarryPotter2 = `${frases.harryPotter2}`;
+
+    paragraph2.textContent = phrasesHarryPotter2;
+
+    divHidden.classList.add("text-ppm");
+
+    chronometerPhrases.value = "";
+  });
+
+  reaload();
 
 });
 
@@ -90,21 +125,34 @@ listItem3.addEventListener("click", () => {
   paragraph3.textContent = phrasesLordOfTheRings;
   modalBody.classList.add("modalBodyImage3");
 
-  btnClearPhrasesLordOfTheRings.addEventListener("click", event => {
+  btnClearPhrasesLordOfTheRings.addEventListener("click", () => {
 
     const chronometerPhrasesValue = parseFloat(chronometerPhrases.value);
 
     if (chronometerPhrasesValue) {
       const phrases = phrasesLordOfTheRings.split(" ").filter(words => words && words).length
-      const calc = (phrases / chronometerPhrasesValue);
+      const calc = phrases / chronometerPhrasesValue;
 
       textPPM.textContent = calc.toFixed(2);
-      btnSopPhrases.textContent = "Continuar";
+
       divHidden.classList.remove("text-ppm");
 
     }
 
   });
+
+  btnRemakeTest.addEventListener("click", () => {
+
+    const phrasesLordOfTheRings2 = `${frases.lordOfTheRings2}`;
+
+    paragraph3.textContent = phrasesLordOfTheRings2;
+
+    divHidden.classList.add("text-ppm");
+
+    chronometerPhrases.value = "";
+  });
+
+  reaload();
 
 });
 
@@ -168,13 +216,13 @@ function chronometerModal() {
 
   function formatMillisecons(ms) {
     const minute = 60 * 1000;
-    if (ms < 1000) {
+    if (ms < 1) {
       return ms;
     } else if (ms < minute) {
       let s = ms / 1000;
       s = parseInt(s);
       let c = ms - (s * 1000);
-      return s + ':' + c;
+      return s;
     } else {
       let m = ms / minute;
       m = parseInt(m);

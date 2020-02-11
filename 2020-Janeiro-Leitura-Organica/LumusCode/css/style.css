@@ -55,6 +55,10 @@ main .section-phrases .divPhrases {
   width: 35%;
 }
 
+main .section-phrases #chronometerPhrases {
+  text-align: center;
+}
+
 main #addon-wrapping .img-temp {
   width: 24px;
 }
@@ -142,6 +146,13 @@ main .modal-content {
   color: #6c757d;
   margin-bottom: 17px;
   
+}
+
+.spanText {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 17px;
+  width: 100%;
 }
 
 .sectionText .chronometer {

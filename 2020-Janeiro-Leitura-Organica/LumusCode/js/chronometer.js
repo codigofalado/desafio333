@@ -12,7 +12,7 @@
 
   start.addEventListener('click', () => {
 
-    if (textAreaValue.value.split(" ").length < 576) {
+    if (textAreaValue.value.split(" ").length < 600) {
       spanAlert.style.display = "block";
       setTimeout(() => {
         spanAlert.style.display = "none";
@@ -92,13 +92,13 @@
 
   function formatMillisecons(ms) {
     const minute = 60 * 1000;
-    if (ms < 1000) {
+    if (ms < 1) {
       return ms;
     } else if (ms < minute) {
       let s = ms / 1000;
       s = parseInt(s);
       let c = ms - (s * 1000);
-      return s + ':' + c;
+      return s;
     } else {
       let m = ms / minute;
       m = parseInt(m);
