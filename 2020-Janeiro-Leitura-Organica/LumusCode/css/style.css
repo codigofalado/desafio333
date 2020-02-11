@@ -193,4 +193,22 @@ footer {
   .sectionText button {
     width: 100%;
   }
+
+  modalPhrases {
+    width: 100%;
+  }
+
+  #idPhrases {
+    width: 100%;
+    
+  }
+
+  #idPhrases, button, input {
+    width: 100%;
+    
+  }
+
+  .divPhrases {
+    width: 50%!important;
+  }
 }
