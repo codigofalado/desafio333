@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Collab Branch',
+  title: 'Leitura Orgânica',
   description:
-    'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-  author: '@ieeeifpbcg',
+    'Você já parou para calcular a sua velocidade de leitura?A medida mais utilizada para calcular a velocidade de leitura é Palavras por Minuto (PPM). Uma leitura em páginas por hora, por exemplo, não pode ser aplicada em qualquer livro (pois tem tamanhos diferentes de páginas), muito menos em artigos ou notícias. Que tal descobrir agora a sua velocidade de leitura?',
+  author: '@henry-ns',
 };

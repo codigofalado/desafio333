@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Collab Branch',
-        short_name: 'Collab Branch',
+        name: 'Medidor de velocidade de leitura - Leitura Orgânica',
+        short_name: siteMetadata.title,
         start_url: '/',
         background_color: '#3198AF',
         theme_color: '#3198AF',
