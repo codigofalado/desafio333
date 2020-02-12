@@ -41,6 +41,9 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
+    'implicit-arrow-linebreak': 'off', // temporary
+    'indent': 'off', // temporary
+    'operator-linebreak': 'off', // temporary
     'react/jsx-filename-extension': [
       'error',
       {

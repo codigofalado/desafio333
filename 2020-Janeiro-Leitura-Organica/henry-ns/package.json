@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "framer-motion": "^1.8.4",
     "gatsby": "^2.19.9",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -23,6 +24,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet-async": "^1.0.4",
+    "react-icons": "^3.9.0",
     "styled-components": "^5.0.0",
     "typeface-roboto": "^0.0.75"
   },
