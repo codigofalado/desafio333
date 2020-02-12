@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import SEO from '~/components/SEO';
 
@@ -15,6 +16,7 @@ const Layout: FC<Props> = ({ children, title }) => (
     <SEO title={title} />
     <Header />
     {children}
+    <Footer />
   </>
 );
 
