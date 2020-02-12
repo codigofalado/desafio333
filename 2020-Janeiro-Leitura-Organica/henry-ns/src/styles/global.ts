@@ -7,12 +7,12 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.active};
-    border-radius: 2.5px;
     transition: 0.2s;
+    border-radius: 2.5px;
+    background: ${({ theme }) => theme.colors.active};
 
     &:hover {
-      background: ${({ theme }) => theme.colors.active};
+      background: ${({ theme }) => theme.colors.activeDark};
     }
   }
 

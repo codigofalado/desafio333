@@ -38,6 +38,7 @@ module.exports = {
     'gatsby-plugin-preload-fonts',
     'gatsby-plugin-netlify-cache',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-polished',
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-plugin-root-import',
