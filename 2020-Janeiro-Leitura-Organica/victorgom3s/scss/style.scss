@@ -1,0 +1,39 @@
+/* Colors */
+$mainColor: #00adb5;
+$textColor: #454a52;
+$titleColor: #2b313b;
+$bgColor: #eeeeee;
+$bgColor2: #f7f5f5;
+$bgColorDark: #222831;
+$bgColorGradient: linear-gradient(104.62deg, #2b313b 38.54%, #454a52 100%);
+$bgColorGradientBtn: linear-gradient(98.52deg, #00979e 0%, #10c4cc 100%);
+$kindleScreenColor: #d9d9d9;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $kindleScreenColor;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  background-color: $textColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  img {
+    margin: 0 30px;
+  }
+  nav {
+    margin: 0 30px;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
