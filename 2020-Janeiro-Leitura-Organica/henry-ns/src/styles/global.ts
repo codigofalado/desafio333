@@ -51,8 +51,11 @@ export default createGlobalStyle`
   }
 
   #gatsby-focus-wrapper {
+    position: relative;
+
     padding: 0 48px;
     margin: 0 auto;
+
     max-width: 1536px;
     min-height: 100%;
   }

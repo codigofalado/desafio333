@@ -10,8 +10,12 @@ interface Props {
 
 export const Container = styled('header')<Props>`
   justify-content: space-between;
-
   height: 80px;
+
+  position: sticky;
+  top: 0;
+
+  background-color: ${({ theme }) => theme.colors.backgound};
 
   &,
   ul {
