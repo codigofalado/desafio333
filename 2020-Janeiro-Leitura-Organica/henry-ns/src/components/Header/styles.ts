@@ -10,12 +10,15 @@ interface Props {
 
 export const Container = styled('header')<Props>`
   justify-content: space-between;
+
+  width: 100%;
   height: 80px;
 
   position: sticky;
   top: 0;
 
   background-color: ${({ theme }) => theme.colors.backgound};
+  z-index: 5;
 
   &,
   ul {

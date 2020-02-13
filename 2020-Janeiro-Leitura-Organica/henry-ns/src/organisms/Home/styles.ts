@@ -14,17 +14,24 @@ export const Container = styled.section`
     letter-spacing: 3%;
     line-height: 150%;
 
+    width: 100%;
     max-width: 580px;
 
     margin-bottom: 96px;
   }
 
   > div {
+    margin-right: 104px;
+  }
+
+  > div,
+  img {
     flex: 1;
+    z-index: 1;
   }
 
   img {
-    max-height: 600px;
+    width: 90%;
   }
 `;
 

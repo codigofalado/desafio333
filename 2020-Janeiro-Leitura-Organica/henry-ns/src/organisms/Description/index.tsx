@@ -3,12 +3,17 @@ import React, { FC } from 'react';
 import Button from '~/components/Button';
 
 import bibliophile from '~/assets/bibliophile.svg';
+import spot1 from '~/assets/spot-1.svg';
+import spot2 from '~/assets/spot-2.svg';
 import studying from '~/assets/studying.svg';
 
-import { Container } from './styles';
+import { Container, Spot } from './styles';
 
 const Description: FC = () => (
   <Container id="sobre">
+    <Spot src={spot1} alt="mancha" />
+    <Spot src={spot2} alt="mancha" />
+
     <div>
       <img src={bibliophile} alt="bibliófila" />
       <article>
