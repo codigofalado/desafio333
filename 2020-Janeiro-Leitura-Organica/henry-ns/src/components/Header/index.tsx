@@ -39,21 +39,23 @@ const Header: FC = () => {
 
   return (
     <Container pressed={pressed}>
-      <ExternalAnchor href="https://www.leituraorganica.com.br/">
-        <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
-      </ExternalAnchor>
-      <FaBars size={32} onClick={togglePressed} />
-      <nav>
-        <ul>
-          {menuList.map(item => (
-            <li key={item.id}>
-              <a href={item.href} onClick={setPressedToFalse}>
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div>
+        <ExternalAnchor href="https://www.leituraorganica.com.br/">
+          <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
+        </ExternalAnchor>
+        <FaBars size={32} onClick={togglePressed} />
+        <nav>
+          <ul>
+            {menuList.map(item => (
+              <li key={item.id}>
+                <a href={item.href} onClick={setPressedToFalse}>
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </Container>
   );
 };

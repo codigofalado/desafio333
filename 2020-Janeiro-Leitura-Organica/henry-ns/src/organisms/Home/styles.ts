@@ -5,7 +5,7 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  height: calc(100vh - 80px);
+  height: 100vh;
 
   h1 {
     font-size: 3rem;

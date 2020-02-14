@@ -9,143 +9,160 @@ interface Props {
 }
 
 export const Container = styled('header')<Props>`
-  justify-content: space-between;
+  position: fixed;
 
   width: 100%;
   height: 80px;
 
-  position: sticky;
   top: 0;
+  left: 0;
 
   background-color: ${({ theme }) => theme.colors.backgound};
   z-index: 5;
 
-  &,
+  div,
   ul {
     display: flex;
     align-items: center;
   }
 
-  svg {
-    display: none;
-    cursor: pointer;
-    pointer-events: none;
-    transition: 0.2s ease;
+  div {
+    justify-content: space-between;
+    padding: 0 48px;
 
-    color: ${({ theme }) => theme.colors.primaryText};
+    width: 100%;
+    height: 100%;
 
-    &:hover {
-      color: ${({ theme }) => theme.colors.active};
-      transform: scale(1.1);
-    }
+    max-width: 1536px;
+
+    margin: auto;
   }
 
-  nav {
-    font-size: 1.125rem;
-  }
-
-  li {
-    position: relative;
-    overflow: hidden;
-    padding: 8px;
-
-    transition: 0.3s ease;
-
-    &::after {
-      content: '';
-      position: absolute;
-
-      width: 100%;
-      height: 3px;
-
-      bottom: 0;
-      left: 0;
-      transition: 0.3s ease;
-      transform: translateY(150%) translateZ(0px);
-
-      background-color: ${({ theme }) => theme.colors.active};
-    }
-
-    &:hover {
-      a {
-        color: ${({ theme }) => theme.colors.active};
-      }
-
-      &::after {
-        transform: translateY(0px) translateZ(0px);
-      }
-    }
-  }
-
-  li + li {
-    margin-left: 32px;
-  }
-
-  @media (max-width: ${media.bigPhone}px) {
+  div {
     svg {
-      display: block;
-      pointer-events: all;
+      display: none;
+      cursor: pointer;
+      pointer-events: none;
+      transition: 0.2s ease;
 
-      z-index: 1;
+      color: ${({ theme }) => theme.colors.primaryText};
 
-      ${({ theme, pressed }) =>
-        pressed &&
-        css`
-          color: ${theme.colors.backgound};
-
-          &:hover {
-            color: ${theme.colors.backgound};
-          }
-        `}
+      &:hover {
+        color: ${({ theme }) => theme.colors.active};
+        transform: scale(1.1);
+      }
     }
 
     nav {
-      position: absolute;
-      background-color: ${({ theme }) => theme.colors.active};
+      font-size: 1.125rem;
+    }
 
-      width: 100%;
-      height: 100%;
+    li {
+      position: relative;
+      overflow: hidden;
+      padding: 8px;
 
-      bottom: 100%;
-      left: 0;
+      transition: 0.3s ease;
 
-      transition: 0.5s ease-out;
-      transform: translateY(${({ pressed }) => (pressed ? '100%' : '0px')})
-        translateZ(0px);
+      &::after {
+        content: '';
+        position: absolute;
 
-      ul {
+        width: 100%;
+        height: 3px;
+
+        bottom: 0;
+        left: 0;
+        transition: 0.3s ease;
+        transform: translateY(150%) translateZ(0px);
+
+        background-color: ${({ theme }) => theme.colors.active};
+      }
+
+      &:hover {
+        a {
+          color: ${({ theme }) => theme.colors.active};
+        }
+
+        &::after {
+          transform: translateY(0px) translateZ(0px);
+        }
+      }
+    }
+
+    li + li {
+      margin-left: 32px;
+    }
+  }
+
+  @media (max-width: ${media.bigPhone}px) {
+    div {
+      svg {
+        display: block;
+        pointer-events: all;
+
+        z-index: 1;
+
+        ${({ theme, pressed }) =>
+          pressed &&
+          css`
+            color: ${theme.colors.backgound};
+
+            &:hover {
+              color: ${theme.colors.backgound};
+            }
+          `}
+      }
+
+      nav {
+        position: fixed;
+        background-color: ${({ theme }) => theme.colors.active};
+
+        width: 100%;
         height: 100%;
 
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        bottom: 100%;
+        left: 0;
 
-        font-size: 2rem;
+        transition: 0.5s ease-out;
+        transform: translateY(${({ pressed }) => (pressed ? '100%' : '0px')})
+          translateZ(0px);
 
-        li {
-          margin: 16px 0px;
-          transition: 0.2s ease-out;
+        ul {
+          height: 100%;
 
-          &::after {
-            background-color: ${({ theme }) => theme.colors.backgound};
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          font-size: 2rem;
+
+          li {
+            margin: 16px 0px;
+            transition: 0.2s ease-out;
+
+            &::after {
+              background-color: ${({ theme }) => theme.colors.backgound};
+              height: 4px;
+            }
+
+            a,
+            &:hover a {
+              color: ${({ theme }) => theme.colors.backgound};
+            }
           }
 
-          a,
-          &:hover a {
-            color: ${({ theme }) => theme.colors.backgound};
+          li:nth-child(1) {
+            transition-delay: 0.1s;
           }
-        }
 
-        li:nth-child(1) {
-          transition-delay: 0.1s;
-        }
+          li:nth-child(2) {
+            transition-delay: 0.2s;
+          }
 
-        li:nth-child(2) {
-          transition-delay: 0.2s;
-        }
-
-        li:nth-child(3) {
-          transition-delay: 0.3s;
+          li:nth-child(3) {
+            transition-delay: 0.3s;
+          }
         }
       }
     }

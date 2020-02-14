@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import ExternalLink from '../ExternalLink';
 
-import { Container } from './styles';
+import { Container, Heart } from './styles';
 
 const Footer: FC = () => (
   <Container>
@@ -14,7 +14,7 @@ const Footer: FC = () => (
     </p>
     <p>
       {'Site feito '}
-      <strong>{'<3'}</strong>
+      <Heart />
       {' com por '}
       <ExternalLink href="https://thehenry.dev/">Henrique Miranda</ExternalLink>
     </p>

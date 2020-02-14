@@ -1,3 +1,4 @@
+import { FaHeart } from 'react-icons/fa';
 import styled from 'styled-components';
 
 export const Container = styled.footer`
@@ -17,4 +18,14 @@ export const Container = styled.footer`
   a:hover {
     color: ${({ theme }) => theme.colors.activeDark};
   }
+`;
+
+export const Heart = styled(FaHeart)`
+  color: ${({ theme }) => theme.colors.active};
+
+  margin: auto;
+
+  height: 16px;
+  width: 16px;
+  transform: translateY(15%);
 `;
