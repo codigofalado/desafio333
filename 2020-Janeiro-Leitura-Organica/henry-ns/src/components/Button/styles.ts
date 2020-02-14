@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import media from '~/styles/media';
+
 interface Props {
   secondary?: boolean;
 }
@@ -43,5 +45,15 @@ export const Container = styled('a')<Props>`
 
   &:active {
     transform: scale(1);
+  }
+
+  @media (max-width: ${media.hd}) {
+    & + & {
+      margin-left: 32px;
+    }
+  }
+
+  @media (max-width: ${media.smallTablet}) {
+    font-size: 0.875rem;
   }
 `;

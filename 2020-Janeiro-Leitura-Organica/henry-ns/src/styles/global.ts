@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import media from './media';
+
 export default createGlobalStyle`
   ::-webkit-scrollbar {
     width: 5px;
@@ -60,6 +62,10 @@ export default createGlobalStyle`
 
     max-width: 1536px;
     min-height: 100%;
+
+    @media (max-width: ${media.smallTablet}) {
+      padding: 0 24px;
+    }
   }
 
   button {

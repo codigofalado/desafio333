@@ -1,9 +1,9 @@
 export default {
-  smallPhone: 400,
-  phone: 500,
-  bigPhone: 620,
-  smallTablet: 720,
-  tablet: 800,
-  smallDesktop: 980,
-  hd: 1366,
+  smallPhone: '400px',
+  phone: '500px',
+  bigPhone: '620px',
+  smallTablet: '720px',
+  tablet: '900px',
+  smallDesktop: '1038px',
+  hd: '1366px',
 };

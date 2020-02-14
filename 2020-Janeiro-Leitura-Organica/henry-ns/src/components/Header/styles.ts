@@ -95,8 +95,10 @@ export const Container = styled('header')<Props>`
     }
   }
 
-  @media (max-width: ${media.bigPhone}px) {
+  @media (max-width: ${media.smallTablet}) {
     div {
+      padding: 0 24px;
+
       svg {
         display: block;
         pointer-events: all;
