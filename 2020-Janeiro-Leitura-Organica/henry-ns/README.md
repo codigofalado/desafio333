@@ -1,60 +1,77 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <!-- <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" /> -->
+  <a href="http://leituraorganica.netlify.com/">
+    <img alt="Logo" src="./src/assets/icon.png" width="100" />
   </a>
 </p>
 <h1 align="center">
-  Collab Branch Landing Page
+  Leitura Orgânica - Calculadora de PPM
 </h1>
 
 <p align="center">
   <a href="https://github.com/henry-ns/portfolio/graphs/commit-activity" alt="Maintenance">
     <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
+  <a href="http://leituraorganica.netlify.com/" alt="Website leituraorganica.netlify.com">
+    <img src="https://img.shields.io/website-up-down-green-red/https/leituraorganica.netlify.com" />
+  </a>
   <a href="./LICENSE" alt="License: MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
   </a>
-  <a href="https://www.codefactor.io/repository/github/henry-ns/portfolio" alt="CodeFactor">
-    <img src="https://www.codefactor.io/repository/github/henry-ns/portfolio/badge" />
+  <a href="https://www.codefactor.io/repository/github/henry-ns/desafio333" alt="CodeFactor">
+    <img src="https://www.codefactor.io/repository/github/henry-ns/desafio333/badge" />
   </a>
-  <a href="https://app.netlify.com/sites/henriquemiranda/deploys" alt="Netlify Status">
-    <img src="https://api.netlify.com/api/v1/badges/73b460d0-9e11-4829-bb83-9752d12634b5/deploy-status" />
+  <a href="https://app.netlify.com/sites/leituraorganica/deploys" alt="Netlify Status">
+    <img src="https://api.netlify.com/api/v1/badges/bd6b4a69-72e9-493f-9292-2a515abaa3b1/deploy-status" />
+  </a>
+
+  <a href="https://thehenry.dev" alt="Website thehenry.dev">
+    <img src="https://img.shields.io/website-up-down-green-red/https/thehenry.dev" />
   </a>
 </p>
 
-O Collab Branch é um projeto idealizado pelo Ramo Estudantil IEEE do IFPB Campus Campina Grande,em que consiste no desenvolvimento de Sistemas com o propósito de ajudar a comunidade do IFPB-CG de diversas formas possíveis, para que os integrantes se sintam mais ambientados com a estrutura e o funcionamento da instituição.
+O primeiro desafio de 2020 já vem com uma novidade! Será uma parceria com a Leitura Orgânica(@leituraorganica), um projeto de um amigão meu que tem como objetivo ajudar as pessoas a lerem mais e melhor.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Você já parou pra pensar qual a sua velocidade de leitura? Nesse desafio vamos simular que a Leitura Orgânica é nossa cliente e precisa de um sistema que calcule a velocidade de leitura das pessoas.
 
-## 🚀 Run Locally
+## 🚀 Execultar Localmente
 
-1.  **Clone this repository.**
+1.  **Clone esse repositório.**
 
     ```shell
-    git clone https://github.com/ieeeifpbcg/cb-site.git
+    git clone https://github.com/henry-ns/desafio333.git
     ```
 
-2.  **Install depedencies.**
+2.  **Instale as dependencias.**
 
-    Navigate into cb-site directory and start it up.
+    Navigate dentro de 2020-Janeiro-Leitura-Organica/henry-ns
 
     ```shell
-    cd cb-site/
+    cd 2020-Janeiro-Leitura-Organica/henry-ns/
 
-    # if you use yarn
+    # se você usa yarn execulte:
     yarn
 
-    # or if you use npm
+    # se você usa npm execulte:
     npm install
     ```
 
-3.  **Open the source code and start editing!**
+3.  **Execultando**
 
-    Your site is now running at `http://localhost:8000`!
+    Execulte na mesma parta
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    ```shell
+    # se você usa yarn execulte:
+    yarn start
 
-## 🧐 What's inside?
+    # se você usa npm execulte:
+    npm start
+    ```
+
+    O site agora está sendo executado em `http://localhost:8000`!
+
+    _Note: Você também verá um segundo link: _`http://localhost:8000/___graphql`_. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre o uso dessa ferramenta no [tutorial Gatsby](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+## 🧐 O que tem dentro?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -96,10 +113,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning Gatsby
+## 🎓 Mais sobre Gatsby
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+Procurando mais orientações? Você pode da uma olhada na documentação completa do Gatsby [no website](https://www.gatsbyjs.org/). Aqui estão alguns lugares para começar:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- **Para a maioria dos desenvolvedores, recomendo começar com o nosso [tutorial detalhado para criar um site com o Gatsby](https://www.gatsbyjs.org/tutorial/).** Começa com zero suposições sobre seu nível de capacidade e percorre todas as etapas do processo.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+- **Para mergulhar diretamente nos exemplos de código, acesse [a documentação do gatsby](https://www.gatsbyjs.org/docs/).** Em particular, consulte as seções _Guides_, _API Reference_ e _Advanced Tutorials_ na Barra Lateral.

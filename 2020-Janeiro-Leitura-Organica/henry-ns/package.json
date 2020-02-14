@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "leitura-organica",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Um sistema que calcula a velocidade de leitura das pessoas da Leitura Orgânica",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Henrique Miranda <enrque.ns@gmail.com>",
   "dependencies": {
     "babel-plugin-polished": "^1.1.0",
     "framer-motion": "^1.8.4",
@@ -54,24 +54,26 @@
     "typescript": "^3.7.5"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "reactjs",
+    "challenge"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "preload-fonts": "gatsby-preload-fonts",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/henry-ns/desafio333/tree/master/2020-Janeiro-Leitura-Organica/henry-ns"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/henry-ns/desafio333/issues"
   }
 }
