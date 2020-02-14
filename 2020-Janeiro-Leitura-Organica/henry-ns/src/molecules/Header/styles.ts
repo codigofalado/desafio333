@@ -55,7 +55,6 @@ export const Container = styled('header')<Props>`
 
     nav {
       font-size: 1.125rem;
-      opacity: 0;
     }
 
     li {

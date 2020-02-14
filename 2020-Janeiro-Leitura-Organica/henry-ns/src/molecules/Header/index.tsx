@@ -43,7 +43,7 @@ const Header: FC = () => {
         <ExternalAnchor href="https://www.leituraorganica.com.br/">
           <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
         </ExternalAnchor>
-        <FaBars size={32} onClick={togglePressed} />
+        <FaBars size={30} onClick={togglePressed} />
         <nav>
           <ul>
             {menuList.map(item => (
