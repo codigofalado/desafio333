@@ -54,6 +54,11 @@ export const Container = styled('a')<Props>`
   }
 
   @media (max-width: ${media.smallTablet}) {
+    padding: 12px 0;
     font-size: 0.875rem;
+  }
+
+  @media (max-width: ${media.smallPhone}) {
+    font-size: 0.75rem;
   }
 `;

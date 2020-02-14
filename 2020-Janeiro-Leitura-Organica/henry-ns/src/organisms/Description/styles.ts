@@ -160,6 +160,32 @@ export const Container = styled.section`
       font-size: 1.5rem;
     }
   }
+
+  @media (max-width: ${media.bigPhone}) {
+    padding-bottom: 32px;
+
+    div + div {
+      margin-bottom: 64px;
+    }
+
+    a {
+      max-width: 152px;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: ${media.smallPhone}) {
+    a {
+      max-width: 136px;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const Spot = styled.img`

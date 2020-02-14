@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import ExternalLink from '../ExternalLink';
+import ExternalLink from '../../atoms/ExternalLink';
 
 import media from '~/styles/media';
 
@@ -55,6 +55,7 @@ export const Container = styled('header')<Props>`
 
     nav {
       font-size: 1.125rem;
+      opacity: 0;
     }
 
     li {
@@ -96,6 +97,8 @@ export const Container = styled('header')<Props>`
   }
 
   @media (max-width: ${media.smallTablet}) {
+    height: 64px;
+
     div {
       padding: 0 24px;
 
@@ -129,6 +132,8 @@ export const Container = styled('header')<Props>`
         transition: 0.5s ease-out;
         transform: translateY(${({ pressed }) => (pressed ? '100%' : '0px')})
           translateZ(0px);
+
+        opacity: ${({ pressed }) => (pressed ? 1 : 0)};
 
         ul {
           height: 100%;
@@ -186,5 +191,12 @@ export const ExternalAnchor = styled(ExternalLink)`
 
   &:active {
     transform: scale(1);
+  }
+
+  @media (max-width: ${media.smallTablet}) {
+    div {
+      width: 99.1px;
+      height: 48px;
+    }
   }
 `;

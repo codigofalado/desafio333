@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import SEO from '~/components/SEO';
+import SEO from '~/atoms/SEO';
 
 const NotFound: FC = () => (
   <>

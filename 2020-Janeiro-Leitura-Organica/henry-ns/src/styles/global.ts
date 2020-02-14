@@ -65,6 +65,7 @@ export default createGlobalStyle`
 
     @media (max-width: ${media.smallTablet}) {
       padding: 0 24px;
+      overflow: hidden;
     }
   }
 

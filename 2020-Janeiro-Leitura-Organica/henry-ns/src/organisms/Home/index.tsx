@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import Button from '~/components/Button';
+import Button from '~/atoms/Button';
 
 import book from '~/assets/book1.svg';
 

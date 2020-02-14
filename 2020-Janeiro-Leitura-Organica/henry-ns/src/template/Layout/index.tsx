@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
-import SEO from '~/components/SEO';
+import SEO from '~/atoms/SEO';
+
+import Footer from '~/molecules/Footer';
+import Header from '~/molecules/Header';
 
 import GlobalStyles from '~/styles/global';
 

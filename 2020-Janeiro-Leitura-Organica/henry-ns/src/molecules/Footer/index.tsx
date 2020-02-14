@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import ExternalLink from '../ExternalLink';
+import ExternalLink from '../../atoms/ExternalLink';
 
 import { Container, Heart } from './styles';
 
@@ -13,9 +13,9 @@ const Footer: FC = () => (
       {'  © 2020, todos os direitos resevados'}
     </p>
     <p>
-      {'Site feito '}
+      {'Site feito com '}
       <Heart />
-      {' com por '}
+      {' por '}
       <ExternalLink href="https://thehenry.dev/">Henrique Miranda</ExternalLink>
     </p>
   </Container>
