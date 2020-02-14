@@ -7,7 +7,7 @@ export const Container = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  margin-top: 20px;
+  padding-top: 20px;
 
   height: 100vh;
 

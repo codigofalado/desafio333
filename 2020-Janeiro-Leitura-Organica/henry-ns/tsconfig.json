@@ -10,6 +10,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,
+    "resolveJsonModule": true,
     "allowJs": true,
     "baseUrl": "src",
     "paths": {

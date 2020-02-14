@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -35,8 +36,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-polished',
     'gatsby-plugin-typescript',

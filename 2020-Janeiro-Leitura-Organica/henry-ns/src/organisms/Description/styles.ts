@@ -164,6 +164,23 @@ export const Container = styled.section`
   @media (max-width: ${media.bigPhone}) {
     padding-bottom: 32px;
 
+    div {
+      img {
+        margin-bottom: 24px !important;
+      }
+
+      article {
+        h1 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    div:nth-child(3) {
+      padding-top: 80px;
+      padding-bottom: 64px;
+    }
+
     div + div {
       margin-bottom: 64px;
     }
@@ -215,6 +232,12 @@ export const Spot = styled.img`
   @media (max-width: ${media.smallTablet}) {
     & + & {
       transform: translateX(90%);
+    }
+  }
+
+  @media (max-width: ${media.phone}) {
+    &:first-child {
+      transform: translate(-95%, -25%) scale(1.3);
     }
   }
 `;
