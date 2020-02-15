@@ -4,11 +4,13 @@ import Calculator from '~/organisms/Calculator';
 import Rules from '~/organisms/Rules';
 import Layout from '~/template/Layout';
 
+import Timer from '~/atoms/Timer';
+
 import data from './data.json';
 
 import { Container } from './styles';
 
-const TEXT = data.texts[0];
+const TEXT = data.texts['1'];
 
 const Test: FC = () => {
   const [start, setStart] = useState(false);
@@ -16,6 +18,7 @@ const Test: FC = () => {
   return (
     <Layout title="Regras">
       <Container>
+        <Timer start={start} />
         {start ? (
           <Calculator data={TEXT} />
         ) : (
