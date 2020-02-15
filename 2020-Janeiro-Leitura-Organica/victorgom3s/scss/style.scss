@@ -1,5 +1,6 @@
 /* Colors */
 $mainColor: #00adb5;
+$mainColorDarker: #00979e;
 $textColor: #454a52;
 $titleColor: #2b313b;
 $bgColor: #eeeeee;
@@ -9,15 +10,119 @@ $bgColorGradient: linear-gradient(104.62deg, #2b313b 38.54%, #454a52 100%);
 $bgColorGradientBtn: linear-gradient(98.52deg, #00979e 0%, #10c4cc 100%);
 $kindleScreenColor: #d9d9d9;
 
+/* Font size */
+$h1: 3rem;
+$h2: 2.25rem;
+$p: 1.5rem;
+$a: 1.125rem;
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1 {
+  font-size: $h1;
+  font-weight: 400;
+  font-family: "IBM Plex Serif", serif;
+  color: $textColor;
+}
+
+h2.title {
+  font-family: "IBM Plex Serif", serif;
+  font-size: $h2;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color: $titleColor;
+  // font-weight: 600;
+  &::after {
+    content: " ";
+    display: block;
+    background-color: $titleColor;
+    height: 4px;
+    width: 5%;
+    position: absolute;
+    border-radius: 5px;
+    left: 47.5%;
+  }
+}
+
+p {
+  font-size: $p;
+  font-weight: 400;
+  color: $textColor;
 }
 
 a {
   color: $kindleScreenColor;
   text-decoration: none;
   font-weight: bold;
+  font-size: $a;
+  transition: 0.2s;
+  &:hover {
+    color: $mainColor;
+  }
+}
+
+.btn {
+  background: none;
+  text-transform: uppercase;
+  font-size: $a;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-header {
+  color: $mainColor;
+  font-size: 18px;
+  border-image: $bgColorGradientBtn;
+  border: 2px solid;
+  padding: 15px 25px;
+  transition: 0.2s;
+  &:hover {
+    border: 2px solid $mainColorDarker;
+    background: $bgColorGradientBtn;
+    color: $kindleScreenColor;
+  }
+}
+
+.btn-chamada {
+  color: $bgColor2;
+  background: $bgColorGradientBtn;
+  padding: 15px 50px;
+  border: 2px solid $mainColorDarker;
+  transition: 0.2s;
+  &:hover {
+    background: $bgColorGradient;
+    border: 2px solid $bgColorDark;
+    color: $bgColor;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 60px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  .col {
+    width: 50%;
+  }
+  .col-6 {
+    width: 60%;
+  }
+  .col-4 {
+    width: 40%;
+  }
+}
+
+.bg {
+  background-color: $bgColor;
 }
 
 header {
@@ -35,5 +140,30 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+  }
+}
+
+section {
+  height: 560px;
+  display: flex;
+  align-items: center;
+  .col {
+    align-self: center;
+  }
+}
+
+section#chamada {
+  background-color: $bgColor;
+  background-image: url("/public/img/Vector.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  .btn {
+    margin: 40px 0 0 0;
+  }
+
+  .bg-svg {
+    display: flex;
+    justify-content: center;
   }
 }
