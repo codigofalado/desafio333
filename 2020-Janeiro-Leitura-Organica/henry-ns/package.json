@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Henrique Miranda <enrque.ns@gmail.com>",
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "babel-plugin-polished": "^1.1.0",
     "framer-motion": "^1.8.4",
     "gatsby": "^2.19.9",
@@ -33,6 +34,7 @@
     "typeface-roboto": "^0.0.75"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.10.0",
     "@types/node": "^13.5.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",

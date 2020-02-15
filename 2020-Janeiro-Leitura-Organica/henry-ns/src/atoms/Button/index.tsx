@@ -4,11 +4,11 @@ import { Container } from './styles';
 
 interface Props {
   secondary?: boolean;
-  href: string;
+  to: string;
 }
 
-const Button: FC<Props> = ({ children, secondary, href }) => (
-  <Container href={href} secondary={secondary}>
+const Button: FC<Props> = ({ children, secondary, to }) => (
+  <Container to={to} secondary={secondary}>
     {children}
   </Container>
 );

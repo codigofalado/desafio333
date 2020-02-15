@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { Link } from 'gatsby';
+
 import media from '~/styles/media';
 
 interface Props {
@@ -11,7 +13,7 @@ const Secondary = css`
   background-color: transparent;
 `;
 
-export const Container = styled('a')<Props>`
+export const Container = styled(Link)<Props>`
   display: flex;
   align-items: center;
   justify-content: center;

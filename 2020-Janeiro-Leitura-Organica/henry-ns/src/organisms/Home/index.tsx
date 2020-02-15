@@ -11,8 +11,8 @@ const Home: FC = () => (
     <div>
       <h1>Você já parou para calcular a sua velocidade de leitura?</h1>
       <ButtonGroup>
-        <Button href="#teste">Fazer o Teste</Button>
-        <Button href="#sobre" secondary>
+        <Button to="/teste">Fazer o Teste</Button>
+        <Button to="/#sobre" secondary>
           Saiba mais
         </Button>
       </ButtonGroup>

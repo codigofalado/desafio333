@@ -56,43 +56,6 @@ export const Container = styled('header')<Props>`
     nav {
       font-size: 1.125rem;
     }
-
-    li {
-      position: relative;
-      overflow: hidden;
-      padding: 8px;
-
-      transition: 0.3s ease;
-
-      &::after {
-        content: '';
-        position: absolute;
-
-        width: 100%;
-        height: 3px;
-
-        bottom: 0;
-        left: 0;
-        transition: 0.3s ease;
-        transform: translateY(150%) translateZ(0px);
-
-        background-color: ${({ theme }) => theme.colors.active};
-      }
-
-      &:hover {
-        a {
-          color: ${({ theme }) => theme.colors.active};
-        }
-
-        &::after {
-          transform: translateY(0px) translateZ(0px);
-        }
-      }
-    }
-
-    li + li {
-      margin-left: 32px;
-    }
   }
 
   @media (max-width: ${media.smallTablet}) {
@@ -142,33 +105,6 @@ export const Container = styled('header')<Props>`
           justify-content: center;
 
           font-size: 2rem;
-
-          li {
-            margin: 16px 0px;
-            transition: 0.2s ease-out;
-
-            &::after {
-              background-color: ${({ theme }) => theme.colors.backgound};
-              height: 4px;
-            }
-
-            a,
-            &:hover a {
-              color: ${({ theme }) => theme.colors.backgound};
-            }
-          }
-
-          li:nth-child(1) {
-            transition-delay: 0.1s;
-          }
-
-          li:nth-child(2) {
-            transition-delay: 0.2s;
-          }
-
-          li:nth-child(3) {
-            transition-delay: 0.3s;
-          }
         }
       }
     }

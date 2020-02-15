@@ -4,16 +4,25 @@ import { FaBars } from 'react-icons/fa';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
+import NavBar, { Item } from '~/atoms/NavBar';
+
 import { Container, ExternalAnchor } from './styles';
 
 const menuList = [
-  { id: 'menu1', title: 'Home', href: '#home' },
-  { id: 'menu2', title: 'Realizar Teste', href: '#teste' },
-  { id: 'menu3', title: 'Sobre', href: '#sobre' },
+  { id: 'menu1', title: 'Home', href: '/#home' },
+  { id: 'menu2', title: 'Realizar Teste', href: '/teste' },
+  { id: 'menu3', title: 'Sobre', href: '/#sobre' },
 ];
 
 const Header: FC = () => {
   const [pressed, setPressed] = useState(false);
+  const [selected, setSelected] = useState(() => {
+    const { pathname, hash } = window.location;
+
+    if (pathname === '/teste') return 'menu2';
+
+    return hash === '#sobre' ? 'menu3' : 'menu1';
+  });
 
   const { image } = useStaticQuery(
     graphql`
@@ -33,8 +42,9 @@ const Header: FC = () => {
     setPressed(!pressed);
   }
 
-  function setPressedToFalse() {
+  function setPressedToFalse(item: Item) {
     setPressed(false);
+    setSelected(item.id);
   }
 
   return (
@@ -44,17 +54,11 @@ const Header: FC = () => {
           <Img fluid={image.sharp.fluid} alt="Leitura Orgânica" />
         </ExternalAnchor>
         <FaBars size={30} onClick={togglePressed} />
-        <nav>
-          <ul>
-            {menuList.map(item => (
-              <li key={item.id}>
-                <a href={item.href} onClick={setPressedToFalse}>
-                  {item.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <NavBar
+          items={menuList}
+          onClick={setPressedToFalse}
+          selected={selected}
+        />
       </div>
     </Container>
   );
