@@ -46,6 +46,7 @@ h2.title {
     position: absolute;
     border-radius: 5px;
     left: 47.5%;
+    margin-top: 5px;
   }
 }
 
@@ -165,5 +166,95 @@ section#chamada {
   .bg-svg {
     display: flex;
     justify-content: center;
+  }
+}
+
+section#teste {
+  height: 1245px;
+  .instrucoes {
+    margin: 0 90px;
+  }
+  .kindle {
+    margin: 50px auto;
+    border: 3px solid $bgColorDark;
+    border-radius: 35px;
+    max-width: 667px;
+    height: 900px;
+    background: $bgColorGradient;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+    .btn-kindle {
+      color: $bgColor2;
+      margin: 0 auto 30px auto;
+      padding: 15px 30px;
+      transition: 0.2s;
+      &:hover {
+        color: $mainColor;
+        border: 2px solid $mainColor;
+      }
+    }
+    .screen {
+      height: 680px;
+      width: 75%;
+      margin: 70px auto 30px auto;
+      padding: 50px 30px;
+      background-color: $kindleScreenColor;
+      border-radius: 35px;
+      color: $textColor;
+      line-height: 150%;
+    }
+  }
+}
+
+section#footer {
+  height: 330px;
+  background: $bgColorGradient;
+  .chamada-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1 {
+      font-weight: 700;
+    }
+    h1,
+    p {
+      margin: 0;
+      color: $bgColor2;
+    }
+    a {
+      margin-top: 20px;
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  background: $bgColorDark;
+  display: flex;
+  align-items: center;
+  .footer-text {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 14px;
+    color: $bgColor;
+    text-align: end;
+  }
+  .row {
+    align-items: center;
+    .col:last-of-type {
+      align-self: flex-end;
+      justify-self: flex-end;
+      a {
+        font-size: 14px;
+        font-family: "IBM Plex Serif", serif;
+        font-size: 14px;
+        color: $bgColor;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
   }
 }
