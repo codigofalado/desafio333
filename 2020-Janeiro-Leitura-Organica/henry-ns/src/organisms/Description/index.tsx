@@ -44,7 +44,7 @@ const Description: FC = () => (
     </div>
 
     <h2>Que tal descobrir agora a sua velocidade de leitura?</h2>
-    <Button href="#teste">Fazer o Teste</Button>
+    <Button to="/teste">Fazer o Teste</Button>
   </Container>
 );
 

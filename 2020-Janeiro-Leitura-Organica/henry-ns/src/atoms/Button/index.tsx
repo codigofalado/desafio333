@@ -13,4 +13,8 @@ const Button: FC<Props> = ({ children, secondary, to }) => (
   </Container>
 );
 
+Button.defaultProps = {
+  secondary: false,
+};
+
 export default Button;

@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import { FaPlay } from 'react-icons/fa';
 
-import { Container } from './styles';
+import woman from '~/assets/woman.svg';
+
+import { Container, StartButton } from './styles';
 
 interface Props {
   onClick: () => void;
@@ -9,15 +11,26 @@ interface Props {
 
 const Rules: FC<Props> = ({ onClick }) => (
   <Container>
-    <ul>
-      <li>Clique no botão no abaixo para começar o teste</li>
-      <li>Ao iniciar o teste, o temporizador irá iniciar</li>
-      <li>Ao terminar a leitura, clique em finalizar para saber o resultado</li>
-    </ul>
+    <img src={woman} alt="woman" />
 
-    <button type="button" onClick={onClick}>
-      Iniciar <FaPlay size={24} />
-    </button>
+    <div>
+      <ul>
+        <li>
+          Clique no <strong>botão a abaixo</strong> para começar o teste.
+        </li>
+        <li>
+          Ao começar o teste, o <strong>temporizador</strong> irá iniciar.
+        </li>
+        <li>
+          Ao termino da leitura, clique em <strong>finalizar</strong> para saber
+          o resultado.
+        </li>
+      </ul>
+
+      <StartButton onClick={onClick}>
+        Iniciar <FaPlay size={24} />
+      </StartButton>
+    </div>
   </Container>
 );
 
