@@ -7,6 +7,8 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
 
+  margin: 64px auto;
+
   strong {
     color: ${({ theme }) => theme.colors.active};
     font-weight: 400;
@@ -29,6 +31,91 @@ export const Container = styled.section`
         &:before {
           content: '';
         }
+      }
+    }
+  }
+
+  @media (max-width: ${media.hd}) {
+    img {
+      width: 300px;
+    }
+
+    div {
+      margin-left: 64px;
+
+      ul {
+        margin-bottom: 32px;
+
+        li {
+          font-size: 1.5rem;
+          padding: 16px 0;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: ${media.smallTablet}) {
+    img {
+      width: 200px;
+    }
+
+    div {
+      margin-left: 40px;
+
+      ul li {
+        font-size: 1.25rem;
+        max-width: 400px;
+      }
+    }
+  }
+
+  @media (max-width: ${media.bigPhone}) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    position: relative;
+    max-width: 400px;
+    margin: 16px auto 64px;
+
+    img {
+      width: 200px;
+      margin-right: auto;
+    }
+
+    div {
+      margin-left: 0px;
+      margin-bottom: 32px;
+
+      ul li {
+        text-align: center;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+
+        transform: translate(-30%, -50%);
+      }
+    }
+  }
+
+  @media (max-width: ${media.smallPhone}) {
+    margin: auto;
+
+    img {
+      display: none;
+    }
+
+    div {
+      margin: auto;
+
+      button {
+        position: initial;
+        margin: auto;
+
+        transform: translate(0, 0);
       }
     }
   }
@@ -71,18 +158,43 @@ export const StartButton = styled.button.attrs({
     transform: scale(1);
   }
 
-  @media (max-width: ${media.hd}) {
-    & + & {
-      margin-left: 32px;
-    }
+  @media (max-width: ${media.smallDesktop}) {
+    padding-right: 24px;
+    padding-left: 32px;
+    font-size: 1rem;
   }
 
   @media (max-width: ${media.smallTablet}) {
-    padding: 12px 0;
+    padding: 8px 16px;
+    padding-left: 24px;
     font-size: 0.875rem;
+
+    svg {
+      margin-left: 8px;
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: ${media.bigPhone}) {
+    &:hover {
+      transform: scale(1.05) translate(-30%, -50%);
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      transform: scale(1) translate(-30%, -50%);
+    }
   }
 
   @media (max-width: ${media.smallPhone}) {
     font-size: 0.75rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
   }
 `;
