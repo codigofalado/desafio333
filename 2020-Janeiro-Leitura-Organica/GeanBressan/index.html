@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Leitura Orgânica</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leitura Orgânica">
+    <meta name="twitter:description" content="Num mundo tão subjetivo quanto o da leitura, a velocidade de leitura é uma métrica objetiva que te permite saber como está a sua leitura nesse momento e te permite acompanhar a sua evolução!">
+    <meta property="twitter:image:src" content="https://geanbressan.github.io/Desafio333/2020-Janeiro-Leitura-Organica/img/leitura-organica-logo.png">
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:url" content="https://geanbressan.github.io/Desafio333/2020-Janeiro-Leitura-Organica/">
+    <meta property="og:type" content="page">
+    <meta property="og:title" content="Leitura Orgânica">
+    <meta property="og:image" content="https://geanbressan.github.io/Desafio333/2020-Janeiro-Leitura-Organica/img/leitura-organica-logo.png">
+    <meta property="og:description" content="Num mundo tão subjetivo quanto o da leitura, a velocidade de leitura é uma métrica objetiva que te permite saber como está a sua leitura nesse momento e te permite acompanhar a sua evolução!">
+    <meta property="og:site_name" content="Leitura Orgânica">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Import Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-5 mx-auto">
+                <img class="img-fluid"  src="img/Logo - Branca.png" alt="Leitura Orgânica">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h1>Você já parou para calcular a sua velocidade de leitura?</h1>
+                <p class="mt-4">Num mundo tão subjetivo quanto o da leitura, a velocidade de leitura é uma métrica objetiva que te permite saber como está a sua leitura nesse momento e te permite acompanhar a sua evolução!</p>
+                <p>A medida mais utilizada para calcular a velocidade de leitura é Palavras por Minuto (PPM). Uma leitura em páginas por hora, por exemplo, não pode ser aplicada em qualquer livro (pois tem tamanhos diferentes de páginas), muito menos em artigos ou notícias.</p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6 mt-5">
+                <button class="btn btn-white" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-clock-o" aria-hidden="true"></i> Que tal descobrir agora a sua velocidade de leitura?</button>
+            </div>
+            <div class="col-md-6 social-icons text-right mt-5">
+                <a href="https://www.facebook.com/leituraorganica" target="blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/leituraorganica/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-title">Teste de PPM</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">Teste o seu PPM agora mesmo, basta clicar em iniciar teste.
+        </div>
+        <div id="sendEmail" class="modal-body input-group mb-3 mt-2 d-none">
+          <input id="email" onfocusout="sendEmail()" onkeyup="sendEmail()" type="text" class="form-control" placeholder="Enviar resultado do teste para seu email:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <a href="" id="mail-share-btn"><button class="btn btn-success" type="button">Enviar</button></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <i id="timer-clock" class="fa fa-clock-o" aria-hidden="true"> <span id="timer"> 00</span></i>
+            <button id="iniciarTeste" type="button" class="btn btn-primary" onclick="iniciarTeste()">Iniciar Teste</button>
+            <button id="encerrarTeste" type="button" class="d-none" onclick="encerrarTeste()">Encerrar Teste</button>
+            <button id="refazerTeste" type="button" class="d-none" onclick="iniciarTeste()">Refazer Teste</button>
+            <a href="" id="twitter-share-btt" rel="nofollow" target="_blank"><button id="shareTW" type="button" class="btn d-none" title="Share on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
