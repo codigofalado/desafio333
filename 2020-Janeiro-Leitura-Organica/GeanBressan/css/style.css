@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap');
+
+body {
+    background: url(../img/glasses-1246611_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-family: 'Quattrocento Sans', sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    text-align: justify;
+    font-weight: 600;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #004A42;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 800;
+}
+
+.btn-white:hover {
+    background-color: rgb(190, 184, 184);
+    color: rgb(5, 63, 57);
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 45px;
+    padding: 0 10px;
+}
+
+.social-icons a:hover {
+    color: rgb(190, 184, 184);
+}
+
+.modal-dialog {
+    color: #000;
+    text-align: justify;
+}
+
+.fonte {
+    font-size: 15px;
+}
