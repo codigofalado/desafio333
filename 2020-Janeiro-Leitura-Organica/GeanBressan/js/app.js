@@ -54,6 +54,8 @@ function encerrarTeste() {
     document.getElementById('shareTW').className = 'btn';
     document.getElementById('twitter-share-btt').href = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=Meu PPM e de ' + Math.floor(ppm) + ' faça o teste e descubra já o seu.';
 
+    document.getElementById('mail-share-btn').href = 'mailto:?subject=Leitura Orgânica teste de PPM&body=' + 'Você leu ' + totalPalavras.length + ' palavras em ' + Math.floor(minutos) + ' minuto(s) e seu PPM é de ' + Math.floor(ppm) + '.';
+    
     clearInterval(interval1);
 }
 
