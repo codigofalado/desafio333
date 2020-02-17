@@ -17,7 +17,7 @@ const Description: FC = () => (
     <div>
       <img src={bibliophile} alt="bibliófila" />
       <article>
-        <h1>Título</h1>
+        <h1>Importância</h1>
         <p>
           Num mundo tão subjetivo quanto o da leitura, a velocidade de leitura é
           uma métrica objetiva que te permite saber como está a sua leitura
@@ -28,7 +28,7 @@ const Description: FC = () => (
 
     <div>
       <article>
-        <h1>Título</h1>
+        <h1>Palavras por Minuto</h1>
         <p>
           A medida mais utilizada para calcular a velocidade de leitura é
           Palavras por Minuto (<strong>PPM</strong>).
