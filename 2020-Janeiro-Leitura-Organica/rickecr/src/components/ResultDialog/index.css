@@ -7,3 +7,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.buttons-options * {
+    margin-top: 5px;
+}
+
+.div-form {
+    display: flex;
+    justify-content: center;
+}
+
+.input-email {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+}

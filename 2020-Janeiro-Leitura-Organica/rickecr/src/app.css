@@ -15,12 +15,7 @@ body, button, a {
 }
 
 button {
-  
     cursor: pointer;
-}
-
-.div-header + .div-main {
-    padding-top: calc(25px + 5vw);
 }
 
 a {
