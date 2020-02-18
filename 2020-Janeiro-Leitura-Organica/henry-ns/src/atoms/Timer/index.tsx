@@ -1,4 +1,11 @@
-import React, { FC, useMemo, useEffect, useState } from 'react';
+import React, {
+  useMemo,
+  useEffect,
+  useState,
+  forwardRef,
+  useImperativeHandle,
+  RefForwardingComponent,
+} from 'react';
 
 import {
   motion,
@@ -13,11 +20,15 @@ interface Props {
   start: boolean;
 }
 
+export interface TimerRef {
+  getSeconds: () => number;
+}
+
 function addZero(time: number): string {
   return time > 9 ? String(time) : `0${time}`;
 }
 
-const Timer: FC<Props> = ({ start }) => {
+const Timer: RefForwardingComponent<TimerRef, Props> = ({ start }, ref) => {
   const { scrollYProgress } = useViewportScroll();
   const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
   const pathLength = useSpring(yRange, {
@@ -41,6 +52,10 @@ const Timer: FC<Props> = ({ start }) => {
     return () => clearInterval(interval);
   }, [seconds, start]);
 
+  useImperativeHandle(ref, () => ({
+    getSeconds: () => seconds,
+  }));
+
   return (
     <Container>
       <svg viewBox="0 0 50 50">
@@ -63,4 +78,4 @@ const Timer: FC<Props> = ({ start }) => {
   );
 };
 
-export default Timer;
+export default forwardRef(Timer);
