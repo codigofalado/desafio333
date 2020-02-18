@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Button from '~/styles/button';
+
 export const Container = styled.section`
   article {
     margin: 0 205px;
@@ -13,4 +15,8 @@ export const Container = styled.section`
       margin-top: 16px;
     }
   }
+`;
+
+export const FinishButton = styled(Button)`
+  margin: auto;
 `;

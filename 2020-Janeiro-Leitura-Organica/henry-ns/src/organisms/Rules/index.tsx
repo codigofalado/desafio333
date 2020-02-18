@@ -3,7 +3,8 @@ import { FaPlay } from 'react-icons/fa';
 
 import woman from '~/assets/woman.svg';
 
-import { Container, StartButton } from './styles';
+import { Container } from './styles';
+import StartButton from '~/styles/button';
 
 interface Props {
   onClick: () => void;

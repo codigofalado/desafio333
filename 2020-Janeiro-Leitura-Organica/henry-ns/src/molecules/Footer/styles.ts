@@ -7,6 +7,8 @@ export const Container = styled.footer`
   text-align: center;
   padding: 24px 0px;
 
+  border-top: 2px solid ${({ theme }) => theme.colors.active};
+
   p + p {
     margin-top: 8px;
   }
