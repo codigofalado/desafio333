@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Velocidade do PPM</title>
+  <link rel="stylesheet" href="css/global2.css">
+  <link rel="stylesheet" href="css/global3.css">
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+  <div id="resultado"  class="container">
+    <div class="cronometro">
+      <div class="codigo">
+      	<span id="minuto">00m</span>:<span id="segundo">00s</span><br>
+      </div>
+      <div id="parar"><input type="button" value="Finalizar" onclick="parar();"></div>
+
+      <div class="players">
+        <a id="play" onclick="playShow()" style="display:none;"><img src="assets/play.png" alt="Play"></a>
+        <a id="pause" onclick="pauseShow()"><img src="assets/pause.png" alt="Pause"> </a>
+
+        <audio id="audio" autoplay loop></audio>
+      </div>
+    </div>
+      <div id="iframeR" class="iframes"></div>
+    </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/audio.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+.container2{
+  position: relative;
+  max-width: 750px;
+  height: 500px;
+  margin: 0 auto;;
+  display: flex;
+  align-items: center;
+}
+.container2 .h1{color: white;}
+
+.card2{
+  width: 749px;
+  height: 350px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  border: 1px solid white;
+  color:white;
+}
+.container2 .card2 img{width: 80%;height: 93%;opacity: 0.2;}
+
+h1,p,button{position: absolute;}
+h1{
+  top:10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF1493;
+  background-color:rgba(0,0,0,0.7);
+  text-align: center;
+  width: 70%;}
+p{
+  top: 80px;
+  margin-right: 10px;
+  right:0;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 30px;
+  color:#32CD32;
+  background-color:rgba(0,0,0,0.6);
+  text-align: center;
+  width: 90%;
+  border-radius: 4px;
+}
+strong{color:#1E90FF}
+.card2 input{
+  position: absolute;
+  top: 170px;
+  margin-right:;
+  right:68px;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 23px;
+  color: #FF7F24;
+  background-color:rgba(0,0,0,0.6);
+  text-align: center;
+  width: 50%;
+  border: 1px solid #FF7F24;
+  border-radius: 4px;
+}
+.card2 input::placeholder{color: #1E90FF;}
+.card2  .bu{
+  position: absolute;
+  top: 170px;
+  right: 5px;
+  width: 60px;
+  height: 29px;
+  background:rgba(0,0,0,0.7);
+  color:  #7D26CD;
+  border: 1px solid #7D26CD;
+  font-weight: bold;
+}
+.card2 .rede {
+  position: absolute;
+  top:200px;
+  left: 0;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 50px;
+  width: 120px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;:
+}
+.card2 .rede a img{
+  opacity: 0.9;
+}
+.button button{
+  background:rgba(0,0,0,0.7);
+  color:  #7D26CD;
+  border: 1px solid #7D26CD;
+  bottom: 5px;
+  width: 100px;
+  height:40px;
+  font-weight: bold;
+  right: 30% ;
+}
+.button .btn{
+  left: 30%;
+
+}
+
+@media (max-width:750px) {
+  .card2{width:100%;}
+  .button button{right:25%;}
+  .button .btn{left:25%;}
+}
+
+@media (max-width:400px) {
+  .button button{right: 15%;}
+  .button .btn{left: 15%;}
+}

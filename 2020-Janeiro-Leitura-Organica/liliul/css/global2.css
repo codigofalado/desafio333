@@ -1,0 +1,67 @@
+*{margin: 0;padding: 0;}
+body{background: #000;}
+.container{
+  max-width:1100px;
+  margin: 0 auto;
+  display:flex;
+}
+.cronometro{
+  width: 100px;
+  height: 100px;
+}
+.cronometro .codigo{
+  border: 2px solid #00BFFF;
+  text-align: center;
+  width: 90px;
+  height: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00BFFF;
+  border-radius: 4px;
+}
+
+.iframes{
+  width: ;
+}
+iframe{
+  width: 900px;
+  height: 95vh;
+  border: none;
+
+}
+#parar{
+  background: #ddd;
+  width: 90px;
+  margin-top: 35px;
+  border: 3px solid #7D26CD;
+  border-radius: 4px;
+}
+#parar input{
+width: 90px;
+height: 25px;
+border: none;
+color: #7D26CD;
+background: black;
+font-size: 17px;
+}
+
+.codigo{position: relative;}
+.players{
+  position: absolute;
+  background-color: ;
+  height: ;
+  right: 10px;;
+  top: 2px;
+}
+.players a img{
+  width: 100%;
+  background: ;
+  border: 2px solid #7D26CD;
+  opacity: 1;
+}
+
+@media (max-width: 750px) {
+  .container{display: flex;flex-direction: column;}
+  iframe{width: 100%;}
+  #parar{margin-top: 10px;}
+}
