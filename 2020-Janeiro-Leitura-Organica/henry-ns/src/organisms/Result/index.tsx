@@ -1,10 +1,8 @@
 import React, { FC } from 'react';
 
-import ExternalLink from '~/atoms/ExternalLink';
-
 import celebrating from '~/assets/celebrating.svg';
 
-import { Container } from './styles';
+import { Container, Anchor } from './styles';
 
 interface Props {
   ppm?: number;
@@ -18,10 +16,11 @@ const Result: FC<Props> = ({ ppm }) => (
       <p>
         Sua velocidade de leitura é de <strong>{ppm ?? '000'} PPM</strong>
       </p>
-      <p>Insatisfeito com o resultado?</p>
-      <ExternalLink href="https://leituraorganica.com.br/">
-        Aprenda como ler até 3 vezes mais rápido.
-      </ExternalLink>
+      <h2>Insatisfeito com o resultado?</h2>
+      <p>
+        <Anchor href="https://leituraorganica.com.br/">Clique aqui</Anchor>
+        {' para aprender como ler até 3 vezes mais rápido.'}
+      </p>
     </div>
   </Container>
 );
