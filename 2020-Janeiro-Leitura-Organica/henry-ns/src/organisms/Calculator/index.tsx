@@ -19,6 +19,15 @@ const Calculator: FC<Props> = ({ data }) => {
     setStart(false);
 
     const seconds = timerRef.current?.getSeconds() ?? 0;
+
+    const words: number = data.reduce(
+      (final, paragraph) => final + paragraph.split(' ').length,
+      0
+    );
+
+    const calculatedPmm = words / (seconds / 60);
+
+    setPmm(+calculatedPmm.toFixed(2));
   }
 
   return (
