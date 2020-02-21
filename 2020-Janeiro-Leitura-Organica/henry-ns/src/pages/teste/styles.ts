@@ -11,6 +11,7 @@ export const Container = styled.section`
   justify-content: center;
 
   @media (max-width: ${media.smallTablet}) {
+    padding-top: 64px;
     min-height: calc(100vh - 71px);
   }
 `;

@@ -43,8 +43,9 @@ const Header: FC = () => {
   }
 
   function setPressedToFalse(item: Item) {
-    setPressed(false);
-    setSelected(item.id);
+    if (pressed) setPressed(false);
+
+    if (selected !== item.id) setSelected(item.id);
   }
 
   return (
