@@ -7,7 +7,11 @@ import Result from '../Result';
 import { Container, FinishButton } from './styles';
 
 interface Props {
-  data: string[];
+  data: {
+    author: string;
+    origin: string;
+    paragraphs: string[];
+  };
 }
 
 const Calculator: FC<Props> = ({ data }) => {
@@ -20,8 +24,13 @@ const Calculator: FC<Props> = ({ data }) => {
 
     const seconds = timerRef.current?.getSeconds() ?? 0;
 
-    const words: number = data.reduce(
-      (final, paragraph) => final + paragraph.split(' ').length,
+    const words: number = data.paragraphs.reduce(
+      (final, paragraph) =>
+        final +
+        paragraph
+          .replace('— ', '')
+          .replace('- ', '')
+          .split(' ').length,
       0
     );
 
@@ -36,7 +45,9 @@ const Calculator: FC<Props> = ({ data }) => {
         <>
           <Timer start={start} ref={timerRef} />
           <article>
-            {data.map(paragraph => (
+            <h1>{data.origin}</h1>
+            <h2>{data.author}</h2>
+            {data.paragraphs.map(paragraph => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </article>

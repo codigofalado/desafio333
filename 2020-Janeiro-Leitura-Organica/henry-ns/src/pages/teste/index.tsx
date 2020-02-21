@@ -8,8 +8,6 @@ import data from './data.json';
 
 import { Container } from './styles';
 
-const TEXT = data.texts['1'];
-
 const Test: FC = () => {
   const [start, setStart] = useState(false);
 
@@ -17,7 +15,9 @@ const Test: FC = () => {
     <Layout title="Regras">
       <Container>
         {start ? (
-          <Calculator data={TEXT} />
+          <Calculator
+            data={data.texts[Math.floor(Math.random() * data.texts.length)]}
+          />
         ) : (
           <Rules onClick={() => setStart(true)} />
         )}

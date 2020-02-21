@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { lighten } from 'polished';
+
 import Button from '~/styles/button';
 import media from '~/styles/media';
 
@@ -7,6 +9,15 @@ export const Container = styled.section`
   article {
     transform: translateY(-32px);
     margin: 0 200px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      color: ${({ theme }) => lighten(0.3, theme.colors.primaryText)};
+      margin: 8px 0 32px;
+    }
 
     p {
       letter-spacing: 3%;
