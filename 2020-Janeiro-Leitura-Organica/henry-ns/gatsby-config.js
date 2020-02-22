@@ -47,6 +47,6 @@ module.exports = {
         '~': path.join(__dirname, 'src'),
       },
     },
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
   ],
 };
