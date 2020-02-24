@@ -10,7 +10,7 @@ const Footer: FC = () => (
       <ExternalLink href="https://leituraorganica.com.br/">
         Leitura Orgânica
       </ExternalLink>
-      {'  © 2020, todos os direitos resevados'}
+      {'  © 2020, todos os direitos reservados'}
     </p>
     <p>
       {'Site feito com '}
