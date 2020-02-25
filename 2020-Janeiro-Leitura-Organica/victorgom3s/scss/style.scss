@@ -137,10 +137,13 @@ header {
   }
   nav {
     margin: 0 30px;
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    a {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -163,9 +166,14 @@ section#chamada {
     margin: 40px 0 0 0;
   }
 
+  .col-4 {
+    z-index: 1;
+  }
+
   .bg-svg {
     display: flex;
     justify-content: center;
+    z-index: 0;
   }
 }
 
@@ -201,9 +209,11 @@ section#teste {
       margin: 70px auto 30px auto;
       padding: 50px 30px;
       background-color: $kindleScreenColor;
-      border-radius: 35px;
       color: $textColor;
       line-height: 150%;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: $mainColor $bgColor;
     }
   }
 }
@@ -255,6 +265,38 @@ footer {
           color: $mainColor;
         }
       }
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  right: 30%;
+  top: 200px;
+  width: 480px;
+  min-height: 200px;
+  background-color: $bgColor2;
+  border: 1px solid $mainColor;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  .modal-header {
+    height: 60px;
+    background-color: $mainColorDarker;
+  }
+  .modal-content,
+  .modal-footer {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin-right: 10px;
     }
   }
 }

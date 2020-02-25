@@ -14,9 +14,9 @@
     <header>
       <img src="./public/img/Logo-Azul.png" alt="Leitura Orgânica" />
       <nav>
-        <a href="#0">O que é?</a>
-        <a href="#0">Como Funciona?</a>
-        <a href="#0">Teste</a>
+        <a class="link" href="#0">O que é?</a>
+        <a class="link" href="#0">Como Funciona?</a>
+        <a class="link" href="#0">Teste</a>
         <a class="btn btn-header">Calcular</a>
       </nav>
     </header>
@@ -99,35 +99,10 @@
           </p>
 
           <div class="kindle">
-            <div class="screen">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi
-              aliquet proin faucibus blandit facilisis arcu. Ultricies eget
-              pulvinar dictum dolor. Turpis penatibus vitae morbi et. Est
-              scelerisque sit diam sagittis tristique nam ultrices blandit
-              semper. Ac, lacus, ante magna ipsum id nunc eleifend pellentesque
-              pulvinar. Diam donec mauris vitae aliquam, nullam sed dignissim.
-              Non ultricies in arcu maecenas mattis sit hendrerit urna. Donec
-              et, egestas et sed elit. Arcu ridiculus tincidunt faucibus augue
-              semper. Pulvinar cursus vel eget tellus, turpis vel neque enim
-              praesent. Mauris, id diam facilisi fames nibh in lacus, pharetra
-              aliquam. Dolor dolor, eget facilisi diam enim. Viverra quis
-              viverra malesuada suspendisse ipsum viverra aenean viverra purus.
-              Urna, egestas risus id est porta. Massa lacus amet, pellentesque
-              urna nec vulputate. Velit at pellentesque viverra facilisis
-              interdum. Arcu, massa convallis mauris, tincidunt tempus. Quis
-              diam arcu mauris, at orci non, aliquet. Ultrices egestas malesuada
-              elit ornare malesuada commodo pellentesque gravida vel. Amet nisl
-              eu semper condimentum. Consequat vivamus pharetra mauris mauris
-              mi, sapien, sem sed. Id fames quis nunc, vestibulum imperdiet
-              habitant. Ac viverra purus elit non, faucibus mauris. Mi vitae
-              ligula senectus mauris vitae, pretium. Lorem viverra eu in lorem
-              consequat in. Aliquam ultricies id quis fusce nunc est, proin.
-              Elementum, pharetra, magna morbi vitae. Quis parturient aliquam
-              proin sodales. Ultricies accumsan sed tempus vel. Amet, pharetra,
-              platea lacinia urna faucibus. Vel pulvinar laoreet viverra pretium
-              interdum. Nec non tortor egestas nisi viverra habitant ultricies.
+            <div class="screen" id="texto-kindle">
+              ...
             </div>
-            <button class="btn btn-kindle">Iniciar</button>
+            <button class="btn btn-kindle" id="iniciarTeste">Iniciar</button>
           </div>
         </div>
       </section>
@@ -159,5 +134,17 @@
         </div>
       </footer>
     </main>
+
+    <div class="modal">
+      <div class="modal-header"></div>
+      <div class="modal-content">Conteúdo do modal vai aqui</div>
+      <div class="modal-footer">
+        <button>Fechar</button>
+        <button>Ok</button>
+      </div>
+    </div>
+
+    <!-- <script type="module" src="textos.js"></script> -->
+    <script type="module" src="./js/readingTest.js"></script>
   </body>
 </html>
