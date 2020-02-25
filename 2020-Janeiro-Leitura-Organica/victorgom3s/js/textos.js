@@ -1,4 +1,4 @@
-export const textos = [
+let textos = [
   {
     livro: "O Diário de Anne Frank",
     texto: `Sua Anne.
@@ -219,3 +219,5 @@ export const textos = [
     palavras: "842"
   }
 ];
+
+export default textos;

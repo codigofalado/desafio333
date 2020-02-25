@@ -103,6 +103,32 @@ a {
   }
 }
 
+.btn-close {
+  color: #e74c3c;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid #e74c3c;
+  transition: 0.2s;
+  &:hover {
+    background: #e74c3c;
+    border: 1px solid #e74c3c;
+    color: $bgColor;
+  }
+}
+
+.btn-modal {
+  color: $bgColor;
+  padding: 10px 20px;
+  background: $mainColor;
+  border: 2px solid $mainColorDarker;
+  transition: 0.2s;
+  &:hover {
+    background: $mainColorDarker;
+    border: 2px solid $mainColor;
+    color: $bgColor;
+  }
+}
+
 .container {
   width: 100%;
   margin: 0 60px;
@@ -194,10 +220,15 @@ section#teste {
     flex-direction: column;
     position: relative;
     .btn-kindle {
-      color: $bgColor2;
+      color: $mainColor;
+      border-color: $mainColor;
       margin: 0 auto 30px auto;
       padding: 15px 30px;
       transition: 0.2s;
+      &:disabled {
+        color: red;
+        border-color: red;
+      }
       &:hover {
         color: $mainColor;
         border: 2px solid $mainColor;
@@ -270,26 +301,33 @@ footer {
 }
 
 .modal {
-  position: absolute;
-  right: 30%;
-  top: 200px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 30%;
   width: 480px;
   min-height: 200px;
   background-color: $bgColor2;
-  border: 1px solid $mainColor;
-  border-radius: 10px;
+  box-shadow: 2px 3px 20px 2px $textColor;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
   .modal-header {
-    height: 60px;
+    height: 50px;
     background-color: $mainColorDarker;
+    border-radius: 20px 20px 0 0;
   }
   .modal-content,
   .modal-footer {
     width: 92%;
     padding: 20px;
+  }
+  .modal-content {
+    margin: 20px auto;
   }
 
   .modal-footer {

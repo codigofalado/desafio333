@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leitura Orgânica</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700|IBM+Plex+Serif:400,600,700&display=swap"
       rel="stylesheet"
@@ -92,10 +92,12 @@
           <h2 class="title">Instruções</h2>
           <p class="instrucoes">
             Quando estiver pronto para testar sua velocidade de leitura, clique
-            abaixo no botão “Iniciar”. Após isso, realize a leitura do texto
-            proposto e, ao final da leitura, clique em concluir. Após isso, o
-            sistema calculará sua velocidade de leitura e apresentará o
-            resultado na tela.
+            abaixo no botão “Iniciar”. Em seguida, realize a leitura do texto
+            proposto e, clique em concluir. Atente-se ao fato de que o botão
+            ficará vermelho até a leitura ser concluida. Isso significa que você
+            ainda não pode terminar o teste. Quando o botão ficar verde, será
+            possivel finalizar o teste . Após isso, o sistema calculará sua
+            velocidade de leitura e apresentará o resultado na tela.
           </p>
 
           <div class="kindle">
@@ -135,16 +137,19 @@
       </footer>
     </main>
 
-    <div class="modal">
+    <div class="modal" style="display: none">
       <div class="modal-header"></div>
-      <div class="modal-content">Conteúdo do modal vai aqui</div>
+      <div class="modal-content">...</div>
       <div class="modal-footer">
-        <button>Fechar</button>
-        <button>Ok</button>
+        <button class="btn btn-close">Fechar</button>
+        <button class="btn btn-modal" style="display:none">
+          Enviar por E-mail
+        </button>
       </div>
     </div>
 
-    <!-- <script type="module" src="textos.js"></script> -->
-    <script type="module" src="./js/readingTest.js"></script>
+    <!-- <script src="./js/textos.js"></script>
+    <script src="./js/Modal.js"></script> -->
+    <script src="./js/readingTest.js"></script>
   </body>
 </html>
