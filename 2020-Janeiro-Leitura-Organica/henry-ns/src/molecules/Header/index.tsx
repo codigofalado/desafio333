@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState, FC } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 import { graphql, useStaticQuery } from 'gatsby';

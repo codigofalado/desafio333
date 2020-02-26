@@ -8,7 +8,7 @@ module.exports = {
     'airbnb',
     'plugin:react/recommended',
     'prettier/react',
-    'prettier/@typescript-eslint',
+    'prettier/@typescript-eslint'
   ],
   globals: {
     Atomics: 'readonly',
@@ -44,6 +44,8 @@ module.exports = {
     'implicit-arrow-linebreak': 'off', // temporary
     'indent': 'off', // temporary
     'operator-linebreak': 'off', // temporary
+    "no-unused-expressions": "off", // temporary
+    "@typescript-eslint/no-unused-expressions": "error", // temporary
     'react/jsx-filename-extension': [
       'error',
       {

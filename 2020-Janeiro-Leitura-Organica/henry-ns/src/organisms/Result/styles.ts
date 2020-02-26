@@ -6,9 +6,10 @@ import media from '~/styles/media';
 
 export const Container = styled.section`
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   img {
     max-height: 400px;
@@ -57,9 +58,12 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
 
+    margin-bottom: 64px;
+
     h3 {
-      margin: 32px 0 16px;
+      margin: 72px 0 24px;
       text-align: center;
+      font-size: 1.5rem;
     }
   }
 
@@ -117,13 +121,23 @@ export const Container = styled.section`
 
         h2 {
           font-size: 1.5rem;
-          margin-top: 64px;
+          margin-top: 48px;
         }
 
         a,
         p {
           font-size: 1.25rem;
         }
+      }
+    }
+
+    > div:last-child {
+      align-items: flex-start;
+      text-align: left;
+      margin-right: auto;
+
+      h3 {
+        margin: 0 0 16px;
       }
     }
   }
@@ -150,6 +164,12 @@ export const Container = styled.section`
           font-size: 1rem;
         }
       }
+    }
+  }
+
+  > div:last-child {
+    h3 {
+      font-size: 1.25rem;
     }
   }
 `;

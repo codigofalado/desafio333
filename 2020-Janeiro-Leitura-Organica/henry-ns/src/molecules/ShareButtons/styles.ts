@@ -5,9 +5,19 @@ export const Container = styled.ul`
   align-items: center;
 
   li {
+    transition: 0.2s ease-out;
+
     svg {
       height: 32px;
       width: 32px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.9);
     }
   }
 

@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import media from '~/styles/media';
 
 export const Container = styled.section`
-  padding-top: 80px;
+  height: 100%;
   min-height: calc(100vh - 97px);
+  padding-top: 80px;
 
   display: flex;
   align-items: center;

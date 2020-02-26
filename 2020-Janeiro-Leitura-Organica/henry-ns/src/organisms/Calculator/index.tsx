@@ -17,6 +17,7 @@ interface Props {
 const Calculator: FC<Props> = ({ data }) => {
   const [start, setStart] = useState(true);
   const [pmm, setPmm] = useState(0);
+
   const timerRef = useRef<TimerRef>(null);
 
   function calculateResult() {
