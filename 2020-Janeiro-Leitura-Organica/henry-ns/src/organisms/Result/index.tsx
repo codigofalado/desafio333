@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, FC } from 'react';
+import React, { useEffect, FC } from 'react';
 
 import ShareButtons from '~/molecules/ShareButtons';
 
@@ -41,4 +41,4 @@ const Result: FC<Props> = ({ ppm }) => {
   );
 };
 
-export default forwardRef(Result);
+export default Result;

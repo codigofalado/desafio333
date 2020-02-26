@@ -63,7 +63,7 @@ export const Container = styled.section`
     h3 {
       margin: 72px 0 24px;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 
@@ -138,6 +138,7 @@ export const Container = styled.section`
 
       h3 {
         margin: 0 0 16px;
+        font-size: 1.5rem;
       }
     }
   }
@@ -165,11 +166,11 @@ export const Container = styled.section`
         }
       }
     }
-  }
 
-  > div:last-child {
-    h3 {
-      font-size: 1.25rem;
+    > div:last-child {
+      h3 {
+        font-size: 1.25rem;
+      }
     }
   }
 `;

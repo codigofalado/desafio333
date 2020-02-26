@@ -12,7 +12,7 @@ const Test: FC = () => {
   const [start, setStart] = useState(false);
 
   return (
-    <Layout title="Regras">
+    <Layout title="Teste">
       <Container>
         {start ? (
           <Calculator
