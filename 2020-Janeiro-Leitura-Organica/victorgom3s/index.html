@@ -14,10 +14,10 @@
     <header>
       <img src="./public/img/Logo-Azul.png" alt="Leitura Orgânica" />
       <nav>
-        <a class="link" href="#0">O que é?</a>
+        <!-- <a class="link" href="#0">O que é?</a>
         <a class="link" href="#0">Como Funciona?</a>
-        <a class="link" href="#0">Teste</a>
-        <a class="btn btn-header">Calcular</a>
+        <a class="link" href="#0">Teste</a> -->
+        <a class="btn btn-header" href="#teste">Calcular</a>
       </nav>
     </header>
 
@@ -30,7 +30,7 @@
                 Você já parou para calcular
                 <b>a sua velocidade de leitura?</b>
               </h1>
-              <a href="#0" class="btn btn-chamada">Calcular</a>
+              <a href="#teste" class="btn btn-chamada">Calcular</a>
             </div>
             <div class="col-6 bg-svg">
               <img
@@ -140,11 +140,23 @@
     <div class="modal" style="display: none">
       <div class="modal-header"></div>
       <div class="modal-content">...</div>
+      <div class="modal-share" style="display: none">
+        <!-- <a href="#0" class="btn-fb">
+          <img src="public/img/bx_bxl-facebook.svg" alt="facebook share" />
+        </a> -->
+        <small>Compartilhar no Twitter:</small>
+        <a
+          href="https://twitter.com/intent/tweet"
+          class="btn-tt twitter-share-button"
+        >
+          <img src="public/img/twitter.svg" alt="Twitter share" />
+        </a>
+      </div>
       <div class="modal-footer">
         <button class="btn btn-close">Fechar</button>
-        <button class="btn btn-modal" style="display:none">
+        <a class="btn btn-modal" href="mailto:" style="display: none">
           Enviar por E-mail
-        </button>
+        </a>
       </div>
     </div>
 

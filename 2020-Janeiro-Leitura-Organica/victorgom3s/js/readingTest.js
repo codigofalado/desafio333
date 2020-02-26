@@ -39,21 +39,23 @@ const toggleButtonAction = e => {
 
 const finalizarTeste = e => {
   const horaFim = Math.floor(Date.now() / 1000);
-  const tempoFinal = Math.floor((horaFim - horaInicio) / 60);
+  const tempoFinal = (horaFim - horaInicio) / 60;
 
-  // if (tempoFinal == 0) {
-  //   modal.showModal();
-  //   modal.setModalText(
-  //     "Você deve completar a leitura do texto proposto antes de finalizar o teste."
-  //   );
-  // } else {
-  testeState = 2;
-  const ppm = +textoAtual.palavras / tempoFinal;
-  modal.showModal(true);
-  modal.setModalText(`Parabéns. Seu PPM atual é de ${ppm}`);
+  if (tempoFinal == 0) {
+    modal.showModal();
+    modal.setModalText(
+      "Você deve completar a leitura do texto proposto antes de finalizar o teste."
+    );
+  } else {
+    testeState = 2;
+    let qtdPalavras = parseInt(textoAtual.palavras, 10).toFixed(1);
+    console.log(qtdPalavras, tempoFinal);
+    const ppm = qtdPalavras / tempoFinal;
+    modal.showModal(true);
+    modal.setModalText(`Parabéns. Seu PPM atual é de ${ppm}`);
 
-  e.target.innerText = "Repetir";
-  // }
+    e.target.innerText = "Repetir";
+  }
 };
 
 const iniciarTeste = e => {

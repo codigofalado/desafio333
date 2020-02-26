@@ -165,7 +165,7 @@ header {
     margin: 0 30px;
     width: 60%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     a {
       margin: 0 10px;
@@ -174,7 +174,7 @@ header {
 }
 
 section {
-  height: 560px;
+  min-height: 560px;
   display: flex;
   align-items: center;
   .col {
@@ -204,7 +204,7 @@ section#chamada {
 }
 
 section#teste {
-  height: 1245px;
+  min-height: 1245px;
   .instrucoes {
     margin: 0 90px;
   }
@@ -249,8 +249,8 @@ section#teste {
   }
 }
 
-section#footer {
-  height: 330px;
+#footer {
+  min-height: 330px;
   background: $bgColorGradient;
   .chamada-footer {
     display: flex;
@@ -328,6 +328,41 @@ footer {
   }
   .modal-content {
     margin: 20px auto;
+  }
+
+  .modal-share {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 20px;
+    .btn-fb,
+    .btn-tt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      img {
+        fill: red;
+        height: 24px;
+        width: 24px;
+      }
+      height: 36px;
+      width: 36px;
+      margin: 0 10px;
+      transition: 0.2s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .btn-fb {
+      border: 0px solid #1a2947;
+      background-color: #384d77;
+    }
+    .btn-tt {
+      border: 0px solid #1da1f2;
+      background-color: #1da1f2;
+    }
   }
 
   .modal-footer {
