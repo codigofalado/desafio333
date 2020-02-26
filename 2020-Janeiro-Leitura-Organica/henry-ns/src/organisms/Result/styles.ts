@@ -6,6 +6,7 @@ import media from '~/styles/media';
 
 export const Container = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -13,35 +14,52 @@ export const Container = styled.section`
     max-height: 400px;
   }
 
-  div {
-    margin-left: 104px;
+  a,
+  h1,
+  strong {
+    color: ${({ theme }) => theme.colors.active};
+  }
 
-    a,
-    h1,
-    strong {
-      color: ${({ theme }) => theme.colors.active};
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      margin-left: 104px;
+
+      h2 {
+        font-size: 2.25rem;
+      }
+
+      a,
+      p {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 24px;
+      }
+
+      strong {
+        font-weight: 400;
+      }
+
+      h2 {
+        margin: 104px 0 16px;
+      }
     }
+  }
 
-    h2 {
-      font-size: 2.25rem;
-    }
+  > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    a,
-    p {
-      font-size: 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 24px;
-    }
-
-    strong {
-      font-weight: 400;
-    }
-
-    h2 {
-      margin: 104px 0 16px;
+    h3 {
+      margin: 32px 0 16px;
+      text-align: center;
     }
   }
 
@@ -50,19 +68,21 @@ export const Container = styled.section`
       max-height: 350px;
     }
 
-    div {
-      h1 {
-        font-size: 2.25rem;
-        margin-bottom: 16px;
-      }
+    > div:first-child {
+      div {
+        h1 {
+          font-size: 2.25rem;
+          margin-bottom: 16px;
+        }
 
-      h2 {
-        font-size: 2rem;
-      }
+        h2 {
+          font-size: 2rem;
+        }
 
-      a,
-      p {
-        font-size: 1.5rem;
+        a,
+        p {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -72,36 +92,38 @@ export const Container = styled.section`
       max-height: 320px;
     }
 
-    div {
+    > div:first-child div {
       margin-left: 64px;
     }
   }
 
   @media (max-width: ${media.tablet}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 48px auto;
-
     img {
       max-height: 300px;
     }
 
-    div {
-      margin-left: 0px;
-      margin-top: 32px;
+    > div:first-child {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 48px auto;
 
-      h1 {
-        font-size: 2rem;
-      }
+      div {
+        margin-left: 0px;
+        margin-top: 32px;
 
-      h2 {
-        font-size: 1.5rem;
-        margin-top: 64px;
-      }
+        h1 {
+          font-size: 2rem;
+        }
 
-      a,
-      p {
-        font-size: 1.25rem;
+        h2 {
+          font-size: 1.5rem;
+          margin-top: 64px;
+        }
+
+        a,
+        p {
+          font-size: 1.25rem;
+        }
       }
     }
   }
@@ -112,19 +134,21 @@ export const Container = styled.section`
       max-height: 250px;
     }
 
-    div {
-      h1 {
-        font-size: 1.5rem;
-      }
+    > div:first-child {
+      div {
+        h1 {
+          font-size: 1.5rem;
+        }
 
-      h2 {
-        font-size: 1.25rem;
-        margin-top: 48px;
-      }
+        h2 {
+          font-size: 1.25rem;
+          margin-top: 48px;
+        }
 
-      a,
-      p {
-        font-size: 1rem;
+        a,
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
