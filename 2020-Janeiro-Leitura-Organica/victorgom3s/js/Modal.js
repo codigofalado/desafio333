@@ -29,8 +29,7 @@ export default class Modal {
   async sendEmail() {
     try {
       /* Chamar função na api que irá enviar email */
-
-      alert("E-mail enviado com sucesso");
+      // alert("E-mail enviado com sucesso");
     } catch (error) {
       console.error(error);
     }
