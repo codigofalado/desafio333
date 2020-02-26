@@ -47,36 +47,36 @@ $(function(){
 				quant_min = soma.toFixed(0)
 				resultado = 651 / soma
 				ppm = resultado.toFixed(0)
-				textoo2 = `Parabéns! Você leu um texto com <b>651</b> em <b>${horas}</b> horas e <b>${minutos}</b> minutos <b>${segundos}</b> segundos e seu PPM atual é de <b>${ppm}</b>.`
-				link = `https://twitter.com/intent/tweet?text=Li um texto com 651 palavras em ${horas} horas ${minutos} minutos e ${segundos}. Meu PPM atual é de ${ppm}! Faça seu teste também em https://anabeatrizzz.netlify.com`
+				textoo2 = `Parabéns! Você leu um texto com <b>651</b> em <b>${horas}</b> horas e <b>${minutos}</b> minutos <b>${segundos}</b> segundos<br>e sua velocidade de leitura atual é de <b>${ppm}</b> PMM.`
+				link = `https://twitter.com/intent/tweet?text=Li um texto com 651 palavras em ${horas} horas ${minutos} minutos e ${segundos} segundos. Minha leitura atual é de ${ppm} PPM! Faça seu teste também em https://anabeatrizzz.netlify.com`
 				break;
 			case "O Miudinho":
 				quant_min = soma.toFixed(0)
 				resultado = 670 / soma
 				ppm = resultado.toFixed(0)
-				textoo2 = `Parabéns! Você leu um texto com <b>670</b> palavras em <b>${horas}</b> horas e <b>${minutos}</b> minutos <b>${segundos}</b> segundos e seu PPM atual é de <b>${ppm}</b>.`
-				link = `https://twitter.com/intent/tweet?text=Li um texto com 670 palavras em ${horas} horas ${minutos} minutos e ${segundos}. Meu PPM atual é de ${ppm}! Faça seu teste também em https://anabeatrizzz.netlify.com`
+				textoo2 = `Parabéns! Você leu um texto com <b>670</b> palavras em <b>${horas}</b> horas e <b>${minutos}</b> minutos <b>${segundos}</b> segundos<br>e sua velocidade de leitura atual é de <b>${ppm}</b> PMM.`
+				link = `https://twitter.com/intent/tweet?text=Li um texto com 670 palavras em ${horas} horas ${minutos} minutos e ${segundos} segundos. Minha leitura atual é de ${ppm} PPM! Faça seu teste também em https://anabeatrizzz.netlify.com`
 				break;
 			case "O Soldado e o Diabo":
 				quant_min = soma.toFixed(0)
 				resultado = 685 / soma
 				ppm = resultado.toFixed(0)
-				textoo2 = `Parabéns! Você leu um texto com <b>685</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos e seu PPM atual é de <b>${ppm}</b>.`
-				link = `https://twitter.com/intent/tweet?text=Li um texto com 685 palavras em ${horas} horas ${minutos} minutos e ${segundos}. Meu PPM atual é de ${ppm}! Faça seu teste também em https://anabeatrizzz.netlify.com`
+				textoo2 = `Parabéns! Você leu um texto com <b>685</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos<br>e sua velocidade de leitura atual é de <b>${ppm}</b> PMM.`
+				link = `https://twitter.com/intent/tweet?text=Li um texto com 685 palavras em ${horas} horas ${minutos} minutos e ${segundos} segundos. Minha leitura atual é de ${ppm} PPM! Faça seu teste também em https://anabeatrizzz.netlify.com`
 				break;
 			case "O Sargento Verde":
 				quant_min = soma.toFixed(0)
 				resultado = 902 / soma
 				ppm = resultado.toFixed(0)
-				textoo2 = `Parabéns! Você leu um texto com <b>902</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos e seu PPM atual é de <b>${ppm}</b>.`
-				link = `https://twitter.com/intent/tweet?text=Li um texto com 902 palavras em ${horas} horas ${minutos} minutos e ${segundos}. Meu PPM atual é de ${ppm}! Faça seu teste também em https://anabeatrizzz.netlify.com`
+				textoo2 = `Parabéns! Você leu um texto com <b>902</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos<br>e sua velocidade de leitura atual é de <b>${ppm}</b> PMM.`
+				link = `https://twitter.com/intent/tweet?text=Li um texto com 902 palavras em ${horas} horas ${minutos} minutos e ${segundos} segundos. Minha leitura atual é de ${ppm} PPM! Faça seu teste também em https://anabeatrizzz.netlify.com`
 				break;
 			case "A Onça e o Cabrito":
 				quant_min = soma.toFixed(0)
 				resultado = 989 / soma
 				ppm = resultado.toFixed(0)
-				textoo2 = `Parabéns! Você leu um texto com <b>989</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos e seu PPM atual é de <b>${ppm}</b>.`
-				link = `https://twitter.com/intent/tweet?text=Li um texto com 989 palavras em ${horas} horas ${minutos} minutos e ${segundos}. Meu PPM atual é de ${ppm}! Faça seu teste também em https://anabeatrizzz.netlify.com`
+				textoo2 = `Parabéns! Você leu um texto com <b>989</b> palavras em <b>${horas}</b> horas <b>${minutos}</b> minutos e <b>${segundos}</b> segundos<br>e sua velocidade de leitura atual é de <b>${ppm}</b> PMM.`
+				link = `https://twitter.com/intent/tweet?text=Li um texto com 989 palavras em ${horas} horas ${minutos} minutos e ${segundos} segundos. Minha leitura atual é de ${ppm} PPM! Faça seu teste também em https://anabeatrizzz.netlify.com`
 				break;
 		}
 		
