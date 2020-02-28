@@ -5,8 +5,6 @@ import {
   TwitterIcon,
   FacebookShareButton,
   FacebookIcon,
-  EmailShareButton,
-  EmailIcon
 } from 'react-share';
 
 import './index.css';
@@ -27,15 +25,6 @@ export default function ButtonsShare() {
         >
           <FacebookIcon className="icon-button" size={34} />
         </FacebookShareButton>
-
-        <EmailShareButton 
-          url={""}
-          subject={"Leitura Orgânica"}
-          body={"Minha velocidade de leitura é 192 PPM"}
-          separator={" "}
-        >
-          <EmailIcon className="icon-button" size={34} round />
-        </EmailShareButton>
     </div>
   );
 }

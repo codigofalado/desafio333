@@ -1,6 +1,18 @@
 .MuiDialog-paperWidthSm {
+    display: flex;
+    align-items: center;
     max-width: 900px;
-    width: 850px;
+    width: 800px;
+    padding: 15px;
+}
+
+.MuiDialogTitle-root h2 {
+    padding: 0;
+}
+
+.MuiDialog-paperWidthSm #btn {
+    width: auto;
+    margin-top: 15px;
 }
 
 .buttons-options {
@@ -14,7 +26,18 @@
 
 .div-form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.div-form #btn {
+    display: flex;
+    align-items: center;
+}
+
+.div-form #btn * {
+    padding: 5px;
 }
 
 .input-email {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import Button from "@material-ui/core/Button";
+import { EmailIcon } from "react-share";
+
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 
@@ -23,18 +24,25 @@ function ResultDialog({ onClosed, open }) {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        const template_params = {
-            "reply_to": email,
-            "ppm": ppm
-        }
-        const service_id = "default_service";
-        const template_id = "template_C6TCwMoL";
+        if (!email) {
+            alert("Email deve ser preenchido!");
+        } else {
+            const template_params = {
+                "reply_to": email,
+                "ppm": ppm
+            }
+            const service_id = "default_service";
+            const template_id = "template_C6TCwMoL";
+    
+            await window.emailjs.send(service_id, template_id, template_params);
 
-        await window.emailjs.send(service_id, template_id, template_params);
+            alert("Email enviado com sucesso!");
+        }
     }
 
     const handleInputChange = e => {
-        setEmail(e.target.value);
+        const email = e.target.value;
+        setEmail(email);
     }
 
     return (
@@ -50,9 +58,9 @@ function ResultDialog({ onClosed, open }) {
             <DialogContent>
                 <DialogContentText>{`Parabéns, seu PPM é: ${ppm} PPM`}</DialogContentText>
                 <div className="buttons-options">
-                    <Button onClick={onClosed} color="primary">
+                    <button onClick={onClosed} id="btn">
                         Refazer
-                    </Button>
+                    </button>
                     <ButtonsShare />
 
                     <form className="div-form" onSubmit={handleSubmit}>
@@ -63,6 +71,12 @@ function ResultDialog({ onClosed, open }) {
                             value={email}
                             onChange={handleInputChange}
                         />
+                        <button type="submit" id="btn">
+                            <EmailIcon className="icon-button" size={34} round />
+                            <span>
+                                Enviar para o e-mail
+                            </span>
+                        </button>
                     </form>
                 </div>
                 </DialogContent>
