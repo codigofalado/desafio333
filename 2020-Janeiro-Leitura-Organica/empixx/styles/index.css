@@ -1,0 +1,41 @@
+/* Info */
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--detail);
+}
+.paragraph {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.paragraph:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.paragraph p {
+  width: 80%;
+}
+.paragraph img {
+  width: 64px;
+}
+
+/* Start */
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start h2 {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 25px 0;
+}
+.button-group {
+  display: none;
+}
+.button-group a {
+  margin: 0 10px;
+}

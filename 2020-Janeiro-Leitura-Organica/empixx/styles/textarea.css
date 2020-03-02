@@ -1,0 +1,67 @@
+/* Regressive */
+.regressive {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+.regressive div {
+  background-color: var(--bg);
+  border: 5px solid var(--detail);
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.regressive span {
+  font-size: 150px;
+  font-weight: 800;
+}
+.regressive span.red {
+  color: var(--red);
+}
+.regressive span.yellow {
+  color: var(--yellow);
+}
+.regressive span.green {
+  color: var(--green);
+}
+
+/* Text */
+.text {
+  width: 80%;
+  max-height: 80%;
+  border: 1px solid var(--detail);
+  padding: 10px 15px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  margin: 40px 0 20px 0;
+}
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+/* Others */
+.others {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.others div {
+  width: calc(100% / 3);
+}
+.others div:nth-child(2) {
+  text-align: center;
+}
+.stopwatch {
+  font-size: 32px;
+}

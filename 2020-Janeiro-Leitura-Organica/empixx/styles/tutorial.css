@@ -1,0 +1,36 @@
+/* Title */
+.title {
+  margin: 40px 0 20px 0;
+}
+
+/* Tutorial */
+.section {
+  display: none;
+  text-align: center;
+}
+.selected {
+  display: initial;
+}
+.section p {
+  margin-bottom: 10px;
+}
+.section p span {
+  font-weight: 800;
+}
+.section img {
+  width: 800px;
+  border: 3px solid var(--detail);
+  margin-bottom: 10px;
+}
+
+/* Controls */
+.controls button {
+  margin: 0 20px;
+}
+.controls button:nth-child(1) {
+  background-color: transparent;
+  color: var(--detail);
+  text-decoration: underline;
+  font-size: 18px;
+  padding: 0;
+}

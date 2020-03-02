@@ -1,0 +1,42 @@
+/* Title */
+.title {
+  margin: 80px 0 40px 0;
+}
+.title h1 {
+  font-weight: 400;
+}
+
+/* Result */
+.result {
+  background-color: var(--green);
+  color: var(--bg);
+  padding: 20px 80px;
+  font-size: 72px;
+  font-weight: 500;
+  border-radius: 80px;
+  margin-bottom: 80px;
+}
+
+/* Info result */
+.info-result {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.info-result span {
+  font-size: 32px;
+}
+
+/* Share */
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.share span {
+  font-size: 18px;
+}
+.share img {
+  width: 20px;
+  margin: 0 8px;
+}

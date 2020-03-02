@@ -1,0 +1,52 @@
+/* Title */
+.title {
+  margin: 40px 0 20px 0;
+}
+
+/* Settings */
+.settings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.setting {
+  margin: 0 10px;
+}
+.setting select {
+  background-color: var(--bg);
+  border: 1px solid var(--detail);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* Text */
+.text {
+  width: 80%;
+  max-height: 60%;
+  border: 1px solid var(--detail);
+  padding: 10px 15px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+/* Others */
+.others {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.others div {
+  width: calc(100% / 3);
+}
+.others div:nth-child(2) {
+  text-align: center;
+}
+.stopwatch {
+  font-size: 32px;
+}
