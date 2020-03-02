@@ -7,13 +7,30 @@ import Typography from '@material-ui/core/Typography';
 
 import TextGenerator from "../../services/TextGenerator";
 
-function TextCard() {
+function TextCard({ onNumberOfWordsInText }) {
 	const [text, setText] = useState('');
 	const classes = useStyles();
 
 	useEffect(() => {
-		setText(TextGenerator.lerolero(25));
-	}, [])
+		const text_gerado = TextGenerator.lerolero(25)
+		setText(text_gerado);
+
+		onNumberOfWordsInText(numberOfWords(text_gerado))
+	},
+	/* eslint-disable-next-line react-hooks/exhaustive-deps */
+	[])
+
+	const numberOfWords = (text) => {
+		let amount = 0;
+		text.split(" ").map(word => {
+			const char = word.split();
+			if (!(char.includes(['?', '!', '.', ',', '-', ':', ';', '~', "´", '`', ']', '[', '(', ')', '{', '}', '&', '$', '@']))) {
+				amount += 1;
+			}
+		});
+
+		return amount;
+	}
 
 	return (
 		<Card className={classes.card}>

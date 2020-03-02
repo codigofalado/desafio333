@@ -14,7 +14,8 @@ export default class VelLeitura extends Component {
       open: false,
       minutes: 0,
       seconds: 0,
-      time: 0,
+      numberOfWordsInText: 0,
+      resultPPM: 0,
     }
   }
 
@@ -27,7 +28,7 @@ export default class VelLeitura extends Component {
 
   startClock() {
     this.myInterval = setInterval(() => {
-      const { minutes, seconds } = this.state;
+      const { seconds } = this.state;
 
       if (seconds >= 0) {
         this.setState(({ seconds }) => ({
@@ -53,12 +54,24 @@ export default class VelLeitura extends Component {
 	}
 
 	readComplete() {
-    this.setState({
-      open: true
-    });
-
     clearInterval(this.myInterval);
-	}
+    this.calculatePPM();
+    
+    this.setState({
+      open: true,
+      minutes: 0,
+      seconds: 0,
+    });
+  }
+  
+  calculatePPM() {
+    const { seconds, minutes, numberOfWordsInText } = this.state;
+
+    const minutesTotal = minutes + (seconds / 60);
+    const ppm = numberOfWordsInText / minutesTotal;
+    this.setState({ resultPPM: ppm });
+    console.log(numberOfWordsInText);
+  }
 
   render() {
     const { minutes, seconds, isTestInit, open } = this.state;
@@ -69,24 +82,20 @@ export default class VelLeitura extends Component {
             <Button id="btn" href="#div-text" onClick={() => this.readStart()}>
               Começar
             </Button>
-          
-          {/* <Button href="#div-text" onClick={() => setIsTestInit(true)}>
-            <span>Começar</span>
-          </Button> */}
         </div>
   
         {isTestInit &&
         <div id="div-text">
-          <TextCard />
+          <TextCard onNumberOfWordsInText={(number) => this.setState({ numberOfWordsInText: number })} />
           <div className="div-btn">
             <button id="btn" onClick={() => this.readComplete()}>Terminei</button>
           </div>
         </div>
         }
   
-        {open && <ResultDialog onClosed={this.handleClose} open={open} />}
+        {open && <ResultDialog onClosed={() => this.handleClose()} open={open} resultPPM={this.state.resultPPM} />}
   
-        <span>{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
+        <span className="span-clock">{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
   
       </div>
     );

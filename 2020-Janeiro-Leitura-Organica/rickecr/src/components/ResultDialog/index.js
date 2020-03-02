@@ -14,9 +14,9 @@ import ButtonsShare from "../ButtonsShare";
 
 import './index.css';
 
-function ResultDialog({ onClosed, open }) {
+function ResultDialog({ onClosed, open, resultPPM }) {
     const [email, setEmail] = useState('');
-    const [ppm, setPpm] = useState(195);
+    const [ppm, setPpm] = useState(resultPPM);
 
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -29,7 +29,7 @@ function ResultDialog({ onClosed, open }) {
         } else {
             const template_params = {
                 "reply_to": email,
-                "ppm": ppm
+                "ppm": ppm.toFixed(2)
             }
             const service_id = "default_service";
             const template_id = "template_C6TCwMoL";
@@ -37,6 +37,8 @@ function ResultDialog({ onClosed, open }) {
             await window.emailjs.send(service_id, template_id, template_params);
 
             alert("Email enviado com sucesso!");
+
+            setEmail('');
         }
     }
 
@@ -56,12 +58,12 @@ function ResultDialog({ onClosed, open }) {
                 {"Resultado do seu teste"}
             </DialogTitle>
             <DialogContent>
-                <DialogContentText>{`Parabéns, seu PPM é: ${ppm} PPM`}</DialogContentText>
+                <DialogContentText>{`Parabéns, seu PPM é: ${ppm.toFixed(2)} PPM`}</DialogContentText>
                 <div className="buttons-options">
                     <button onClick={onClosed} id="btn">
                         Refazer
                     </button>
-                    <ButtonsShare />
+                    <ButtonsShare ppm={ppm} />
 
                     <form className="div-form" onSubmit={handleSubmit}>
                         <input
