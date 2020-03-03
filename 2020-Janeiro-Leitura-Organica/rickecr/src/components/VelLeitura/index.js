@@ -78,25 +78,25 @@ export default class VelLeitura extends Component {
 
     return (
       <div className="div-text">
+        <span className="span-clock">{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
         <div className="div-btn">
-            <Button id="btn" href="#div-text" onClick={() => this.readStart()}>
-              Começar
-            </Button>
+          <Button id="btn" href="#div-text" onClick={() => this.readStart()}>
+            <span>Começar</span>
+          </Button>
         </div>
-  
+
         {isTestInit &&
         <div id="div-text">
           <TextCard onNumberOfWordsInText={(number) => this.setState({ numberOfWordsInText: number })} />
           <div className="div-btn">
-            <button id="btn" onClick={() => this.readComplete()}>Terminei</button>
+            <Button id="btn" onClick={() => this.readComplete()}>
+              <span>Terminei</span>
+            </Button>
           </div>
         </div>
         }
   
         {open && <ResultDialog onClosed={() => this.handleClose()} open={open} resultPPM={this.state.resultPPM} />}
-  
-        <span className="span-clock">{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
-  
       </div>
     );
   }

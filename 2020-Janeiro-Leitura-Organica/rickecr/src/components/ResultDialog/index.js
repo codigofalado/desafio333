@@ -5,6 +5,7 @@ import { EmailIcon } from "react-share";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 
+import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
@@ -60,9 +61,9 @@ function ResultDialog({ onClosed, open, resultPPM }) {
             <DialogContent>
                 <DialogContentText>{`Parabéns, seu PPM é: ${ppm.toFixed(2)} PPM`}</DialogContentText>
                 <div className="buttons-options">
-                    <button onClick={onClosed} id="btn">
+                    <Button title="Refazer" onClick={onClosed} id="btn" >
                         Refazer
-                    </button>
+                    </Button>
                     <ButtonsShare ppm={ppm} />
 
                     <form className="div-form" onSubmit={handleSubmit}>
@@ -73,12 +74,14 @@ function ResultDialog({ onClosed, open, resultPPM }) {
                             value={email}
                             onChange={handleInputChange}
                         />
-                        <button type="submit" id="btn">
-                            <EmailIcon className="icon-button" size={34} round />
-                            <span>
-                                Enviar para o e-mail
-                            </span>
-                        </button>
+                        <Button title="Enviar email" type="submit" id="btn">
+                            <div className="btn-email">
+                                <EmailIcon className="icon-button" size={34} round />
+                                <span>
+                                    Enviar para o e-mail
+                                </span>
+                            </div>
+                        </Button>
                     </form>
                 </div>
                 </DialogContent>

@@ -1,7 +1,7 @@
 .MuiDialog-paperWidthSm {
     display: flex;
     align-items: center;
-    max-width: 900px;
+    max-width: 925px;
     width: 800px;
     padding: 15px;
 }
@@ -10,18 +10,20 @@
     padding: 0;
 }
 
-.MuiDialog-paperWidthSm #btn {
-    width: auto;
-    margin-top: 15px;
-}
-
 .buttons-options {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons-options * {
     margin-top: 5px;
+}
+
+.buttons-options #btn {
+    margin-top: 10px;
+    height: auto;
 }
 
 .div-form {
@@ -31,13 +33,18 @@
     justify-content: center;
 }
 
-.div-form #btn {
+.btn-email {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .div-form #btn * {
-    padding: 5px;
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .input-email {

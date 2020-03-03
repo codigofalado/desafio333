@@ -7,11 +7,10 @@
 
 body {
     background-color: #f8f8f8;
-    margin-bottom: 25px;
 }
 
-body, button, a {
-    font-family: Lato, sans-serif;
+body, button, a, span, strong {
+    font-family: "Roboto", Sans-serif;
 }
 
 button {

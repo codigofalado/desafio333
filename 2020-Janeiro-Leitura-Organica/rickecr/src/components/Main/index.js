@@ -14,7 +14,7 @@ function Main() {
 
             <div className="div-ppm" id="div-ppm">
                 <h1 className="title">Calcular o seu PPM</h1>
-                <span className="text">Para iniciar o teste você deve clicar em “Começar”, então será mostrado um texto para você iniciar a leitura, após finalizar a leitura clique no botão “Terminei”. E será mostrado o seu resultado, permitindo que você compartilhar nas redes sociais, refazer o teste e/ou enviar para seu e-mail. Por favor, para que o teste seja feito corretamente você precisa ser sincero, leia o texto, sem pular nenhuma parte e com a velocidade que você iria ler normalmente.</span>
+                <span className="text">Para iniciar o teste você deve clicar em <strong>“Começar”</strong>, então será mostrado um texto para você iniciar a leitura, após finalizar a leitura clique no botão <strong>“Terminei”</strong>. E será mostrado o seu resultado, permitindo que você compartilhar nas redes sociais, refazer o teste e/ou enviar para seu e-mail. Por favor, para que o teste seja feito corretamente você precisa ser sincero, leia o texto, sem pular nenhuma parte e com a velocidade que você iria ler normalmente.</span>
             </div>
             <VelLeitura />
         </div>

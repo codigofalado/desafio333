@@ -6,13 +6,13 @@
 }
 
 .text {
-    display: flex;
-    color: #72a1d6;
+    display: block;
     font-size: 24px;
     margin-left: 53px;
     margin-right: 53px;
     margin-top: 68px;
 }
 
-.div-info {
+.text strong {
+    color: rgb(43, 248, 11);
 }
