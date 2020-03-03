@@ -5,6 +5,7 @@ import { EmailIcon } from "react-share";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -18,6 +19,7 @@ import './index.css';
 function ResultDialog({ onClosed, open, resultPPM }) {
     const [email, setEmail] = useState('');
     const [ppm, setPpm] = useState(resultPPM);
+    const [isEmailSending, setIsEmailSending] = useState(false);
 
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -25,6 +27,7 @@ function ResultDialog({ onClosed, open, resultPPM }) {
     const handleSubmit = async e => {
         e.preventDefault();
 
+        setIsEmailSending(true);
         if (!email) {
             alert("Email deve ser preenchido!");
         } else {
@@ -41,6 +44,8 @@ function ResultDialog({ onClosed, open, resultPPM }) {
 
             setEmail('');
         }
+
+        setIsEmailSending(false);
     }
 
     const handleInputChange = e => {
@@ -49,7 +54,7 @@ function ResultDialog({ onClosed, open, resultPPM }) {
     }
 
     return (
-        <Dialog
+            <Dialog
             fullScreen={fullScreen}
             open={open}
             onClose={onClosed}
@@ -75,12 +80,13 @@ function ResultDialog({ onClosed, open, resultPPM }) {
                             onChange={handleInputChange}
                         />
                         <Button title="Enviar email" type="submit" id="btn">
-                            <div className="btn-email">
+                            { isEmailSending ? <CircularProgress size={24} /> : <div className="btn-email">
                                 <EmailIcon className="icon-button" size={34} round />
                                 <span>
                                     Enviar para o e-mail
                                 </span>
                             </div>
+                            }
                         </Button>
                     </form>
                 </div>

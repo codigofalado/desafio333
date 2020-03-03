@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 140px;
+  height: 120px;
   margin-top: 15px;
   background-color: #6EBAD0;
 }
@@ -15,8 +15,8 @@
 .footer-left img {
   margin-top: 10px;
   display: flex;
-  height: 95px;
-  width: 146px;
+  height: 75px;
+  width: 126px;
 }
 
 .footer-right {
