@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
 .regressive div {
@@ -32,6 +33,12 @@
 }
 .regressive span.green {
   color: var(--green);
+}
+
+/* Blur */
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(4px);
 }
 
 /* Text */

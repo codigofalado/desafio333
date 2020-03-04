@@ -21,7 +21,7 @@ function nextSlide() {
 
   if (slideIndex == section.length - 1) {
     handleNextButton({
-      name: "Iniciar",
+      name: "Continuar",
       toNextSlide: false,
       addClass: "green",
       removeClass: "blue",
