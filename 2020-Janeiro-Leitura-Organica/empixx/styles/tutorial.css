@@ -34,3 +34,6 @@
   font-size: 18px;
   padding: 0;
 }
+.previous-button {
+  display: none;
+}
