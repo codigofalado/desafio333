@@ -9,9 +9,15 @@
     font-family: "Roboto", Sans-serif;
     background-color: #21d6a0;
     border-radius: 5px;
+    border: 0;
+    overflow: hidden;
     width: 200px;
     height: 50px;
     max-width: 300px;
+}
+
+#btn:hover {
+    background-color: #04e4a1;
 }
 
 /* #btn:hover {

@@ -6,6 +6,10 @@
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-img {
+.div-header img {
     width: 100%;
+}
+
+.div-header a {
+    display: flex;
 }

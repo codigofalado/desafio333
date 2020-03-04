@@ -64,7 +64,9 @@ function ResultDialog({ onClosed, open, resultPPM }) {
                 {"Resultado do seu teste"}
             </DialogTitle>
             <DialogContent>
-                <DialogContentText>{`Parabéns, seu PPM é: ${ppm.toFixed(2)} PPM`}</DialogContentText>
+                <DialogContentText>
+                    O valor do seu PPM é: <strong id="value-ppm">{ppm.toFixed(2)}</strong>
+                </DialogContentText>
                 <div className="buttons-options">
                     <Button title="Refazer" onClick={onClosed} id="btn" >
                         Refazer

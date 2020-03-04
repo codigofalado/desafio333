@@ -1,3 +1,9 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .title {
     text-align: center;
     color: #72a1d6;
