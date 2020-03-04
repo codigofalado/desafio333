@@ -16,7 +16,7 @@ import ButtonsShare from "../ButtonsShare";
 
 import './index.css';
 
-function ResultDialog({ onClosed, open, resultPPM }) {
+function ResultDialog({ onClosed, open, numberWordsText, minutes, seconds, resultPPM }) {
     const [email, setEmail] = useState('');
     const [ppm, setPpm] = useState(resultPPM);
     const [isEmailSending, setIsEmailSending] = useState(false);
@@ -65,6 +65,7 @@ function ResultDialog({ onClosed, open, resultPPM }) {
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>
+                    Você leu um texto com {numberWordsText} palavras em {minutes} minuto(s) e {seconds} segundos.<br />
                     O valor do seu PPM é: <strong id="value-ppm">{ppm.toFixed(2)}</strong>
                 </DialogContentText>
                 <div className="buttons-options">

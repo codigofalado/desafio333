@@ -23,6 +23,8 @@ export default class VelLeitura extends Component {
     this.setState({
       isTestInit: false,
       open: false,
+      minutes: 0,
+      seconds: 0,
     });
 	}
 
@@ -59,28 +61,25 @@ export default class VelLeitura extends Component {
     
     this.setState({
       open: true,
-      minutes: 0,
-      seconds: 0,
     });
   }
-  
+
   calculatePPM() {
     const { seconds, minutes, numberOfWordsInText } = this.state;
 
     const minutesTotal = minutes + (seconds / 60);
     const ppm = numberOfWordsInText / minutesTotal;
     this.setState({ resultPPM: ppm });
-    console.log(numberOfWordsInText);
   }
 
   render() {
-    const { minutes, seconds, isTestInit, open } = this.state;
+    const { minutes, seconds, isTestInit, open, numberOfWordsInText } = this.state;
 
     return (
       <div className="div-text">
-        <span className="span-clock">{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
+        <span id="clock" className="span-clock">{ minutes }:{ seconds < 10 ? `0${ Number(seconds) }` : Number(seconds) }</span>
         <div className="div-btn">
-          <Button id="btn" href="#div-text" onClick={() => this.readStart()}>
+          <Button id="btn" href="#clock" onClick={() => this.readStart()}>
             <span>Começar</span>
           </Button>
         </div>
@@ -96,7 +95,15 @@ export default class VelLeitura extends Component {
         </div>
         }
   
-        {open && <ResultDialog onClosed={() => this.handleClose()} open={open} resultPPM={this.state.resultPPM} />}
+        {open && <ResultDialog 
+                    onClosed={() => this.handleClose()}
+                    open={open}
+                    numberWordsText={numberOfWordsInText}
+                    minutes={this.state.minutes}
+                    seconds={this.state.seconds}
+                    resultPPM={this.state.resultPPM}
+                  />
+        }
       </div>
     );
   }
