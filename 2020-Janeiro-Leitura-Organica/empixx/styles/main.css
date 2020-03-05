@@ -87,7 +87,7 @@ button.red:hover {
 
 /* Logo */
 .logo {
-  position: absolute;
+  position: fixed;
   bottom: 15px;
   right: 30px;
 }

@@ -43,3 +43,28 @@
 .previous-button {
   display: none;
 }
+
+/***************/
+@media only screen and (max-width: 860px) {
+  .section img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .section p {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .controls {
+    text-align: center;
+  }
+  .controls button {
+    margin: 10px 0;
+  }
+  .next-button {
+    display: block;
+  }
+}

@@ -39,3 +39,64 @@
 .button-group a {
   margin: 0 10px;
 }
+
+/***************/
+@media only screen and (max-width: 920px) {
+  .title {
+    width: 80%;
+    margin: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .logo a img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .paragraph {
+    width: 80%;
+    margin-bottom: 32px;
+  }
+
+  .start {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .start h2 {
+    width: 80%;
+    text-align: center;
+  }
+  .button-group a {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .paragraph {
+    width: 80%;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .paragraph:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .paragraph p {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .paragraph img {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .logo a img {
+    width: 70px;
+  }
+}

@@ -40,3 +40,42 @@
   width: 20px;
   margin: 0 8px;
 }
+
+/*************/
+@media only screen and (max-width: 680px) {
+  .title {
+    width: 80%;
+  }
+
+  .logo a img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .result {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+
+  .info-result {
+    width: 80%;
+    text-align: center;
+  }
+
+  .share span {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .share {
+    width: 80%;
+    margin-bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .try-again {
+    margin-bottom: 25px;
+  }
+}

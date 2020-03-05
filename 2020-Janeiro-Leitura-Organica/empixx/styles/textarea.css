@@ -74,3 +74,33 @@
   color: var(--detail);
   transition: opacity 0.5s;
 }
+
+@media only screen and (max-width: 800px) {
+  .text {
+    width: 90%;
+  }
+
+  .logo a img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text {
+    max-height: none;
+  }
+
+  .others {
+    flex-direction: column;
+  }
+  .others div {
+    width: 100%;
+  }
+  .stopwatch {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .others button {
+    margin-bottom: 15px;
+  }
+}

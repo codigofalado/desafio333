@@ -55,3 +55,59 @@
   color: var(--detail);
   transition: opacity 0.5s;
 }
+
+/************/
+@media only screen and (max-width: 790px) {
+  .title {
+    width: 90%;
+  }
+
+  .text {
+    width: 90%;
+  }
+
+  .others {
+    margin-bottom: 25px;
+  }
+
+  .logo a img {
+    width: 100px;
+  }
+
+  .settings {
+    width: 90%;
+  }
+  .setting {
+    text-align: center;
+  }
+  .setting select {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .settings {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .setting {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .text {
+    max-height: none;
+  }
+
+  .others {
+    flex-direction: column;
+  }
+  .others div {
+    width: 100%;
+  }
+  .stopwatch {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
