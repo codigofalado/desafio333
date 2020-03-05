@@ -8,8 +8,10 @@ window.localStorage.setItem("ready", 0);
 const textarea = document.querySelector(".text");
 const regressive = document.querySelector(".regressive");
 const container = document.querySelector(".container");
+const finish = document.querySelector(".finish");
 
 const selectedText = window.localStorage.getItem("text");
+const wordsOfText = texts[selectedText].words;
 
 textarea.innerHTML = texts[selectedText].text;
 
@@ -36,10 +38,9 @@ const regressiveCount = setInterval(() => {
 }, 1000);
 
 let timer;
+let minutes = 0;
+let seconds = 1;
 function startStopwatch() {
-  let minutes = 0;
-  let seconds = 1;
-
   timer = setInterval(() => {
     if (seconds == 60) {
       minutes++;
@@ -55,3 +56,15 @@ function startStopwatch() {
     seconds++;
   }, 1000);
 }
+
+finish.addEventListener("click", () => {
+  clearInterval(timer);
+  let timeInSeconds = minutes * 60 + seconds;
+  let ppm = (wordsOfText / timeInSeconds) * 60;
+  window.localStorage.setItem("minutes", minutes);
+  window.localStorage.setItem("seconds", seconds);
+  window.localStorage.setItem("words", wordsOfText);
+  window.localStorage.setItem("ppm", Math.round(ppm));
+  window.localStorage.setItem("pageResult", 1);
+  window.location.href = "result.html";
+});
