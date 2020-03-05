@@ -1,6 +1,6 @@
-let previousButton = document.querySelector(".previous-button");
-let nextButton = document.querySelector(".next-button");
-let section = document.querySelectorAll(".section");
+const previousButton = document.querySelector(".previous-button");
+const nextButton = document.querySelector(".next-button");
+const section = document.querySelectorAll(".section");
 
 let slideIndex = 0;
 let toNextSlide = true;

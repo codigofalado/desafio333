@@ -8,7 +8,6 @@
   align-items: center;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
 }
 .regressive div {
   background-color: var(--bg);
@@ -50,6 +49,7 @@
   overflow-y: scroll;
   border-radius: 20px;
   margin: 40px 0 20px 0;
+  color: var(--detail);
 }
 .text::-webkit-scrollbar {
   display: none;
@@ -71,4 +71,6 @@
 }
 .stopwatch {
   font-size: 32px;
+  color: var(--detail);
+  transition: opacity 0.5s;
 }
