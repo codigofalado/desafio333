@@ -7,7 +7,7 @@ A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. Neste m�
 ## Como Participar
 
 Lançaremos um desafio novo no **primeiro sábado** do mês (a cada 2 meses).
-Não é preciso se cadastrar. Os participantes terão 2 semanas para enviar suas versões.
+Não é preciso se cadastrar. Os participantes terão 1 mês e meio para enviar suas versões.
 
 1. Faça um Fork deste repositório.
 2. Entre na pasta do desafio atual e crie uma pasta com seu Github Username.
