@@ -17,7 +17,7 @@ Não é preciso se cadastrar. Os participantes terão 1 mês e meio para enviar 
 
 ## Votação
 
-Após as 2 semanas de espera para os Pull Requests, abriremos votação no Github e compartilharemos os participantes nas Redes Sociais.
+Após 1 mês e meio de espera para os Pull Requests, abriremos votação no Github e compartilharemos os participantes nas Redes Sociais.
 
 **Em caso de empate, o desempate será feito via votação no Twitch na Live de apresentação dos Vencedores**
 
