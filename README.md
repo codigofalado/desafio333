@@ -13,7 +13,7 @@ Não é preciso se cadastrar. Os participantes terão 1 mês e meio para enviar 
 2. Entre na pasta do desafio atual e crie uma pasta com seu Github Username.
 3. Desenvolva o desafio dentro da sua pasta recém-criada.
 4. Ao terminar, envie um Pull Request com a sua versão.
-5. (Opcional) Acompanhe a nossa comunidade no [Discord](https://discord.gg/CbeEaEe) para mais detalhes e tirar dúvidas.
+5. (Opcional) Acompanhe a nossa comunidade no [Discord](https://discord.gg/3y4X9pm) para mais detalhes e tirar dúvidas.
 
 ## Votação
 
