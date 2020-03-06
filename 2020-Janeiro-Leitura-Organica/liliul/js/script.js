@@ -39,6 +39,7 @@ function parar() {
   localStorage.setItem('chave', mi);
   let ch = localStorage.getItem('chave')
 
+
   localStorage.setItem('chaveE', m)
   let cE = localStorage.getItem('chaveE')
 
@@ -54,7 +55,8 @@ function parar() {
       font-weight: bold;`
 
     document.write(`
-        <button style="${btn}" type="submit" onclick="window.location.href='index.html'">Inicio</button>
+       <h1 style="color:#7D26CD;">Faça o teste com mais de 1 minuto</h1>
+       <button style="${btn}" type="submit" onclick="window.location.href='index.html'">Inicio</button>
         <button style="${btn}" type="submit" onclick="window.location.href='testeppm.html'">Refazer teste</button>
         <div style="${styles}"><img width="100%" src="../assets/chato.png"></div>
 
@@ -63,19 +65,22 @@ function parar() {
   }else{
 
     let refe = localStorage.getItem('noticia')
-
-    let re1 = refe/cE;
+    let cal = `${cE}.${s}`
+    let conver = parseFloat(cal)
+    let re1 = refe/conver;
 
     let res = Math.trunc(re1)
 
-    let redeinfo =`Resultado do teste PPM, Seu Tempo: ${ch}, Palavras: ${refe}, PPM: ${res}.`
+    let redeinfo =`Resultado do teste PPM, Seu Tempo: ${cE}m:${s}s, Palavras: ${refe}, PPM: ${res}.`
 
     let divs = `<button type="submit" onclick="window.location.href='testeppm.html'">refazer test</button> `
     let div2 = `<button class="btn" type="submit" onclick="window.location.href='index.html'">Inicio</button>`
     let rede = `<span class="rede">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://teste-ppm-leitura.netlify.com/index.html&t=${redeinfo}"><img width="100%" src="assets/face.png"></a>
+          <b>Compartilhar teste PPM</b>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://teste-ppm-leitura.netlify.com/index.html&quote=${redeinfo}"><img width="100%" src="assets/face.png"></a>
+
             <a href="https://twitter.com/intent/tweet?url=https://teste-ppm-leitura.netlify.com&text=${redeinfo}"><img width="100%" src="assets/twitter.png"></a>
-          </span>`
+	</span>`
 
 
     let ine = `
@@ -84,9 +89,9 @@ function parar() {
         <div class="card2">
           <img src="./assets/Logo - Branca.png">
           <h1 class"h1">Resultado do teste de Leitura (PPM)</h1>
-          <p><span>Tempo: ${ch}</span><span> Palavras: ${refe}</span><strong> (PPM): ${res}</strong></p>
+          <p><span>Tempo: ${cE}m:${s}s</span><span> Palavras: ${refe}</span><strong> (PPM): ${res}</strong></p>
 
-          ${rede}
+          <div>${rede}</div>
           <div class="button">${divs}  ${div2}</div>
         </div>
       </div>
