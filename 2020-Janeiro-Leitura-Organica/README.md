@@ -6,7 +6,10 @@
 **Data Limite para Participação:** 05/03/2020  
 **Data de Anúncio dos Vencedores:** 19/03/2020  
 **Vencedores:**
-(a definir)
+
+1. - kammradt
+2. - henry-ns
+3. - anabeatrizzz
 
 ## TL;DR
 
