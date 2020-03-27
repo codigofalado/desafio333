@@ -1,0 +1,83 @@
+{
+  "name": "leitura-organica",
+  "private": true,
+  "description": "Um sistema que calcula a velocidade de leitura das pessoas da Leitura Orgânica",
+  "version": "0.1.0",
+  "author": "Henrique Miranda <enrque.ns@gmail.com>",
+  "dependencies": {
+    "@loadable/component": "^5.12.0",
+    "babel-plugin-polished": "^1.1.0",
+    "framer-motion": "^1.8.4",
+    "gatsby": "^2.19.9",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-netlify": "^2.1.31",
+    "gatsby-plugin-netlify-cache": "^1.2.0",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-page-creator": "^2.1.38",
+    "gatsby-plugin-polished": "^1.0.4",
+    "gatsby-plugin-preload-fonts": "^1.0.27",
+    "gatsby-plugin-react-helmet-async": "^1.0.14",
+    "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-sitemap": "^2.2.27",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "polished": "^3.4.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet-async": "^1.0.4",
+    "react-icons": "^3.9.0",
+    "styled-components": "^5.0.0",
+    "typeface-roboto": "^0.0.75"
+  },
+  "devDependencies": {
+    "@types/loadable__component": "^5.10.0",
+    "@types/node": "^13.5.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/styled-components": "^4.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  },
+  "keywords": [
+    "gatsby",
+    "reactjs",
+    "challenge"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "preload-fonts": "gatsby-preload-fonts",
+    "start": "npm run develop",
+    "serve": "gatsby serve -H 0.0.0.0",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henry-ns/desafio333/tree/master/2020-Janeiro-Leitura-Organica/henry-ns"
+  },
+  "bugs": {
+    "url": "https://github.com/henry-ns/desafio333/issues"
+  }
+}

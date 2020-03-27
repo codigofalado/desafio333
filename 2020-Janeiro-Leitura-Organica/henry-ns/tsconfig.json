@@ -1,0 +1,21 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "baseUrl": "src",
+    "paths": {
+      "~/*" : ["*"]
+    }
+  },
+  "exclude": ["node_modules", "public", ".cache"],
+}
