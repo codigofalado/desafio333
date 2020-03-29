@@ -1,13 +1,12 @@
 # Desafio333 - #QuarentenaTech - Jogo Tetris ou Jogo da Velha
 
-**Tecnologia:** Livre
-**Modalidade**: Equipes de 3 Pessoas
-**Áreas:** Full-Stack, Criatividade
+**Tecnologia:** Livre  
+**Modalidade**: Equipes de 3 Pessoas  
+**Áreas:** Full-Stack, Criatividade  
 **Data de Lançamento:** 28/03/2020  
-**Data Limite para Participação:** 30/05/2020
+**Data Limite para Participação:** 30/05/2020  
 **Data de Anúncio dos Vencedores:** 13/06/2020  
-\*\*Vencedores:\*\*
-(a definir)
+**Vencedores:** (a definir)
 
 ## TL;DR
 
