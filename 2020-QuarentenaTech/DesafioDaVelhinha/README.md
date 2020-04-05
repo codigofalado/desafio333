@@ -4,6 +4,8 @@
 **Tecnologia:** JS / HTML / CSS
 **Modalidade**: ddauriol / João Santos / RRDOS
 
+[Source Temprario](https://github.com/ddauriol/Jogo_da_Velha)
+
 ## Descrição do Desafio
 Estamos criando um Desafio333 especial para participar da [#QuarentenaTech](https://quarentena.tech). Trata-se de uma iniciativa em parceria com a [CollabCode](https://www.twitch.tv/collabdode) para criar uma página que listará diferentes desafios para você fazer durante a quarentena contra o coronavirus. Para participar deste Desafio333 você precisará escolher entre **Jogo da Velha** e **Jogo Tetris**. A sua implementação precisará cumprir no mínimo **5 items** da **lista de requisitos**.
 
@@ -27,6 +29,7 @@ Estamos criando um Desafio333 especial para participar da [#QuarentenaTech](http
 - [ ] Diferentes Fases (IA vai aumentando a dificuldade a cada fase)
 - [ ] Suporte a Touch (celular)
 - [ ] Implementação de Sons e Cores
-- [ ] Recorde de jogos sem perder (apenas jogo da velha)
 
 ## Versão BETA
+Testes das versões Betas na pasta publish
+![Entrar em uma Sala](https://raw.githubusercontent.com/ddauriol/Jogo_da_Velha/master/doc/VersaoBeta_01.gif)
