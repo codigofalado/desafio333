@@ -16,7 +16,7 @@ Você precisa montar uma equipe de 3 pessoas. Faça um fork do repositório do D
 
 Estamos criando um Desafio333 especial para participar da [#QuarentenaTech](https://quarentena.tech). Trata-se de uma iniciativa em parceria com a [CollabCode](https://www.twitch.tv/collabdode) para criar uma página que listará diferentes desafios para você fazer durante a quarentena contra o coronavirus. Para participar deste Desafio333 você precisará escolher entre **Jogo da Velha** e **Jogo Tetris**. A sua implementação precisará cumprir no mínimo **5 items** da **lista de requisitos**.
 
-## Lista de Requisitos
+## Lista de Requisitos (escolha no mínimo 5)
 
 - Implementação de Sons e Cores
 - Previsão de próxima peça (apenas tetris)
