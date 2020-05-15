@@ -1,7 +1,7 @@
 class Block {
-  constructor({ x = 0, y = 0, size = blockSize, color = "#fff" }) {
-    this.x = x * size;
-    this.y = y * size;
+  constructor({ x = 0, y = 0, size = BLOCK_SIZE, color = "#fff" } = {}) {
+    this.x = x;
+    this.y = y;
     
     this.size = size;
     this.color = color;
@@ -13,7 +13,6 @@ class Block {
   }
 
   update() {
-    this.x -= blockSize;
-    this.y -= blockSize;
+    this.y += this.size;
   }
 }

@@ -1,18 +1,9 @@
-const INITIAL_DATA = {
-  x = width / 2, 
-  y = 0,
-  initialShape = [[]], 
-  color: `#${_decToHex()}${_decToHex()}${_decToHex()}`,
-}
-
 class Piece {
-  constructor(data = INITIAL_DATA) {
-    const { x, y, initialShape, color } = data;
-
+  constructor({ x = width / 2, y = 0, initialShape = [[]], color } = {}) {
     this.x = x;
     this.y = y;
 
-    this.color = color;
+    this.color = color || this._randomColor();
     this.blocks = this._initBlocks(initialShape);
   }
 
@@ -23,19 +14,23 @@ class Piece {
     return Math.floor(number).toString(16);
   }
 
+  _randomColor() {
+    return `#${this._decToHex()}${this._decToHex()}${this._decToHex()}`;
+  }
+
   _initBlocks(model) {
     const blocks = [];
-    
-    model.foreach((line, yIndex) => {
-      line.foreach((item, xIndex) => {
+
+    model.forEach((line, yIndex) => {
+      line.forEach((item, xIndex) => {
         if (item) {
           const block = new Block({
-            x: this.x + xIndex,
-            y: this.y + yIndex,
+            x: this.x + xIndex * BLOCK_SIZE,
+            y: this.y + yIndex * BLOCK_SIZE,
             color: this.color,
           });
 
-          block.push(block);
+          blocks.push(block);
         }
       });
     });
@@ -44,10 +39,10 @@ class Piece {
   }
 
   show() {
-    this.blocks.foreach(block => block.show());
+    this.blocks.forEach((block) => block.show());
   }
 
   update() {
-    this.blocks.foreach(block => block.update());
+    this.blocks.forEach((block) => block.update());
   }
 }
