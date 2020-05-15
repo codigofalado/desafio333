@@ -38,9 +38,9 @@ class Piece {
     return blocks;
   }
 
-  move(direction = 1) {
+  moveHorizontally(direction = 1) {
     this.blocks.forEach((block) => {
-      block.move(direction);
+      block.moveHorizontally(direction);
       block.show();
     });
   }

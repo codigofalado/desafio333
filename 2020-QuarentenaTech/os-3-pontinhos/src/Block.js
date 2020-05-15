@@ -7,7 +7,7 @@ class Block {
     this.color = color;
   }
 
-  move(direction = 1) {
+  moveHorizontally(direction = 1) {
     this.x += direction * BLOCK_SIZE;
   }
 

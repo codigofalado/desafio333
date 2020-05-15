@@ -1,4 +1,6 @@
 let piece;
+let lastKeyPressed;
+let moviments;
 
 function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
@@ -8,6 +10,15 @@ function setup() {
     x: width / 2 - BLOCK_SIZE,
     y: 0,
   });
+
+  moviments = {
+    [LEFT_ARROW]: () => {
+      piece.moveHorizontally(-1);
+    },
+    [RIGHT_ARROW]: () => {
+      piece.moveHorizontally();
+    },
+  };
 
   setInterval(() => {
     piece.update();
@@ -24,18 +35,19 @@ function draw() {
 
 function keyPressed() {
   console.log(keyCode);
-  const moviments = {
-    [LEFT_ARROW]: () => {
-      piece.move(-1);
-    },
-    [RIGHT_ARROW]: () => {
-      piece.move();
-    },
-  };
+
+  /*
+  if(keyIsDown(lastKeyPressed)){
+    moviments[keyCode]();
+  }
+  */
 
   const moviment = moviments[keyCode];
 
-  if (moviment) moviment();
+  if (moviment) {
+    moviment();
+    lastKeyPressed = keyCode;
+  }
 }
 
 function drawBackground() {
