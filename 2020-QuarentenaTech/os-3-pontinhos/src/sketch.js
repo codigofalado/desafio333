@@ -9,17 +9,33 @@ function setup() {
     y: 0,
   });
 
-  // setInterval(() => {
-  //   block.update();
-  // }, TIME_INTERVAL);
+  setInterval(() => {
+    piece.update();
+  }, TIME_INTERVAL);
 }
 
 function draw() {
   drawBackground();
 
-  // translate(-BLOCK_SIZE, 0);
+  translate(-BLOCK_SIZE, 0);
 
   piece.show();
+}
+
+function keyPressed() {
+  console.log(keyCode);
+  const moviments = {
+    [LEFT_ARROW]: () => {
+      piece.move(-1);
+    },
+    [RIGHT_ARROW]: () => {
+      piece.move();
+    },
+  };
+
+  const moviment = moviments[keyCode];
+
+  if (moviment) moviment();
 }
 
 function drawBackground() {

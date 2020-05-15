@@ -7,6 +7,10 @@ class Block {
     this.color = color;
   }
 
+  move(direction = 1) {
+    this.x += direction * BLOCK_SIZE;
+  }
+
   show() {
     fill(this.color);
     rect(this.x, this.y, this.size, this.size);

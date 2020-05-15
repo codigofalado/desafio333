@@ -38,6 +38,13 @@ class Piece {
     return blocks;
   }
 
+  move(direction = 1) {
+    this.blocks.forEach((block) => {
+      block.move(direction);
+      block.show();
+    });
+  }
+
   show() {
     this.blocks.forEach((block) => block.show());
   }
