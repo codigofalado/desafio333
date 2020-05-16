@@ -6,18 +6,22 @@ function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
   piece = new Piece({
-    initialShape: SHAPES[0],
+    initialShape: SHAPES[4],// random(SHAPES),
     x: width / 2 - BLOCK_SIZE,
     y: 0,
   });
 
   moviments = {
-    [LEFT_ARROW]: () => {
+    'ArrowLeft': () => {
       piece.moveHorizontally(-1);
     },
-    [RIGHT_ARROW]: () => {
+    'ArrowRight': () => {
       piece.moveHorizontally();
     },
+    'a': () => {
+      piece.rotate();
+    },
+    's': () => {},
   };
 
   setInterval(() => {
@@ -34,19 +38,17 @@ function draw() {
 }
 
 function keyPressed() {
-  console.log(keyCode);
-
   /*
   if(keyIsDown(lastKeyPressed)){
-    moviments[keyCode]();
+    moviments[key]();
   }
   */
 
-  const moviment = moviments[keyCode];
+  const moviment = moviments[key];
 
   if (moviment) {
     moviment();
-    lastKeyPressed = keyCode;
+    lastKeyPressed = key;
   }
 }
 
