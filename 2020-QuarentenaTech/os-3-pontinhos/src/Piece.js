@@ -1,10 +1,10 @@
 class Piece {
-  constructor({ x = width / 2, y = 0, initialShape, color } = {}) {
+  constructor({ x = width / 2, y = 0, shape, color } = {}) {
     this.x = x;
     this.y = y;
 
     this.color = color || this._randomColor();
-    this.blocks = this._initBlocks(initialShape);
+    this.blocks = this._initBlocks(shape);
 
     this.size = 4;
   }
