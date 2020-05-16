@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ringue{
+  background: #D43031;
+  width:600px;
+  height: 600px;
+  transform: rotateX(45deg) rotateZ(45deg);
+  display: flex;
+  justify-content: center;
+  margin-left: 150px;
+  margin-top:90px;
+}
+
+/* .ringue::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #333;
+  position: absolute;
+  bottom:0;
+} */
+
+.lona {
+  background: rgb(135, 139, 141);
+  width: 500px;
+  height: 500px;
+  /* transform: rotateX(45deg) rotateZ(45deg); */
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  border-radius: 7px;
+  /* box-shadow: 10px 10px 20px 1px rgba(160, 157, 157, 0.788); */
+}
+
+.sub-box{
+  width: 30.5%;
+  height: 30.5%;
+  margin: 7px;
+  background: rgb(247, 247, 247);
+  border: none;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: .35s ease-in-out;
+}
+
+.sub-box:hover{
+  background: rgb(77, 74, 74);
+}
+
+.pilar1{
+  width: 25px;
+  height:120px;
+  background: #D7D7D7;
+  border-radius: 7px; 
+  transform: rotate(135deg);
+  position: absolute;
+  top: -11%;
+  left:-3%;
+}
+
+.pilar2{
+  width: 25px;
+  height:120px;
+  background: #D7D7D7;
+  border-radius: 7px; 
+  transform: rotate(135deg);
+  position: absolute;
+  bottom:0;
+  left:-3%;
+}
+
+.pilar3{
+  width: 25px;
+  height:120px;
+  background: #D7D7D7;
+  border-radius: 7px; 
+  transform: rotate(135deg);
+  position: absolute;
+  right: 10%;
+  top: -12%
+}
+
+.corda1{
+  width: 5px;
+  height: 90%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top:-5%;
+  right: 105%;
+  border: 1px solid #333;
+}
+
+.corda2{
+  width: 5px;
+  height: 90%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top:0%;
+  right: 101%;
+  border: 1px solid #333;
+}
+
+.corda3{
+  width: 5px;
+  height: 90%;
+  background: rgb(255, 252, 252);
+  position: absolute;
+  top: 2%;
+  right: 97%;
+  border: 1px solid #333;
+}
+
+.corda4{
+  width: 90%;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: -6%;
+  left: -6%;
+  border: 1px solid #333;
+}
+
+.corda5{
+  width: 90%;
+  height: 5px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: -3%;
+  left: -3%;
+  border: 1px solid #333;
+}
+
+.corda6{
+  width: 90%;
+  height: 5px;
+  background: rgb(255, 252, 252);
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  border: 1px solid #333;
+}
+
+.ladoEsquerdo {
+  width:100%;
+  height: 50px;
+  background: #831C20;
+  position: absolute;
+  bottom: -8%;
+  right: -4%;
+  transform: skew(45deg);
+}
+
+.ladoDireito {
+  width:50px;
+  height: 100%;
+  background: #BE2A2B;
+  position: absolute;
+  bottom: -4%;
+  right: -8%;
+  transform: skew(0deg,45deg);
+}
+
+.fa.fa-cog {
+  font-size:4em;
+}
+
+.btn {
+  background: rgb(38, 129, 248);
+  width: 100px;
+  height:100px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  position:absolute;
+  top:10px;
+  left:10px
+}
+
+/* --------------------------- */
+
