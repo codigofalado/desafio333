@@ -3,11 +3,7 @@ let piece;
 function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
-  piece = new Piece({
-    initialShape: SHAPES[0],
-    x: width / 2 - BLOCK_SIZE,
-    y: 0,
-  });
+  piece = new Piece(random(MODELS));
 
   // setInterval(() => {
   //   block.update();
