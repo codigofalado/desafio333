@@ -43,7 +43,6 @@ function q = AtacouV2(A0)
     end
   end            
        
-range
 
     i = find(A0(range)==0);
     if length(i)>1
