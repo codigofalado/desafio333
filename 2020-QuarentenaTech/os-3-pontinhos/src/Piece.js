@@ -73,6 +73,8 @@ class Piece {
       block.x = this.x + index * BLOCK_SIZE;
       block.y = this.y + lineIndex * BLOCK_SIZE;
     });
+
+    this.checkPieceInBoard();
   }
 
   show() {
@@ -92,6 +94,20 @@ class Piece {
     }
     if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE == width) {
       return "r";
+    }
+  }
+
+  checkPieceInBoard() {
+    let pieceWidth = this.blocks[0].length;
+    console.log(this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE);
+    if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+      this.moveHorizontally(-1);
+      if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+        this.moveHorizontally(-1);
+        if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+          this.moveHorizontally(-1);
+        }
+      }
     }
   }
 }
