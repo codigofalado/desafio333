@@ -87,7 +87,7 @@ class Piece {
   }
 
   checkSideEdges() {
-    let pieceWidth = this.blocks[0].length;
+    const pieceWidth = this.blocks[0].length;
 
     if (this.x == BLOCK_SIZE) {
       return "l";
@@ -98,7 +98,7 @@ class Piece {
   }
 
   checkPieceInBoard() {
-    let pieceWidth = this.blocks[0].length;
+    const pieceWidth = this.blocks[0].length;
     console.log(this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE);
     if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
       this.moveHorizontally(-1);
@@ -108,6 +108,14 @@ class Piece {
           this.moveHorizontally(-1);
         }
       }
+    }
+  }
+
+  checkBottomEdge() {
+    const pieceHeight = this.blocks.length;
+    if (this.y + pieceHeight * BLOCK_SIZE == height) {
+      noLoop();
+      return true;
     }
   }
 }
