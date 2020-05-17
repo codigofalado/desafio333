@@ -8,7 +8,7 @@ class Block {
   }
 
   moveHorizontally(direction = 1) {
-    this.x += direction * BLOCK_SIZE;
+    this.x += direction * this.size;
   }
 
   show() {

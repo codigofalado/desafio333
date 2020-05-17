@@ -44,13 +44,15 @@ class Piece {
   _forBlock(callback, onlyNotNull = true) {
     this.blocks.forEach((line, lineIndex) =>
       line.forEach((block, index) => {
-        (!onlyNotNull || block) && callback(block, index, line, lineIndex);
+        (!onlyNotNull || block) && callback({ block, index, line, lineIndex });
       })
     );
   }
 
   moveHorizontally(direction = 1) {
-    this._forBlock((block) => {
+    this.x += direction * BLOCK_SIZE;
+
+    this._forBlock(({ block }) => {
       block.moveHorizontally(direction);
       block.show();
     });
@@ -60,26 +62,25 @@ class Piece {
     const { length } = this.blocks[0];
     const newMatrix = Array.from({ length }).map(() => []);
 
-    this._forBlock((block, index) => newMatrix[index].unshift(block), false);
-
-    /*
-    this._forBlock((block, index) => {
-      block.x = 1;
-      block.y = 2;
-
-    });
-
+    this._forBlock(
+      ({ block, index }) => newMatrix[index].unshift(block),
+      false
+      );
+      
     this.blocks = newMatrix;
-    */
 
-    console.log(newMatrix);
+    this._forBlock(({ block, index, lineIndex }) => {
+      block.x = this.x + index * BLOCK_SIZE;
+      block.y = this.y + lineIndex * BLOCK_SIZE;
+    });    
   }
 
   show() {
-    this._forBlock((block) => block.show());
+    this._forBlock(({ block }) => block.show());
   }
 
   update() {
-    this._forBlock((block) => block.update());
+    this.y += BLOCK_SIZE;
+    this._forBlock(({ block }) => block.update());
   }
 }
