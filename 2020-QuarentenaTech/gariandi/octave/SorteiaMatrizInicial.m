@@ -7,7 +7,7 @@ function q = SorteiaMatrizInicial(player)
       A(N) = 1;
   else
       if player==2 %computador
-        A(N) = 0.4;
+        A(N) = 0.3;
       else
         disp('player inválido');
       end

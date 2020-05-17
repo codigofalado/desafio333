@@ -4,7 +4,9 @@ function q = SorteiaJogadaUsuario(A)
   N = length(i); 
   N = nro_natural_aleatorio(N);
   
-  A(i(N)) = 1;
+  if ~isempty(i)
+    A(i(N)) = 1;
+  end
   
   q = A;
   

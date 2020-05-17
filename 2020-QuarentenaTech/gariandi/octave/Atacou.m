@@ -9,7 +9,7 @@ function q = Atacou(A0)
   
   somas = [ diag1 diag2 lins cols ];    
   
-        k = find(somas==min(somas)) % vendo aonde tem mais espaço para atacar
+        k = find(somas==min(somas)); % vendo aonde tem mais espaço para atacar
         if length(k)>1
           Somas = MontaMatrizSoma(A0);
      %     Somas = A0 + Somas;          
@@ -35,14 +35,14 @@ function q = Atacou(A0)
              escolhido = nro_natural_aleatorio(N);
              i = i(escolhido); j = j(escolhido);
            end
-           if A(i,j)==0 || A(i,j)~=0
-             A(i,j) = 0.4;  %ataca!
+           if A(i,j)==0 %|| A(i,j)~=0
+             A(i,j) = 0.3;  %ataca!
            else
              while A(i,j)~=0
                Somas(i,j) = max(max(Somas));
                [i,j]= find(Somas==min(min(Somas)));
              end
-             A(i,j) = 0.4; 
+             A(i,j) = 0.3; 
             end 
             Somas(i,j) = max(max(Somas(i,j)));           
         else                                      

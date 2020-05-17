@@ -5,14 +5,15 @@ function q = SimulacaoJogo(player_inicio,espera)
   
   A1 = SorteiaMatrizInicial(player_inicio)
   pause(espera);
+  A2 = A1;
 
-  for jogada=2:5
+  while length(A2)>1 && length(A1)>1
     A2 = ProximaJogadaV2(A1)
     pause(espera);
     A1 = SorteiaJogadaUsuario(A2)
     pause(espera);
   end
   
-  q = A1;
+  q = A2;
   
 endfunction

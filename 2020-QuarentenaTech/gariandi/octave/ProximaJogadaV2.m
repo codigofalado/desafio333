@@ -32,7 +32,7 @@ function q = ProximaJogadaV2(A0);
     disp('Você perdeu');
     A = 1;
   else
-   if find(somas>2) 
+   if find(somas==3) 
       disp('Você venceu');
       A = 0;
    else 
