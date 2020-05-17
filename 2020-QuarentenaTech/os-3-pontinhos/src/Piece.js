@@ -54,7 +54,7 @@ class Piece {
 
     this._forBlock(({ block }) => {
       block.moveHorizontally(direction);
-      block.show();
+      //block.show();
     });
   }
 
@@ -65,14 +65,14 @@ class Piece {
     this._forBlock(
       ({ block, index }) => newMatrix[index].unshift(block),
       false
-      );
-      
+    );
+
     this.blocks = newMatrix;
 
     this._forBlock(({ block, index, lineIndex }) => {
       block.x = this.x + index * BLOCK_SIZE;
       block.y = this.y + lineIndex * BLOCK_SIZE;
-    });    
+    });
   }
 
   show() {
@@ -82,5 +82,16 @@ class Piece {
   update() {
     this.y += BLOCK_SIZE;
     this._forBlock(({ block }) => block.update());
+  }
+
+  checkSideEdges() {
+    let pieceWidth = this.blocks[0].length;
+
+    if (this.x == BLOCK_SIZE) {
+      return "l";
+    }
+    if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE == width) {
+      return "r";
+    }
   }
 }
