@@ -8,16 +8,18 @@ function setup() {
   piece = new Piece(random(MODELS));
 
   moviments = {
-    'ArrowLeft': () => {
+    ArrowLeft() {
       piece.moveHorizontally(-1);
     },
-    'ArrowRight': () => {
+    ArrowRight() {
       piece.moveHorizontally();
     },
-    'a': () => {
-      piece.rotate();
+    a() {
+      piece.rotateClockwise();
     },
-    's': () => {},
+    s() {
+      piece.rotateAntiClockwise();
+    },
   };
 
   setInterval(() => {

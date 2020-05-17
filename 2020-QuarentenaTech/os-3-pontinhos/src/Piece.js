@@ -5,8 +5,6 @@ class Piece {
 
     this.color = color || this._randomColor();
     this.blocks = this._initBlocks(shape);
-
-    this.size = 4;
   }
 
   _randomColor() {
@@ -38,6 +36,7 @@ class Piece {
       blocks.push(blockLine);
     });
 
+    console.log(blocks);
     return blocks;
   }
 
@@ -54,25 +53,30 @@ class Piece {
 
     this._forBlock(({ block }) => {
       block.moveHorizontally(direction);
-      block.show();
     });
   }
 
-  rotate() {
+  rotateClockwise() {
     const { length } = this.blocks[0];
     const newMatrix = Array.from({ length }).map(() => []);
 
     this._forBlock(
       ({ block, index }) => newMatrix[index].unshift(block),
       false
-      );
-      
+    );
+
     this.blocks = newMatrix;
 
     this._forBlock(({ block, index, lineIndex }) => {
       block.x = this.x + index * BLOCK_SIZE;
       block.y = this.y + lineIndex * BLOCK_SIZE;
-    });    
+    });
+  }
+
+  rotateAntiClockwise() {
+    for (let i = 0; i < 3; i++) {
+      this.rotateClockwise();
+    }
   }
 
   show() {
@@ -81,6 +85,6 @@ class Piece {
 
   update() {
     this.y += BLOCK_SIZE;
-    this._forBlock(({ block }) => block.update());
+    this._forBlock(({ block }) => block.gravity());
   }
 }
