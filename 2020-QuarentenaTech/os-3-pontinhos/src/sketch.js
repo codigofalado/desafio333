@@ -8,18 +8,16 @@ function setup() {
   piece = new Piece(random(MODELS));
 
   moviments = {
-    ArrowLeft() {
-      piece.moveHorizontally(-1);
+    ArrowLeft: () => {
+      if (piece.checkSideEdges() != "l") piece.moveHorizontally(-1);
     },
-    ArrowRight() {
-      piece.moveHorizontally();
+    ArrowRight: () => {
+      if (piece.checkSideEdges() != "r") piece.moveHorizontally();
     },
-    a() {
-      piece.rotateClockwise();
+    a: () => {
+      piece.rotate();
     },
-    s() {
-      piece.rotateAntiClockwise();
-    },
+    s: () => {},
   };
 
   setInterval(() => {
@@ -33,6 +31,7 @@ function draw() {
   translate(-BLOCK_SIZE, 0);
 
   piece.show();
+  //piece.checkBottomEdge();
 }
 
 function keyPressed() {

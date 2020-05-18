@@ -71,6 +71,8 @@ class Piece {
       block.x = this.x + index * BLOCK_SIZE;
       block.y = this.y + lineIndex * BLOCK_SIZE;
     });
+    
+    this.checkPieceInBoard();
   }
 
   rotateAntiClockwise() {
@@ -86,5 +88,38 @@ class Piece {
   update() {
     this.y += BLOCK_SIZE;
     this._forBlock(({ block }) => block.gravity());
+  }
+
+  checkSideEdges() {
+    const pieceWidth = this.blocks[0].length;
+
+    if (this.x == BLOCK_SIZE) {
+      return "l";
+    }
+    if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE == width) {
+      return "r";
+    }
+  }
+
+  checkPieceInBoard() {
+    const pieceWidth = this.blocks[0].length;
+    console.log(this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE);
+    if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+      this.moveHorizontally(-1);
+      if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+        this.moveHorizontally(-1);
+        if (this.x + pieceWidth * BLOCK_SIZE - BLOCK_SIZE > width) {
+          this.moveHorizontally(-1);
+        }
+      }
+    }
+  }
+
+  checkBottomEdge() {
+    const pieceHeight = this.blocks.length;
+    if (this.y + pieceHeight * BLOCK_SIZE == height) {
+      noLoop();
+      return true;
+    }
   }
 }
