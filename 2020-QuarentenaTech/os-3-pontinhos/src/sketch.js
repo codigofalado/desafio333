@@ -15,9 +15,11 @@ function setup() {
       if (piece.checkSideEdges() != "r") piece.moveHorizontally();
     },
     a: () => {
-      piece.rotate();
+      piece.rotateClockwise();
     },
-    s: () => {},
+    s: () => {
+      piece.rotateAntiClockwise();
+    },
   };
 
   setInterval(() => {
@@ -31,7 +33,7 @@ function draw() {
   translate(-BLOCK_SIZE, 0);
 
   piece.show();
-  //piece.checkBottomEdge();
+  piece.checkBottomEdge();
 }
 
 function keyPressed() {
