@@ -140,7 +140,6 @@ class Piece {
   checkBottomEdge() {
     const pieceHeight = this.blocks.length;
     if (this.y + pieceHeight * BLOCK_SIZE == height) {
-      noLoop();
       return true;
     }
   }
