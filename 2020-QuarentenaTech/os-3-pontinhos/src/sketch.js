@@ -30,8 +30,6 @@ function setup() {
 function draw() {
   drawBackground();
 
-  translate(-BLOCK_SIZE, 0);
-
   piece.show();
   piece.checkBottomEdge();
 }
