@@ -1,25 +1,54 @@
 let piece;
+let lastKeyPressed;
+let moviments;
 
 function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
-  piece = new Piece({
-    initialShape: SHAPES[0],
-    x: width / 2 - BLOCK_SIZE,
-    y: 0,
-  });
+  piece = new Piece(random(MODELS));
 
-  // setInterval(() => {
-  //   block.update();
-  // }, TIME_INTERVAL);
+  moviments = {
+    ArrowLeft: () => {
+      if (piece.checkSideEdges() != "l") piece.moveHorizontally(-1);
+    },
+    ArrowRight: () => {
+      if (piece.checkSideEdges() != "r") piece.moveHorizontally();
+    },
+    a: () => {
+      piece.rotateClockwise();
+    },
+    s: () => {
+      piece.rotateAntiClockwise();
+    },
+  };
+
+  setInterval(() => {
+    piece.update();
+  }, TIME_INTERVAL);
 }
 
 function draw() {
   drawBackground();
 
-  // translate(-BLOCK_SIZE, 0);
+  translate(-BLOCK_SIZE, 0);
 
   piece.show();
+  piece.checkBottomEdge();
+}
+
+function keyPressed() {
+  /*
+  if(keyIsDown(lastKeyPressed)){
+    moviments[key]();
+  }
+  */
+
+  const moviment = moviments[key];
+
+  if (moviment) {
+    moviment();
+    lastKeyPressed = key;
+  }
 }
 
 function drawBackground() {

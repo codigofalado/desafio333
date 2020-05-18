@@ -7,12 +7,16 @@ class Block {
     this.color = color;
   }
 
+  moveHorizontally(direction = 1) {
+    this.x += direction * this.size;
+  }
+
   show() {
     fill(this.color);
     rect(this.x, this.y, this.size, this.size);
   }
 
-  update() {
+  gravity() {
     this.y += this.size;
   }
 }
