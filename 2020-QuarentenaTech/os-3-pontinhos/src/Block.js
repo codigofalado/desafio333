@@ -16,7 +16,7 @@ class Block {
     rect(this.x, this.y, this.size, this.size);
   }
 
-  update() {
+  gravity() {
     this.y += this.size;
   }
 }
