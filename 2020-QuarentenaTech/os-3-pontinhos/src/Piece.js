@@ -98,6 +98,14 @@ class Piece {
 
   show() {
     this._forBlock(({ block }) => block.show());
+    circle(this.x, this.y, 10);
+    circle(this.x + this.pieceWidth * BLOCK_SIZE, this.y, 10);
+    circle(this.x, this.y + this.pieceHeight * BLOCK_SIZE, 10);
+    circle(
+      this.x + this.pieceWidth * BLOCK_SIZE,
+      this.y + this.pieceHeight * BLOCK_SIZE,
+      10
+    );
   }
 
   update() {
