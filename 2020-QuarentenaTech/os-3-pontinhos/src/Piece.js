@@ -50,7 +50,15 @@ class Piece {
     );
   }
 
+  /**
+   * direction = 1  -> right
+   * direction = -1 -> left
+   */
   moveHorizontally(direction = 1) {
+    if (this.checkSideEdges(direction)) {
+      return;
+    }
+
     this.x += direction * BLOCK_SIZE;
 
     this.forBlock(({ block }) => {
@@ -64,10 +72,7 @@ class Piece {
     const { length } = this.blocks[0];
     const newMatrix = Array.from({ length }).map(() => []);
 
-    this.forBlock(
-      ({ block, index }) => newMatrix[index].unshift(block),
-      false
-    );
+    this.forBlock(({ block, index }) => newMatrix[index].unshift(block), false);
 
     this.blocks = newMatrix;
 
@@ -103,20 +108,16 @@ class Piece {
     this.forBlock(({ block }) => block.gravity());
   }
 
-  checkSideEdges() {
-    if (this.x == 0) {
-      //console.log("LEFT EDGE", this.x);
-      return "l";
-    }
-    if (this.x + this.width * BLOCK_SIZE == width) {
-      //console.log("RIGHT EDGE", this.x);
-      return "r";
-    }
+  checkSideEdges(direction) {
+    const leftEdge = direction === -1 && this.x === 0;
+
+    const rightEdge =
+      direction === 1 && this.x + this.width * BLOCK_SIZE === width;
+
+    return leftEdge || rightEdge;
   }
 
   checkPieceInBoard() {
-    console.log(this.x + this.width * BLOCK_SIZE);
-
     if (this.x + this.width * BLOCK_SIZE > width) {
       this.moveHorizontally(-1);
       if (this.x + this.width * BLOCK_SIZE > width) {
