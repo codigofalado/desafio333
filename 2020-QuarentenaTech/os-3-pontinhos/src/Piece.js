@@ -1,17 +1,10 @@
 class Piece {
-  constructor({
-    x = width / 2,
-    y = 0,
-    shape,
-    color,
-    pieceWidth,
-    pieceHeight,
-  } = {}) {
-    this.x = x - BLOCK_SIZE;
-    this.y = y;
+  constructor({ shape, color, ...size }) {
+    this.x = width / 2 - BLOCK_SIZE;
+    this.y = 0;
 
-    this.pieceWidth = pieceWidth;
-    this.pieceHeight = pieceHeight;
+    this.width = size.width;
+    this.height = size.height;
 
     this.color = color || this._randomColor();
     this.blocks = this._initBlocks(shape);
@@ -46,7 +39,6 @@ class Piece {
       blocks.push(blockLine);
     });
 
-    console.log(blocks);
     return blocks;
   }
 
@@ -67,10 +59,7 @@ class Piece {
   }
 
   rotateClockwise() {
-    this.pieceHeight = [
-      this.pieceWidth,
-      (this.pieceWidth = this.pieceHeight),
-    ][0];
+    this.height = [this.width, (this.width = this.height)][0];
 
     const { length } = this.blocks[0];
     const newMatrix = Array.from({ length }).map(() => []);
@@ -98,17 +87,18 @@ class Piece {
 
   show() {
     this._forBlock(({ block }) => block.show());
+
     circle(this.x, this.y, 10);
-    circle(this.x + this.pieceWidth * BLOCK_SIZE, this.y, 10);
-    circle(this.x, this.y + this.pieceHeight * BLOCK_SIZE, 10);
+    circle(this.x + this.width * BLOCK_SIZE, this.y, 10);
+    circle(this.x, this.y + this.height * BLOCK_SIZE, 10);
     circle(
-      this.x + this.pieceWidth * BLOCK_SIZE,
-      this.y + this.pieceHeight * BLOCK_SIZE,
+      this.x + this.width * BLOCK_SIZE,
+      this.y + this.height * BLOCK_SIZE,
       10
     );
   }
 
-  update() {
+  gravity() {
     this.y += BLOCK_SIZE;
     this._forBlock(({ block }) => block.gravity());
   }
@@ -118,19 +108,20 @@ class Piece {
       //console.log("LEFT EDGE", this.x);
       return "l";
     }
-    if (this.x + this.pieceWidth * BLOCK_SIZE == width) {
+    if (this.x + this.width * BLOCK_SIZE == width) {
       //console.log("RIGHT EDGE", this.x);
       return "r";
     }
   }
 
   checkPieceInBoard() {
-    console.log(this.x + this.pieceWidth * BLOCK_SIZE);
-    if (this.x + this.pieceWidth * BLOCK_SIZE > width) {
+    console.log(this.x + this.width * BLOCK_SIZE);
+
+    if (this.x + this.width * BLOCK_SIZE > width) {
       this.moveHorizontally(-1);
-      if (this.x + this.pieceWidth * BLOCK_SIZE > width) {
+      if (this.x + this.width * BLOCK_SIZE > width) {
         this.moveHorizontally(-1);
-        if (this.x + this.pieceWidth * BLOCK_SIZE > width) {
+        if (this.x + this.width * BLOCK_SIZE > width) {
           this.moveHorizontally(-1);
         }
       }
@@ -138,9 +129,6 @@ class Piece {
   }
 
   checkBottomEdge() {
-    const pieceHeight = this.blocks.length;
-    if (this.y + pieceHeight * BLOCK_SIZE == height) {
-      return true;
-    }
+    return this.y + this.height * BLOCK_SIZE === height;
   }
 }

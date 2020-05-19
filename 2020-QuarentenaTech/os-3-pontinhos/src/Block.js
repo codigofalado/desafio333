@@ -1,9 +1,9 @@
 class Block {
-  constructor({ x = 0, y = 0, size = BLOCK_SIZE, color = "#fff" } = {}) {
+  constructor({ x = 0, y = 0, color } = {}) {
     this.x = x;
     this.y = y;
     
-    this.size = size;
+    this.size = BLOCK_SIZE;
     this.color = color;
   }
 

@@ -7,8 +7,8 @@ const TIME_INTERVAL = 1000;
 const I_MODEL = {
   shape: [[1, 1, 1, 1]],
   color: "#FFFF",
-  pieceWidth: 4,
-  pieceHeight: 1,
+  width: 4,
+  height: 1,
 };
 
 const J_MODEL = {
@@ -18,8 +18,8 @@ const J_MODEL = {
     //[0, 0, 0],
   ],
   color: "#FFFF",
-  pieceWidth: 3,
-  pieceHeight: 2,
+  width: 3,
+  height: 2,
 };
 
 const L_MODEL = {
@@ -29,8 +29,8 @@ const L_MODEL = {
     //[0, 0, 0],
   ],
   color: "#FFFF",
-  pieceWidth: 3,
-  pieceHeight: 2,
+  width: 3,
+  height: 2,
 };
 
 const O_MODEL = {
@@ -39,8 +39,8 @@ const O_MODEL = {
     [1, 1],
   ],
   color: "#FFFF",
-  pieceWidth: 2,
-  pieceHeight: 2,
+  width: 2,
+  height: 2,
 };
 
 const S_MODEL = {
@@ -50,8 +50,8 @@ const S_MODEL = {
     //[0, 0, 0],
   ],
   color: "#FFFF",
-  pieceWidth: 3,
-  pieceHeight: 2,
+  width: 3,
+  height: 2,
 };
 
 const Z_MODEL = {
@@ -61,8 +61,8 @@ const Z_MODEL = {
     //[0, 0, 0],
   ],
   color: "#FFFF",
-  pieceWidth: 3,
-  pieceHeight: 2,
+  width: 3,
+  height: 2,
 };
 
 const T_MODEL = {
@@ -72,8 +72,8 @@ const T_MODEL = {
     //[0, 0, 0],
   ],
   color: "#FFFF",
-  pieceWidth: 3,
-  pieceHeight: 2,
+  width: 3,
+  height: 2,
 };
 
 const MODELS = [I_MODEL, J_MODEL, L_MODEL, O_MODEL, S_MODEL, Z_MODEL, T_MODEL];
