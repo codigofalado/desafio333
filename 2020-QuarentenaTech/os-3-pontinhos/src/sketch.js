@@ -1,11 +1,17 @@
 let piece;
 let lastKeyPressed;
 let moviments;
+let board;
 
 function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
   piece = new Piece(random(MODELS));
+
+  board = new Board({
+    width: BOARD_X,
+    height: BOARD_Y,
+  });
 
   moviments = {
     ArrowLeft() {
@@ -24,20 +30,23 @@ function setup() {
 
   setInterval(() => {
     piece.gravity();
-  }, TIME_INTERVAL * 0.2);
+  }, TIME_INTERVAL * 0.1);
 }
 
 function draw() {
   drawBackground();
 
   piece.show();
+  board.show();
+
   if (piece.checkBottomEdge()) {
-    noLoop();
+    board.addPiece(piece);
+    piece = new Piece(random(MODELS));
   }
 }
 
 function keyPressed() {
-  // if(keyIsDown(lastKeyPressed)) moviments[key](); 
+  // if(keyIsDown(lastKeyPressed)) moviments[key]();
 
   const moviment = moviments[key];
 
