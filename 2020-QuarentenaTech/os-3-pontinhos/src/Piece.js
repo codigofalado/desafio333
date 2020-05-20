@@ -1,4 +1,22 @@
 class Piece {
+  moviments = {
+    ArrowLeft: () => {
+      this.moveHorizontally(-1);
+    },
+    ArrowRight: () => {
+      this.moveHorizontally();
+    },
+    ArrowUp: () => {
+      this.rotateClockwise();
+    },
+    a: () => {
+      this.rotateClockwise();
+    },
+    s: () => {
+      this.rotateAntiClockwise();
+    },
+  };
+
   constructor({ shape, color, ...size }) {
     this.x = width / 2 - BLOCK_SIZE;
     this.y = 0;
