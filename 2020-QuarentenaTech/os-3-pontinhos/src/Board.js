@@ -32,13 +32,18 @@ class Board {
     // Down blocks for the nummber of removed lines 
   }
 
-  checkCollision(piace) {
-    // piece.forBlock(({ block }) => {
-        // check collision
-        // if collided, return true
-        //
-    // });
+  checkCollision(piece) {
+    let isCollide = false;
 
-    return false;
+    piece.forBlock(({ block }) => {
+      const x = block.x / BLOCK_SIZE;
+      const y = block.y / BLOCK_SIZE + 1;
+      
+      if (this.matrix[y] && this.matrix[y][x]) {
+        isCollide = true;
+      }
+    })
+
+    return isCollide;
   }
 }
