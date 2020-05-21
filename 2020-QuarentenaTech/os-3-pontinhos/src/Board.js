@@ -8,7 +8,7 @@ class Board {
   }
 
   _initMatrix() {
-    this.matrix = Array.from({ length: sizes.height }).map(() =>
+    this.matrix = Array.from({ length: this.sizes.height }).map(() =>
       this._initLine()
     );
   }
@@ -38,7 +38,7 @@ class Board {
         return false;
       }
     }
-    
+
     return true;
   }
 
@@ -46,7 +46,7 @@ class Board {
     const fullLineIndexes = [];
 
     this.matrix.forEach((line, index) => {
-      if (_isLineFilled(line)) {
+      if (this._isLineFilled(line)) {
         fullLineIndexes.push(index);
       }
     });
