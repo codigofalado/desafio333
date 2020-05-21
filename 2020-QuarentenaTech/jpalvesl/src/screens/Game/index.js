@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-import { Container, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text } from './styles';
+import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, Counter } from './styles';
 
 var gameOver = false
+var matrix = ['','','','','','','','','']
 
 function Game() {
-  const [matrix, setMatrix] = useState(['','','','','','','','',''])
   const [chance, setChance] = useState(true)
+  const [modalVisible, setModalVisible] = useState(false)
 
 
   function handlePlay(player, cell) {
@@ -92,16 +93,24 @@ function Game() {
       gameOver = true
     }
 
-    setMatrix(matrix)
     if (gameOver){
-      alert(`O jogador ${chance ? 'X' : 'O' } ganhou`)
+      setModalVisible(state => !state)
     }
 
     setChance(state => !state)
   }
 
+  function handleRestartGame() {
+    matrix = ['','','','','','','','','']
+    gameOver = !gameOver
+    setModalVisible(state => !state)
+    setChance(state => !state)
+  }
+
   return (
     <Container>
+      <Title>Jogo da velha</Title>
+
       <TicTacToe>
         <Line>
           <Cell onPress={() => handlePlay(chance, 0)}><Text>{matrix[0]}</Text></Cell>
@@ -125,6 +134,27 @@ function Game() {
           <Cell onPress={() => handlePlay(chance, 8)}><Text>{matrix[8]}</Text></Cell>
         </Line>
       </TicTacToe>
+
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+      >
+        <CentredView>
+            <ModalView>
+              <WinnerText>O jogador <Bold>{chance ? 'O' : 'X' }</Bold> venceu!</WinnerText>
+            <ModalButton onPress={handleRestartGame}>
+              <ButtonText>Jogar novamente</ButtonText>
+            </ModalButton>
+
+            <ModalButton onPress={() => alert('Deve fechar o app')}>
+              <ButtonText>Sair do jogo</ButtonText>
+            </ModalButton>
+          </ModalView>
+        </CentredView>
+      </Modal>
+
+      <Counter>N vitórias consecutivas</Counter>
     </Container>
   )
 }
