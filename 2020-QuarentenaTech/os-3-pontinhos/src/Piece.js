@@ -15,6 +15,9 @@ class Piece {
     s: () => {
       this.rotateAntiClockwise();
     },
+    q: () => {
+      game.playPause();
+    },
   };
 
   constructor({ shape, color, ...size }) {
