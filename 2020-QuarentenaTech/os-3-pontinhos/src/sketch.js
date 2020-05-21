@@ -1,5 +1,6 @@
 let board;
 let lastKeyPressed;
+let interval;
 
 function setup() {
   createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
@@ -9,9 +10,13 @@ function setup() {
     height: BOARD_Y,
   });
 
-  setInterval(() => {
+  interval = setInterval(() => {
     board.update();
-  }, TIME_INTERVAL * 0.1);
+  }, TIME_INTERVAL * 0.2);
+}
+
+function stop() {
+  clearInterval(interval);
 }
 
 function draw() {
