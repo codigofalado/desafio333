@@ -4,6 +4,10 @@ class Board {
 
     this._nextPiece();
 
+    this._initMatrix();
+  }
+
+  _initMatrix() {
     this.matrix = Array.from({ length: sizes.height }).map(() =>
       this._initLine()
     );
