@@ -1,11 +1,33 @@
 import React from 'react';
 
-import { Container, Texto } from './styles';
+import { Container, TicTacToe, Line, MiddleLine, Cell, MiddleCell } from './styles';
 
 function Game() {
   return (
     <Container>
-      <Texto>Game</Texto>
+      <TicTacToe>
+        <Line>
+          <Cell></Cell>
+          <MiddleCell>
+            <Cell></Cell>
+          </MiddleCell>
+          <Cell></Cell>
+        </Line>
+        <MiddleLine>
+          <Cell></Cell>
+          <MiddleCell>
+            <Cell></Cell>
+          </MiddleCell>
+          <Cell></Cell>
+        </MiddleLine>
+        <Line>
+          <Cell></Cell>
+          <MiddleCell>
+            <Cell></Cell>
+          </MiddleCell>
+          <Cell></Cell>
+        </Line>
+      </TicTacToe>
     </Container>
   )
 }
