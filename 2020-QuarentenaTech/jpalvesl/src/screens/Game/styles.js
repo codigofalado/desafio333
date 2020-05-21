@@ -29,6 +29,8 @@ export const MiddleLine = styled.View`
 
 export const Cell = styled.TouchableOpacity`
   flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const MiddleCell = styled.View`
@@ -36,4 +38,10 @@ export const MiddleCell = styled.View`
   border: 1px solid yellow;
   border-top-width: 0;
   border-bottom-width: 0;
+`;
+
+export const Text = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
 `;
