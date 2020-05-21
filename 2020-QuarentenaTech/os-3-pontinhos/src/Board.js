@@ -7,14 +7,14 @@ class Board {
     this._initMatrix();
   }
 
+  _initLine() {
+    return Array.from({ length: this.sizes.width }).map(() => null);
+  }
+
   _initMatrix() {
     this.matrix = Array.from({ length: this.sizes.height }).map(() =>
       this._initLine()
     );
-  }
-
-  _initLine() {
-    return Array.from({ length: this.sizes.width }).map(() => null);
   }
 
   _nextPiece() {
@@ -23,10 +23,10 @@ class Board {
 
   _addCurrentPiece() {
     this.currentPiece.forBlock(({ block }) => {
-      const x = block.x / BLOCK_SIZE;
-      const y = block.y / BLOCK_SIZE;
+      const xIndex = block.x / BLOCK_SIZE;
+      const yIndex = block.y / BLOCK_SIZE;
 
-      this.matrix[y][x] = block;
+      this.matrix[yIndex][xIndex] = block;
     });
 
     this._checkCompleteLines();

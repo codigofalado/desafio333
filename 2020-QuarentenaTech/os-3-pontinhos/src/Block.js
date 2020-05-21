@@ -1,5 +1,5 @@
 class Block {
-  constructor({ x = 0, y = 0, color } = {}) {
+  constructor({ x = 0, y = 0, color }) {
     this.x = x;
     this.y = y;
     
@@ -11,12 +11,12 @@ class Block {
     this.x += direction * this.size;
   }
 
+  gravity() {
+    this.y += this.size;
+  }
+
   show() {
     fill(this.color);
     rect(this.x, this.y, this.size, this.size);
-  }
-
-  gravity() {
-    this.y += this.size;
   }
 }
