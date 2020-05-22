@@ -14,10 +14,11 @@ function Navigation() {
     <NavigationContainer>
       <Tab.Navigator
         tabBarOptions={{
-          activeTintColor: '#f0f',
-          inactiveTintColor: '#0ff',
+          activeTintColor: '#860c4e',
+          inactiveTintColor: '#0003',
           style: {
-            backgroundColor: '#000'
+            backgroundColor: '#dedede',
+            borderTopColor: '#D9C7EF'
           }
         }}
       >

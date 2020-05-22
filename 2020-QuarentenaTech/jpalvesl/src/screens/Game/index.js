@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, Counter } from './styles';
+import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, Counter, ChooseTitle, Buttons, ChooseButton, ChooseText } from './styles';
 
 var gameOver = false
 var matrix = ['','','','','','','','','']
+var newGame = 0
 
 function Game() {
   const [chance, setChance] = useState(true)
   const [modalVisible, setModalVisible] = useState(false)
+  const [chooseModalVisible, setChooseModalVisible] = useState(true)
+
+  useEffect(() => {
+    setChooseModalVisible(true)
+  }, [newGame])
 
 
   function handlePlay(player, cell) {
@@ -103,8 +109,14 @@ function Game() {
   function handleRestartGame() {
     matrix = ['','','','','','','','','']
     gameOver = !gameOver
+    newGame += 1
     setModalVisible(state => !state)
     setChance(state => !state)
+  }
+
+  function handleSelect(symbol) {
+    setChance(symbol)
+    setChooseModalVisible(false)
   }
 
   return (
@@ -141,8 +153,8 @@ function Game() {
         visible={modalVisible}
       >
         <CentredView>
-            <ModalView>
-              <WinnerText>O jogador <Bold>{chance ? 'O' : 'X' }</Bold> venceu!</WinnerText>
+          <ModalView>
+            <WinnerText>O jogador <Bold>{chance ? 'O' : 'X' }</Bold> venceu!</WinnerText>
             <ModalButton onPress={handleRestartGame}>
               <ButtonText>Jogar novamente</ButtonText>
             </ModalButton>
@@ -150,6 +162,28 @@ function Game() {
             <ModalButton onPress={() => alert('Deve fechar o app')}>
               <ButtonText>Sair do jogo</ButtonText>
             </ModalButton>
+          </ModalView>
+        </CentredView>
+      </Modal>
+
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={chooseModalVisible}
+      >
+        <CentredView>
+          <ModalView style={{height: 200}}>
+            <ChooseTitle>Escolha com qual jogar</ChooseTitle>
+
+            <Buttons>
+              <ChooseButton onPress={() => handleSelect(true)}>
+                <ChooseText><Bold>X</Bold></ChooseText>
+              </ChooseButton>
+
+              <ChooseButton onPress={() => handleSelect(false)}>
+                <ChooseText><Bold>O</Bold></ChooseText>
+              </ChooseButton>
+            </Buttons>
           </ModalView>
         </CentredView>
       </Modal>

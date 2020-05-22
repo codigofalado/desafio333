@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: #000;
+  background-color: #860c4e;
   align-items: center;
   justify-content: center;
 `;
@@ -16,7 +16,7 @@ export const Title = styled.Text`
 export const TicTacToe = styled.View`
   width: 65%;
   height: 65%;
-  background-color: red;
+  background-color: #000;
 `;
 
 export const Line = styled.View`
@@ -25,7 +25,7 @@ export const Line = styled.View`
 `;
 
 export const MiddleLine = styled.View`
-  border: 1px solid yellow;
+  border: 5px solid #860c4e;
   border-left-width: 0;
   border-right-width: 0;
   flex: 0.5;
@@ -41,7 +41,7 @@ export const Cell = styled.TouchableOpacity`
 
 export const MiddleCell = styled.View`
   flex: 1;
-  border: 1px solid yellow;
+  border: 5px solid #860c4e;
   border-top-width: 0;
   border-bottom-width: 0;
 `;
@@ -98,5 +98,30 @@ export const ButtonText = styled.Text`
 
 export const Counter = styled.Text`
   text-align: right;
+  color: #fff;
+`;
+
+export const ChooseTitle = styled.Text`
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+`;
+
+export const Buttons = styled.View`
+  flex-direction: row;
+`;
+
+export const ChooseButton = styled.TouchableOpacity`
+  background: red;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  margin-right: 10px;
+`;
+
+export const ChooseText = styled.Text`
+  font-size: 30px;
   color: #fff;
 `;
