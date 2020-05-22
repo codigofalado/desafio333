@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { BackHandler } from 'react-native';
 
-import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, Counter, ChooseTitle, Buttons, ChooseButton, ChooseText } from './styles';
+import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, ChooseTitle, Buttons, ChooseButton, ChooseText, VelhaText, FlipText  } from './styles';
 
 var gameOver = false
 var matrix = ['','','','','','','','','']
@@ -10,6 +11,8 @@ function Game() {
   const [chance, setChance] = useState(true)
   const [modalVisible, setModalVisible] = useState(false)
   const [chooseModalVisible, setChooseModalVisible] = useState(true)
+  const [velhaModalVisible, setVelhaModalVisible] = useState(false)
+  const [coin, setCoin] = useState('')
 
   useEffect(() => {
     setChooseModalVisible(true)
@@ -99,6 +102,16 @@ function Game() {
       gameOver = true
     }
 
+    else {
+      let counter = 0
+      for (const cell of matrix) {
+        if (cell !== '') counter++
+      }
+      if (counter === 9) {
+        setVelhaModalVisible(true)
+      }
+    }
+
     if (gameOver){
       setModalVisible(state => !state)
     }
@@ -108,15 +121,26 @@ function Game() {
 
   function handleRestartGame() {
     matrix = ['','','','','','','','','']
-    gameOver = !gameOver
+    gameOver = false
     newGame += 1
-    setModalVisible(state => !state)
-    setChance(state => !state)
+    setModalVisible(false)
+    setVelhaModalVisible(false)
   }
 
   function handleSelect(symbol) {
     setChance(symbol)
     setChooseModalVisible(false)
+  }
+
+  function flipCoin() {
+      const number = Math.floor(Math.random() * 2)
+
+      if (number === 1) {
+        setCoin('O')
+      }
+      else {
+        setCoin('X')
+      }
   }
 
   return (
@@ -159,7 +183,7 @@ function Game() {
               <ButtonText>Jogar novamente</ButtonText>
             </ModalButton>
 
-            <ModalButton onPress={() => alert('Deve fechar o app')}>
+            <ModalButton onPress={() => BackHandler.exitApp()}>
               <ButtonText>Sair do jogo</ButtonText>
             </ModalButton>
           </ModalView>
@@ -188,7 +212,25 @@ function Game() {
         </CentredView>
       </Modal>
 
-      <Counter>N vitórias consecutivas</Counter>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={velhaModalVisible}
+      >
+        <CentredView>
+          <ModalView>
+            <VelhaText>Deu velha</VelhaText>
+            <ModalButton onPress={flipCoin}>
+              <ButtonText>Girar modeda</ButtonText>
+            </ModalButton>
+            <ModalButton onPress={handleRestartGame}>
+              <ButtonText>Jogar novamente</ButtonText>
+            </ModalButton>
+
+            <FlipText>{coin ? `O jogador ${coin} venceu` : '?'}</FlipText>
+          </ModalView>
+        </CentredView>
+      </Modal>
     </Container>
   )
 }

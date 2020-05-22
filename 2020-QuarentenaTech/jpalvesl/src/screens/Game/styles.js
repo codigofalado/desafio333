@@ -96,10 +96,6 @@ export const ButtonText = styled.Text`
   font-size: 20px;
 `;
 
-export const Counter = styled.Text`
-  text-align: right;
-  color: #fff;
-`;
 
 export const ChooseTitle = styled.Text`
   font-size: 24px;
@@ -125,3 +121,14 @@ export const ChooseText = styled.Text`
   font-size: 30px;
   color: #fff;
 `;
+
+export const VelhaText = styled.Text`
+  font-size: 20px;
+  color: #000;
+`;
+
+export const FlipText = styled.Text`
+  font-size: 16px;
+  color: #000;
+`;
+
