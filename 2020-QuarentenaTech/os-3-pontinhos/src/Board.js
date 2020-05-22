@@ -1,10 +1,20 @@
 class Board {
   constructor(sizes) {
+    this.sizes = sizes;
+
     this._nextPiece();
 
-    this.matrix = Array.from({ length: sizes.height }).map(() =>
-      Array.from({ length: sizes.width }).map(() => null)
+    this._initMatrix();
+  }
+
+  _initMatrix() {
+    this.matrix = Array.from({ length: this.sizes.height }).map(() =>
+      this._initLine()
     );
+  }
+
+  _initLine() {
+    return Array.from({ length: this.sizes.width }).map(() => null);
   }
 
   _nextPiece() {
@@ -19,17 +29,43 @@ class Board {
       this.matrix[y][x] = block;
     });
 
-    // this._checkCompleteLines();
+    this._checkCompleteLines();
+  }
+
+  _isLineFilled(line) {
+    for (let block of line) {
+      if (!block) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   _checkCompleteLines() {
-    this.matrix.forEach((line) => {
-      // check if the line is full of blocks
-      // save line index if true
-      // re init the line
+    const fullLineIndexes = [];
+
+    this.matrix.forEach((line, index) => {
+      if (this._isLineFilled(line)) {
+        fullLineIndexes.push(index);
+      }
     });
 
-    // Down blocks for the nummber of removed lines
+    const { length } = fullLineIndexes;
+
+    if (length) {
+      this.matrix.splice(fullLineIndexes[0], length);
+      fullLineIndexes.forEach(() => this.matrix.unshift(this._initLine()));
+
+      this.matrix.forEach((line, yIndex) =>
+        line.forEach((block, xIndex) => {
+          if (block) {
+            block.x = xIndex * BLOCK_SIZE;
+            block.y = yIndex * BLOCK_SIZE;
+          }
+        })
+      );
+    }
   }
 
   _checkCollision() {

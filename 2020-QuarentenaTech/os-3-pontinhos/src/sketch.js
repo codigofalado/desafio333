@@ -4,16 +4,6 @@ function gameSketch(p) {
   let pauseLock = false;
   let interval;
 
-  p.playPause = function () {
-    if (pauseLock) {
-      p.play();
-      pauseLock = false;
-    } else {
-      p.pause(interval);
-      pauseLock = true;
-    }
-  };
-
   p.setup = function () {
     p.createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
@@ -23,6 +13,16 @@ function gameSketch(p) {
     });
 
     p.playPause();
+  };
+
+  p.playPause = function () {
+    if (pauseLock) {
+      p.play();
+      pauseLock = false;
+    } else {
+      p.pause(interval);
+      pauseLock = true;
+    }
   };
 
   p.pause = function (interval) {
