@@ -1,4 +1,7 @@
-function q = SimulacaoJogoV3(player_inicio,espera)
+function q = SimulacaoJogoV4(player_inicio,espera,dificuldade)
+
+%% V4: usando leitura de csv vindo de ProximaJogada_full(dificuldade)  
+  
 %% V3: salva matrizes num array 3D
   
 %% V2: usa ProximaJogadaV3
@@ -14,18 +17,22 @@ function q = SimulacaoJogoV3(player_inicio,espera)
   cods = [];
   
   A1 = SorteiaMatrizInicial(player_inicio)
+  csvwrite('Tabuleiro.csv',A1);
   Saida = A1;
   pause(espera);
   A2 = A1;
 
   while length(A2)>1 && length(A1)>1
     Saida = cat(3,Saida,A1,A2);
-    A2 = ProximaJogadaV3(A1)
+    ProximaJogadaVfinal(dificuldade);
+    A2 = csvread('Tabuleiro.csv');
     load cod;
     cod
     cods = horzcat(cods,cod);
     pause(espera);
     A1 = SorteiaJogadaUsuario(A2)
+    Tabuleiro = A1;
+    csvwrite('Tabuleiro.csv',Tabuleiro);
     pause(espera);
   end
   

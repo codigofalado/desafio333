@@ -1,5 +1,5 @@
 function q = MedeDesempenho_IA_V2(N)
-  
+ %% N = qtd de jogos a simular 
  %% V2: usa SimulacaoJogoV3
   
  player = nro_natural_aleatorio(2);
@@ -12,11 +12,17 @@ function q = MedeDesempenho_IA_V2(N)
  
  deu_pau = 0;
  
+ MatrizCods = zeros(5,round(0.025*N)); %matriz com os códigos de saída das simulações nas quais user ganhou
+ 
+ Simulacoes = []; %array com todas as simulações nas quais user venceu, de todos os jogos
  
  for i = 1:N
    
-  resultado = SimulacaoJogo(player,0);  %simula um jogo
-   
+  Simulacao = SimulacaoJogoV3(player,0);  %simula um jogo
+  ultimo = size(Simulacao); ultimo = ultimo(length(ultimo));
+  resultado = testa_somas( Simulacao(:,:,ultimo) );
+  cont = 1; 
+  
   if length(resultado)==1
    
     if resultado==1
@@ -24,6 +30,14 @@ function q = MedeDesempenho_IA_V2(N)
     else
       if resultado==0
         user_ganhou = user_ganhou + 1;
+        Simulacoes = cat(4,Simulacoes,Simulacao); 
+        load cods;
+          if length(cods)==4
+            MatrizCods(2:5,cont) = cods';
+          else
+            MatrizCods(:,cont) = cods';
+          end
+        cont = cont + 1;
       else
         if resultado==-1
           deu_velha = deu_velha + 1;
@@ -39,6 +53,9 @@ function q = MedeDesempenho_IA_V2(N)
   end
 
  end 
+
+ save Simulacoes;
+ save MatrizCods;
  
  compu = 100*compu_ganhou/N ;
  user = 100*user_ganhou/N ;

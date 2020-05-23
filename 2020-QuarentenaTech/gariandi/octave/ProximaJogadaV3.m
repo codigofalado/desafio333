@@ -1,4 +1,4 @@
-function q = ProximaJogadaV3(A0);
+function q = ProximaJogadaV3(A0)
 %% V3: monitora q parte do algoritmo é usada salvando variável cod .
 %% cod de um dígito => Fim de jogo
 %% 2 dígitos começando com um =>  Defesa
@@ -44,8 +44,8 @@ function q = ProximaJogadaV3(A0);
       disp('Você venceu');
       A = 0; cod = 0; save cod;
    else 
-     k = find(A0==0); tem_zeros = ~isempty(k);
-     if ~tem_zeros
+     k = find(A0==0); n_tem_zeros = isempty(k);
+     if n_tem_zeros
         disp('Deu velha!');
         A = -1; cod = -1; save cod;
      else
