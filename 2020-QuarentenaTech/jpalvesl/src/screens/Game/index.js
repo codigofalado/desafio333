@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BackHandler } from 'react-native';
+import { Audio } from 'expo-av';
+
+import koSound from '../../sounds/ko.mp3';
+import failSound from '../../sounds/fail.mp3';
 
 import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, ChooseTitle, Buttons, ChooseButton, ChooseText, VelhaText, FlipText  } from './styles';
 
@@ -19,7 +23,7 @@ function Game() {
   }, [newGame])
 
 
-  function handlePlay(player, cell) {
+  async function handlePlay(player, cell) {
     if (matrix[cell] === 'X' || matrix[cell] === 'O' || gameOver) return;
 
     if (player) {
@@ -109,11 +113,26 @@ function Game() {
       }
       if (counter === 9) {
         setVelhaModalVisible(true)
+        let SoundObject = new Audio.Sound()
+        try {
+          await SoundObject.loadAsync(failSound)
+          await SoundObject.playAsync()
+        } catch (error) {
+          alert('Erro ao tocar failSong')
+        }
       }
     }
 
     if (gameOver){
       setModalVisible(state => !state)
+
+      let SoundObject = new Audio.Sound()
+      try {
+        await SoundObject.loadAsync(koSound)
+        await SoundObject.playAsync()
+      } catch (error) {
+        alert('Erro ao tocar KO')
+      }
     }
 
     setChance(state => !state)
@@ -125,6 +144,7 @@ function Game() {
     newGame += 1
     setModalVisible(false)
     setVelhaModalVisible(false)
+    setCoin('')
   }
 
   function handleSelect(symbol) {
