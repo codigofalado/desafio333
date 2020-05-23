@@ -1,13 +1,16 @@
 function q = MontaMatrizSoma(A0)
+  %% esta função monta as somas dos elementos relevantes em cada posição do tabuleiro
+  %% para localizar as regiões mais livres ou mais ocupadas
+  %% De modo a comparar equitativamente, normalizamos as somas aonde diagonais tomam parte.
   
   diag1 = trace(A0);
   diag2 = trace(flip(A0));
 
-  soma22 = sum(A0(2,:)) + sum(A0(:,2)) + diag1 + diag2; %somas com elemento central (1)
-  soma11 = sum(A0(1,:)) + sum(A0(:,1)) + diag1; %canto sup esq
-  soma13 = sum(A0(1,:)) + sum(A0(:,3)) + diag2; %canto sup dir
-  soma33 = sum(A0(3,:)) + sum(A0(:,3)) + diag1; %canto inf dir
-  soma31 = sum(A0(3,:)) + sum(A0(:,1)) + diag2; %canto inf esq
+  soma22 = ( sum(A0(2,:)) + sum(A0(:,2)) + diag1 + diag2 )*(2/4); %somas com elemento central (1)
+  soma11 = ( sum(A0(1,:)) + sum(A0(:,1)) + diag1 )*2/3; %canto sup esq
+  soma13 = ( sum(A0(1,:)) + sum(A0(:,3)) + diag2 )*2/3; %canto sup dir
+  soma33 = ( sum(A0(3,:)) + sum(A0(:,3)) + diag1 )*2/3; %canto inf dir
+  soma31 = ( sum(A0(3,:)) + sum(A0(:,1)) + diag2 )*2/3; %canto inf esq
  % soma2 = [soma11 soma13 soma33 soma31];
  % soma2 = min(soma2); %menor soma nos cantos
   %agora, as somas das pontas cruz central(3)

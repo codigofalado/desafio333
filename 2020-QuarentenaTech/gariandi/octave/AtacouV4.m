@@ -1,4 +1,10 @@
-function q = AtacouV3(A0)
+function q = AtacouV4(A0)
+%% V4: monitora q parte do algoritmo é usada salvando variável cod .
+%% cod de um dígito => Fim de jogo
+%% 2 dígitos começando com um =>  Defesa
+%% 4 digitos começando com dois ou três => Ataque
+  
+  cod = 2;
   
   A = A0;
   
@@ -13,9 +19,9 @@ function q = AtacouV3(A0)
   
   mods = mod(soma,0.3); 
    
-   i = find(mods==0);
+   i = find(mods==0);  tem_brecha = ~isempty(i);
 
-if ~isempty(i) %checar se pode completar aonde atacou antes
+if tem_brecha %checar se pode completar aonde atacou antes
    
    if length(i)>1
     i = find(soma==min(soma(i(:))));
@@ -54,23 +60,28 @@ if ~isempty(i) %checar se pode completar aonde atacou antes
       end
     end
   end            
-       
+    
+    cod = 10*cod + i ;  
 
     i = find(A0(range)==0);
     if length(i)>1
  %     i_ = find(Soma(i(:))==min(min(Soma))
       if Soma(i(1))<Soma(i(2))
-        i = i(1);
+        i = i(1);   
       else
         i = i(2);
       end
+      cod = 28 + i;  %% cods 29 ou 30
+    else
+      cod = 20;  %% cod 20
     end
   
     A(range(i)) = 0.3;
-
+    cod = 100*cod; 
+    save cod;
 else
-
-  A = Atacou(A);
+  cod = 200; save cod;
+  A = AtacouV1_2(A);
 
 end  
     
