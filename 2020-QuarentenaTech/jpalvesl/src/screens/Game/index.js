@@ -122,7 +122,8 @@ function Game() {
         }
       }
     }
-
+    setChance(state => !state)
+    
     if (gameOver){
       setModalVisible(state => !state)
 
@@ -134,8 +135,6 @@ function Game() {
         alert('Erro ao tocar KO')
       }
     }
-
-    setChance(state => !state)
   }
 
   function handleRestartGame() {
