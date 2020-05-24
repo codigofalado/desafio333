@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "jpalvesl",
-    "slug": "jpalvesl",
+    "name": "Jogo da velha",
+    "slug": "jogo-da-velha",
     "platforms": [
       "ios",
       "android",

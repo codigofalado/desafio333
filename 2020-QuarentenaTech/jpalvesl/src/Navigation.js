@@ -29,7 +29,7 @@ function Navigation() {
         />
         <Tab.Screen name="Credits" component={Credits} 
           options={{
-            title: 'Créditos',
+            title: 'Sobre',
             tabBarIcon: ({ color, size }) => (<Ionicons name="ios-person" color={color} size={size} />),
           }}
         />
