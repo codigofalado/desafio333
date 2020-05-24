@@ -1,10 +1,9 @@
 class Board {
   constructor(sizes) {
     this.sizes = sizes;
-    this._fistLineWithoutBocks = 20;
 
-    this._nextPiece();
     this._initMatrix();
+    this._nextPiece();
   }
 
   _initLine() {
@@ -21,6 +20,8 @@ class Board {
     const model = MODELS[0]; // random(MODELS));
     this.currentPiece = new Piece(model);
     this.phantomPiece = new Piece(model);
+
+    this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
   }
 
   _addCurrentPiece() {
@@ -101,22 +102,19 @@ class Board {
     }
   }
 
-  _findFirstLineWithoutBlock() {
+  _findFirstLineWithoutBlocks() {
     const { x, y, height, width } = this.currentPiece;
 
     const initalLine = y / BLOCK_SIZE + height;
     const initialColumn = x / BLOCK_SIZE;
 
     for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
-      const line = this.matrix[yIndex];
+      const line = this.matrix[yIndex].slice(
+        initialColumn,
+        initialColumn + width
+      );
 
-      for (
-        let xIndex = initialColumn;
-        xIndex < initialColumn + width;
-        xIndex += 1
-      ) {
-        const block = line[xIndex];
-
+      for (let block of line) {
         if (block) {
           return yIndex;
         }
@@ -130,7 +128,7 @@ class Board {
     this.currentPiece.forBlock(({ block, lineIndex }) => {
       const x = block.x;
       const y =
-        (this._fistLineWithoutBocks - this.currentPiece.height + lineIndex) *
+        (this._fistLineWithoutBlocks - this.currentPiece.height + lineIndex) *
         BLOCK_SIZE;
 
       fill(255, 255, 255, 50);
@@ -151,7 +149,6 @@ class Board {
 
   update() {
     this.currentPiece.gravity();
-    this._fistLineWithoutBocks = this._findFirstLineWithoutBlock();
 
     if (this._checkCollision() || this.currentPiece.checkBottomEdge()) {
       this._addCurrentPiece();
@@ -166,6 +163,7 @@ class Board {
       moviment();
     }
 
+    this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
     return !!moviment;
   }
 }

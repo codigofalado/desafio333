@@ -12,7 +12,7 @@ function setup() {
 
   interval = setInterval(() => {
     board.update();
-  }, TIME_INTERVAL * 0.5);
+  }, TIME_INTERVAL * 0.1);
 }
 
 function stop() {
