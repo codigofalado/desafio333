@@ -64,6 +64,10 @@ function sideBar(p) {
 
   let state = 0;
 
+  let difficulty = "fácil";
+  let grid = true;
+  let ghostPiece = true;
+
   p.setup = function () {
     p.createCanvas(MENU_X, MENU_Y);
 
@@ -133,6 +137,66 @@ function sideBar(p) {
       text1: "Points",
       text2: "100000000000000000000",
     });
+
+    //Config menu buttons
+    changeDifficultyButton = new Clickable({
+      x: MENU_X / 2 - buttonWidth / 2,
+      y: MENU_Y / 2 - buttonHeight / 2 - 50,
+      width: buttonWidth,
+      height: buttonHeight / 2,
+      text: `Dificuldade: ${difficulty}`,
+    });
+    changeDifficultyButton.onPress = function () {
+      console.log(difficulty);
+      if (difficulty === "fácil") {
+        difficulty = "médio";
+        changeDifficultyButton.text = `Dificuldade: ${difficulty}`;
+      } else if (difficulty === "médio") {
+        difficulty = "difícil";
+        changeDifficultyButton.text = `Dificuldade: ${difficulty}`;
+      } else if (difficulty === "difícil") {
+        difficulty = "fácil";
+        changeDifficultyButton.text = `Dificuldade: ${difficulty}`;
+      }
+    };
+
+    changeGhostPieceButton = new Clickable({
+      x: MENU_X / 2 - buttonWidth / 2,
+      y: MENU_Y / 2 - buttonHeight / 2,
+      width: buttonWidth,
+      height: buttonHeight / 2,
+      text: `GhostPiece: ${ghostPiece ? "on" : "off"}`,
+    });
+    changeGhostPieceButton.onPress = function () {
+      if (ghostPiece) {
+        ghostPiece = false;
+        changeGhostPieceButton.text = `GhostPiece: ${
+          ghostPiece ? "on" : "off"
+        }`;
+      } else {
+        ghostPiece = true;
+        changeGhostPieceButton.text = `GhostPiece: ${
+          ghostPiece ? "on" : "off"
+        }`;
+      }
+    };
+
+    changeGridButton = new Clickable({
+      x: MENU_X / 2 - buttonWidth / 2,
+      y: MENU_Y / 2 - buttonHeight / 2 + 50,
+      width: buttonWidth,
+      height: buttonHeight / 2,
+      text: `Grid: ${grid ? "on" : "off"}`,
+    });
+    changeGridButton.onPress = function () {
+      if (grid) {
+        grid = false;
+        changeGridButton.text = `Grid: ${grid ? "on" : "off"}`;
+      } else {
+        grid = true;
+        changeGridButton.text = `Grid: ${grid ? "on" : "off"}`;
+      }
+    };
   };
 
   p.draw = function () {
@@ -163,6 +227,15 @@ function sideBar(p) {
     }
     //Configurations state
     if (state === 2) {
+      //change difficulty
+      changeDifficultyButton.draw();
+
+      //turn on/off ghost piece
+      changeGhostPieceButton.draw();
+
+      //turn on/off grid
+      changeGridButton.draw();
+
       returnButton.draw();
     }
     //Help state
