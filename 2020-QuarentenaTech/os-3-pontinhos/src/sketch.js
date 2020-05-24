@@ -111,6 +111,28 @@ function sideBar(p) {
     returnButton.onPress = function () {
       state = 0;
     };
+
+    //In game menu infobox
+    difficultyBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 100,
+      text1: "Difficulty",
+      text2: "Hard",
+    });
+
+    levelBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 100 + 100,
+      text1: "Nivel",
+      text2: "2",
+    });
+
+    pointBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 100 + 200,
+      text1: "Points",
+      text2: "100000000000000000000",
+    });
   };
 
   p.draw = function () {
@@ -127,10 +149,13 @@ function sideBar(p) {
       //Game starts
 
       // Show difficulty
+      difficultyBox.show();
 
       //Show level
+      levelBox.show();
 
       //Show points
+      pointBox.show();
 
       ///Show next piece
 
