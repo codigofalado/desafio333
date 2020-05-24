@@ -103,7 +103,9 @@ function sideBar(p) {
       y: 20,
       width: 50,
       height: 30,
+      color: "#D2D2D2",
       text: "Return",
+      strokeWeight: 0,
     });
 
     playButton.onPress = function () {
@@ -229,6 +231,8 @@ function sideBar(p) {
       text1: "Play and Pause",
       text2: `Pressione 'q' para pausar ou despausar o jogo`,
     });
+
+    piece = new Piece(p.random(MODELS));
   };
 
   p.draw = function () {
@@ -244,6 +248,11 @@ function sideBar(p) {
     if (state === 1) {
       //Game starts
 
+      //Show next piece
+
+      p.fill(210);
+      p.rect(p.width / 2 - (p.width * 0.8) / 2, 100, p.width * 0.8, 200);
+
       // Show difficulty
       difficultyBox.show();
 
@@ -252,8 +261,6 @@ function sideBar(p) {
 
       //Show points
       pointBox.show();
-
-      ///Show next piece
 
       returnButton.draw();
     }
