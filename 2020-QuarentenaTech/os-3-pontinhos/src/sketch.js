@@ -74,20 +74,29 @@ function sideBar(p) {
     playButton = new Clickable({
       x: MENU_X / 2 - buttonWidth / 2,
       y: MENU_Y / 2 - buttonHeight / 2 - 125 + 100,
-      text: "Jogar",
+      textColor: "#ffff",
       textSize: 48,
+      text: "Jogar",
+      color: "#2a2a2a",
+      strokeWeight: 0,
     });
     settingsButton = new Clickable({
       x: MENU_X / 2 - buttonWidth / 2,
       y: MENU_Y / 2 - buttonHeight / 2 + 100,
-      text: "Configurações",
+      textColor: "#ffff",
       textSize: 29,
+      text: "Configurações",
+      color: "#2a2a2a",
+      strokeWeight: 0,
     });
     helpButton = new Clickable({
       x: MENU_X / 2 - buttonWidth / 2,
       y: MENU_Y / 2 - buttonHeight / 2 + 125 + 100,
-      text: "Ajuda",
+      textColor: "#ffff",
       textSize: 48,
+      text: "Ajuda",
+      color: "#2a2a2a",
+      strokeWeight: 0,
     });
     returnButton = new Clickable({
       x: 20,
@@ -119,32 +128,33 @@ function sideBar(p) {
     //In game menu infobox
     difficultyBox = new infoBox({
       x: p.width / 2 - (p.width * 0.8) / 2,
-      y: 100,
+      y: 400,
       text1: "Difficulty",
       text2: "Hard",
     });
 
     levelBox = new infoBox({
       x: p.width / 2 - (p.width * 0.8) / 2,
-      y: 100 + 100,
+      y: 400 + 100,
       text1: "Nivel",
       text2: "2",
     });
 
     pointBox = new infoBox({
       x: p.width / 2 - (p.width * 0.8) / 2,
-      y: 100 + 200,
+      y: 400 + 200,
       text1: "Points",
       text2: "100000000000000000000",
     });
 
     //Config menu buttons
     changeDifficultyButton = new Clickable({
-      x: MENU_X / 2 - buttonWidth / 2,
-      y: MENU_Y / 2 - buttonHeight / 2 - 50,
-      width: buttonWidth,
+      x: MENU_X / 2 - (buttonWidth * 0.8) / 2,
+      y: MENU_Y / 2 - buttonHeight / 2 - 55,
+      width: buttonWidth * 0.8,
       height: buttonHeight / 2,
       text: `Dificuldade: ${difficulty}`,
+      textSize: 16,
     });
     changeDifficultyButton.onPress = function () {
       console.log(difficulty);
@@ -161,11 +171,12 @@ function sideBar(p) {
     };
 
     changeGhostPieceButton = new Clickable({
-      x: MENU_X / 2 - buttonWidth / 2,
+      x: MENU_X / 2 - (buttonWidth * 0.8) / 2,
       y: MENU_Y / 2 - buttonHeight / 2,
-      width: buttonWidth,
+      width: buttonWidth * 0.8,
       height: buttonHeight / 2,
       text: `GhostPiece: ${ghostPiece ? "on" : "off"}`,
+      textSize: 16,
     });
     changeGhostPieceButton.onPress = function () {
       if (ghostPiece) {
@@ -182,11 +193,12 @@ function sideBar(p) {
     };
 
     changeGridButton = new Clickable({
-      x: MENU_X / 2 - buttonWidth / 2,
-      y: MENU_Y / 2 - buttonHeight / 2 + 50,
-      width: buttonWidth,
+      x: MENU_X / 2 - (buttonWidth * 0.8) / 2,
+      y: MENU_Y / 2 - buttonHeight / 2 + 55,
+      width: buttonWidth * 0.8,
       height: buttonHeight / 2,
       text: `Grid: ${grid ? "on" : "off"}`,
+      textSize: 16,
     });
     changeGridButton.onPress = function () {
       if (grid) {
