@@ -23,7 +23,7 @@ class infoBox {
       x: this.x,
       y: this.y + 30,
       width: this.width,
-      height: this.height,
+      height: this.height + 20,
       text: this.text2,
       cornerRadius: 0,
       color: "#D2D2D2",

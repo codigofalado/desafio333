@@ -197,6 +197,26 @@ function sideBar(p) {
         changeGridButton.text = `Grid: ${grid ? "on" : "off"}`;
       }
     };
+
+    //Help menu
+    movementBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 100,
+      text1: "Teclas de Movimento",
+      text2: "Pressione as setas esquerda e direita para movimentar a peça.",
+    });
+    rotationBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 200,
+      text1: "Rotacionar a peça",
+      text2: `Pressione 'a', 's' ou seta pra cima para movimentar a peça`,
+    });
+    pauseBox = new infoBox({
+      x: p.width / 2 - (p.width * 0.8) / 2,
+      y: 300,
+      text1: "Play and Pause",
+      text2: `Pressione 'q' para pausar ou despausar o jogo`,
+    });
   };
 
   p.draw = function () {
@@ -240,6 +260,10 @@ function sideBar(p) {
     }
     //Help state
     if (state === 3) {
+      movementBox.show();
+      rotationBox.show();
+      pauseBox.show();
+
       returnButton.draw();
     }
   };
