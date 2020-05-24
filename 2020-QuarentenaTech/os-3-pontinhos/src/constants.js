@@ -4,6 +4,9 @@ const BOARD_Y = 20;
 const BLOCK_SIZE = 40;
 const TIME_INTERVAL = 1000;
 
+const MENU_X = 200;
+const MENU_Y = BOARD_Y * BLOCK_SIZE;
+
 const I_MODEL = {
   shape: [[1, 1, 1, 1]],
   color: "#00ADEE",
