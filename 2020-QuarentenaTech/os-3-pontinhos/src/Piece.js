@@ -17,7 +17,7 @@ class Piece {
     },
   };
 
-  constructor({ shape, color, ...size }) {
+  constructor({ shape, color, ...size } = {}) {
     this.x = width / 2 - BLOCK_SIZE;
     this.y = 0;
 
@@ -91,7 +91,7 @@ class Piece {
       block.moveHorizontally(direction);
     });
   }
-  
+
   gravity() {
     this.y += BLOCK_SIZE;
     this.forBlock(({ block }) => block.gravity());

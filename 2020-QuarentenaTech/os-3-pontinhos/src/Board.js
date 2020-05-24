@@ -1,9 +1,9 @@
 class Board {
   constructor(sizes) {
     this.sizes = sizes;
+    this._fistLineWithoutBocks = 20;
 
     this._nextPiece();
-
     this._initMatrix();
   }
 
@@ -18,7 +18,9 @@ class Board {
   }
 
   _nextPiece() {
-    this.currentPiece = new Piece(MODELS[0]); // random(MODELS));
+    const model = MODELS[0]; // random(MODELS));
+    this.currentPiece = new Piece(model);
+    this.phantomPiece = new Piece(model);
   }
 
   _addCurrentPiece() {
@@ -99,6 +101,43 @@ class Board {
     }
   }
 
+  _findFirstLineWithoutBlock() {
+    const { x, y, height, width } = this.currentPiece;
+
+    const initalLine = y / BLOCK_SIZE + height;
+    const initialColumn = x / BLOCK_SIZE;
+
+    for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
+      const line = this.matrix[yIndex];
+
+      for (
+        let xIndex = initialColumn;
+        xIndex < initialColumn + width;
+        xIndex += 1
+      ) {
+        const block = line[xIndex];
+
+        if (block) {
+          return yIndex;
+        }
+      }
+    }
+
+    return this.sizes.height;
+  }
+
+  _showPhantomPiece() {
+    this.currentPiece.forBlock(({ block, lineIndex }) => {
+      const x = block.x;
+      const y =
+        (this._fistLineWithoutBocks - this.currentPiece.height + lineIndex) *
+        BLOCK_SIZE;
+
+      fill(255, 255, 255, 50);
+      rect(x, y, BLOCK_SIZE, BLOCK_SIZE);
+    });
+  }
+
   show() {
     this._drawBackground();
 
@@ -107,14 +146,15 @@ class Board {
     });
 
     this.currentPiece.show();
+    this._showPhantomPiece();
   }
 
   update() {
     this.currentPiece.gravity();
+    this._fistLineWithoutBocks = this._findFirstLineWithoutBlock();
 
     if (this._checkCollision() || this.currentPiece.checkBottomEdge()) {
       this._addCurrentPiece();
-
       this._nextPiece();
     }
   }
