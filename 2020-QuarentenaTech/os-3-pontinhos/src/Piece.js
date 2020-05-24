@@ -92,6 +92,13 @@ class Piece {
     });
   }
 
+  dropTo(yPosition) {
+    const y = (yPosition - this.height) * BLOCK_SIZE;
+    
+    this.y = y;
+    this.updateBlocksPosition();
+  }
+
   gravity() {
     this.y += BLOCK_SIZE;
     this.forBlock(({ block }) => block.gravity());
@@ -108,7 +115,7 @@ class Piece {
     this.blocks = newMatrix;
 
     this.updateBlocksPosition();
-    
+
     this.checkPieceInBoard();
   }
 

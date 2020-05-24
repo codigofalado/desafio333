@@ -1,4 +1,8 @@
 class Board {
+  moviments = {
+    d: () => this._hardDrop(),
+  };
+
   constructor(sizes) {
     this.sizes = sizes;
 
@@ -156,8 +160,20 @@ class Board {
     }
   }
 
+  _hardDrop() {
+    this.currentPiece.dropTo(this._fistLineWithoutBlocks);
+
+    this._addCurrentPiece();
+    this._nextPiece();
+  }
+
   movePiece(key) {
-    const moviment = this.currentPiece.moviments[key];
+    const moviments = {
+      ...this.currentPiece.moviments,
+      ...this.moviments,
+    }
+
+    const moviment = moviments[key];
 
     if (moviment) {
       moviment();
