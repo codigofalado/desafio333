@@ -15,10 +15,13 @@ class Piece {
     s: () => {
       this.rotateAntiClockwise();
     },
+    q: () => {
+      game.playPause();
+    },
   };
 
-  constructor({ shape, color, ...size } = {}) {
-    this.x = width / 2 - BLOCK_SIZE;
+  constructor({ shape, color, ...size }) {
+    this.x = game.width / 2 - BLOCK_SIZE;
     this.y = 0;
 
     this.width = size.width;
@@ -94,7 +97,7 @@ class Piece {
 
   dropTo(yPosition) {
     const y = (yPosition - this.height) * BLOCK_SIZE;
-    
+
     this.y = y;
     this.updateBlocksPosition();
   }
@@ -126,22 +129,27 @@ class Piece {
     }
   }
 
+  gravity() {
+    this.y += BLOCK_SIZE;
+    this.forBlock(({ block }) => block.gravity());
+  }
+
   checkSideEdges(direction) {
     const leftEdge = direction === -1 && this.x === 0;
 
     const rightEdge =
-      direction === 1 && this.x + this.width * BLOCK_SIZE === width;
+      direction === 1 && this.x + this.width * BLOCK_SIZE === game.width;
 
     return leftEdge || rightEdge;
   }
 
   // TODO: For refactor later
   checkPieceInBoard() {
-    if (this.x + this.width * BLOCK_SIZE > width) {
+    if (this.x + this.width * BLOCK_SIZE > game.width) {
       this.moveHorizontally(-1);
-      if (this.x + this.width * BLOCK_SIZE > width) {
+      if (this.x + this.width * BLOCK_SIZE > game.width) {
         this.moveHorizontally(-1);
-        if (this.x + this.width * BLOCK_SIZE > width) {
+        if (this.x + this.width * BLOCK_SIZE > game.width) {
           this.moveHorizontally(-1);
         }
       }
@@ -149,16 +157,16 @@ class Piece {
   }
 
   checkBottomEdge() {
-    return this.y + this.height * BLOCK_SIZE === height;
+    return this.y + this.height * BLOCK_SIZE === game.height;
   }
 
   show() {
     this.forBlock(({ block }) => block.show());
 
-    circle(this.x, this.y, 10);
-    circle(this.x + this.width * BLOCK_SIZE, this.y, 10);
-    circle(this.x, this.y + this.height * BLOCK_SIZE, 10);
-    circle(
+    game.circle(this.x, this.y, 10);
+    game.circle(this.x + this.width * BLOCK_SIZE, this.y, 10);
+    game.circle(this.x, this.y + this.height * BLOCK_SIZE, 10);
+    game.circle(
       this.x + this.width * BLOCK_SIZE,
       this.y + this.height * BLOCK_SIZE,
       10

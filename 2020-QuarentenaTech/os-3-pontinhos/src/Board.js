@@ -93,15 +93,15 @@ class Board {
   _drawBackground() {
     let [x, y] = [0, 0];
 
-    background(50);
+    game.background(50);
 
-    while (x < width) {
-      line(x, 0, x, height);
+    while (x < game.width) {
+      game.line(x, 0, x, game.height);
       x += BLOCK_SIZE;
     }
 
-    while (y < height) {
-      line(0, y, width, y);
+    while (y < game.height) {
+      game.line(0, y, game.width, y);
       y += BLOCK_SIZE;
     }
   }
@@ -135,8 +135,8 @@ class Board {
         (this._fistLineWithoutBlocks - this.currentPiece.height + lineIndex) *
         BLOCK_SIZE;
 
-      fill(255, 255, 255, 50);
-      rect(x, y, BLOCK_SIZE, BLOCK_SIZE);
+      game.fill(255, 255, 255, 50);
+      game.rect(x, y, BLOCK_SIZE, BLOCK_SIZE);
     });
   }
 
@@ -171,7 +171,7 @@ class Board {
     const moviments = {
       ...this.currentPiece.moviments,
       ...this.moviments,
-    }
+    };
 
     const moviment = moviments[key];
 

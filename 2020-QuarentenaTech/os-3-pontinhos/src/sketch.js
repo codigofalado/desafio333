@@ -1,35 +1,59 @@
-let board;
-let lastKeyPressed;
-let interval;
+function gameSketch(p) {
+  let board;
+  let lastKeyPressed;
+  let pauseLock = false;
+  let interval;
 
-function setup() {
-  createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
+  p.setup = function () {
+    p.createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
 
-  board = new Board({
-    width: BOARD_X,
-    height: BOARD_Y,
-  });
+    board = new Board({
+      width: BOARD_X,
+      height: BOARD_Y,
+    });
 
-  interval = setInterval(() => {
-    board.update();
-  }, TIME_INTERVAL * 1);
+    p.playPause();
+  };
+
+  p.playPause = function () {
+    if (pauseLock) {
+      console.log("play game");
+      p.play();
+      pauseLock = false;
+    } else {
+      console.log("pause game");
+      p.pause(interval);
+      pauseLock = true;
+    }
+  };
+
+  p.pause = function (interval) {
+    clearInterval(interval);
+    p.noLoop();
+  };
+
+  p.play = function () {
+    interval = setInterval(() => {
+      board.update();
+    }, TIME_INTERVAL);
+    p.loop();
+
+    return interval;
+  };
+
+  p.draw = function () {
+    board.show();
+  };
+
+  p.keyPressed = function () {
+    // if(keyIsDown(lastKeyPressed)) moviments[key]();
+
+    const moved = board.movePiece(p.key);
+
+    if (moved) {
+      lastKeyPressed = p.key;
+    }
+  };
 }
 
-function stop() {
-  clearInterval(interval);
-}
-
-function draw() {
-  board.show();
-}
-
-function keyPressed() {
-  // if(keyIsDown(lastKeyPressed)) moviments[key]();
-
-  const moved = board.movePiece(key);
-
-  if (moved) {
-    lastKeyPressed = key;
-  }
-}
-
+let game = new p5(gameSketch);
