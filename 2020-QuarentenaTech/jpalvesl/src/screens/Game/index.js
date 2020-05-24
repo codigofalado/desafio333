@@ -5,7 +5,7 @@ import { Audio } from 'expo-av';
 import koSound from '../../sounds/ko.mp3';
 import failSound from '../../sounds/fail.mp3';
 
-import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView, ChooseTitle, Buttons, ChooseButton, ChooseText, VelhaText, FlipText  } from './styles';
+import { Container, Title, TicTacToe, Line, MiddleLine, Cell, MiddleCell, Text, Modal, ModalView, WinnerText, Bold, ModalButton, ButtonText, CentredView,CentredBlurView, ChooseTitle, Buttons, ChooseButton, ChooseText, VelhaText, FlipText  } from './styles';
 
 var gameOver = false
 var matrix = ['','','','','','','','','']
@@ -196,7 +196,7 @@ function Game() {
         transparent={true}
         visible={modalVisible}
       >
-        <CentredView>
+        <CentredBlurView intensity={100} tint="dark">
           <ModalView>
             <WinnerText>O jogador <Bold>{chance ? 'O' : 'X' }</Bold> venceu!</WinnerText>
             <ModalButton onPress={handleRestartGame}>
@@ -207,7 +207,7 @@ function Game() {
               <ButtonText>Sair do jogo</ButtonText>
             </ModalButton>
           </ModalView>
-        </CentredView>
+        </CentredBlurView>
       </Modal>
 
       <Modal
@@ -237,7 +237,7 @@ function Game() {
         transparent={true}
         visible={velhaModalVisible}
       >
-        <CentredView>
+        <CentredBlurView intensity={100} tint="dark">
           <ModalView>
             <VelhaText>Deu velha</VelhaText>
             <ModalButton onPress={flipCoin}>
@@ -249,7 +249,7 @@ function Game() {
 
             <FlipText>{coin ? `O jogador ${coin} venceu` : '?'}</FlipText>
           </ModalView>
-        </CentredView>
+        </CentredBlurView>
       </Modal>
     </Container>
   )

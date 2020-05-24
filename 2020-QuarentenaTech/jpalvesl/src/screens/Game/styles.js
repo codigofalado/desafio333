@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { BlurView } from 'expo-blur';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -60,6 +61,14 @@ export const CentredView = styled.View`
   align-items: center;
   margin-top: 22px;
 `;
+
+export const CentredBlurView = styled(BlurView)`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+`;
+
 
 export const ModalView = styled.View`
   background-color: #fff;
