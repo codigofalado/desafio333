@@ -22,7 +22,7 @@ class Board {
   }
 
   _nextPiece() {
-    const model = MODELS[0]; // random(MODELS));
+    const model = MODELS[0]; // game.random(MODELS);
     this.currentPiece = new Piece(model);
     this.phantomPiece = new Piece(model);
 
@@ -89,6 +89,7 @@ class Board {
     });
 
     const { length } = fullLineIndexes;
+    this._addPoints(length - 1);
 
     if (length) {
       this.matrix.splice(fullLineIndexes[0], length);
@@ -146,6 +147,15 @@ class Board {
       game.fill(255, 255, 255, 50);
       game.rect(x, y, BLOCK_SIZE, BLOCK_SIZE);
     });
+  }
+
+  qtyPoints = [40, 100, 300, 1200];
+
+  _addPoints(multiplier) {
+    if (multiplier >= 0) {
+      let point = this.qtyPoints[multiplier];
+      game.points += point;
+    }
   }
 
   show() {
