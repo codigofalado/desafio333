@@ -1,4 +1,7 @@
 export default {
+  sizes: {
+    maxWidth: '1170px',
+  },
   colors: {
     active: '#EB4960',
     background: '#27363B',

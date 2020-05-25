@@ -30,7 +30,7 @@ export const Container = styled.main`
   }
 
   li {
-    padding: 16px;
+    padding: 16px 0;
     overflow: hidden;
 
     a {

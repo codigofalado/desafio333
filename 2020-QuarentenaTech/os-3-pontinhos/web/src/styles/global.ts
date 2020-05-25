@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { rem } from 'polished';
 
 export default createGlobalStyle`
   * {
@@ -12,17 +11,20 @@ export default createGlobalStyle`
   input,
   button,
   a {
-    font: ${rem('24px')} 'VT323', monospace;
+    font-family: 'VT323', monospace;
     color: ${({ theme }) => theme.colors.primaryText};
   }
 
   h1,
-  h2 {
+  h2,
+  strong {
     letter-spacing: 0.05em;
+    font-weight: 400;
   }
 
   body {
     background: ${({ theme }) => theme.colors.background};
+    -webkit-font-smoothing: antialiased;
   }
 
   strong {

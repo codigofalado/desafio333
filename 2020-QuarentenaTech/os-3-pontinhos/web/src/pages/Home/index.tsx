@@ -15,10 +15,10 @@ const Home: React.FC = () => {
             <Link to="/play">Jogar</Link>
           </li>
           <li>
-            <Link to="config">Configurações</Link>
+            <Link to="/config">Configurações</Link>
           </li>
           <li>
-            <Link to="rules">Ajuda</Link>
+            <Link to="/ajuda">Ajuda</Link>
           </li>
         </ul>
       </nav>

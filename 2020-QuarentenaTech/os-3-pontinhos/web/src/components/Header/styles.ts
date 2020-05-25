@@ -3,15 +3,15 @@ import { rem } from 'polished';
 
 export const Container = styled.header`
   background: ${({ theme }) => theme.colors.backgroundDark};
-  padding: 40px 32px;
-
   div {
     display: flex;
     align-items: center;
 
     width: 100%;
     max-width: ${({ theme }) => theme.sizes.maxWidth};
+
     margin: 0 auto;
+    padding: 40px 32px;
   }
 
   a,
