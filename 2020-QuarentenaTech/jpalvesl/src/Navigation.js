@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
 
 import Game from './screens/Game';
-import Credits from './screens/Credits';
+import CreditsStack from './stacks/CreditsStack';
 
 function Navigation() {
   return (
@@ -27,7 +27,7 @@ function Navigation() {
             tabBarIcon: ({ color, size }) => (<Ionicons name="logo-game-controller-a" color={color} size={size} />),
           }}
         />
-        <Tab.Screen name="Credits" component={Credits} 
+        <Tab.Screen name="CreditsStack" component={CreditsStack} 
           options={{
             title: 'Sobre',
             tabBarIcon: ({ color, size }) => (<Ionicons name="ios-person" color={color} size={size} />),

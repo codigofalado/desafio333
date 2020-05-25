@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Zocial, Entypo } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -9,6 +10,8 @@ import info from '../../assets/personal.json';
 import avatar from '../../assets/avatar.jpeg';
 
 function Credits() {
+  const navigation = useNavigation();
+
   return (
     <Container>
       <Wrapper>
@@ -34,12 +37,12 @@ function Credits() {
           </InformationText>
 
           <SocialContent>
-            <SocialItem>
+            <SocialItem onPress={() => navigation.push('Social', { socialMedia: 'https://github.com/jpalvesl' })}>
               <Zocial name="github" size={24} color="white" />
               <SocialText>Github</SocialText>
             </SocialItem>
 
-            <SocialItem>
+            <SocialItem onPress={() => navigation.push('Social', { socialMedia: 'https://twitter.com/jpalvesl' })}>
               <Zocial name="twitter" size={24} color="white" />
               <SocialText>Twitter</SocialText>
             </SocialItem>
