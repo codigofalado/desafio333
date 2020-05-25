@@ -22,7 +22,13 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "import-helpers"
+  ],
   "rules": {
     "prettier/prettier": "error",
 
@@ -55,6 +61,24 @@
       {
         "ts": "never",
         "tsx": "never"
+      }
+    ],
+
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^(react|styled-components)/",
+          "module",
+          "/^./components/",
+          "/^./hooks/",
+          "/^./pages/",
+          ["parent", "sibling", "index"],
+          "/^./assets/",
+          "/^./styles/"
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   },
