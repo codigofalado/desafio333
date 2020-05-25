@@ -4,8 +4,7 @@
     "slug": "jogo-da-velha",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +12,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#860c4e"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +21,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gmail.jpalvesl"
+    },
+    "android": {
+      "package": "com.gmail.jpalvesl.jogodavelha"
     }
   }
 }
