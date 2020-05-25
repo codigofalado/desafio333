@@ -1,10 +1,30 @@
 import { createGlobalStyle } from 'styled-components';
+import { opacify } from 'polished';
 
 export default createGlobalStyle`
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => opacify(-0.4, theme.colors.secondaryText)};
+    transition: 0.3s;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.secondaryText};
+    }
+  }
+
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    &::selection {
+      background-color: ${({ theme }) => opacify(-0.4, theme.colors.active)};
+      color: white;
+    }
   }
 
   body,

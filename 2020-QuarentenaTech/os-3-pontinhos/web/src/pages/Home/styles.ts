@@ -44,12 +44,12 @@ export const Container = styled.main`
         left: 0;
         bottom: 0;
 
-        height: 8px;
+        height: 6px;
         width: 100%;
 
         background: ${({ theme }) => theme.colors.secondaryText};
 
-        transform: translateY(100%) translateZ(0);
+        transform: translateY(106%) translateZ(0);
         transition: transform 0.3s;
       }
 
