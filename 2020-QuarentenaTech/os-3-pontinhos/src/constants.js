@@ -1,3 +1,8 @@
+const KEY_A = 65;
+const KEY_S = 83;
+const KEY_D = 68;
+const KEY_Q = 81;
+
 const BOARD_X = 10;
 const BOARD_Y = 20;
 

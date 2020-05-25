@@ -1,6 +1,7 @@
 class Board {
   moviments = {
-    d: () => this._hardDrop(),
+    [KEY_D]: () => this._hardDrop(),
+    [KEY_Q]: () => game.playPause(),
   };
 
   constructor(sizes) {
@@ -47,6 +48,35 @@ class Board {
     }
 
     return true;
+  }
+
+  _findFirstLineWithoutBlocks() {
+    const { x, y, height, width } = this.currentPiece;
+
+    const initalLine = y / BLOCK_SIZE + height;
+    const initialColumn = x / BLOCK_SIZE;
+
+    for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
+      const line = this.matrix[yIndex].slice(
+        initialColumn,
+        initialColumn + width
+      );
+
+      for (let block of line) {
+        if (block) {
+          return yIndex;
+        }
+      }
+    }
+
+    return this.sizes.height;
+  }
+
+  _hardDrop() {
+    this.currentPiece.dropTo(this._fistLineWithoutBlocks);
+
+    this._addCurrentPiece();
+    this._nextPiece();
   }
 
   _checkCompleteLines() {
@@ -106,28 +136,6 @@ class Board {
     }
   }
 
-  _findFirstLineWithoutBlocks() {
-    const { x, y, height, width } = this.currentPiece;
-
-    const initalLine = y / BLOCK_SIZE + height;
-    const initialColumn = x / BLOCK_SIZE;
-
-    for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
-      const line = this.matrix[yIndex].slice(
-        initialColumn,
-        initialColumn + width
-      );
-
-      for (let block of line) {
-        if (block) {
-          return yIndex;
-        }
-      }
-    }
-
-    return this.sizes.height;
-  }
-
   _showPhantomPiece() {
     this.currentPiece.forBlock(({ block, lineIndex }) => {
       const x = block.x;
@@ -158,13 +166,6 @@ class Board {
       this._addCurrentPiece();
       this._nextPiece();
     }
-  }
-
-  _hardDrop() {
-    this.currentPiece.dropTo(this._fistLineWithoutBlocks);
-
-    this._addCurrentPiece();
-    this._nextPiece();
   }
 
   movePiece(key) {

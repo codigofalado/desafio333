@@ -1,22 +1,19 @@
 class Piece {
   moviments = {
-    ArrowLeft: () => {
+    [game.LEFT_ARROW]: () => {
       this.moveHorizontally(-1);
     },
-    ArrowRight: () => {
+    [game.RIGHT_ARROW]: () => {
       this.moveHorizontally();
     },
-    ArrowUp: () => {
+    [game.UP_ARROW]: () => {
       this.rotateClockwise();
     },
-    a: () => {
+    [KEY_A]: () => {
       this.rotateClockwise();
     },
-    s: () => {
+    [KEY_S]: () => {
       this.rotateAntiClockwise();
-    },
-    q: () => {
-      game.playPause();
     },
   };
 
@@ -127,11 +124,6 @@ class Piece {
     for (let i = 0; i < 3; i++) {
       this.rotateClockwise();
     }
-  }
-
-  gravity() {
-    this.y += BLOCK_SIZE;
-    this.forBlock(({ block }) => block.gravity());
   }
 
   checkSideEdges(direction) {

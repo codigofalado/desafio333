@@ -35,6 +35,7 @@ class infoBox {
   show() {
     this.box1.draw();
     this.box2.draw();
+
     //menu.fill(210);
     //menu.rect(this.x, this.y, this.width, this.height);
     //menu.fill(21);
