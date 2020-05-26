@@ -56,6 +56,7 @@ function gameSketch(p) {
     if (board.checkEndGame()) {
       p.playPause();
     }
+    //console.log(board.nextPiece.blocks);
     //console.log(p.points);
   };
 

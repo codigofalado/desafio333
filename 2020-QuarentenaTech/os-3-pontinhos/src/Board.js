@@ -7,6 +7,7 @@ class Board {
   constructor(sizes) {
     this.sizes = sizes;
 
+    this.createPieceStack();
     this._initMatrix();
     this._nextPiece();
   }
@@ -21,12 +22,17 @@ class Board {
     );
   }
 
-  _nextPiece() {
-    const model = game.random(MODELS);
-    //const model = MODELS[0];
+  createPieceStack() {
+    this.pieceStack = [];
+    this.pieceStack.push(new Piece(game.random(MODELS)));
+    this.pieceStack.push(new Piece(game.random(MODELS)));
+  }
 
-    this.currentPiece = new Piece(model);
-    this.phantomPiece = new Piece(model);
+  _nextPiece() {
+    this.nextPiece = this.pieceStack[1];
+    this.currentPiece = this.pieceStack.splice(0, 1)[0];
+
+    this.pieceStack.push(new Piece(game.random(MODELS)));
 
     this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
   }
