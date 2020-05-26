@@ -6,6 +6,7 @@ function gameSketch(p) {
 
   p.setup = () => {
     p.createCanvas(BOARD_X * BLOCK_SIZE, BOARD_Y * BLOCK_SIZE);
+    p.points = 0;
 
     board = new Board({
       width: BOARD_X,
@@ -36,33 +37,39 @@ function gameSketch(p) {
   p.pause = (interval) => {
     clearInterval(interval);
     p.noLoop();
-
-    console.log("pause time");
   };
 
   p.play = () => {
-    interval = setInterval(() => {
-      board.update();
-    }, TIME_INTERVAL);
+    if (!board.checkEndGame()) {
+      interval = setInterval(() => {
+        board.update();
+      }, TIME_INTERVAL * 0.2);
 
-    p.loop();
+      p.loop();
 
-    console.log("play time");
-    return interval;
+      return interval;
+    }
   };
 
   p.draw = () => {
     board.show();
+    if (board.checkEndGame()) {
+      p.playPause();
+    }
+    //console.log(board.nextPiece.blocks);
+    //console.log(p.points);
   };
 
   p.keyPressed = () => {
-    const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
+    if (!pauseLock || p.keyCode === KEY_Q) {
+      const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
 
-    const moved = board.movePiece(p.keyCode);
-    // console.log(p.keyCode);
+      const moved = board.movePiece(p.keyCode);
+      // console.log(p.keyCode);
 
-    if (moved && moviments.includes(p.keyCode)) {
-      lastKeyPressed = p.keyCode;
+      if (moved && moviments.includes(p.keyCode)) {
+        lastKeyPressed = p.keyCode;
+      }
     }
   };
 }
@@ -155,7 +162,7 @@ function sideBar(p) {
       x: p.width / 2 - (p.width * 0.8) / 2,
       y: 400 + 200,
       text1: "Points",
-      text2: "100000000000000000000",
+      text2: `${game.points}`,
     });
 
     // Config menu buttons
@@ -297,5 +304,5 @@ function sideBar(p) {
   };
 }
 
-let menu = new p5(sideBar);
+//let menu = new p5(sideBar);
 let game = new p5(gameSketch);

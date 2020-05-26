@@ -7,6 +7,7 @@ class Board {
   constructor(sizes) {
     this.sizes = sizes;
 
+    this.createPieceStack();
     this._initMatrix();
     this._nextPiece();
   }
@@ -21,10 +22,17 @@ class Board {
     );
   }
 
+  createPieceStack() {
+    this.pieceStack = [];
+    this.pieceStack.push(new Piece(game.random(MODELS)));
+    this.pieceStack.push(new Piece(game.random(MODELS)));
+  }
+
   _nextPiece() {
-    const model = MODELS[0]; // random(MODELS));
-    this.currentPiece = new Piece(model);
-    this.phantomPiece = new Piece(model);
+    this.nextPiece = this.pieceStack[1];
+    this.currentPiece = this.pieceStack.splice(0, 1)[0];
+
+    this.pieceStack.push(new Piece(game.random(MODELS)));
 
     this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
   }
@@ -53,10 +61,12 @@ class Board {
   _findFirstLineWithoutBlocks() {
     const { x, y, height, width } = this.currentPiece;
 
-    const initalLine = y / BLOCK_SIZE + height;
+    const piecePosition = y / BLOCK_SIZE + height;
+
+    const initialLine = piecePosition > 0 ? piecePosition : 0;
     const initialColumn = x / BLOCK_SIZE;
 
-    for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
+    for (let yIndex = initialLine; yIndex < this.matrix.length; yIndex += 1) {
       const line = this.matrix[yIndex].slice(
         initialColumn,
         initialColumn + width
@@ -73,10 +83,12 @@ class Board {
   }
 
   _hardDrop() {
-    this.currentPiece.dropTo(this._fistLineWithoutBlocks);
+    if (!this.checkEndGame()) {
+      this.currentPiece.dropTo(this._fistLineWithoutBlocks);
 
-    this._addCurrentPiece();
-    this._nextPiece();
+      this._addCurrentPiece();
+      this._nextPiece();
+    }
   }
 
   _checkCompleteLines() {
@@ -89,6 +101,7 @@ class Board {
     });
 
     const { length } = fullLineIndexes;
+    this._addPoints(length - 1);
 
     if (length) {
       this.matrix.splice(fullLineIndexes[0], length);
@@ -148,6 +161,15 @@ class Board {
     });
   }
 
+  qtyPoints = [40, 100, 300, 1200];
+
+  _addPoints(multiplier) {
+    if (multiplier >= 0) {
+      let point = this.qtyPoints[multiplier];
+      game.points += point;
+    }
+  }
+
   show() {
     this._drawBackground();
 
@@ -162,7 +184,11 @@ class Board {
   update() {
     this.currentPiece.gravity();
 
-    if (this._checkCollision() || this.currentPiece.checkBottomEdge()) {
+    if (
+      this._checkCollision() ||
+      this.currentPiece.checkBottomEdge() ||
+      this.checkEndGame()
+    ) {
       this._addCurrentPiece();
       this._nextPiece();
     }
@@ -182,5 +208,23 @@ class Board {
 
     this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
     return !!moviment;
+  }
+
+  _firstLineHasBlock() {
+    let line = this.matrix[0];
+    for (let block of line) {
+      if (block) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  checkEndGame() {
+    if (this._firstLineHasBlock()) {
+      return true;
+    }
+    return false;
   }
 }
