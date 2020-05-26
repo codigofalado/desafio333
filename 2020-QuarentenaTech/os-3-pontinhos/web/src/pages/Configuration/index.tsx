@@ -9,9 +9,7 @@ import * as S from './styles';
 
 const Configuration: React.FC = () => {
   const {
-    difficulty,
-    gridEnabled,
-    phantomPieceEnabled,
+    config,
     toggleGrid,
     togglePhantomPiece,
     increseDifficulty,
@@ -40,7 +38,12 @@ const Configuration: React.FC = () => {
               <button type="button" onClick={decreseDifficulty}>
                 <FaChevronLeft />
               </button>
-              <input readOnly type="text" id="difficulty" value={difficulty} />
+              <input
+                readOnly
+                type="text"
+                id="difficulty"
+                value={config.difficulty}
+              />
               <button type="button" onClick={increseDifficulty}>
                 <FaChevronRight />
               </button>
@@ -52,7 +55,7 @@ const Configuration: React.FC = () => {
             <input
               type="checkbox"
               id="phantomPiece"
-              checked={phantomPieceEnabled}
+              checked={config.phantomPieceEnabled}
               onChange={togglePhantomPiece}
             />
             <span />
@@ -63,7 +66,7 @@ const Configuration: React.FC = () => {
             <input
               type="checkbox"
               id="grid"
-              checked={gridEnabled}
+              checked={config.gridEnabled}
               onChange={toggleGrid}
             />
             <span />
