@@ -40,28 +40,35 @@ function gameSketch(p) {
   };
 
   p.play = () => {
-    interval = setInterval(() => {
-      board.update();
-    }, TIME_INTERVAL);
+    if (!board.checkEndGame()) {
+      interval = setInterval(() => {
+        board.update();
+      }, TIME_INTERVAL * 0.2);
 
-    p.loop();
+      p.loop();
 
-    return interval;
+      return interval;
+    }
   };
 
   p.draw = () => {
     board.show();
+    if (board.checkEndGame()) {
+      p.playPause();
+    }
     //console.log(p.points);
   };
 
   p.keyPressed = () => {
-    const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
+    if (!pauseLock || p.keyCode === KEY_Q) {
+      const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
 
-    const moved = board.movePiece(p.keyCode);
-    // console.log(p.keyCode);
+      const moved = board.movePiece(p.keyCode);
+      // console.log(p.keyCode);
 
-    if (moved && moviments.includes(p.keyCode)) {
-      lastKeyPressed = p.keyCode;
+      if (moved && moviments.includes(p.keyCode)) {
+        lastKeyPressed = p.keyCode;
+      }
     }
   };
 }

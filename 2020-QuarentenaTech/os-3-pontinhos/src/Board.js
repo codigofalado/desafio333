@@ -22,7 +22,9 @@ class Board {
   }
 
   _nextPiece() {
-    const model = MODELS[0]; // game.random(MODELS);
+    const model = game.random(MODELS);
+    //const model = MODELS[0];
+
     this.currentPiece = new Piece(model);
     this.phantomPiece = new Piece(model);
 
@@ -53,10 +55,12 @@ class Board {
   _findFirstLineWithoutBlocks() {
     const { x, y, height, width } = this.currentPiece;
 
-    const initalLine = y / BLOCK_SIZE + height;
+    const piecePosition = y / BLOCK_SIZE + height;
+
+    const initialLine = piecePosition > 0 ? piecePosition : 0;
     const initialColumn = x / BLOCK_SIZE;
 
-    for (let yIndex = initalLine; yIndex < this.matrix.length; yIndex += 1) {
+    for (let yIndex = initialLine; yIndex < this.matrix.length; yIndex += 1) {
       const line = this.matrix[yIndex].slice(
         initialColumn,
         initialColumn + width
@@ -73,10 +77,12 @@ class Board {
   }
 
   _hardDrop() {
-    this.currentPiece.dropTo(this._fistLineWithoutBlocks);
+    if (!this.checkEndGame()) {
+      this.currentPiece.dropTo(this._fistLineWithoutBlocks);
 
-    this._addCurrentPiece();
-    this._nextPiece();
+      this._addCurrentPiece();
+      this._nextPiece();
+    }
   }
 
   _checkCompleteLines() {
@@ -172,7 +178,11 @@ class Board {
   update() {
     this.currentPiece.gravity();
 
-    if (this._checkCollision() || this.currentPiece.checkBottomEdge()) {
+    if (
+      this._checkCollision() ||
+      this.currentPiece.checkBottomEdge() ||
+      this.checkEndGame()
+    ) {
       this._addCurrentPiece();
       this._nextPiece();
     }
@@ -192,5 +202,23 @@ class Board {
 
     this._fistLineWithoutBlocks = this._findFirstLineWithoutBlocks();
     return !!moviment;
+  }
+
+  _firstLineHasBlock() {
+    let line = this.matrix[0];
+    for (let block of line) {
+      if (block) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  checkEndGame() {
+    if (this._firstLineHasBlock()) {
+      return true;
+    }
+    return false;
   }
 }

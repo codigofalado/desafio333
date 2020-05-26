@@ -19,7 +19,7 @@ class Piece {
 
   constructor({ shape, color, ...size }) {
     this.x = game.width / 2 - BLOCK_SIZE;
-    this.y = 0;
+    this.y = -2 * BLOCK_SIZE;
 
     this.width = size.width;
     this.height = size.height;
