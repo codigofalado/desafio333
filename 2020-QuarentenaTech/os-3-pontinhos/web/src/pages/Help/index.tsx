@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Header from '../../components/Header';
+import Layout from '../../components/Layout';
 
 import * as S from './styles';
 
 const Help: React.FC = () => {
   return (
-    <>
-      <Header />
+    <Layout>
       <S.Container>
         <h1>Ajuda</h1>
 
@@ -51,7 +50,7 @@ const Help: React.FC = () => {
           </li>
         </ul>
       </S.Container>
-    </>
+    </Layout>
   );
 };
 

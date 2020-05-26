@@ -68,4 +68,10 @@ export default createGlobalStyle`
       color: ${({ theme }) => theme.colors.secondaryText};
     }
   }
+
+  #root > main {
+    max-width: ${({ theme }) => theme.sizes.maxWidth};
+    margin: 0 auto;
+    padding: 32px;
+  }
 `;

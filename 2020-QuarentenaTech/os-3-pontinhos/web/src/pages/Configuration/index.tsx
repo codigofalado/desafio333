@@ -2,7 +2,7 @@ import React, { FormEvent } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 
-import Header from '../../components/Header';
+import Layout from '../../components/Layout';
 import { useConfig } from '../../hooks/config';
 
 import * as S from './styles';
@@ -30,8 +30,7 @@ const Configuration: React.FC = () => {
   }
 
   return (
-    <>
-      <Header />
+    <Layout>
       <S.Container>
         <h1>Configuração</h1>
         <form onSubmit={handleSubmit}>
@@ -73,7 +72,7 @@ const Configuration: React.FC = () => {
           <S.SubmitButton>Salvar</S.SubmitButton>
         </form>
       </S.Container>
-    </>
+    </Layout>
   );
 };
 

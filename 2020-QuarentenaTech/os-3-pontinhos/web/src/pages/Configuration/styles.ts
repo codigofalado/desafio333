@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { rem, opacify } from 'polished';
 
 export const Container = styled.main`
-  max-width: ${({ theme }) => theme.sizes.maxWidth};
-  margin: 0 auto;
-  padding: 32px;
-
   h1 {
     text-align: center;
     font-size: ${rem('48px')};
