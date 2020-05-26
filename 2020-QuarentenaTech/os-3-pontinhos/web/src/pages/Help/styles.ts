@@ -20,7 +20,7 @@ export const Container = styled.main`
     padding: 24px;
 
     background: ${({ theme }) => theme.colors.backgroundDark};
-    font-size: ${rem('18px')};
+    font-size: ${rem('20px')};
 
     li + li {
       margin-top: 16px;

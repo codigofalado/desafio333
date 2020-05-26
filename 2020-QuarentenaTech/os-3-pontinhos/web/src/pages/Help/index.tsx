@@ -21,17 +21,25 @@ const Help: React.FC = () => {
             <strong>Seta para esquerda</strong>
             <span>: Movimenta a peça para a esquerda.</span>
           </li>
+          <li>
+            <strong>Seta para baixo</strong>
+            <span>: Derruba a peça.</span>
+          </li>
         </ul>
 
         <S.SubTitle>Rotacionar a peça</S.SubTitle>
         <ul>
           <li>
-            <strong>Seta para direita</strong>
-            <span>: Movimenta a peça para a direita.</span>
+            <strong>Seta para cima</strong>
+            <span>: Rotaciona a peça no sentido horario.</span>
           </li>
           <li>
-            <strong>Seta para esquerda</strong>
-            <span>: Movimenta a peça para a esquerda.</span>
+            <strong>Tecla A</strong>
+            <span>: rotaciona no sentido horário.</span>
+          </li>
+          <li>
+            <strong>Tecla B</strong>
+            <span>: rotaciona no sentido anti-horário.</span>
           </li>
         </ul>
 
