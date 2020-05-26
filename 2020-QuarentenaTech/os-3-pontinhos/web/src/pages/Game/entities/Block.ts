@@ -1,5 +1,7 @@
 import P5 from 'p5';
 
+import { BLOCK_SIZE } from '../../../utils/constants';
+
 interface BlockData {
   x?: number;
   y?: number;
@@ -19,8 +21,13 @@ class Block {
     this.x = x;
     this.y = y;
 
-    this.size = 40;
+    this.size = BLOCK_SIZE;
     this.color = color;
+  }
+
+  setPosition(x: number, y: number): void {
+    this.x = x;
+    this.y = y;
   }
 
   moveHorizontally(direction = 1): void {

@@ -70,7 +70,7 @@ const T_MODEL = {
   height: 2,
 };
 
-export const BLOCK_SIZE = 40;
+export const BLOCK_SIZE = 35;
 export const TIME_INTERVAL = 1000;
 
 export const BOARD = {
