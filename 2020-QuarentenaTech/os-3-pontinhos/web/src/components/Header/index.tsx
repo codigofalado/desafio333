@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         <Link to="/">
           <FaArrowLeft />
         </Link>
-        <h1>Tetris</h1>
+        <h1>Tetris 333</h1>
       </div>
     </Container>
   );

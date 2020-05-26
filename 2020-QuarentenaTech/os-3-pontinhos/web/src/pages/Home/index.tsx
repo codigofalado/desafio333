@@ -7,7 +7,7 @@ import * as S from './styles';
 const Home: React.FC = () => {
   return (
     <S.Container>
-      <h1>Tetris</h1>
+      <h1>Tetris 333</h1>
 
       <nav>
         <ul>

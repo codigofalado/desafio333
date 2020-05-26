@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { rem } from 'polished';
 
 export const Container = styled.main`
@@ -17,6 +18,7 @@ export const Container = styled.main`
     text-transform: uppercase;
 
     text-align: center;
+    max-width: 500px;
   }
 
   nav {
