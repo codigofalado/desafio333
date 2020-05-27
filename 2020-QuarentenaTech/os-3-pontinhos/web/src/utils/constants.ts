@@ -78,6 +78,8 @@ export const BOARD = {
   Y: 20,
 };
 
+export const POINTS = [40, 100, 300, 1200];
+
 export const KEYS = {
   A: 65,
   S: 83,

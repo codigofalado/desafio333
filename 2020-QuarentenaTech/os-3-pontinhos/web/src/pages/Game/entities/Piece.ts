@@ -25,21 +25,21 @@ interface ForBlockCbData {
 }
 
 class Piece {
-  public moviments: Moviments;
-
-  private x: number;
-
-  private y: number;
-
-  private width: number;
-
-  private height: number;
+  private canvas: P5;
 
   private color: string;
 
   private blocks: Blocks;
 
-  private canvas: P5;
+  moviments: Moviments;
+
+  x: number;
+
+  y: number;
+
+  width: number;
+
+  height: number;
 
   constructor(canvas: P5, { shape, color, width, height }: CreatePiace) {
     this.canvas = canvas;

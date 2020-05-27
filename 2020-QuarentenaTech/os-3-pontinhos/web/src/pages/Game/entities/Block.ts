@@ -9,9 +9,9 @@ interface BlockData {
 }
 
 class Block {
-  private x: number;
+  x: number;
 
-  private y: number;
+  y: number;
 
   private size: number;
 
