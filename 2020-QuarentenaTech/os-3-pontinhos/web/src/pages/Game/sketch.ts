@@ -1,85 +1,92 @@
 /* eslint-disable no-param-reassign */
-import p5 from 'p5';
+import P5 from 'p5';
 
+import { ConfigData } from '../../hooks/config';
 import { BOARD, BLOCK_SIZE, KEYS, TIME_INTERVAL } from '../../utils/constants';
 import Board from './entities/Board';
 
-function sketch(p: p5): void {
-  let board: Board;
+type Sketch = (p: P5) => void;
 
-  let lastKeyPressed: number;
+function createSketch(config: ConfigData): Sketch {
+  function sketch(p: P5): void {
+    let board: Board;
 
-  let isPaused = false;
+    let lastKeyPressed: number;
 
-  let interval: number;
+    let isPaused = false;
 
-  let points: number;
+    let interval: number;
 
-  function pause(): void {
-    console.log('pause game');
+    let points: number;
 
-    clearInterval(interval);
-    p.noLoop();
-  }
-
-  function play(): void {
-    console.log('play game');
-
-    if (!board.checkEndGame()) {
-      interval = setInterval(() => {
-        board.update();
-      }, TIME_INTERVAL * 0.2);
-
-      p.loop();
-    }
-  }
-
-  function togglePlayed(): void {
-    if (isPaused) {
-      play();
-    } else {
-      pause();
+    function pause(): void {
+      clearInterval(interval);
+      p.noLoop();
     }
 
-    isPaused = !isPaused;
-  }
+    function play(): void {
+      console.log(config.difficulty);
 
-  p.setup = () => {
-    p.createCanvas(BOARD.X * BLOCK_SIZE, BOARD.Y * BLOCK_SIZE);
-    points = 0;
+      if (!board.checkEndGame()) {
+        interval = setInterval(() => {
+          board.update();
+        }, TIME_INTERVAL / (config.difficulty + 1) ** 2);
 
-    board = new Board(p, {
-      width: BOARD.X,
-      height: BOARD.Y,
-    });
-
-    play();
-  };
-
-  p.draw = () => {
-    board.show();
-
-    // if (board.checkEndGame()) {
-    //   p.playPause();
-    // }
-  };
-
-  p.keyPressed = () => {
-    if (p.keyCode === KEYS.Q) {
-      togglePlayed();
-      return;
-    }
-
-    if (!isPaused) {
-      const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
-
-      const moved = board.movePiece(p.keyCode);
-
-      if (moved && moviments.includes(p.keyCode)) {
-        lastKeyPressed = p.keyCode;
+        p.loop();
       }
     }
-  };
+
+    function togglePlayed(): void {
+      if (isPaused) {
+        play();
+      } else {
+        pause();
+      }
+
+      isPaused = !isPaused;
+    }
+
+    p.setup = () => {
+      p.createCanvas(BOARD.X * BLOCK_SIZE, BOARD.Y * BLOCK_SIZE);
+      points = 0;
+
+      const sizes = {
+        width: BOARD.X,
+        height: BOARD.Y,
+      };
+
+      board = new Board(p, config, sizes);
+
+      play();
+    };
+
+    p.draw = () => {
+      board.show();
+
+      if (board.checkEndGame()) {
+        togglePlayed();
+      }
+    };
+
+    p.keyPressed = () => {
+      if (p.keyCode === KEYS.Q) {
+        togglePlayed();
+        return;
+      }
+
+      if (!isPaused) {
+        const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
+
+        const moved = board.movePiece(p.keyCode);
+
+        if (moved && moviments.includes(p.keyCode)) {
+          lastKeyPressed = p.keyCode;
+        }
+      }
+    };
+  }
+
+  return sketch;
 }
 
-export default sketch;
+export { createSketch };

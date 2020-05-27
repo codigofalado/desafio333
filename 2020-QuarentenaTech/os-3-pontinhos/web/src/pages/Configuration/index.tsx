@@ -42,7 +42,7 @@ const Configuration: React.FC = () => {
                 readOnly
                 type="text"
                 id="difficulty"
-                value={config.difficulty}
+                value={config.formattedDifficulty}
               />
               <button type="button" onClick={increseDifficulty}>
                 <FaChevronRight />

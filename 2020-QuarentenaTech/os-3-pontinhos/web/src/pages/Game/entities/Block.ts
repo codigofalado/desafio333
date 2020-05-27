@@ -9,13 +9,13 @@ interface BlockData {
 }
 
 class Block {
-  x: number;
-
-  y: number;
-
   private size: number;
 
   private color: string;
+
+  x: number;
+
+  y: number;
 
   constructor({ x = 0, y = 0, color }: BlockData) {
     this.x = x;
@@ -38,9 +38,9 @@ class Block {
     this.y += this.size;
   }
 
-  show(p: P5): void {
-    p.fill(this.color);
-    p.rect(this.x, this.y, this.size, this.size);
+  show(canvas: P5): void {
+    canvas.fill(this.color);
+    canvas.rect(this.x, this.y, this.size, this.size);
   }
 }
 

@@ -4,7 +4,7 @@ import P5 from 'p5';
 
 import Layout from '../../components/Layout';
 import { useConfig } from '../../hooks/config';
-import sketch from './sketch';
+import { createSketch } from './sketch';
 
 import * as S from './styles';
 
@@ -16,9 +16,11 @@ const Game: React.FC = () => {
 
   useEffect(() => {
     if (boardRef.current) {
+      const sketch = createSketch(config);
+
       setGame(new P5(sketch, boardRef.current));
     }
-  }, []);
+  }, [config]);
 
   return (
     <Layout>
