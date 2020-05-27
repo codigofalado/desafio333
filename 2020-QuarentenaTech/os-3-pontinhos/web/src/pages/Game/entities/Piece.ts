@@ -25,8 +25,6 @@ interface ForBlockCbData {
 }
 
 class Piece {
-  private canvas: P5;
-
   private color: string;
 
   private blocks: Blocks;
@@ -41,16 +39,17 @@ class Piece {
 
   height: number;
 
-  constructor(canvas: P5, { shape, color, width, height }: CreatePiace) {
-    this.canvas = canvas;
-
-    this.x = canvas.width / 2 - BLOCK_SIZE;
+  constructor(
+    private canvas: P5,
+    { shape, color, width, height }: CreatePiace,
+  ) {
+    this.x = this.canvas.width / 2 - BLOCK_SIZE;
     this.y = -2 * BLOCK_SIZE;
 
     this.width = width;
     this.height = height;
 
-    this.color = color || Piece.randomColor();
+    this.color = color || this.randomColor();
     this.blocks = this.initBlocks(shape);
 
     this.moviments = {
@@ -72,7 +71,7 @@ class Piece {
     };
   }
 
-  static randomColor(): string {
+  private randomColor(): string {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 
@@ -81,7 +80,7 @@ class Piece {
     const blocks: Blocks = [];
 
     model.forEach((line, yIndex) => {
-      const blockLine: Array<Block | null> = [];
+      const blockLine: LineOfBlocks = [];
 
       line.forEach((item, xIndex) => {
         const block = item

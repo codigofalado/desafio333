@@ -1,5 +1,7 @@
 import P5 from 'p5';
 
+import { ConfigData } from '../../../hooks/config';
+import theme from '../../../styles/themes';
 import { KEYS, MODELS, BLOCK_SIZE, POINTS } from '../../../utils/constants';
 import Block from './Block';
 import Piece from './Piece';
@@ -19,10 +21,6 @@ type Blocks = LineOfBlocks[];
 class Board {
   private moviments: Moviments;
 
-  private canvas: P5;
-
-  private sizes: Sizes;
-
   private matrix: Blocks;
 
   private pieceStack: Piece[];
@@ -33,10 +31,11 @@ class Board {
 
   currentPiece?: Piece;
 
-  constructor(canvas: P5, sizes: Sizes) {
-    this.canvas = canvas;
-    this.sizes = sizes;
-
+  constructor(
+    private canvas: P5,
+    private config: Omit<ConfigData, 'difficulty'>,
+    private sizes: Sizes,
+  ) {
     this.pieceStack = [];
     this.matrix = this.initMatrix();
 
@@ -48,7 +47,6 @@ class Board {
 
     this.moviments = {
       [KEYS.D]: () => this.hardDrop(),
-      // [KEYS.Q]: () => canvas.playPause(),
     };
   }
 
@@ -181,16 +179,18 @@ class Board {
   private drawBackground(): void {
     let [x, y] = [0, 0];
 
-    this.canvas.background(50);
+    this.canvas.background(theme.colors.backgroundDark);
 
-    while (x < this.canvas.width) {
-      this.canvas.line(x, 0, x, this.canvas.height);
-      x += BLOCK_SIZE;
-    }
+    if (this.config.gridEnabled) {
+      while (x < this.canvas.width) {
+        this.canvas.line(x, 0, x, this.canvas.height);
+        x += BLOCK_SIZE;
+      }
 
-    while (y < this.canvas.height) {
-      this.canvas.line(0, y, this.canvas.width, y);
-      y += BLOCK_SIZE;
+      while (y < this.canvas.height) {
+        this.canvas.line(0, y, this.canvas.width, y);
+        y += BLOCK_SIZE;
+      }
     }
   }
 
@@ -218,12 +218,19 @@ class Board {
   show(): void {
     this.drawBackground();
 
+    if (!this.config.gridEnabled) {
+      this.canvas.noStroke();
+    }
+
     this.matrix.forEach((line) => {
       line.forEach((block) => block?.show(this.canvas));
     });
 
     this.currentPiece?.show();
-    this.showPhantomPiece();
+
+    if (this.config.phantomPieceEnabled) {
+      this.showPhantomPiece();
+    }
   }
 
   update(): void {

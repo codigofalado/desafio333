@@ -1,11 +1,14 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
 
+export interface ConfigData {
+  difficulty: number;
+  formattedDifficulty: string;
+  gridEnabled: boolean;
+  phantomPieceEnabled: boolean;
+}
+
 interface Config {
-  config: {
-    difficulty: string;
-    gridEnabled: boolean;
-    phantomPieceEnabled: boolean;
-  };
+  config: ConfigData;
   togglePhantomPiece(): void;
   toggleGrid(): void;
   increseDifficulty(): void;
@@ -75,7 +78,8 @@ const ConfigProvider: React.FC = ({ children }) => {
     <ConfigContext.Provider
       value={{
         config: {
-          difficulty: formattedDifficulty,
+          difficulty,
+          formattedDifficulty,
           gridEnabled,
           phantomPieceEnabled,
         },
