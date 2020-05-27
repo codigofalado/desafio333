@@ -38,10 +38,10 @@ class Board {
     this.sizes = sizes;
 
     this.pieceStack = [];
-    this.matrix = [];
+    this.matrix = this.initMatrix();
 
-    this.createPieceStack();
-    this.initMatrix();
+    this.initPieceStack();
+
     this.getNextPiece();
 
     this.fistLineWithoutBlocks = 20;
@@ -56,14 +56,11 @@ class Board {
     return Array.from({ length: this.sizes.width }).map(() => null);
   }
 
-  private initMatrix(): void {
-    this.matrix = Array.from({ length: this.sizes.height }).map(() =>
-      this.initLine(),
-    );
+  private initMatrix(): null[][] {
+    return Array.from({ length: this.sizes.height }).map(() => this.initLine());
   }
 
-  createPieceStack(): void {
-    this.pieceStack = [];
+  private initPieceStack(): void {
     this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
     this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
   }
@@ -91,19 +88,14 @@ class Board {
     this.checkCompleteLines();
   }
 
+  // TODO: Verify
   private isLineFilled(line: LineOfBlocks): boolean {
-    // for (const block of line) {
-    //   if (!block) {
-    //     return false;
-    //   }
-    // }
-
     // Check if at lest one no block on line,
     // if not, find return undefined = line is filled;
     return line.find((block) => !block) === undefined;
   }
 
-  findFirstLineWithoutBlocks(): number {
+  private findFirstLineWithoutBlocks(): number {
     if (this.currentPiece) {
       const { x, y, height, width } = this.currentPiece;
 
@@ -248,9 +240,9 @@ class Board {
   }
 
   movePiece(key: number): boolean {
-    const moviments = {
-      ...this.currentPiece?.moviments,
+    const moviments: Moviments = {
       ...this.moviments,
+      ...this.currentPiece?.moviments,
     };
 
     const moviment = moviments[key];

@@ -6,10 +6,43 @@ import Board from './entities/Board';
 
 function sketch(p: p5): void {
   let board: Board;
+
   let lastKeyPressed: number;
-  const pauseLock = false;
+
+  let isPaused = false;
+
   let interval: number;
+
   let points: number;
+
+  function pause(): void {
+    console.log('pause game');
+
+    clearInterval(interval);
+    p.noLoop();
+  }
+
+  function play(): void {
+    console.log('play game');
+
+    if (!board.checkEndGame()) {
+      interval = setInterval(() => {
+        board.update();
+      }, TIME_INTERVAL * 0.2);
+
+      p.loop();
+    }
+  }
+
+  function togglePlayed(): void {
+    if (isPaused) {
+      play();
+    } else {
+      pause();
+    }
+
+    isPaused = !isPaused;
+  }
 
   p.setup = () => {
     p.createCanvas(BOARD.X * BLOCK_SIZE, BOARD.Y * BLOCK_SIZE);
@@ -20,42 +53,8 @@ function sketch(p: p5): void {
       height: BOARD.Y,
     });
 
-    interval = setInterval(() => {
-      board.update();
-    }, TIME_INTERVAL * 0.2);
-    // p.playPause();
+    play();
   };
-
-  /**
-     p.tooglePlayed = () => {
-    if (pauseLock) {
-      console.log("play game");
-      p.play();
-      pauseLock = false;
-    } else {
-      console.log("pause game");
-      p.pause(interval);
-      pauseLock = true;
-    }
-  };
-
-  p.pause = (interval) => {
-    clearInterval(interval);
-    p.noLoop();
-  };
-
-  p.play = () => {
-    if (!board.checkEndGame()) {
-      interval = setInterval(() => {
-        board.update();
-      }, TIME_INTERVAL * 0.2);
-
-      p.loop();
-
-      return interval;
-    }
-  };
-   */
 
   p.draw = () => {
     board.show();
@@ -66,11 +65,15 @@ function sketch(p: p5): void {
   };
 
   p.keyPressed = () => {
-    if (!pauseLock || p.keyCode === KEYS.Q) {
+    if (p.keyCode === KEYS.Q) {
+      togglePlayed();
+      return;
+    }
+
+    if (!isPaused) {
       const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
 
       const moved = board.movePiece(p.keyCode);
-      // console.log(p.keyCode);
 
       if (moved && moviments.includes(p.keyCode)) {
         lastKeyPressed = p.keyCode;

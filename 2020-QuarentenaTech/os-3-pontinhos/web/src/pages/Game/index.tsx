@@ -24,7 +24,12 @@ const Game: React.FC = () => {
     <Layout>
       <S.Container>
         <h1>Game</h1>
-        <div ref={boardRef} />
+        <section ref={boardRef} />
+        <section>
+          <h1>Próxima peça</h1>
+          <h1>Nivel </h1>
+          <h1>Pontos </h1>
+        </section>
       </S.Container>
     </Layout>
   );
