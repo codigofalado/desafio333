@@ -5,7 +5,7 @@
 **Modalidade**: ddauriol / João Santos / RRDOS
 
 ## Jogue agora:
-[AQUI](ddauriol.github.io/jv)
+[AQUI](https://ddauriol.github.io/jv/index.html)
 
 ## Descrição do Desafio
 Estamos criando um Desafio333 especial para participar da [#QuarentenaTech](https://quarentena.tech). Trata-se de uma iniciativa em parceria com a [CollabCode](https://www.twitch.tv/collabdode) para criar uma página que listará diferentes desafios para você fazer durante a quarentena contra o coronavirus. Para participar deste Desafio333 você precisará escolher entre **Jogo da Velha** e **Jogo Tetris**. A sua implementação precisará cumprir no mínimo **5 items** da **lista de requisitos**.
@@ -29,7 +29,7 @@ Estamos criando um Desafio333 especial para participar da [#QuarentenaTech](http
 ## Versão Final
   
 ## Jogue agora:
-[AQUI](ddauriol.github.io/jv)
+[AQUI](https://ddauriol.github.io/jv/index.html)
   
 ### Skins  
 Padrão  
