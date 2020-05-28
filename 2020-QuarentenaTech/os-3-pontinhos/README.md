@@ -96,12 +96,13 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 
 ### :package:  Pacotes
 
-| Função                    | Biblioteca                                                      |
-| ------------------------- | --------------------------------------------------------------- |
-| Fonte                     | [V323](https://fonts.google.com/specimen/VT323)                 |
-| Icones                    | [React Icons](https://react-icons.netlify.com/#/)               |
-| CSS in JS                 | [Styled Compoments](https://www.styled-components.com/)         |
-| Manipulação de cores      | [Polished](https://polished.js.org/)                            |
+| Função               | Biblioteca                                              |
+| -------------------- | ------------------------------------------------------- |
+| Fonte                | [V323](https://fonts.google.com/specimen/VT323)         |
+| Icones               | [React Icons](https://react-icons.netlify.com/#/)       |
+| CSS in JS            | [Styled Compoments](https://www.styled-components.com/) |
+| Manipulação de cores | [Polished](https://polished.js.org/)                    |
+| Sons                 | [freesound](https://freesound.org/)                     |
 
 :bulb: **Para mais detalhes, veja o `package.json`.**
 
