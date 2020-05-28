@@ -3,6 +3,7 @@ import P5 from 'p5';
 
 import { ConfigData } from '../../hooks/config';
 import { BOARD, BLOCK_SIZE, KEYS, TIME_INTERVAL } from '../../utils/constants';
+import sounds from '../../utils/sounds';
 import Board from './entities/Board';
 
 export type Sketch = (p: P5) => void;
@@ -61,6 +62,7 @@ function createSketch(config: ConfigData): Sketch {
 
       if (board.checkEndGame()) {
         togglePlayed();
+        sounds.endGame.play();
       }
     };
 
