@@ -1,8 +1,9 @@
 import P5 from 'p5';
+import { opacify } from 'polished';
 
 import { ConfigData } from '../../../hooks/config';
 import theme from '../../../styles/themes';
-import { KEYS, MODELS, BLOCK_SIZE, POINTS } from '../../../utils/constants';
+import { KEYS, MODELS, BLOCK_SIZE } from '../../../utils/constants';
 import Block from './Block';
 import Piece from './Piece';
 
@@ -25,11 +26,11 @@ class Board {
 
   private pieceStack: Piece[];
 
-  private fistLineWithoutBlocks: number;
+  private phantomPiece: Piece;
+
+  currentPiece: Piece;
 
   nextPiece?: Piece;
-
-  currentPiece?: Piece;
 
   constructor(
     private canvas: P5,
@@ -39,11 +40,11 @@ class Board {
     this.pieceStack = [];
     this.matrix = this.initMatrix();
 
+    this.currentPiece = this.createPiace();
+    this.phantomPiece = this.createPhantomPiece();
     this.initPieceStack();
 
     this.getNextPiece();
-
-    this.fistLineWithoutBlocks = 20;
 
     this.moviments = {
       [KEYS.D]: () => this.hardDrop(),
@@ -58,9 +59,38 @@ class Board {
     return Array.from({ length: this.sizes.height }).map(() => this.initLine());
   }
 
+  private createPiace(): Piece {
+    return new Piece(this.canvas, this.canvas.random(MODELS));
+  }
+
+  private createPhantomPiece(): Piece {
+    const { color, shape, height, width, x, y } = this.currentPiece;
+
+    const phantomPiece = new Piece(this.canvas, {
+      color: opacify(-0.7, color),
+      shape,
+      height,
+      width,
+    });
+
+    phantomPiece.x = x;
+    phantomPiece.y = y;
+
+    phantomPiece.updateBlocksPosition();
+
+    while (
+      !this.checkCollision(phantomPiece) &&
+      !phantomPiece.checkBottomEdge()
+    ) {
+      phantomPiece.gravity();
+    }
+
+    return phantomPiece;
+  }
+
   private initPieceStack(): void {
-    this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
-    this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
+    this.pieceStack.push(this.createPiace());
+    this.pieceStack.push(this.createPiace());
   }
 
   private getNextPiece(): void {
@@ -70,11 +100,11 @@ class Board {
 
     this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
 
-    this.fistLineWithoutBlocks = this.findFirstLineWithoutBlocks();
+    this.phantomPiece = this.createPhantomPiece();
   }
 
   private addCurrentPiece(): void {
-    this.currentPiece?.forBlock(({ block }) => {
+    this.currentPiece.forBlock(({ block }) => {
       if (block) {
         const xIndex = block.x / BLOCK_SIZE;
         const yIndex = block.y / BLOCK_SIZE;
@@ -86,42 +116,20 @@ class Board {
     this.checkCompleteLines();
   }
 
-  // TODO: Verify
   private isLineFilled(line: LineOfBlocks): boolean {
     // Check if at lest one no block on line,
     // if not, find return undefined = line is filled;
     return line.find((block) => !block) === undefined;
   }
 
-  private findFirstLineWithoutBlocks(): number {
-    if (this.currentPiece) {
-      const { x, y, height, width } = this.currentPiece;
-
-      const piecePosition = y / BLOCK_SIZE + height;
-
-      const initialLine = piecePosition > 0 ? piecePosition : 0;
-      const initialColumn = x / BLOCK_SIZE;
-
-      for (let yIndex = initialLine; yIndex < this.matrix.length; yIndex += 1) {
-        const line = this.matrix[yIndex].slice(
-          initialColumn,
-          initialColumn + width,
-        );
-
-        const findBlock = !!line.find((block) => block);
-
-        if (findBlock) {
-          return yIndex;
-        }
-      }
-    }
-
-    return this.sizes.height;
-  }
-
   private hardDrop(): void {
     if (!this.checkEndGame()) {
-      this.currentPiece?.dropTo(this.fistLineWithoutBlocks);
+      const { x, y } = this.phantomPiece;
+
+      this.currentPiece.x = x;
+      this.currentPiece.y = y;
+
+      this.currentPiece.updateBlocksPosition();
 
       this.addCurrentPiece();
       this.getNextPiece();
@@ -158,11 +166,11 @@ class Board {
     }
   }
 
-  private checkCollision(): boolean {
+  private checkCollision(piece = this.currentPiece): boolean {
     let isCollide = false;
 
     // TODO: check the if
-    this.currentPiece?.forBlock(({ block }) => {
+    piece.forBlock(({ block }) => {
       if (block) {
         const x = block.x / BLOCK_SIZE;
         const y = block.y / BLOCK_SIZE + 1;
@@ -194,20 +202,6 @@ class Board {
     }
   }
 
-  private showPhantomPiece(): void {
-    this.currentPiece?.forBlock(({ block, lineIndex }) => {
-      if (block && this.currentPiece) {
-        const { x } = block;
-        const y =
-          (this.fistLineWithoutBlocks - this.currentPiece.height + lineIndex) *
-          BLOCK_SIZE;
-
-        this.canvas.fill(255, 255, 255, 50);
-        this.canvas.rect(x, y, BLOCK_SIZE, BLOCK_SIZE);
-      }
-    });
-  }
-
   private addPoints(multiplier: number): void {
     if (multiplier >= 0) {
       // TODO: ADD POINTS
@@ -226,19 +220,19 @@ class Board {
       line.forEach((block) => block?.show(this.canvas));
     });
 
-    this.currentPiece?.show();
-
     if (this.config.phantomPieceEnabled) {
-      this.showPhantomPiece();
+      this.phantomPiece.show();
     }
+
+    this.currentPiece.show();
   }
 
   update(): void {
-    this.currentPiece?.gravity();
+    this.currentPiece.gravity();
 
     if (
       this.checkCollision() ||
-      this.currentPiece?.checkBottomEdge() ||
+      this.currentPiece.checkBottomEdge() ||
       this.checkEndGame()
     ) {
       this.addCurrentPiece();
@@ -249,7 +243,7 @@ class Board {
   movePiece(key: number): boolean {
     const moviments: Moviments = {
       ...this.moviments,
-      ...this.currentPiece?.moviments,
+      ...this.currentPiece.moviments,
     };
 
     const moviment = moviments[key];
@@ -258,7 +252,7 @@ class Board {
       moviment();
     }
 
-    this.fistLineWithoutBlocks = this.findFirstLineWithoutBlocks();
+    this.phantomPiece = this.createPhantomPiece();
     return !!moviment;
   }
 

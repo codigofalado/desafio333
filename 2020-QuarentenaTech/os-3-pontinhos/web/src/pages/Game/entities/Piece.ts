@@ -25,9 +25,11 @@ interface ForBlockCbData {
 }
 
 class Piece {
-  private color: string;
+  color: string;
 
-  private blocks: Blocks;
+  shape: number[][];
+
+  blocks: Blocks;
 
   moviments: Moviments;
 
@@ -51,6 +53,7 @@ class Piece {
 
     this.color = color || this.randomColor();
     this.blocks = this.initBlocks(shape);
+    this.shape = shape;
 
     this.moviments = {
       [canvas.LEFT_ARROW]: () => {
@@ -145,6 +148,7 @@ class Piece {
     this.forBlock(({ block }) => block?.gravity());
   }
 
+  // TODO: For refactor later
   rotateClockwise(): void {
     [this.height] = [this.width, (this.width = this.height)];
 
@@ -155,6 +159,18 @@ class Piece {
 
     this.blocks = newMatrix;
     this.updateBlocksPosition();
+
+    const newShape: number[][] = Array.from({
+      length: this.shape[0].length,
+    }).map(() => []);
+
+    this.shape.forEach((line) => {
+      line.forEach((block, index) => {
+        newShape[index].unshift(block);
+      });
+    });
+
+    this.shape = newShape;
 
     this.checkPieceInBoard();
   }
@@ -177,14 +193,8 @@ class Piece {
 
   // TODO: For refactor later
   checkPieceInBoard(): void {
-    if (this.x + this.width * BLOCK_SIZE > this.canvas.width) {
+    while (this.x + this.width * BLOCK_SIZE > this.canvas.width) {
       this.moveHorizontally(-1);
-      if (this.x + this.width * BLOCK_SIZE > this.canvas.width) {
-        this.moveHorizontally(-1);
-        if (this.x + this.width * BLOCK_SIZE > this.canvas.width) {
-          this.moveHorizontally(-1);
-        }
-      }
     }
   }
 

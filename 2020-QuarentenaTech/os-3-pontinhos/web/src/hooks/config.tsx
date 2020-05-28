@@ -16,7 +16,7 @@ interface Config {
   saveConfig(): void;
 }
 
-const DIFFICULTY = ['Facíl', 'Medio', 'Díficil'];
+const DIFFICULTY = ['Facíl', 'Médio', 'Díficil'];
 
 const ConfigContext = createContext<Config>({} as Config);
 

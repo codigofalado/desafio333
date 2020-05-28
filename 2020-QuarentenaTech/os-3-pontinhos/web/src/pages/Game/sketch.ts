@@ -17,7 +17,7 @@ function createSketch(config: ConfigData): Sketch {
 
     let interval: number;
 
-    let points: number;
+    // let points: number;
 
     function pause(): void {
       clearInterval(interval);
@@ -25,8 +25,6 @@ function createSketch(config: ConfigData): Sketch {
     }
 
     function play(): void {
-      console.log(config.difficulty);
-
       if (!board.checkEndGame()) {
         interval = setInterval(() => {
           board.update();
@@ -48,7 +46,7 @@ function createSketch(config: ConfigData): Sketch {
 
     p.setup = () => {
       p.createCanvas(BOARD.X * BLOCK_SIZE, BOARD.Y * BLOCK_SIZE);
-      points = 0;
+      // points = 0;
 
       const sizes = {
         width: BOARD.X,
@@ -57,7 +55,7 @@ function createSketch(config: ConfigData): Sketch {
 
       board = new Board(p, config, sizes);
 
-      play();
+      // play();
     };
 
     p.draw = () => {
@@ -71,6 +69,11 @@ function createSketch(config: ConfigData): Sketch {
     p.keyPressed = () => {
       if (p.keyCode === KEYS.Q) {
         togglePlayed();
+        return;
+      }
+
+      if (p.keyCode === p.DOWN_ARROW) {
+        board.update();
         return;
       }
 

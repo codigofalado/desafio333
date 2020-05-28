@@ -11,7 +11,7 @@ import * as S from './styles';
 const Game: React.FC = () => {
   const { config } = useConfig();
 
-  const [game, setGame] = useState<P5>();
+  const [, setGame] = useState<P5>();
   const boardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

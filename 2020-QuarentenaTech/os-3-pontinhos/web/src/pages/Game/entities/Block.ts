@@ -11,7 +11,7 @@ interface BlockData {
 class Block {
   private size: number;
 
-  private color: string;
+  color: string;
 
   x: number;
 
