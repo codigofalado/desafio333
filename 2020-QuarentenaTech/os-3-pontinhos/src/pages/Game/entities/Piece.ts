@@ -1,6 +1,5 @@
 import P5 from 'p5';
 
-import theme from '../../../styles/themes';
 import { KEYS, BLOCK_SIZE } from '../../../utils/constants';
 import Block from './Block';
 
@@ -217,7 +216,7 @@ class Piece {
   }
 
   saveImg(): void {
-    const scale = 20;
+    const scale = 30;
 
     const gb = this.canvas.createGraphics(
       this.width * scale,

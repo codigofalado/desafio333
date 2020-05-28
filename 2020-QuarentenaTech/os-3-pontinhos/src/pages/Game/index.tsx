@@ -7,7 +7,7 @@ import { useConfig } from '../../hooks/config';
 import SubTitle from '../../styles/SubTitle';
 import { createSketch } from './sketch';
 
-import { Container } from './styles';
+import { Container, NextPiece } from './styles';
 
 const Game: React.FC = () => {
   const { config } = useConfig();
@@ -28,10 +28,12 @@ const Game: React.FC = () => {
       <Container>
         <section ref={boardRef} />
         <section>
-          <div>
+          <NextPiece>
             <SubTitle>Próxima peça</SubTitle>
-            <img src="" alt="" id="nextPiece" />
-          </div>
+            <div>
+              <img src="" alt="" id="nextPiece" />
+            </div>
+          </NextPiece>
           {/* <div>
             <SubTitle>Nivel</SubTitle>
             <strong id="level" />

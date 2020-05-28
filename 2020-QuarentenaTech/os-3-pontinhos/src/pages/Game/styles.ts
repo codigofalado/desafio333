@@ -32,3 +32,25 @@ export const Container = styled(MainContainer)`
     }
   }
 `;
+
+export const NextPiece = styled.div`
+  flex-direction: column;
+  align-items: flex-start;
+
+  h2 {
+    margin: 0 auto 16px 0;
+  }
+
+  div {
+    display: flex;
+
+    background: ${({ theme }) => theme.colors.backgroundDark};
+
+    width: 100%;
+    height: 100px;
+
+    img {
+      margin: auto;
+    }
+  }
+`;
