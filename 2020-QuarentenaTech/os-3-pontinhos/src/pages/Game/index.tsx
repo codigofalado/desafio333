@@ -30,11 +30,12 @@ const Game: React.FC = () => {
         <section>
           <div>
             <SubTitle>Próxima peça</SubTitle>
+            <img src="" alt="" id="nextPiece" />
           </div>
-          <div>
+          {/* <div>
             <SubTitle>Nivel</SubTitle>
             <strong id="level" />
-          </div>
+          </div> */}
           <div>
             <SubTitle>Pontos</SubTitle>
             <strong id="points" />

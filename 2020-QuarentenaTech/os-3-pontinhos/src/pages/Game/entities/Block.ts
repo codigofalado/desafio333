@@ -9,7 +9,7 @@ interface BlockData {
 }
 
 class Block {
-  private size: number;
+  size: number;
 
   color: string;
 
