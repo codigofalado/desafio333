@@ -109,6 +109,8 @@ class Board {
 
     this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
 
+    this.nextPiece.saveImg();
+
     this.phantomPiece = this.createPhantomPiece();
   }
 

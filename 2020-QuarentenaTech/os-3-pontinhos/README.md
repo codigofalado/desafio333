@@ -73,8 +73,8 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 ### :fire: Requisitos escolhidos
 
   - [ ] Implementação de Sons e Cores
-  - [ ] Previsão de próxima peça
-  - [ ] Escolha entre pelo menos 3 dificuldades
+  - [x] Previsão de próxima peça
+  - [x] Escolha entre pelo menos 3 dificuldades
   - [ ] Contabilização de Pontos e Game Over
   - [x] Poder habilitar Peça Fantasma
 
