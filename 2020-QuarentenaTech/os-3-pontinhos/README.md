@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://leituraorganica.netlify.com/">
+  <a href="https://tetris333.netlify.app/">
     <img alt="Logo" src="public/logo512.png" width="100" />
   </a>
 </p>
@@ -12,11 +12,9 @@
     <img src="https://img.shields.io/badge/Maintained%3F-yes-1EAE72.svg" />
   </a>
 
-  <!-- if your app is a website
-  <a href="https://<link>" alt="Website <link>">
-    <img src="https://img.shields.io/website-up-down-1EAE72-red/https/<link>" />
+  <a href="https://tetris333.netlify.app/" alt="Website tetris333.netlify.app">
+    <img src="https://img.shields.io/website-up-down-1EAE72-red/https/tetris333.netlify.app" />
   </a>
- -->
 
   <!-- License -->
   <a href="./LICENSE" alt="License: MIT">
@@ -28,13 +26,11 @@
     <img src="https://www.codefactor.io/repository/github/henry-ns/desafio333/badge" />
   </a>
 
-  <!-- if your app is a website deployed on Netlify
-  <a href="https://app.netlify.com/sites/<name>/deploys" alt="Netlify Status">
-    <img src="https://api.netlify.com/api/v1/badges/<netplify-id>/deploy-status" />
-  </a>
--->
   <br/>
-
+  <!-- if your app is a website deployed on Netlify -->
+  <a href="https://app.netlify.com/sites/tetris333/deploys" alt="Netlify Status">
+    <img src="https://api.netlify.com/api/v1/badges/a8174029-82b6-416e-9a20-ba1fb2d2e3dd/deploy-status" />
+  </a>
   <!-- Social -->
   <a href="https://github.com/henry-ns/desafio333/stargazers">
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/henry-ns/desafio333?style=social">
@@ -49,6 +45,14 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
+---
+
+<p align="center">
+  <a href="https://tetris333.netlify.app/">Click aqui para testar</a>
+</p>
+
+---
+
 ## :clipboard: Descrição
 
 :tada: Finalmente, após inumeras xicaras de café, terminamos a v1.0 do nosso jogo de Tetris para a #QuarentenaTech.  Optamos por fazer para web pois ficaria mais fácil de testar e compartilhar com qualquer pessoa.
@@ -61,7 +65,7 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 
 ## :sparkles: Funcionalidades
 
-- Ao entrar no [site](<link-here>) você vai encontrar um menu com três botões:
+- Ao entrar no [site](https://tetris333.netlify.app/) você vai encontrar um menu com três botões:
   - **Jogar**: levará você para a página do jogo do Tetris em si.
   - **Configurações**: onde você poderá configurar a dificuldade, habilitar o grid e a peça fantasma. Toda a configuração é salva no _local storage_ do seu navegador.
   - **Ajuda**: aqui você encontrará informações sobre como jogar o jogo.
