@@ -4,6 +4,7 @@ import { opacify } from 'polished';
 import { ConfigData } from '../../../hooks/config';
 import theme from '../../../styles/themes';
 import { KEYS, MODELS, BLOCK_SIZE, POINTS } from '../../../utils/constants';
+import sounds from '../../../utils/sounds';
 import Block from './Block';
 import Piece from './Piece';
 
@@ -124,6 +125,8 @@ class Board {
       }
     });
 
+    sounds.pieceColision.play();
+
     this.checkCompleteLines();
   }
 
@@ -161,6 +164,8 @@ class Board {
     this.addPoints(length - 1);
 
     if (length) {
+      sounds.lineComplete.play();
+
       this.matrix.splice(fullLineIndexes[0], length);
       fullLineIndexes.forEach(() => this.matrix.unshift(this.initLine()));
 
@@ -273,6 +278,9 @@ class Board {
     }
 
     this.phantomPiece = this.createPhantomPiece();
+
+    sounds.pieceMovement.play();
+
     return !!moviment;
   }
 
