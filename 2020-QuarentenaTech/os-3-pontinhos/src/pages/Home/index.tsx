@@ -2,11 +2,11 @@ import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import * as S from './styles';
+import { Container } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <S.Container>
+    <Container>
       <h1>Tetris 333</h1>
 
       <nav>
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
           <FaGithub />
         </a>
       </footer>
-    </S.Container>
+    </Container>
   );
 };
 

@@ -1,16 +1,17 @@
 import React from 'react';
 
 import Layout from '../../components/Layout';
+import SubTitle from '../../styles/SubTitle';
 
-import * as S from './styles';
+import { Container } from './styles';
 
 const Help: React.FC = () => {
   return (
     <Layout>
-      <S.Container>
+      <Container>
         <h1>Ajuda</h1>
 
-        <S.SubTitle>Teclas de Movimento</S.SubTitle>
+        <SubTitle>Teclas de Movimento</SubTitle>
         <ul>
           <li>
             <strong>Seta para direita</strong>
@@ -26,7 +27,7 @@ const Help: React.FC = () => {
           </li>
         </ul>
 
-        <S.SubTitle>Rotacionar a peça</S.SubTitle>
+        <SubTitle>Rotacionar a peça</SubTitle>
         <ul>
           <li>
             <strong>Seta para cima</strong>
@@ -42,14 +43,14 @@ const Help: React.FC = () => {
           </li>
         </ul>
 
-        <S.SubTitle>Play & Pause</S.SubTitle>
+        <SubTitle>Play & Pause</SubTitle>
         <ul>
           <li>
             <strong>Tecla Q</strong>
             <span>: Movimenta a peça para a direita.</span>
           </li>
         </ul>
-      </S.Container>
+      </Container>
     </Layout>
   );
 };

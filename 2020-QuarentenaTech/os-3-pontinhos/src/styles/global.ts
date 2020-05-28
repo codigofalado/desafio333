@@ -48,6 +48,13 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  #root {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+  }
+
   strong {
     color: ${({ theme }) => theme.colors.active};
   }
@@ -67,11 +74,5 @@ export default createGlobalStyle`
     &:hover {
       color: ${({ theme }) => theme.colors.secondaryText};
     }
-  }
-
-  #root > main {
-    max-width: ${({ theme }) => theme.sizes.maxWidth};
-    margin: 0 auto;
-    padding: 32px;
   }
 `;

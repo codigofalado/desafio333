@@ -4,9 +4,10 @@ import P5 from 'p5';
 
 import Layout from '../../components/Layout';
 import { useConfig } from '../../hooks/config';
+import SubTitle from '../../styles/SubTitle';
 import { createSketch } from './sketch';
 
-import * as S from './styles';
+import { Container } from './styles';
 
 const Game: React.FC = () => {
   const { config } = useConfig();
@@ -24,15 +25,22 @@ const Game: React.FC = () => {
 
   return (
     <Layout>
-      <S.Container>
-        <h1>Game</h1>
+      <Container>
         <section ref={boardRef} />
         <section>
-          <h1>Próxima peça</h1>
-          <h1>Nivel </h1>
-          <h1>Pontos </h1>
+          <div>
+            <SubTitle>Próxima peça</SubTitle>
+          </div>
+          <div>
+            <SubTitle>Nivel</SubTitle>
+            <strong id="level" />
+          </div>
+          <div>
+            <SubTitle>Pontos</SubTitle>
+            <strong id="points" />
+          </div>
         </section>
-      </S.Container>
+      </Container>
     </Layout>
   );
 };

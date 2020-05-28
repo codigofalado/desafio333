@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 import { rem } from 'polished';
 
-export const Container = styled.main`
+import MainContainer from '../../styles/Container';
+
+export const Container = styled(MainContainer)`
   h1 {
     text-align: center;
     font-size: ${rem('48px')};
@@ -25,25 +27,5 @@ export const Container = styled.main`
     span {
       color: ${({ theme }) => theme.colors.secondaryText};
     }
-  }
-`;
-
-export const SubTitle = styled.h2`
-  position: relative;
-  padding-left: 20px;
-  font-size: ${rem('36px')};
-
-  &::before {
-    content: '';
-    position: absolute;
-
-    height: 70%;
-    width: 3px;
-
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-
-    background: ${({ theme }) => theme.colors.active};
   }
 `;

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import { useConfig } from '../../hooks/config';
 
-import * as S from './styles';
+import { Container, SubmitButton } from './styles';
 
 const Configuration: React.FC = () => {
   const {
@@ -29,7 +29,7 @@ const Configuration: React.FC = () => {
 
   return (
     <Layout>
-      <S.Container>
+      <Container>
         <h1>Configuração</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="difficulty">
@@ -72,9 +72,9 @@ const Configuration: React.FC = () => {
             <span />
           </label>
 
-          <S.SubmitButton>Salvar</S.SubmitButton>
+          <SubmitButton>Salvar</SubmitButton>
         </form>
-      </S.Container>
+      </Container>
     </Layout>
   );
 };

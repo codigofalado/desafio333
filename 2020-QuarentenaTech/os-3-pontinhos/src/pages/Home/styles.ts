@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 import { rem } from 'polished';
 
-export const Container = styled.main`
+import MainContainer from '../../styles/Container';
+
+export const Container = styled(MainContainer)`
   min-height: 100vh;
 
   display: flex;

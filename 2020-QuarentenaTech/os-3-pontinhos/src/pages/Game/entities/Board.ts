@@ -3,7 +3,7 @@ import { opacify } from 'polished';
 
 import { ConfigData } from '../../../hooks/config';
 import theme from '../../../styles/themes';
-import { KEYS, MODELS, BLOCK_SIZE } from '../../../utils/constants';
+import { KEYS, MODELS, BLOCK_SIZE, POINTS } from '../../../utils/constants';
 import Block from './Block';
 import Piece from './Piece';
 
@@ -32,6 +32,10 @@ class Board {
 
   nextPiece?: Piece;
 
+  level: number;
+
+  points: number;
+
   constructor(
     private canvas: P5,
     private config: Omit<ConfigData, 'difficulty'>,
@@ -45,6 +49,11 @@ class Board {
     this.initPieceStack();
 
     this.getNextPiece();
+
+    this.level = 1;
+    this.points = 0;
+
+    this.displayPoints();
 
     this.moviments = {
       [KEYS.D]: () => this.hardDrop(),
@@ -202,11 +211,20 @@ class Board {
     }
   }
 
+  private displayPoints(): void {
+    const pointsElement = document.getElementById('points');
+
+    if (pointsElement) {
+      pointsElement.innerText = String(this.points);
+    }
+  }
+
   private addPoints(multiplier: number): void {
     if (multiplier >= 0) {
-      // TODO: ADD POINTS
-      // game.points += POINTS[multiplier];
+      this.points += POINTS[multiplier];
     }
+
+    this.displayPoints();
   }
 
   show(): void {

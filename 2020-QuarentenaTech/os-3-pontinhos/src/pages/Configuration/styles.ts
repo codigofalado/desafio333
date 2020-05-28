@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 import { rem, opacify } from 'polished';
 
-export const Container = styled.main`
+import MainContainer from '../../styles/Container';
+
+export const Container = styled(MainContainer)`
   h1 {
     text-align: center;
     font-size: ${rem('48px')};
