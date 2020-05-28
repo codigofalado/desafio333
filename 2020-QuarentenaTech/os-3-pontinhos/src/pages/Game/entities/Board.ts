@@ -103,6 +103,33 @@ class Board {
     this.pieceStack.push(this.createPiace());
   }
 
+  private displayNextPiece(): void {
+    if (this.nextPiece) {
+      const { width, height } = this.nextPiece;
+
+      const scale = 30;
+
+      const gb = this.canvas.createGraphics(width * scale, height * scale);
+
+      if (!this.config.gridEnabled) {
+        gb.noStroke();
+      }
+
+      this.nextPiece.forBlock(({ block, index, lineIndex }) => {
+        if (block) {
+          gb.fill(block.color);
+          gb.rect(index * scale, lineIndex * scale, scale, scale);
+        }
+      });
+
+      const img = document.getElementById('nextPiece') as HTMLImageElement;
+
+      if (img) {
+        img.src = gb.elt.toDataURL();
+      }
+    }
+  }
+
   private getNextPiece(): void {
     [, this.nextPiece] = this.pieceStack;
 
@@ -110,7 +137,7 @@ class Board {
 
     this.pieceStack.push(new Piece(this.canvas, this.canvas.random(MODELS)));
 
-    this.nextPiece.saveImg();
+    this.displayNextPiece();
 
     this.phantomPiece = this.createPhantomPiece();
   }
@@ -279,7 +306,7 @@ class Board {
 
     this.phantomPiece = this.createPhantomPiece();
 
-    sounds.pieceMovement.play();
+    // sounds.pieceMovement.play();
 
     return !!moviment;
   }

@@ -33,7 +33,7 @@ const ConfigProvider: React.FC = ({ children }) => {
 
   const [gridEnabled, setGridEnabled] = useState(() => {
     const response = localStorage.getItem('@tetris333:config:grid');
-    return response ? JSON.parse(response) : true;
+    return response ? JSON.parse(response) : false;
   });
 
   const formattedDifficulty = useMemo(() => DIFFICULTY[difficulty], [

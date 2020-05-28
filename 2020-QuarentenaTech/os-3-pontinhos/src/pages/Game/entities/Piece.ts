@@ -214,28 +214,6 @@ class Piece {
       10,
     );
   }
-
-  saveImg(): void {
-    const scale = 30;
-
-    const gb = this.canvas.createGraphics(
-      this.width * scale,
-      this.height * scale,
-    );
-
-    this.forBlock(({ block, index, lineIndex }) => {
-      if (block) {
-        gb.fill(block.color);
-        gb.rect(index * scale, lineIndex * scale, scale, scale);
-      }
-    });
-
-    const img = document.getElementById('nextPiece') as HTMLImageElement;
-
-    if (img) {
-      img.src = gb.elt.toDataURL();
-    }
-  }
 }
 
 export default Piece;
