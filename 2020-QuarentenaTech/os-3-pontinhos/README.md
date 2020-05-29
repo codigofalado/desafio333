@@ -52,6 +52,10 @@
 </p>
 
 ---
+## :construction_worker: Time: Os 3 pontinhos
+- **Henrique** - @henry-ns
+- **Felipe**  - @felipefbs
+- **~~Gabriel~~** - (Desistiu :'()
 
 ## :clipboard: Descrição
 
@@ -72,10 +76,10 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 
 ### :fire: Requisitos escolhidos
 
-  - [ ] Implementação de Sons e Cores
+  - [x] Implementação de Sons e Cores
   - [x] Previsão de próxima peça
   - [x] Escolha entre pelo menos 3 dificuldades
-  - [ ] Contabilização de Pontos e Game Over
+  - [x] Contabilização de Pontos e Game Over
   - [x] Poder habilitar Peça Fantasma
 
 
