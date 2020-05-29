@@ -23,6 +23,10 @@ const Help: React.FC = () => {
           </li>
           <li>
             <strong>Seta para baixo</strong>
+            <span>: Faz a peça descer mais rápido.</span>
+          </li>
+          <li>
+            <strong>Tecla D</strong>
             <span>: Derruba a peça.</span>
           </li>
         </ul>
@@ -35,11 +39,11 @@ const Help: React.FC = () => {
           </li>
           <li>
             <strong>Tecla A</strong>
-            <span>: rotaciona no sentido horário.</span>
+            <span>: Rotaciona no sentido horário.</span>
           </li>
           <li>
             <strong>Tecla B</strong>
-            <span>: rotaciona no sentido anti-horário.</span>
+            <span>: Rotaciona no sentido anti-horário.</span>
           </li>
         </ul>
 
@@ -47,7 +51,7 @@ const Help: React.FC = () => {
         <ul>
           <li>
             <strong>Tecla Q</strong>
-            <span>: Movimenta a peça para a direita.</span>
+            <span>: Muda entre o play e o pause no jogo.</span>
           </li>
         </ul>
       </Container>
