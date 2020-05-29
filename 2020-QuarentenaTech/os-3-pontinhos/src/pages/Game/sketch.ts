@@ -54,7 +54,7 @@ function createSketch(config: ConfigData): Sketch {
 
       board = new Board(p, config, sizes);
 
-      // play();
+      play();
     };
 
     p.draw = () => {
