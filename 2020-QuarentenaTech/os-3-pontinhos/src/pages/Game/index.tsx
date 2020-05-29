@@ -7,7 +7,7 @@ import { useConfig } from '../../hooks/config';
 import SubTitle from '../../styles/SubTitle';
 import { createSketch } from './sketch';
 
-import { Container, NextPiece } from './styles';
+import { Container, NextPiece, GameOver } from './styles';
 
 const Game: React.FC = () => {
   const { config } = useConfig();
@@ -27,7 +27,7 @@ const Game: React.FC = () => {
     <Layout>
       <Container>
         <section ref={boardRef}>
-          {/* <div id="gameOverText">Game Over</div> */}
+          <GameOver id="gameOverText">Game Over</GameOver>
         </section>
 
         <section>
