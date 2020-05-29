@@ -75,4 +75,10 @@ export default createGlobalStyle`
       color: ${({ theme }) => theme.colors.secondaryText};
     }
   }
+
+  .display{
+    opacity:1;
+    pointer-events: all;
+
+  }
 `;

@@ -11,6 +11,10 @@ export const Container = styled(MainContainer)`
   margin: auto;
   max-width: 900px;
 
+  section:first-of-type {
+    position: relative;
+  }
+
   section:last-of-type {
     width: 100%;
     max-width: 300px;
@@ -53,4 +57,10 @@ export const NextPiece = styled.div`
       margin: auto;
     }
   }
+`;
+
+export const GameOver = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
 `;

@@ -128,7 +128,9 @@ class Board {
         const xIndex = block.x / BLOCK_SIZE;
         const yIndex = block.y / BLOCK_SIZE;
 
-        this.matrix[yIndex][xIndex] = block;
+        if (yIndex >= 0) {
+          this.matrix[yIndex][xIndex] = block;
+        }
       }
     });
 

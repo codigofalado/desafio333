@@ -26,7 +26,10 @@ const Game: React.FC = () => {
   return (
     <Layout>
       <Container>
-        <section ref={boardRef} />
+        <section ref={boardRef}>
+          {/* <div id="gameOverText">Game Over</div> */}
+        </section>
+
         <section>
           <NextPiece>
             <SubTitle>Próxima peça</SubTitle>

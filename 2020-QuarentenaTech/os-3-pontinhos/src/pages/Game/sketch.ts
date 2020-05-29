@@ -59,9 +59,21 @@ function createSketch(config: ConfigData): Sketch {
 
     p.draw = () => {
       board.show();
-
       if (board.checkEndGame()) {
+        const gameOverText = document.getElementById('gameOverText');
+        if (gameOverText) {
+          gameOverText.classList.add('display');
+        }
+
+        p.fill(`rgba(42,42,42,0.9)`);
+        p.rect(0, 0, p.width, p.height);
+        p.textAlign(p.CENTER, p.CENTER);
+        p.fill(255);
+        p.textSize(42);
+        p.text('GAME OVER', p.width / 2, p.height / 2);
+
         togglePlayed();
+
         sounds.endGame.play();
       }
     };
