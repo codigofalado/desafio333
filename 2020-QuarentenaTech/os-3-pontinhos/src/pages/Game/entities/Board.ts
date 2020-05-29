@@ -18,6 +18,7 @@ interface Moviments {
 }
 
 type LineOfBlocks = (Block | null)[];
+
 type Blocks = LineOfBlocks[];
 
 class Board {
@@ -58,6 +59,12 @@ class Board {
 
     this.moviments = {
       [KEYS.D]: () => this.hardDrop(),
+      [this.canvas.LEFT_ARROW]: () => {
+        this.moveHorizontally(-1);
+      },
+      [this.canvas.RIGHT_ARROW]: () => {
+        this.moveHorizontally();
+      },
     };
   }
 
@@ -67,6 +74,11 @@ class Board {
 
   private initMatrix(): null[][] {
     return Array.from({ length: this.sizes.height }).map(() => this.initLine());
+  }
+
+  private initPieceStack(): void {
+    this.pieceStack.push(this.createPiace());
+    this.pieceStack.push(this.createPiace());
   }
 
   private createPiace(): Piece {
@@ -98,38 +110,6 @@ class Board {
     return phantomPiece;
   }
 
-  private initPieceStack(): void {
-    this.pieceStack.push(this.createPiace());
-    this.pieceStack.push(this.createPiace());
-  }
-
-  private displayNextPiece(): void {
-    if (this.nextPiece) {
-      const { width, height } = this.nextPiece;
-
-      const scale = 30;
-
-      const gb = this.canvas.createGraphics(width * scale, height * scale);
-
-      if (!this.config.gridEnabled) {
-        gb.noStroke();
-      }
-
-      this.nextPiece.forBlock(({ block, index, lineIndex }) => {
-        if (block) {
-          gb.fill(block.color);
-          gb.rect(index * scale, lineIndex * scale, scale, scale);
-        }
-      });
-
-      const img = document.getElementById('nextPiece') as HTMLImageElement;
-
-      if (img) {
-        img.src = gb.elt.toDataURL();
-      }
-    }
-  }
-
   private getNextPiece(): void {
     [, this.nextPiece] = this.pieceStack;
 
@@ -157,6 +137,14 @@ class Board {
     this.checkCompleteLines();
   }
 
+  private addPoints(multiplier: number): void {
+    if (multiplier >= 0) {
+      this.points += POINTS[multiplier];
+    }
+
+    this.displayPoints();
+  }
+
   private isLineFilled(line: LineOfBlocks): boolean {
     // Check if at lest one no block on line,
     // if not, find return undefined = line is filled;
@@ -175,6 +163,14 @@ class Board {
       this.addCurrentPiece();
       this.getNextPiece();
     }
+  }
+
+  private moveHorizontally(direction = 1): void {
+    if (this.checkSideCollision(direction)) {
+      return;
+    }
+
+    this.currentPiece.moveHorizontally(direction);
   }
 
   // TODO: CHECK
@@ -227,6 +223,23 @@ class Board {
     return isCollide;
   }
 
+  private checkSideCollision(direction = 1): boolean {
+    let isCollide = false;
+
+    this.currentPiece.forBlock(({ block }) => {
+      if (block) {
+        const xIndex = block.x / BLOCK_SIZE + direction;
+        const yIndex = block.y / BLOCK_SIZE;
+
+        if (this.matrix[yIndex] && this.matrix[yIndex][xIndex]) {
+          isCollide = true;
+        }
+      }
+    });
+
+    return isCollide;
+  }
+
   private drawBackground(): void {
     let [x, y] = [0, 0];
 
@@ -245,20 +258,39 @@ class Board {
     }
   }
 
+  private displayNextPiece(): void {
+    if (this.nextPiece) {
+      const { width, height } = this.nextPiece;
+
+      const scale = 30;
+
+      const gb = this.canvas.createGraphics(width * scale, height * scale);
+
+      if (!this.config.gridEnabled) {
+        gb.noStroke();
+      }
+
+      this.nextPiece.forBlock(({ block, index, lineIndex }) => {
+        if (block) {
+          gb.fill(block.color);
+          gb.rect(index * scale, lineIndex * scale, scale, scale);
+        }
+      });
+
+      const img = document.getElementById('nextPiece') as HTMLImageElement;
+
+      if (img) {
+        img.src = gb.elt.toDataURL();
+      }
+    }
+  }
+
   private displayPoints(): void {
     const pointsElement = document.getElementById('points');
 
     if (pointsElement) {
       pointsElement.innerText = String(this.points);
     }
-  }
-
-  private addPoints(multiplier: number): void {
-    if (multiplier >= 0) {
-      this.points += POINTS[multiplier];
-    }
-
-    this.displayPoints();
   }
 
   show(): void {
@@ -294,8 +326,8 @@ class Board {
 
   movePiece(key: number): boolean {
     const moviments: Moviments = {
-      ...this.moviments,
       ...this.currentPiece.moviments,
+      ...this.moviments,
     };
 
     const moviment = moviments[key];
