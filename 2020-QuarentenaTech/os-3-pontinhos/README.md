@@ -100,6 +100,10 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
 
+### :loud_sound: Efeitos Sonoros
+
+Todos os efeitos sonoros foram tirados do site [freesound](https://freesound.org/).
+
 ### :package:  Pacotes
 
 | Função               | Biblioteca                                              |
@@ -108,7 +112,7 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
 | Icones               | [React Icons](https://react-icons.netlify.com/#/)       |
 | CSS in JS            | [Styled Compoments](https://www.styled-components.com/) |
 | Manipulação de cores | [Polished](https://polished.js.org/)                    |
-| Sons                 | [freesound](https://freesound.org/)                     |
+| Play de áudio        | [uifx](https://github.com/wle8300/uifx)                 |
 
 :bulb: **Para mais detalhes, veja o `package.json`.**
 
