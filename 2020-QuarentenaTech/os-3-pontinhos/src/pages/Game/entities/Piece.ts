@@ -209,9 +209,9 @@ class Piece {
     // this.canvas.circle(this.x + this.width * BLOCK_SIZE, this.y, 10);
     // this.canvas.circle(this.x, this.y + this.height * BLOCK_SIZE, 10);
     // this.canvas.circle(
-    //   this.x + this.width * BLOCK_SIZE,
-    //   this.y + this.height * BLOCK_SIZE,
-    //   10,
+    //  this.x + this.width * BLOCK_SIZE,
+    //  this.y + this.height * BLOCK_SIZE,
+    //  10,
     // );
   }
 }
