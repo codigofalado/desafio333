@@ -83,6 +83,8 @@ Utilizamos a biblioteca [p5.js](https://p5js.org) pela influência do [Daniel Sh
   - [x] Poder habilitar Peça Fantasma
 
 
+#### :construction: Ainda tem alguns bugs :bug: e estamos tentanto concerla-los, se encontrar algum, por favor, comenta ai em baixo :arrow_down: ficaramos muito gratos.
+
 ## 🧐 O que tem dentro?
 
 ### :label: Linguagem
