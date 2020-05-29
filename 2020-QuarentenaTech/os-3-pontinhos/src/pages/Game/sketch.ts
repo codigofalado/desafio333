@@ -1,7 +1,9 @@
 /* eslint-disable no-param-reassign */
 import P5 from 'p5';
+import { opacify } from 'polished';
 
 import { ConfigData } from '../../hooks/config';
+import theme from '../../styles/themes';
 import { BOARD, BLOCK_SIZE, KEYS, TIME_INTERVAL } from '../../utils/constants';
 import sounds from '../../utils/sounds';
 import Board from './entities/Board';
@@ -61,16 +63,13 @@ function createSketch(config: ConfigData): Sketch {
       board.show();
       if (board.checkEndGame()) {
         const gameOverText = document.getElementById('gameOverText');
+
         if (gameOverText) {
           gameOverText.classList.add('display');
         }
 
-        p.fill(`rgba(42,42,42,0.9)`);
+        p.fill(opacify(-0.2, theme.colors.backgroundDark));
         p.rect(0, 0, p.width, p.height);
-        p.textAlign(p.CENTER, p.CENTER);
-        p.fill(255);
-        p.textSize(42);
-        p.text('GAME OVER', p.width / 2, p.height / 2);
 
         togglePlayed();
 
@@ -105,89 +104,3 @@ function createSketch(config: ConfigData): Sketch {
 }
 
 export { createSketch };
-
-// export type Sketch = (p: P5) => void;
-
-// class Sketch {
-//   config: ConfigData;
-
-//   board: Board;
-
-//   constructor(config: ConfigData) {
-//     this.config = config;
-//   }
-
-//   create = (p: P5): void => {
-//     let lastKeyPressed: number;
-
-//     let isPaused = false;
-
-//     let interval: number;
-
-//     const pause = (): void => {
-//       clearInterval(interval);
-//       p.noLoop();
-//     };
-
-//     const play = (): void => {
-//       if (!this.board.checkEndGame()) {
-//         interval = setInterval(() => {
-//           this.board.update();
-//         }, TIME_INTERVAL / (this.config.difficulty + 1) ** 2);
-
-//         p.loop();
-//       }
-//     };
-
-//     const togglePlayed = (): void => {
-//       if (isPaused) {
-//         play();
-//       } else {
-//         pause();
-//       }
-
-//       isPaused = !isPaused;
-//     };
-
-//     p.setup = () => {
-//       p.createCanvas(BOARD.X * BLOCK_SIZE, BOARD.Y * BLOCK_SIZE);
-
-//       this.board.setCanvas(p);
-
-//       console.log(this.board);
-//       // play();
-//     };
-
-//     p.draw = () => {
-//       this.board.show();
-
-//       if (this.board.checkEndGame()) {
-//         togglePlayed();
-//       }
-//     };
-
-//     p.keyPressed = () => {
-//       if (p.keyCode === KEYS.Q) {
-//         togglePlayed();
-//         return;
-//       }
-
-//       if (p.keyCode === p.DOWN_ARROW) {
-//         this.board.update();
-//         return;
-//       }
-
-//       if (!isPaused) {
-//         const moviments = [p.LEFT_ARROW, p.RIGHT_ARROW, p.DOWN_ARROW];
-
-//         const moved = this.board.movePiece(p.keyCode);
-
-//         if (moved && moviments.includes(p.keyCode)) {
-//           lastKeyPressed = p.keyCode;
-//         }
-//       }
-//     };
-//   };
-// }
-
-// export default Sketch;

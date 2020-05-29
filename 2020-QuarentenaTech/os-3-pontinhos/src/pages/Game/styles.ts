@@ -60,7 +60,18 @@ export const NextPiece = styled.div`
 `;
 
 export const GameOver = styled.div`
+  opacity: 0;
+
   position: absolute;
+  user-select: none;
+
+  text-align: center;
+  font-size: ${rem('60px')};
+  letter-spacing: 0.2rem;
+
+  width: 100%;
   left: 50%;
   top: 50%;
+
+  transform: translate(-50%, -50%);
 `;
