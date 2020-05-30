@@ -25,6 +25,8 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
     console.log('The file has been saved!');
   });
 
+  res.send();
+
 })
 
 app.post('/calcularProximaJogada', function(req, res) {
@@ -37,6 +39,8 @@ app.post('/calcularProximaJogada', function(req, res) {
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
   });
+
+  res.send();
   
 })
 
