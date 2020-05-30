@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wolverine X Blob || Game ticTacToe</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+
+    <div class="choise">
+      <span>Escolha seu Lutador</span>
+      <div class="personagem">
+        <div class="Wolve" onclick="choisePerson()">
+          <img src="img/volvi.png" alt="Wolverine">
+        </div>
+        <div class="Blob" onclick="choisePerson()">
+          <img src="img/blob.png" alt="Blob">
+        </div>
+      </div>
+      </div>
+
+    <div class="tela"></div>
+    
+    <div class="logo">
+      <img src="img/logo.png" alt="logo">
+    </div>
+
+    <div class="Placar">
+      <div class="paper">
+        <span>Vitorias</span>
+        <span class="victory">999</span>
+      </div>
+    </div>
+    <div class="PlacarTras"></div>
+
+    <div class="puxaPlacar">Placar</div>
+    <div class="puxaPlacarSubistituto">
+        <span>Vitorias</span>
+        <span class="victory">999</span>
+    </div>
+    
+    <div class="pickColor">Color</div>
+    <div class="colorOption">
+      <button class="Option op1"></button>
+      <button class="Option op2"></button>
+      <button class="Option op3"></button>
+    </div>
+
+    <!-- ======================= -->
+
+    <div id="coin">
+      <img src="img/money.png" alt="coint">
+    </div>
+
+    <div id="mySideFlip" class="sideflip">
+      <span>FLIP A COIN</span>
+      <div class="cointImg">
+        <img class="cointFlip" src="img/coint.gif" alt="">
+      </div>
+      <div class="resultado">...</div>
+      <button id="btnFlip">Flip</button>
+    </div>
+
+    <!-- ======================= -->
+
+    <div class="ringue">
+      <div class="lona">
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+        <button class=sub-box> </button>
+
+        <div class="lonaLadoDireito"></div>
+        <div class="lonaLadoEsquerdo"></div>
+
+        <div class="cordaLadoDireito corda1"></div>
+        <div class="cordaLadoDireito corda2"></div>
+        <div class="cordaLadoDireito corda3"></div>
+
+        <div class="cordaLadoEsquerdo corda4"></div>
+        <div class="cordaLadoEsquerdo corda5"></div>
+        <div class="cordaLadoEsquerdo corda6"></div>
+
+        <div class="pilar pilar1"></div>
+        <div class="pilar pilar2"></div>
+        <div class="pilar pilar3"></div>
+      </div>
+    </div>
+
+
+    <video autoplay>
+      <source src="../videos/VitoriaWolverine.mp4" type="video/mp4">
+        Your browser does not support the audio element.
+    </video>
+
+    
+
+    <!-- <button class="fa fa-cog btn"></button> -->
+
+  
+
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
