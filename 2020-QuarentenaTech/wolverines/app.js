@@ -51,6 +51,7 @@ app.get('/lerRespostaDoOctave', function(req, res) {
   fs.readFileSync('src/scripts/Tabuleiro.csv', (err, data) => {
     if (err) throw err;
     response = data;
+    console.log(data)
   });
 
   res.send(response)
