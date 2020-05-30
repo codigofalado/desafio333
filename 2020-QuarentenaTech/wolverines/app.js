@@ -1,3 +1,6 @@
+const { exec } = require('child_process');
+const fs = require('fs')
+
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -15,9 +18,18 @@ const indexRouter = require('./src/router/index');
 
 app.get('/', indexRouter);
 
-app.post('/proximaJogada', function(req, res) {
+app.post('/obterParametroParaScriptOctave', function(req, res) {
   
-  exec('octave-cli --eval "cd src/scripts; csvwrite("Tabuleiro.csv", [0 0 0; 0 0 0; 0 0 0]); ProximaJogada_(0.5)"', (error, stdout, stderr) => {
+  fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
+
+})
+
+app.post('/calcularProximaJogada', function(req, res) {
+
+  exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;
