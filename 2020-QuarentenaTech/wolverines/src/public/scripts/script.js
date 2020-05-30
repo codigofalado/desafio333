@@ -98,8 +98,7 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
       obterParametroParaScriptOctave(matriz)
       proximaJogada();
-      a = lerRespostaDoOctave();
-      console.log(a)
+      lerRespostaDoOctave();
     }
     
   }
