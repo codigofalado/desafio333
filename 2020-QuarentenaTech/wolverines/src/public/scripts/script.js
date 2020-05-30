@@ -112,7 +112,7 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
       obterParametroParaScriptOctave(matriz)
       proximaJogada();
-      lerRespostaDoOctave(matriz);
+      // lerRespostaDoOctave(matriz);
     }
     
   }
