@@ -22,7 +22,13 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
   
   fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;
-    console.log('The file has been saved!');
+    
+    console.log('The file has been saved!');  
+    fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {
+      if (err) throw err;
+      res.send(data);
+    });
+
   });
 
 })
@@ -38,15 +44,6 @@ app.post('/calcularProximaJogada', function(req, res) {
     console.error(`stderr: ${stderr}`);
   });
   
-})
-
-app.get('/lerRespostaDoOctave', function(req, res) {
-  
-  fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {
-    if (err) throw err;
-    res.send(data);
-  });
-
 })
 
 app.listen(3000, err => {

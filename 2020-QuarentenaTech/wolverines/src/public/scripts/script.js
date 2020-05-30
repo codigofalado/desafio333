@@ -25,9 +25,16 @@ function obterParametroParaScriptOctave(matriz) {
   http.open("POST", url);    
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
-          console.log(http.responseText);
-      }}
+    if(http.readyState == 4 && http.status == 200) {
+
+      matriz = http.responseText
+        .replace("\n", ",")
+        .replace("\n", ",")
+        .split(",");
+
+      console.log(matriz)
+
+    }}
   http.send(params);
 
 }
@@ -48,38 +55,38 @@ function proximaJogada() {
 
 }
 
-function lerRespostaDoOctave(matriz) {
+// function lerRespostaDoOctave(matriz) {
 
-  const Tabuleiro = [
-    [matriz[0], matriz[1], matriz[2]],
-    [matriz[3], matriz[4], matriz[5]],
-    [matriz[6], matriz[7], matriz[8]]
-  ];
+//   const Tabuleiro = [
+//     [matriz[0], matriz[1], matriz[2]],
+//     [matriz[3], matriz[4], matriz[5]],
+//     [matriz[6], matriz[7], matriz[8]]
+//   ];
 
-  let csvContent = "";
-  Tabuleiro.forEach(function(rowArray) {
-      let row = rowArray.join(",");
-      csvContent += row + "\r\n";
-  });
+//   let csvContent = "";
+//   Tabuleiro.forEach(function(rowArray) {
+//       let row = rowArray.join(",");
+//       csvContent += row + "\r\n";
+//   });
 
-  var http = new XMLHttpRequest();
-  var url = '/lerRespostaDoOctave';
-  http.open("GET", url);    
-  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
+//   var http = new XMLHttpRequest();
+//   var url = '/lerRespostaDoOctave';
+//   http.open("GET", url);    
+//   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+//   http.onreadystatechange = function() {//Call a function when the state changes.
+//       if(http.readyState == 4 && http.status == 200) {
 
-        matriz = http.responseText
-          .replace("\n", ",")
-          .replace("\n", ",")
-          .split(",");
+//         matriz = http.responseText
+//           .replace("\n", ",")
+//           .replace("\n", ",")
+//           .split(",");
 
-        console.log(matriz)
+//         console.log(matriz)
 
-      }}
-  http.send();
+//       }}
+//   http.send();
 
-}
+// }
 
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
