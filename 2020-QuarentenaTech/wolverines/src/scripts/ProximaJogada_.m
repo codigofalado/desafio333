@@ -3,22 +3,22 @@
 %%%%%%%%%%%%%%%%%%%% Jogo da Velha %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Wolverines %%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%% Gabriel, Vinícius, Wesley %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Gabriel, VinÃ­cius, Wesley %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% Versão final da nossa IA vencedora de jogo da véia #####
+%%% VersÃ£o final da nossa IA vencedora de jogo da vÃ©ia #####
 %%% feito a partir de ProximaJogadaFullV2 ,              %%%   
-%%% apenas renomeando funções                            %%%
+%%% apenas renomeando funÃ§Ãµes                            %%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% programa principal %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = ProximaJogada_(dificuldade)  %%OLHA O UNDERLINE!!!
-%% Inputs: dificuldade - número de 0 a 1
+%% Inputs: dificuldade - nÃºmero de 0 a 1
 %%         Tabuleiro - csv com matriz atual do tabuleiro
 
-%% Outputs: Tabuleiro - csv com próxima jogada do computador inclusa na matriz do tabuleiro
+%% Outputs: Tabuleiro - csv com prÃ³xima jogada do computador inclusa na matriz do tabuleiro
 %%          Ao terminar o programa retorna 1
 
 a = rand(); %nro aleatorio de 0 a 1
@@ -27,11 +27,11 @@ Tabuleiro = csvread('Tabuleiro.csv');
 
 if a < dificuldade
   
-  Tabuleiro = NaoGanharas(Tabuleiro);   % IA - ganha em 90% dos casos, empata em 8%, só deixa user vencer 2%
+  Tabuleiro = NaoGanharas(Tabuleiro);   % IA - ganha em 90% dos casos, empata em 8%, sÃ³ deixa user vencer 2%
 
 else
 
-  Tabuleiro = SePaCeGanha(Tabuleiro);  % computador faz jogada aleatória
+  Tabuleiro = SePaCeGanha(Tabuleiro);  % computador faz jogada aleatÃ³ria
  
 end
 
@@ -68,23 +68,23 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = NaoGanharas(A0)
-%% V3: monitora q parte do algoritmo é usada salvando variável cod .
-%% cod de um dígito => Fim de jogo
-%% 2 dígitos começando com um =>  Defesa
-%% 4 digitos começando com dois => Ataque
+%% V3: monitora q parte do algoritmo Ã© usada salvando variÃ¡vel cod .
+%% cod de um dÃ­gito => Fim de jogo
+%% 2 dÃ­gitos comeÃ§ando com um =>  Defesa
+%% 4 digitos comeÃ§ando com dois => Ataque
 
-  % A0 é uma matriz 3x3 com zeros, uns e frações (0.3) 
-  % As jogadas do usuário estão representadas pelos uns
-  % As jogadas do computador estão representadas pelos 0.3
-  % Os zeros são espaços vazios
+  % A0 Ã© uma matriz 3x3 com zeros, uns e fraÃ§Ãµes (0.3) 
+  % As jogadas do usuÃ¡rio estÃ£o representadas pelos uns
+  % As jogadas do computador estÃ£o representadas pelos 0.3
+  % Os zeros sÃ£o espaÃ§os vazios
   
   %Vamos usar um algoritmo com os seguintes passos:
   
   %I) obter as somas da matriz em todos os sentidos
-  %II) testar se as somas são inteiros na seguinte ordem: diagonais, linhas e colunas.
-  %III) testar se somas são >= do que 2, 
-        % se não localizar aonde e defender elemento correspondente
-       % caso for <2 , testar se é menor do que 1.5
+  %II) testar se as somas sÃ£o inteiros na seguinte ordem: diagonais, linhas e colunas.
+  %III) testar se somas sÃ£o >= do que 2, 
+        % se nÃ£o localizar aonde e defender elemento correspondente
+       % caso for <2 , testar se Ã© menor do que 1.5
         
         %prioridades de ataque: (1) elemento central ( [i,j] = [2,2] )
         %                       (2) cantos  ( [i,j] = [1,1] , [1,3] , [3,1] , [3,3] )
@@ -92,7 +92,7 @@ function q = NaoGanharas(A0)
 
    cod = 0;
 
-   A = A0; %inicialização matriz de saída  
+   A = A0; %inicializaÃ§Ã£o matriz de saÃ­da  
   
   %I) somas  
   diag1 = trace(A0);
@@ -105,12 +105,12 @@ function q = NaoGanharas(A0)
   %II) testando possibilidades para somas  
   k = find(somas==3*0.3); compu_vence = ~isempty(k);
   if compu_vence
-    disp('Você perdeu');
+    disp('VocÃª perdeu');
     A = 1; cod = 1; save cod;
   else
    k = find(somas==3); user_vence = ~isempty(k); 
    if user_vence 
-      disp('Você venceu');
+      disp('VocÃª venceu');
       A = 0; cod = 0; save cod;
    else 
      k = find(A0==0); n_tem_zeros = isempty(k);
@@ -120,10 +120,10 @@ function q = NaoGanharas(A0)
      else
       k = find(somas==2);  %averiguando aonde defender (coluna, linha ou diagonal)  
       tem_brecha = ~isempty(k);
-      if tem_brecha %caso usuário ataque (marque duas casas vizinhas com possibilidade de uma terceira)
+      if tem_brecha %caso usuÃ¡rio ataque (marque duas casas vizinhas com possibilidade de uma terceira)
          A = Defesa(A0,k);  % defesa!      
       else  
-        %k = find(somas==min(somas)); % vendo aonde tem mais espaço para atacar
+        %k = find(somas==min(somas)); % vendo aonde tem mais espaÃ§o para atacar
         %A = AtacouV3(A0,k);  % ataque!
          A = Ataque(A0);   
       endif
@@ -140,10 +140,10 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = Defesa(A0,k)
-%% V3: monitora q parte do algoritmo é usada salvando variável cod .
-%% cod de um dígito => Fim de jogo
-%% 2 dígitos começando com um =>  Defesa
-%% 4 digitos começando com dois => Ataque
+%% V3: monitora q parte do algoritmo Ã© usada salvando variÃ¡vel cod .
+%% cod de um dÃ­gito => Fim de jogo
+%% 2 dÃ­gitos comeÃ§ando com um =>  Defesa
+%% 4 digitos comeÃ§ando com dois => Ataque
 
   cod = 0;
   
@@ -167,25 +167,25 @@ function q = Defesa(A0,k)
 
         if k==1
           diagA0 = diag(A0); %vetor com a diagonal principal, de cima para baixo
-          i = find(diagA0==0); %acha espaço vazio nessa diagonal
-          A(i,i) = 0.3; %defende esse espaço!
+          i = find(diagA0==0); %acha espaÃ§o vazio nessa diagonal
+          A(i,i) = 0.3; %defende esse espaÃ§o!
           cod = 11; save cod;
         else
           if k==2
-             diagA0 = diag(flip(A0)); %vetor com a diagonal secundária, de cima para baixo
-             i = find(diagA0==0); %acha espaço vazio nessa diagonal    
-             A(3-i+1,i) = 0.3 ; %defende esse espaço!
+             diagA0 = diag(flip(A0)); %vetor com a diagonal secundÃ¡ria, de cima para baixo
+             i = find(diagA0==0); %acha espaÃ§o vazio nessa diagonal    
+             A(3-i+1,i) = 0.3 ; %defende esse espaÃ§o!
              cod = 12; save cod;
            else
               if k>=3 && k<=5
-                i = find(lins==2); %acha linha onde está atacando
+                i = find(lins==2); %acha linha onde estÃ¡ atacando
                 j = find(A0(i,:)==0); %acha coluna vazia nessa linha
                 A(i,j) = 0.3; %defende a linha!
                 cod = 13;
                 save cod;
               else     
                  if k>=6 && k<=8
-                    j = find(cols==2); %acha coluna onde está atacando
+                    j = find(cols==2); %acha coluna onde estÃ¡ atacando
                     i = find(A0(:,j)==0); %acha linha vazia nessa coluna
                    A(i,j) = 0.3; %defende a coluna!
                    cod = 14; save cod;
@@ -202,10 +202,10 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = Ataque(A0)
-%% V4: monitora q parte do algoritmo é usada salvando variável cod .
-%% cod de um dígito => Fim de jogo
-%% 2 dígitos começando com um =>  Defesa
-%% 4 digitos começando com dois ou três => Ataque
+%% V4: monitora q parte do algoritmo Ã© usada salvando variÃ¡vel cod .
+%% cod de um dÃ­gito => Fim de jogo
+%% 2 dÃ­gitos comeÃ§ando com um =>  Defesa
+%% 4 digitos comeÃ§ando com dois ou trÃªs => Ataque
   
   cod = 2;
   
@@ -295,10 +295,10 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = AtaqueDasProfundezas(A0)
-%% V1_2: monitora q parte do algoritmo é usada salvando variável cod .
-%% cod de um dígito => Fim de jogo
-%% 2 dígitos começando com um =>  Defesa
-%% 4 digitos começando com dois => Ataque
+%% V1_2: monitora q parte do algoritmo Ã© usada salvando variÃ¡vel cod .
+%% cod de um dÃ­gito => Fim de jogo
+%% 2 dÃ­gitos comeÃ§ando com um =>  Defesa
+%% 4 digitos comeÃ§ando com dois => Ataque
 
   load cod;
   
@@ -311,7 +311,7 @@ function q = AtaqueDasProfundezas(A0)
   
   somas = [ diag1 diag2 lins cols ];    
   
-        k = find(somas==min(somas)); % vendo aonde tem mais espaço para atacar
+        k = find(somas==min(somas)); % vendo aonde tem mais espaÃ§o para atacar
         tem_dois_espacos = length(k)>1;
         if tem_dois_espacos
           Somas = MontaMatrizSoma(A0); cod = cod +1 ;
@@ -327,7 +327,7 @@ function q = AtaqueDasProfundezas(A0)
           tem_dois_minimos = length(i)>1 ; % de novo
           if tem_dois_minimos || A(i,j)~=0
             cod = cod + 1;
-            %acha elemento mais distante de tudo que usuário preencheu no tabuleiro
+            %acha elemento mais distante de tudo que usuÃ¡rio preencheu no tabuleiro
             elemento = espacoMaisDistante(A,i,j);
             i = elemento(:,1); j = elemento(:,2);
              
@@ -363,35 +363,35 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = AtaquePuntual(A0,k)
-%% V2: monitora q parte do algoritmo é usada salvando variável cod .
-%% cod de um dígito => Fim de jogo
-%% 2 dígitos começando com um =>  Defesa
-%% 4 digitos começando com dois ou 3 => Ataque
+%% V2: monitora q parte do algoritmo Ã© usada salvando variÃ¡vel cod .
+%% cod de um dÃ­gito => Fim de jogo
+%% 2 dÃ­gitos comeÃ§ando com um =>  Defesa
+%% 4 digitos comeÃ§ando com dois ou 3 => Ataque
   
   A = A0;
   load cod;
           if k==1
             diagA0 = diag(A0); %vetor com a diagonal principal, de cima para baixo
-            i = find(diagA0==0) %acha espaço vazio nessa diagonal
-            A(i,i) = 0.3; %ataca esse espaço!
+            i = find(diagA0==0) %acha espaÃ§o vazio nessa diagonal
+            A(i,i) = 0.3; %ataca esse espaÃ§o!
             cod = 10*cod + 1;
           else
             if k==2
-             diagA0 = diag(flip(A0)); %vetor com a diagonal secundária, de cima para baixo
-             i = find(diagA0==0) %acha espaço vazio nessa diagonal    
-             A(3-i+1,i) = 0.3 ; %ataca esse espaço!
+             diagA0 = diag(flip(A0)); %vetor com a diagonal secundÃ¡ria, de cima para baixo
+             i = find(diagA0==0) %acha espaÃ§o vazio nessa diagonal    
+             A(3-i+1,i) = 0.3 ; %ataca esse espaÃ§o!
              cod = 10*cod + 2;
             else
               if k>=3 && k<=5
                 lins = sum(A0');
-                i = find(lins==2); %acha linha onde está atacando
+                i = find(lins==2); %acha linha onde estÃ¡ atacando
                 j = find(A0(i,:)==0); %acha coluna vazia nessa linha
                 A(i,j) = 0.3; %ataca a linha!
                 cod = 10*cod + 3;
               else     
                  if k>=6 && k<=8
                     cols = sum(A0);
-                    j = find(cols==2); %acha coluna onde está atacando
+                    j = find(cols==2); %acha coluna onde estÃ¡ atacando
                     i = find(A0(:,j)==0); %acha linha vazia nessa coluna
                     A(i,j) = 0.3; %ataca a coluna!
                     cod = 10*cod + 4;
@@ -408,8 +408,8 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = MontaMatrizSoma(A0)
-  %% esta função monta as somas dos elementos relevantes em cada posição do tabuleiro
-  %% para localizar as regiões mais livres ou mais ocupadas
+  %% esta funÃ§Ã£o monta as somas dos elementos relevantes em cada posiÃ§Ã£o do tabuleiro
+  %% para localizar as regiÃµes mais livres ou mais ocupadas
   %% De modo a comparar equitativamente, normalizamos as somas aonde diagonais tomam parte.
   
   diag1 = trace(A0);
@@ -441,7 +441,7 @@ endfunction
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 function q = nroNaturalAleatorio(N)
-  %sorteia um numero aleatório não nulo até o valor N
+  %sorteia um numero aleatÃ³rio nÃ£o nulo atÃ© o valor N
   
    q = round((N-1)*rand()) + 1 ;
   
@@ -451,7 +451,7 @@ endfunction
 
 function q = espacoMaisDistante(A,i,j)
   
-   %acha elemento mais distante de tudo que usuário preencheu no tabuleiro
+   %acha elemento mais distante de tudo que usuÃ¡rio preencheu no tabuleiro
    Distancia = zeros(1,length(i));
        for p=1:length(i)
           [i_uns,j_uns] = find(A==1);
@@ -481,12 +481,12 @@ function q = testaSomas(A0)
 
   k = find(somas==3*0.3); compu_vence = ~isempty(k);
   if compu_vence
-    disp('Você perdeu');
+    disp('VocÃª perdeu');
     A = 1;
   else
    k = find(somas==3); user_vence = ~isempty(k);  
    if user_vence 
-      disp('Você venceu');
+      disp('VocÃª venceu');
       A = 0;
    else 
      k = find(A0==0); tem_zeros = ~isempty(k); 
@@ -494,7 +494,7 @@ function q = testaSomas(A0)
         disp('Deu velha!');
         A = -1;
      else
-        disp('Deu pau');
+        disp('Jogo continua');
         A = [];
      end
     end
