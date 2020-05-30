@@ -46,10 +46,14 @@ app.post('/calcularProximaJogada', function(req, res) {
 
 app.get('/lerRespostaDoOctave', function(req, res) {
   
+  let response = null
+
   fs.readFileSync('src/scripts/Tabuleiro.csv', (err, data) => {
     if (err) throw err;
-    res.send(data);
+    response = data;
   });
+
+  res.send(response)
 
 })
 
