@@ -5,6 +5,39 @@ function choisePerson() {
   document.querySelector('.choise').style.display = "none";
 }
 
+function criarCSV(matriz) {
+
+  const Tabuleiro = [
+    [matriz[0], matriz[1], matriz[2]],
+    [matriz[3], matriz[4], matriz[5]],
+    [matriz[6], matriz[7], matriz[8]]
+  ];
+
+  let csvContent = "";
+  Tabuleiro.forEach(function(rowArray) {
+      let row = rowArray.join(",");
+      csvContent += row + ";";
+  });
+
+  return csvContent;
+
+}
+
+function enviarCSV(matriz) {
+  
+  var http = new XMLHttpRequest();
+  var url = '/proximaJogada';
+  var params = 'csvContent=' + criarCSV(matriz);
+
+  http.open("POST", url, true);    
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+          console.log(http.responseText);
+      }}
+  http.send(params);
+
+}
 
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
@@ -13,11 +46,9 @@ const matriz = new Array( 9 ).fill( 0 );
 
 for ( let i = 0; i < celulas.length; i++ ) {
 
-  celulas[ i ].onclick = function( event ) {
+  celulas[ i ].onclick = function( event ) {    
 
     // GERAR MATRIZ DA JOGADA
-    
-    
 
     if(matriz[ i ] != 1) {
       matriz[ i ] = 1;
@@ -29,6 +60,8 @@ for ( let i = 0; i < celulas.length; i++ ) {
       let audio = new Audio();
       audio.src =  "../trilhaSonora/WolverineGarras.mp3";
       audio.play();
+
+      enviarCSV(matriz);
     }
     
   }
