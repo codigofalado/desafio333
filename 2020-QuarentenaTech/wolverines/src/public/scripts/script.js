@@ -68,11 +68,13 @@ function lerRespostaDoOctave(matriz) {
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.
       if(http.readyState == 4 && http.status == 200) {
-debugger
+
         matriz = http.responseText
           .replace("\n", ",")
           .replace("\n", ",")
           .split(",");
+
+        console.log(matriz)
 
       }}
   http.send();
