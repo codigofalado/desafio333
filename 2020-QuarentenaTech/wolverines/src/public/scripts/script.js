@@ -48,6 +48,32 @@ function proximaJogada() {
 
 }
 
+function obterParametroParaScriptOctave(matriz) {
+
+  const Tabuleiro = [
+    [matriz[0], matriz[1], matriz[2]],
+    [matriz[3], matriz[4], matriz[5]],
+    [matriz[6], matriz[7], matriz[8]]
+  ];
+
+  let csvContent = "";
+  Tabuleiro.forEach(function(rowArray) {
+      let row = rowArray.join(",");
+      csvContent += row + "\r\n";
+  });
+
+  var http = new XMLHttpRequest();
+  var url = '/lerRespostaDoOctave';
+  http.open("GET", url, true);    
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+          console.log(http.responseText);
+      }}
+  http.send();
+
+}
+
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
 
@@ -72,6 +98,8 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
       obterParametroParaScriptOctave(matriz)
       proximaJogada();
+      a = lerRespostaDoOctave();
+      console.log(a)
     }
     
   }

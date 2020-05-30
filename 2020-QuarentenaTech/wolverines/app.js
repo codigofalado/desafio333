@@ -40,6 +40,15 @@ app.post('/calcularProximaJogada', function(req, res) {
   
 })
 
+app.get('/lerRespostaDoOctave', function(req, res) {
+  
+  fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {
+    if (err) throw err;
+    res.send(data);
+  });
+
+})
+
 app.listen(3000, err => {
   console.log("Server is listening on 3000");
 });
