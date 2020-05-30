@@ -20,6 +20,11 @@ app.get('/', indexRouter);
 
 app.post('/obterParametroParaScriptOctave', function(req, res) {
   
+  fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+  });
+
   fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
@@ -44,6 +49,7 @@ app.get('/lerRespostaDoOctave', function(req, res) {
   
   fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {
     if (err) throw err;
+    console.log(data);
     res.send(data);
   });
 
