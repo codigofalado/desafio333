@@ -135,7 +135,7 @@ const state = {
   yourTurn: true,
   enemy: {
     img: "../img/miniBlob.png",
-    audio: "../trilhaSonora/WolverineGarras.mp3",
+    audio: "../trilhaSonora/BlobBanha.mpeg",
     video: "../videos/VitoriaBlob.mp4",
     territory: []
   },
@@ -151,7 +151,7 @@ const state = {
     this.video = "../videos/VitoriaWolverine.mp4";
     this.yourTurn = true;
     this.enemy.img = "../img/miniBlob.png";
-    this.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.enemy.audio = "../trilhaSonora/BlobBanha.mpeg";
     this.enemy.video = "../videos/VitoriaBlob.mp4";
     this.enemy.territory = [];
     this.matrix = new Array( 9 ).fill( 0 );
@@ -201,7 +201,7 @@ function choisePerson(e) {
 
 if (e.classList[0] == "Blob") {
   state.img = "../img/miniBlob.png";
-  state.audio = "../trilhaSonora/WolverineGarras.mp3";
+  state.audio = "../trilhaSonora/BlobBanha.mpeg";
   state.video = "../videos/VitoriaBlob.mp4";
   state.enemy.img = "../img/miniVolvi.png";
   state.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
