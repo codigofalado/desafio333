@@ -604,13 +604,39 @@ body .PlacarTras {
   }
 }
 
-body video {
+body .estatos {
+  width: 900px;
+  height: 500px;
+  background: #D7D7D7;
+  border-radius: 7px;
+  z-index: 1000;
+  position: absolute;
+  top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+body .estatos .fraseEstatos {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+body .estatos video {
   display: none;
   width: 800px;
-  z-index: 100;
-  position: absolute;
-  top: 20%;
-  left: 19%;
+  z-index: 1000;
 }
 
 body .dificuldade {

@@ -476,15 +476,33 @@ body {
 
   }
 
-
-  video {
-    display: none;
-    width: 800px;
-    z-index: 100;
+  .estatos {
+    width: 900px;
+    height:500px;
+    background: #D7D7D7;
+    border-radius: 7px;
+    z-index: 1000;
     position: absolute;
-    top: 20%;
-    left: 19%;
+    top:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+
+    .fraseEstatos{
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    video {
+      display: none;
+      width: 800px;
+      z-index:1000;
+    }
+
   }
+
 
   .dificuldade {
     width: 300px;
@@ -524,6 +542,8 @@ body {
       }
     }
   }
+
+
 
 
   

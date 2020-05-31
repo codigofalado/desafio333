@@ -1,3 +1,20 @@
+function estatos() {
+    document.querySelector('estados').style.display = "flex";
+    document.querySelector('video').style.display = "initial";
+    let vid = document.querySelector('video');
+    function Autoplay() { 
+      vid.autoplay = true;
+      vid.load();
+    }
+    Autoplay()
+    vid.onended = () => {
+      document.querySelector('video').style.display = "none";
+    };
+}
+
+
+
+
 const state = {
 
   user: 1,
@@ -319,18 +336,6 @@ function choiseColorBtn() {
   
   if (left <= 10) {
     choiseColorOpen()
-
-    // document.querySelector('video').style.display = "initial";
-    // let vid = document.querySelector('video');
-    // function Autoplay() { 
-    //   vid.autoplay = true;
-    //   vid.load();
-    // }
-    // Autoplay()
-    // vid.onended = () => {
-    //   document.querySelector('video').style.display = "none";
-    // };
-
   }
   else { 
     choiseColorClose()
@@ -365,3 +370,8 @@ function choiceEventPlacar() {
 
 let puxaPlacar = document.querySelector('.puxaPlacar');
 puxaPlacar.addEventListener('click', choiceEventPlacar);
+
+
+
+
+
