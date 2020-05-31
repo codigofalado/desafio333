@@ -40,7 +40,7 @@ end
 ultima = testaSomas(Tabuleiro); %checando se compu deu xeque mate
 ganhou = ~isempty(ultima);
 if ganhou
-  Tabuleiro = ultima;
+  maquinaGanha = ultima;
 end
 
 csvwrite('maquinaGanha.csv',maquinaGanha);
