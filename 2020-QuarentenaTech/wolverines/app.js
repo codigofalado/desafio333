@@ -28,13 +28,9 @@ app.post('/proximaJogada', function(req, res) {
 
   await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
     if (err) throw err;
-    console.log("Octave processou.")
-    console.log(data);
-    res.send(data)
-  });
-
-  console.log('Executando octave...');
-  console.log('Retornando tabuleiro...');
+    console.log('Executando octave...');
+    console.log('Retornando tabuleiro...');
+  }); 
 
 });
 
