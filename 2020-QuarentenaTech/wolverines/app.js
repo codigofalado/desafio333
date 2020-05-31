@@ -39,7 +39,8 @@ app.post('/calcularProximaJogada', function(req, res) {
     console.error(`stderr: ${stderr}`);
 
     fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-      if (err) throw err;  
+      if (err) throw err;
+      setTimeout(function(){}, 200, 'funky');  
       console.log(data)
       res.send(data);
     });
