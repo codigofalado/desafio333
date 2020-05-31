@@ -36,17 +36,6 @@ function choiceDificultOption(elem) {
 
 }
 
-// function choiceDificultClose() {
-//   if( dificuldadeEscolhida == undefined ) {
-//     dificuldadeEscolhida = 0.3;
-//   }
-//   console.log(dificuldadeEscolhida);
-  
-//   document.querySelector('.dificuldade').style.display = "none";
-//   document.querySelector('.choise').style.display = "initial";
-// }
-
-
 function choisePerson(e) {
   
   if (e.classList[0] == "Blob") {
@@ -86,7 +75,6 @@ function proximaJogada(matriz) {
         .replace("\n", ",")
         .replace("\n", ",")
         .split(",");
-      console.log(matriz)
 
       for ( let i = 0; i < celulas.length; i++ ) {
       
@@ -126,7 +114,7 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
     // GERAR MATRIZ DA JOGADA
 
-    if(matriz[ i ] != 1 && state.yourTurn) {
+    if(matriz[ i ] == 0 && state.yourTurn) {
       
       matriz[ i ] = 1;
       state.yourTurn = false
