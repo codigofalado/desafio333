@@ -12,9 +12,10 @@ Que vença o melhor!
 
 Baseado [nessa luta](https://www.youtube.com/watch?v=Awj8GTs1Zh8) do filme ["X-Men Origens: Wolverine"](https://www.youtube.com/watch?v=s5GD3FCE4So).
 
-
 #################
 
-# Inteligência artificial em Matlab-Octave - Gabriel //
-# Backend com interface em php-node.js - Vinícius  //
-# Frontend, webdesign e artes - Wesley //
+Wolverines
+
+- Inteligência artificial em Matlab-Octave - Gabriel //
+- Backend com interface em php-node.js - Vinícius  //
+- Frontend, webdesign e artes - Wesley //
