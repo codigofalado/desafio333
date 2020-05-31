@@ -1,0 +1,67 @@
+# Created by Octave 5.2.0, Sat May 30 23:29:13 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
+# name: A
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 1 0.29999999999999999
+ 1 1 0.29999999999999999
+ 0.29999999999999999 0.29999999999999999 0
+
+
+# name: A0
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 1 0.29999999999999999
+ 1 1 0.29999999999999999
+ 0 0.29999999999999999 0
+
+
+# name: argn
+# type: sq_string
+# elements: 2
+# length: 2
+A0
+# length: 2
+k 
+
+
+# name: cod
+# type: scalar
+14
+
+
+# name: cols
+# type: matrix
+# rows: 1
+# columns: 3
+ 2 2.2999999999999998 0.59999999999999998
+
+
+# name: i
+# type: scalar
+3
+
+
+# name: j
+# type: scalar
+1
+
+
+# name: k
+# type: scalar
+6
+
+
+# name: lins
+# type: matrix
+# rows: 1
+# columns: 3
+ 2.2999999999999998 2.2999999999999998 0.29999999999999999
+
+
+# name: n
+# type: scalar
+2
+
+
