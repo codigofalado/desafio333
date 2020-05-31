@@ -150,11 +150,7 @@ const state = {
     this.enemy.territory = [];
     this.matrix = new Array( 9 ).fill( 0 );
     this.difficult = 0.3;
-    this.score = 0;
-
-    document
-      .querySelectorAll( '.sub-box img' )
-      .forEach( x => x.remove() );
+    this.score = 0;    
 
   }
 
@@ -164,7 +160,13 @@ function reset() {
   
   state.reset();
 
-  // APARECER MENU DE ESCOLHA
+  document
+    .querySelectorAll( '.sub-box img' )
+    .forEach( x => x.remove() );
+
+  document.querySelector('.tela').style.display = "initial";
+  document.querySelector('.dificuldade').style.display = "flex";
+  document.querySelector('.choise').style.display = "none";
 
 }
 
