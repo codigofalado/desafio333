@@ -18,48 +18,56 @@ const indexRouter = require('./src/router/index');
 
 app.get('/', indexRouter);
 
-app.post('/obterParametroParaScriptOctave', function(req, res) {
+app.post('/proximaJogada', function(req, res) {
+
+  console.log('Gravando tabuleiro...');
+  console.log('Executando octave...');
+  console.log('Retornando tabuleiro...');
+
+});
+
+// app.post('/obterParametroParaScriptOctave', function(req, res) {
   
-  fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-    if (err) throw err;
-    console.log("Gravando...")
-    console.log(data)
+//   fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+//     if (err) throw err;
+//     console.log("Gravando...")
+//     console.log(data)
 
-    fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
-      if (err) throw err;    
-      console.log("Conteúdo a ser gravado:");
-      console.log(req.body.csvContent)
+//     fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+//       if (err) throw err;    
+//       console.log("Conteúdo a ser gravado:");
+//       console.log(req.body.csvContent)
 
-      fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-        if (err) throw err;
-        console.log("Gravado...")
-        console.log(data)
+//       fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+//         if (err) throw err;
+//         console.log("Gravado...")
+//         console.log(data)
         
-        exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
-          if (error) {
-            // console.error(`exec error: ${error}`);
-            return;
-          }
+//         exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
+//           if (error) {
+//             // console.error(`exec error: ${error}`);
+//             return;
+//           }
       
-          // console.log(`stdout: ${stdout}`);
-          // console.error(`stderr: ${stderr}`);
+//           // console.log(`stdout: ${stdout}`);
+//           // console.error(`stderr: ${stderr}`);
       
-          fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-            if (err) throw err;
-            console.log("Octave processou.")
-            console.log(data);
-            res.send(data)
-          });
+//           fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+//             if (err) throw err;
+//             console.log("Octave processou.")
+//             console.log(data);
+//             res.send(data)
+//           });
           
-        }); 
+//         }); 
 
-      });
+//       });
 
-    });
+//     });
 
-  });   
+//   });   
 
-})
+// })
 
 app.listen(3000, err => {
   console.log("Server is listening on 3000");
