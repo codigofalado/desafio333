@@ -34,16 +34,17 @@ app.post('/calcularProximaJogada', function(req, res) {
       console.error(`exec error: ${error}`);
       return;
     }
+
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
-  });
 
-  fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-    if (err) throw err;  
-    console.log(data)
-    res.send(data);
-  });
-  
+    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+      if (err) throw err;  
+      console.log(data)
+      res.send(data);
+    });
+    
+  });  
 })
 
 app.listen(3000, err => {
