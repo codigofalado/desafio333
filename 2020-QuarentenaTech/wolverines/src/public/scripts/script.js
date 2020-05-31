@@ -47,7 +47,6 @@ function proximaJogada() {
         .replace("\n", ",")
         .replace("\n", ",")
         .split(",");
-
       console.log(matriz)
 
     }}
@@ -91,7 +90,7 @@ function proximaJogada() {
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
 
-const matriz = new Array( 9 ).fill( 0 );
+let matriz = new Array( 9 ).fill( 0 );
 
 for ( let i = 0; i < celulas.length; i++ ) {
 
