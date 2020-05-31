@@ -12,4 +12,4 @@ https://www.youtube.com/watch?v=Awj8GTs1Zh8
 
 Inteligência artificial em Matlab-Octave - Gabriel //
 Backend com interface em php-node.js - Vinícius  //
-Frontend, webdesign e arte - Wesley
+Frontend, webdesign e artes - Wesley
