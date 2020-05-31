@@ -1,6 +1,30 @@
+const state = {
+
+  user: 1,
+  img: "../img/miniVolvi.png",
+  audio: "../trilhaSonora/WolverineGarras.mp3",
+  enemy: {
+    img: "../img/miniBlob.png",
+    audio: "../trilhaSonora/WolverineGarras.mp3",
+  },
+  difficult: 0.3,
+  score: 0,
+  gameOver: false
+
+}
+
+
 const difficult = 0.2;
 
-function choisePerson() {
+function choisePerson(e) {
+  
+  if (e.classList[0] == "Blob") {
+    state.img = "../img/miniBlob.png";
+    state.audio = "../trilhaSonora/WolverineGarras.mp3";
+    state.enemy.img = "../img/miniVolvi.png";
+    state.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+  }
+
   document.querySelector('.tela').style.display = "none";
   document.querySelector('.choise').style.display = "none";
 }
@@ -48,6 +72,23 @@ function proximaJogada() {
         .replace("\n", ",")
         .split(",");
       console.log(matriz)
+
+      for ( let i = 0; i < celulas.length; i++ ) {
+      
+          // GERAR MATRIZ DA JOGADA
+      
+          if(matriz[ i ] != 0.3) {
+            // CRIAR IMAGEM
+            let img = new Image( 100, 100 );
+            img.src = state.enemy.img;
+            img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
+            document.querySelectorAll( '.sub-box' )[i].appendChild( img );
+            let audio = new Audio();
+            audio.src =  state.enemy.audio;
+            audio.play();
+          }
+      }
+
 
     }}
   http.send(params);
@@ -101,17 +142,16 @@ for ( let i = 0; i < celulas.length; i++ ) {
     if(matriz[ i ] != 1) {
       matriz[ i ] = 1;
       // CRIAR IMAGEM
-      let wolve = new Image( 100, 100 );
-      wolve.src = '../img/miniVolvi.png';
-      wolve.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
-      document.querySelectorAll( '.sub-box' )[i].appendChild( wolve );
+      let img = new Image( 100, 100 );
+      img.src = state.img;
+      img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
+      document.querySelectorAll( '.sub-box' )[i].appendChild( img );
       let audio = new Audio();
-      audio.src =  "../trilhaSonora/WolverineGarras.mp3";
+      audio.src =  state.audio;
       audio.play();
 
       obterParametroParaScriptOctave(matriz)
       proximaJogada();
-      // lerRespostaDoOctave(matriz);
     }
     
   }
