@@ -22,11 +22,7 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
   
   fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;    
-    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-      console.log(data)
-      res.send(data);
-    });
-
+    console.log(data);
   });
 
 })
@@ -40,6 +36,11 @@ app.post('/calcularProximaJogada', function(req, res) {
     }
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
+  });
+
+  fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+    if (err) throw err;  
+    res.send(data);
   });
   
 })
