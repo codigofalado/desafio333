@@ -23,6 +23,7 @@ app.post('/proximaJogada', async function(req, res) {
   await fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     
     if (err) throw err;    
+    console.clear();
     console.log('INÍCIO DA JOGADA ---------------------------------------------');
     console.log('( 1 ) Gravando tabuleiro...');
     console.log(req.body.csvContent);
