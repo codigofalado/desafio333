@@ -6,6 +6,7 @@ const state = {
   enemy: {
     img: "../img/miniBlob.png",
     audio: "../trilhaSonora/WolverineGarras.mp3",
+    territory: []
   },
   difficult: 0.3,
   score: 0,
@@ -77,7 +78,8 @@ function proximaJogada() {
       
           // GERAR MATRIZ DA JOGADA
       
-          if(matriz[ i ] == 0.3) {
+          if(matriz[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
+            state.enemy.territory.push(i);
             // CRIAR IMAGEM
             let img = new Image( 100, 100 );
             img.src = state.enemy.img;
