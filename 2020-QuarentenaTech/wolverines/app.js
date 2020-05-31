@@ -23,7 +23,8 @@ app.post('/proximaJogada', async function(req, res) {
   await fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     
     if (err) throw err;    
-    console.log('Gravando tabuleiro...');
+    console.log('INÍCIO DA JOGADA ---------------------------------------------');
+    console.log('( 1 ) Gravando tabuleiro...');
     console.log(req.body.csvContent);
 
   });
@@ -31,11 +32,13 @@ app.post('/proximaJogada', async function(req, res) {
   await exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', async (err, stdout, stderr) => {
     
     if (err) throw err;    
-    console.log('Executando octave...');
+    console.log('( 2 ) Executando octave...');
     
     await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
       if (err) throw err;
-      console.log('Retornando tabuleiro...');
+      console.log('( 3 ) Retornando tabuleiro...');
+      console.log(data);
+      console.log('FIM DA JOGADA ----------------------------------------------');
       res.send(data)
     });
 
