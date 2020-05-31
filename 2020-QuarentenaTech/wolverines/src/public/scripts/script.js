@@ -109,6 +109,7 @@ function proximaJogada() {
             let audio = new Audio();
             audio.src =  state.enemy.audio;
             audio.play();
+            setTimeout(function(){ console.log("Aguarde"); }, 1000);
             state.yourTurn = true;
           }
       }
