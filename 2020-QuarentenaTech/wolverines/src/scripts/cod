@@ -1,0 +1,79 @@
+# Created by Octave 5.2.0, Sun May 31 14:23:48 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
+# name: A
+# type: scalar
+-1
+
+
+# name: A0
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 0.29999999999999999 1
+ 1 1 0.29999999999999999
+ 0.29999999999999999 1 0.29999999999999999
+
+
+# name: argn
+# type: sq_string
+# elements: 1
+# length: 9
+Tabuleiro
+
+
+# name: cod
+# type: scalar
+-1
+
+
+# name: cols
+# type: matrix
+# rows: 1
+# columns: 3
+ 2.2999999999999998 2.2999999999999998 1.6000000000000001
+
+
+# name: compu_vence
+# type: bool
+0
+
+
+# name: diag1
+# type: scalar
+2.2999999999999998
+
+
+# name: diag2
+# type: scalar
+2.2999999999999998
+
+
+# name: k
+# type: matrix
+# rows: 0
+# columns: 1
+
+
+# name: lins
+# type: matrix
+# rows: 1
+# columns: 3
+ 2.2999999999999998 2.2999999999999998 1.6000000000000001
+
+
+# name: n_tem_zeros
+# type: bool
+1
+
+
+# name: somas
+# type: matrix
+# rows: 1
+# columns: 8
+ 2.2999999999999998 2.2999999999999998 2.2999999999999998 2.2999999999999998 1.6000000000000001 2.2999999999999998 2.2999999999999998 1.6000000000000001
+
+
+# name: user_vence
+# type: bool
+0
+
+

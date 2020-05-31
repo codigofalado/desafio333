@@ -18,34 +18,34 @@ const indexRouter = require('./src/router/index');
 
 app.get('/', indexRouter);
 
-app.post('/obterParametroParaScriptOctave', function(req, res) {
-  
-  fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+app.post('/proximaJogada', async function(req, res) {
+
+  await fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+    
     if (err) throw err;    
-    console.log("Arquivo escrito com sucesso");
+    console.clear();
+    console.log('INÍCIO DA JOGADA ---------------------------------------------');
+    console.log('( 1 ) Gravando tabuleiro...');
+    console.log(req.body.csvContent);
+
   });
 
-})
-
-app.post('/calcularProximaJogada', function(req, res) {
-
-  exec('C:\\Octave\\Octave-5.2.0\\mingw64\\bin\\octave --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error: ${error}`);
-      return;
-    }
-
-    console.log(`stdout: ${stdout}`);
-    console.error(`stderr: ${stderr}`);
-
-    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-      if (err) throw err;  
-      console.log(data)
-      res.send(data);
-    });
+  await exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', async (err, stdout, stderr) => {
     
+    if (err) throw err;    
+    console.log('( 2 ) Executando octave...');
+    
+    await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+      if (err) throw err;
+      console.log('( 3 ) Retornando tabuleiro...');
+      console.log(data);
+      console.log('FIM DA JOGADA ----------------------------------------------');
+      res.send(data)
+    });
+
   });  
-})
+
+});
 
 app.listen(3000, err => {
   console.log("Server is listening on 3000");
