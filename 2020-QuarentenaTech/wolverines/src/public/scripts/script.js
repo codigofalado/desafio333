@@ -133,7 +133,7 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
       for (let j = 0; j < document.querySelectorAll( '.sub-box img' ).length; j++) {
         const pastImg = document.querySelectorAll( '.sub-box img' )[j];
-        pastImg.style.opacity = 0.85;
+        pastImg.style.opacity = 0.7;
       }
 
       // CRIAR IMAGEM
