@@ -26,7 +26,7 @@ app.post('/proximaJogada', async function(req, res) {
     console.log(req.body.csvContent);
   });
 
-  await exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (err, stdout, stderr) => {
+  await exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', async (err, stdout, stderr) => {
     if (err) throw err;
     
     console.log('Executando octave...');
