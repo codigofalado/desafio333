@@ -37,21 +37,23 @@ app.post('/proximaJogada', async function(req, res) {
     if (err) throw err;    
     console.log('( 2 ) Executando octave...');
     
-    await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, tabuleiro) => {      
+    await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", async (err, tabuleiro) => {      
       if (err) throw err;
       console.log('( 3 ) Retornando tabuleiro...');
       console.log(tabuleiro);
-      jogada.tabuleiro = tabuleiro;
-    });
+      
+      await fs.readFile('src/scripts/maquinaGanha.csv', "utf8", (err, estado) => {      
+        if (err) throw err;
+        console.log('( 3 ) Retornando objeto da jogada...');
+        console.log(estado);
+        
+        console.log('FIM DA JOGADA ----------------------------------------------');
+        jogada.tabuleiro = tabuleiro;
+        jogada.estado = estado;
+        res.send( jogada );
+      });
 
-    await fs.readFile('src/scripts/maquinaGanha.csv', "utf8", (err, estado) => {      
-      if (err) throw err;
-      console.log('( 3 ) Retornando objeto da jogada...');
-      console.log(estado);
-      jogada.estado = estado;
-      console.log('FIM DA JOGADA ----------------------------------------------');
-      res.send( jogada );
-    });
+    });   
 
   });  
 

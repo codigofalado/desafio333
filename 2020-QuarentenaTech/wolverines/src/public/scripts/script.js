@@ -1,3 +1,109 @@
+// class Personagem {
+
+//   constructor() {
+
+//     this.img = img;
+//     this.audio = audio;
+//     this.video = video;
+
+//   }
+
+// }
+
+// class Partida {
+
+//   constructor() {
+
+//     this.tabuleiro = new Array( 9 ).fill( 0 );
+//     this.estado = 0;
+//     this.pontuacao = 0;
+//     this.dificuldade = 0.3;
+
+//   }
+
+//   get csv() {
+
+//     return [
+
+//       [ this.tabuleiro[ 0 ], this.tabuleiro[ 1 ], this.tabuleiro[ 2 ] ],
+//       [ this.tabuleiro[ 3 ], this.tabuleiro[ 4 ], this.tabuleiro[ 5 ] ],
+//       [ this.tabuleiro[ 6 ], this.tabuleiro[ 7 ], this.tabuleiro[ 8 ] ]
+
+//     ].reduce( ( acumulador, valor ) => acumulador.toString() + "\r\n" + valor.toString() ); 
+  
+//   }
+
+//   montarTabuleiro( stringTabuleiro ) {
+
+//     this.tabuleiro = stringTabuleiro
+//       .replace( '\n', ',' )
+//       .replace( '\n', ',' )
+//       .split( ',' )
+//       .map( m => parseFloat( m ) );
+
+//   }
+
+//   desenharTabuleiro() {
+
+//     for ( let i = 0; i < celulas.length; i++ ) {      
+              
+//       if ( state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1 ) {
+        
+//         this.oponente.desenhar();
+
+//         state.yourTurn = true;
+//       }
+
+//     }
+
+//   }
+
+//   obterProximoEstado() {
+
+//     var http = new XMLHttpRequest();
+//     var url = '/proximaJogada';
+//     var params = `csvContent=${this.csv}&difficult=${this.dificuldade}`;
+
+//     http.open( 'POST', url );    
+//     http.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
+//     http.onreadystatechange = function() {
+      
+//       if( http.readyState == 4 && http.status == 200 ) {
+
+//         return JSON.parse( http.responseText );
+      
+//       }
+
+//     }
+//     http.send( params );
+
+//   }
+
+//   atribuirProximoEstado() {
+
+//     const proximoEstado = this.obterProximoEstado();
+//     this.montarTabuleiro( proximoEstado.tabuleiro );
+//     this.desenharTabuleiro();
+
+
+//   }
+
+//   atribuirProximoEstado() {  
+
+
+        
+
+      
+
+      
+//   }
+
+// }
+
+// const partida = new Partida();
+
+/////////////////////////////////////////////////////////////////////
+
 function estatos() {
   document.querySelector('estados').style.display = "flex";
   document.querySelector('video').style.display = "initial";
@@ -90,15 +196,17 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 
     const jogada = JSON.parse( http.responseText );
    
-    if(http.responseText == "1") {
-      console.log("Perdeu Otario");
-    } else if(http.responseText == "-1") {
-      console.log("Empate");
-    } else {
-      console.log("Vitoria carai");
-    }    
+    console.log(jogada)
 
-    state.matrix = http.responseText
+    // if(jogada.tabuleiro == "") {
+    //   console.log("Perdeu Otario");
+    // } else if(jogada.tabuleiro == "-1") {
+    //   console.log("Empate");
+    // } else if(jogada.tabuleiro == "0") {
+    //   console.log("Vitoria carai");
+    // }    
+
+    state.matrix = jogada.tabuleiro
       .replace("\n", ",")
       .replace("\n", ",")
       .split(",")
