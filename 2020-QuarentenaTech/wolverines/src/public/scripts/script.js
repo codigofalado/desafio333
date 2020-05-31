@@ -9,6 +9,7 @@ const state = {
     audio: "../trilhaSonora/WolverineGarras.mp3",
     territory: []
   },
+  matrix: new Array( 9 ).fill( 0 ),
   difficult: 0.3,
   score: 0
 
@@ -49,13 +50,15 @@ function choisePerson(e) {
   document.querySelector('.choise').style.display = "none";
 }
 
-function proximaJogada(matriz) {
+function proximaJogada() {
+  console.log(state.matrix);
 
   const Tabuleiro = [
-    [matriz[0], matriz[1], matriz[2]],
-    [matriz[3], matriz[4], matriz[5]],
-    [matriz[6], matriz[7], matriz[8]]
+    [state.matrix[0], state.matrix[1], state.matrix[2]],
+    [state.matrix[3], state.matrix[4], state.matrix[5]],
+    [state.matrix[6], state.matrix[7], state.matrix[8]]
   ];
+  // console.log(Tabuleiro);
 
   let csvContent = "";
   Tabuleiro.forEach(function(rowArray) {
@@ -71,16 +74,15 @@ function proximaJogada(matriz) {
   http.onreadystatechange = function() {//Call a function when the state changes.
     if(http.readyState == 4 && http.status == 200) {
 
-      matriz = http.responseText
+      state.matrix = http.responseText
         .replace("\n", ",")
         .replace("\n", ",")
-        .split(",");
+        .split(",")
+        .map( m => parseFloat( m ) );
 
-      for ( let i = 0; i < celulas.length; i++ ) {
-      
-          // GERAR MATRIZ DA JOGADA
-      
-          if(matriz[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
+      for ( let i = 0; i < celulas.length; i++ ) {      
+               
+          if(state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
             state.enemy.territory.push(i);
             // CRIAR IMAGEM
             
@@ -106,17 +108,13 @@ function proximaJogada(matriz) {
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
 
-let matriz = new Array( 9 ).fill( 0 );
-
 for ( let i = 0; i < celulas.length; i++ ) {
 
   celulas[ i ].onclick = function( event ) {    
 
-    // GERAR MATRIZ DA JOGADA
-
-    if(matriz[ i ] == 0 && state.yourTurn) {
+        if(state.matrix[ i ] == 0 && state.yourTurn) {
       
-      matriz[ i ] = 1;
+      state.matrix[ i ] = 1;
       state.yourTurn = false
 
       for (let j = 0; j < document.querySelectorAll( '.sub-box img' ).length; j++) {
@@ -132,8 +130,8 @@ for ( let i = 0; i < celulas.length; i++ ) {
       let audio = new Audio();
       audio.src =  state.audio;
       audio.play();
-
-      proximaJogada(matriz)      
+      
+      proximaJogada()      
     }
     
   }
