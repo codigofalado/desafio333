@@ -22,7 +22,7 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
   
   fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;    
-    fs.readFile('src/scripts/Tabuleiro.csv', (err, data) => {      
+    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
       console.log(data)
       res.send(data);
     });
