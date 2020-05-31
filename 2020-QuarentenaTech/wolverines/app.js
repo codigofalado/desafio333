@@ -22,7 +22,7 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
   
   fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;    
-    console.log(data);
+    console.log("Arquivo escrito com sucesso");
   });
 
 })
