@@ -15,6 +15,29 @@ const state = {
 
 }
 
+let dificuldadeEscolhida;
+let dificuldade = document.querySelector('.iniciar');
+dificuldade.addEventListener('click', choiceDificultClose);
+
+function choiceDificultOption(elem) {
+  let valor = elem.className;
+  if( valor == "facil" ) dificuldadeEscolhida = 0.3;
+  else if( valor == "medio" ) dificuldadeEscolhida = 0.6;
+  else dificuldadeEscolhida = 0.9;
+  return dificuldadeEscolhida;
+}
+
+function choiceDificultClose() {
+  if( dificuldadeEscolhida == undefined ) {
+    dificuldadeEscolhida = 0.3;
+  }
+  console.log(dificuldadeEscolhida);
+  
+  document.querySelector('.dificuldade').style.display = "none";
+  document.querySelector('.choise').style.display = "initial";
+}
+
+
 function choisePerson(e) {
   
   if (e.classList[0] == "Blob") {
@@ -297,16 +320,16 @@ function choiseColorBtn() {
   if (left <= 10) {
     choiseColorOpen()
 
-    document.querySelector('video').style.display = "initial";
-    let vid = document.querySelector('video');
-    function Autoplay() { 
-      vid.autoplay = true;
-      vid.load();
-    }
-    Autoplay()
-    vid.onended = () => {
-      document.querySelector('video').style.display = "none";
-    };
+    // document.querySelector('video').style.display = "initial";
+    // let vid = document.querySelector('video');
+    // function Autoplay() { 
+    //   vid.autoplay = true;
+    //   vid.load();
+    // }
+    // Autoplay()
+    // vid.onended = () => {
+    //   document.querySelector('video').style.display = "none";
+    // };
 
   }
   else { 

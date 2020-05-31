@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <title>Wolverine X Blob || Game ticTacToe</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
   </head>
   <body>
 
     <div class="choise">
       <span>Escolha seu Lutador</span>
       <div class="personagem">
-        <div class="Wolve" onclick="choisePerson(this)">
+        <div class="Wolve" onclick="choisePerson()">
           <img src="img/volvi.png" alt="Wolverine">
         </div>
-        <div class="Blob" onclick="choisePerson(this)">
+        <div class="Blob" onclick="choisePerson()">
           <img src="img/blob.png" alt="Blob">
         </div>
       </div>
@@ -94,14 +95,18 @@
     </div>
 
 
-    <video autoplay>
+    <!-- <video autoplay>
       <source src="../videos/VitoriaWolverine.mp4" type="video/mp4">
         Your browser does not support the audio element.
-    </video>
+    </video> -->
 
-    
-
-    <!-- <button class="fa fa-cog btn"></button> -->
+    <div class="dificuldade">
+      <span>NIVEL DE DIFICULDADE</span>
+      <button class="facil" onclick="choiceDificultOption(this)">Fácil</button>
+      <button class="medio" onclick="choiceDificultOption(this)">Médio</button>
+      <button class="dificil" onclick="choiceDificultOption(this)">Difícil</button>
+      <button class="iniciar">Lutar</button>
+    </div>
 
   
 

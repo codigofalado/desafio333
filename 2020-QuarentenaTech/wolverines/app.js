@@ -29,7 +29,7 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
 
 app.post('/calcularProximaJogada', function(req, res) {
 
-  exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
+  exec('C:\\Octave\\Octave-5.2.0\\mingw64\\bin\\octave --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;
