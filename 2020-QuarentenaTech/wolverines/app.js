@@ -24,21 +24,22 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
     if (err) throw err;
     console.log("Gravando...")
     console.log(data)
-    res.send(data);
-  });
 
-  fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
-    if (err) throw err;    
-    console.log("Conteúdo a ser gravado:");
-    console.log(req.body.csvContent)
-  });
+    fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+      if (err) throw err;    
+      console.log("Conteúdo a ser gravado:");
+      console.log(req.body.csvContent)
 
-  fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-    if (err) throw err;
-    console.log("Gravado...")
-    console.log(data)
-    res.send(data);
-  });
+      fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+        if (err) throw err;
+        console.log("Gravado...")
+        console.log(data)
+        res.send(data);
+      });
+
+    });
+
+  });   
 
 })
 
