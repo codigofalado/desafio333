@@ -47,7 +47,6 @@ else state.difficult = 0.9;
 // if( dificuldadeEscolhida == undefined ) {
 //   dificuldadeEscolhida = 0.3;
 // }
-console.log(state.difficult);
 
 document.querySelector('.dificuldade').style.display = "none";
 document.querySelector('.choise').style.display = "initial";
@@ -68,14 +67,12 @@ document.querySelector('.choise').style.display = "none";
 }
 
 function proximaJogada() {
-console.log(state.matrix);
 
 const Tabuleiro = [
   [state.matrix[0], state.matrix[1], state.matrix[2]],
   [state.matrix[3], state.matrix[4], state.matrix[5]],
   [state.matrix[6], state.matrix[7], state.matrix[8]]
 ];
-// console.log(Tabuleiro);
 
 let csvContent = "";
 Tabuleiro.forEach(function(rowArray) {
