@@ -77,7 +77,7 @@ function proximaJogada() {
       
           // GERAR MATRIZ DA JOGADA
       
-          if(matriz[ i ] != 0.3) {
+          if(matriz[ i ] == 0.3) {
             // CRIAR IMAGEM
             let img = new Image( 100, 100 );
             img.src = state.enemy.img;
