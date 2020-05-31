@@ -184,9 +184,26 @@ document.querySelector('.victory').textContent = state.score;
 
 function choiceDificultOption(elem) {
 let valor = elem.className;
-if( valor == "facil" ) state.difficult = 0.3;
-else if( valor == "medio" ) state.difficult = 0.6;
-else state.difficult = 0.9;
+if( valor == "facil" ) { 
+  
+  state.difficult = 0.3; 
+
+}
+else if( valor == "medio" ) { 
+  
+  state.difficult = 0.6; 
+
+}
+else { 
+  
+  state.difficult = 0.9; 
+
+  aparece = Math.round(Math.random());
+  if(aparece){
+    alert('Ministério da Saúde adverte: jogos difíceis podem ser frustrantes...'); 
+  };
+
+}
 
 // if( dificuldadeEscolhida == undefined ) {
 //   dificuldadeEscolhida = 0.3;
