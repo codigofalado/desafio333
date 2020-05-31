@@ -9,33 +9,41 @@ const state = {
     audio: "../trilhaSonora/WolverineGarras.mp3",
     territory: []
   },
-  difficult: 0.9,
+  difficult: 0.3,
   score: 0,
   gameOver: false
 
 }
 
-let dificuldadeEscolhida;
-let dificuldade = document.querySelector('.iniciar');
-dificuldade.addEventListener('click', choiceDificultClose);
+// let dificuldadeEscolhida;
+// let dificuldade = document.querySelector('.iniciar');
+// dificuldade.addEventListener('click', choiceDificultClose);
 
 function choiceDificultOption(elem) {
   let valor = elem.className;
-  if( valor == "facil" ) dificuldadeEscolhida = 0.3;
-  else if( valor == "medio" ) dificuldadeEscolhida = 0.6;
-  else dificuldadeEscolhida = 0.9;
-  return dificuldadeEscolhida;
-}
-
-function choiceDificultClose() {
-  if( dificuldadeEscolhida == undefined ) {
-    dificuldadeEscolhida = 0.3;
-  }
-  console.log(dificuldadeEscolhida);
+  if( valor == "facil" ) state.difficult = 0.3;
+  else if( valor == "medio" ) state.difficult = 0.6;
+  else state.difficult = 0.9;
+  
+  // if( dificuldadeEscolhida == undefined ) {
+  //   dificuldadeEscolhida = 0.3;
+  // }
+  console.log(state.difficult);
   
   document.querySelector('.dificuldade').style.display = "none";
   document.querySelector('.choise').style.display = "initial";
+
 }
+
+// function choiceDificultClose() {
+//   if( dificuldadeEscolhida == undefined ) {
+//     dificuldadeEscolhida = 0.3;
+//   }
+//   console.log(dificuldadeEscolhida);
+  
+//   document.querySelector('.dificuldade').style.display = "none";
+//   document.querySelector('.choise').style.display = "initial";
+// }
 
 
 function choisePerson(e) {
@@ -109,7 +117,7 @@ function proximaJogada() {
             let audio = new Audio();
             audio.src =  state.enemy.audio;
             audio.play();
-            setTimeout(function(){ console.log("Aguarde"); }, 1000);
+            // setTimeout(function(){ console.log("Aguarde"); }, 1000);
             state.yourTurn = true;
           }
       }
