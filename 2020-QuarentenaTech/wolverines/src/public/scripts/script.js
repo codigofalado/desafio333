@@ -76,7 +76,7 @@ function proximaJogada(matriz) {
 
   var http = new XMLHttpRequest();
   var url = '/proximaJogada';
-  var params = 'csvContent=' + csvContent;
+  var params = 'csvContent=' + csvContent + '&difficult=' + state.difficult;
   http.open("POST", url);    
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.

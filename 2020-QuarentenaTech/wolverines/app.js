@@ -18,7 +18,7 @@ const indexRouter = require('./src/router/index');
 
 app.get('/', indexRouter);
 
-app.post('/proximaJogada', function(req, res) {
+app.post('/proximaJogada', async function(req, res) {
 
   await fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
     if (err) throw err;    
