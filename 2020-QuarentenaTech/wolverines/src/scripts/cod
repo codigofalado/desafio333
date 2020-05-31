@@ -1,79 +1,100 @@
-# Created by Octave 5.2.0, Sun May 31 14:23:48 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
+# Created by Octave 5.2.0, Sun May 31 18:13:27 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
 # name: A
-# type: scalar
--1
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 0 0
+ 0 0 0.29999999999999999
+ 0 0 0
 
 
 # name: A0
 # type: matrix
 # rows: 3
 # columns: 3
- 1 0.29999999999999999 1
- 1 1 0.29999999999999999
- 0.29999999999999999 1 0.29999999999999999
+ 1 0 0
+ 0 0 0
+ 0 0 0
+
+
+# name: Soma
+# type: matrix
+# rows: 3
+# columns: 3
+ 2 1 0.66666666666666663
+ 1 0.5 0
+ 0.66666666666666663 0 0.66666666666666663
 
 
 # name: argn
 # type: sq_string
 # elements: 1
-# length: 9
-Tabuleiro
+# length: 2
+A0
 
 
 # name: cod
 # type: scalar
--1
+3000
 
 
 # name: cols
 # type: matrix
 # rows: 1
 # columns: 3
- 2.2999999999999998 2.2999999999999998 1.6000000000000001
-
-
-# name: compu_vence
-# type: bool
-0
+ 1 0 0
 
 
 # name: diag1
 # type: scalar
-2.2999999999999998
+1
 
 
 # name: diag2
 # type: scalar
-2.2999999999999998
+0
 
 
-# name: k
-# type: matrix
-# rows: 0
-# columns: 1
+# name: i
+# type: scalar
+2
 
 
 # name: lins
 # type: matrix
 # rows: 1
 # columns: 3
- 2.2999999999999998 2.2999999999999998 1.6000000000000001
+ 1 0 0
 
 
-# name: n_tem_zeros
-# type: bool
-1
-
-
-# name: somas
+# name: mods
 # type: matrix
 # rows: 1
 # columns: 8
- 2.2999999999999998 2.2999999999999998 2.2999999999999998 2.2999999999999998 1.6000000000000001 2.2999999999999998 2.2999999999999998 1.6000000000000001
+ 0.10000000000000009 0 0.10000000000000009 0 0 0.10000000000000009 0 0
 
 
-# name: user_vence
+# name: range
+# type: lazy_index
+# name: index_value
+# type: matrix
+# rows: 2
+# columns: 1
+ 6
+ 8
+
+
+
+
+# name: soma
+# type: matrix
+# rows: 1
+# columns: 8
+ 1 0 1 0 0 1 0 0
+
+
+# name: tem_brecha
 # type: bool
-0
+1
 
 
