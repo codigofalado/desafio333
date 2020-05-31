@@ -124,22 +124,47 @@ function estatos() {
 }
 
 
-
-
 const state = {
 
-user: 1,
-img: "../img/miniVolvi.png",
-audio: "../trilhaSonora/WolverineGarras.mp3",
-yourTurn: true,
-enemy: {
-  img: "../img/miniBlob.png",
+  user: 1,
+  img: "../img/miniVolvi.png",
   audio: "../trilhaSonora/WolverineGarras.mp3",
-  territory: []
-},
-matrix: new Array( 9 ).fill( 0 ),
-difficult: 0.3,
-score: 0
+  yourTurn: true,
+  enemy: {
+    img: "../img/miniBlob.png",
+    audio: "../trilhaSonora/WolverineGarras.mp3",
+    territory: []
+  },
+  matrix: new Array( 9 ).fill( 0 ),
+  difficult: 0.3,
+  score: 0,
+
+  reset: function () {
+    
+    this.user = 1;
+    this.img = "../img/miniVolvi.png";
+    this.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.yourTurn = true;
+    this.enemy.img = "../img/miniBlob.png";
+    this.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.enemy.territory = [];
+    this.matrix = new Array( 9 ).fill( 0 );
+    this.difficult = 0.3;
+    this.score = 0;
+
+    document
+      .querySelectorAll( '.sub-box img' )
+      .forEach( x => x.remove() );
+
+  }
+
+}
+
+function reset() {
+  
+  state.reset();
+
+  // APARECER MENU DE ESCOLHA
 
 }
 
@@ -201,21 +226,21 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 
     const jogada = JSON.parse( http.responseText );
    
-    console.log(jogada)
-
-    // if(jogada.tabuleiro == "") {
-    //   console.log("Perdeu Otario");
-    // } else if(jogada.tabuleiro == "-1") {
-    //   console.log("Empate");
-    // } else if(jogada.tabuleiro == "0") {
-    //   console.log("Vitoria carai");
-    // }    
+    console.log(jogada)   
 
     state.matrix = jogada.tabuleiro
       .replace("\n", ",")
       .replace("\n", ",")
       .split(",")
       .map( m => parseFloat( m ) );
+
+    if(jogada.estado.trim() == "1") {
+      console.log("Perdeu Otario");
+    } else if(jogada.estado.trim() == "-1") {
+      console.log("Empate");
+    } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
+      console.log("Vitoria carai");
+    }    
 
     for ( let i = 0; i < celulas.length; i++ ) {      
              
@@ -442,10 +467,6 @@ if (valor == 0){
 
 let puxaPlacar = document.querySelector('.puxaPlacar');
 puxaPlacar.addEventListener('click', choiceEventPlacar);
-
-function reset() {
-  console.log("Eu resetei tudo só que vc não viu");
-}
 
 
 
