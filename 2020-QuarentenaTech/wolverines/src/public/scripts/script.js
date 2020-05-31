@@ -3,19 +3,17 @@ const state = {
   user: 1,
   img: "../img/miniVolvi.png",
   audio: "../trilhaSonora/WolverineGarras.mp3",
+  yourTurn: true,
   enemy: {
     img: "../img/miniBlob.png",
     audio: "../trilhaSonora/WolverineGarras.mp3",
     territory: []
   },
-  difficult: 0.3,
+  difficult: 0.9,
   score: 0,
   gameOver: false
 
 }
-
-
-const difficult = 0.2;
 
 function choisePerson(e) {
   
@@ -61,7 +59,7 @@ function proximaJogada() {
 
   var http = new XMLHttpRequest();
   var url = '/calcularProximaJogada';
-  var params = 'difficult=' + difficult;
+  var params = 'difficult=' + state.difficult;
 
   http.open("POST", url);    
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -88,6 +86,7 @@ function proximaJogada() {
             let audio = new Audio();
             audio.src =  state.enemy.audio;
             audio.play();
+            state.yourTurn = true;
           }
       }
 
@@ -141,8 +140,16 @@ for ( let i = 0; i < celulas.length; i++ ) {
 
     // GERAR MATRIZ DA JOGADA
 
-    if(matriz[ i ] != 1) {
+    if(matriz[ i ] != 1 && state.yourTurn) {
+      
       matriz[ i ] = 1;
+      state.yourTurn = false
+
+      for (let j = 0; j < document.querySelectorAll( '.sub-box img' ).length; j++) {
+        const pastImg = document.querySelectorAll( '.sub-box img' )[j];
+        pastImg.style.opacity = 0.85;
+      }
+
       // CRIAR IMAGEM
       let img = new Image( 100, 100 );
       img.src = state.img;
