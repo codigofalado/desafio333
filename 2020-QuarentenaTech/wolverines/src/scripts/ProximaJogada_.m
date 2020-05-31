@@ -23,6 +23,7 @@ function q = ProximaJogada_(dificuldade)  %%OLHA O UNDERLINE!!!
 
 a = rand(); %nro aleatorio de 0 a 1
 
+maquinaGanha = 0;
 Tabuleiro = csvread('Tabuleiro.csv');
 
 if a < dificuldade
@@ -36,6 +37,13 @@ else
  
 end
 
+ultima = testaSomas(Tabuleiro); %checando se compu deu xeque mate
+ganhou = ~isempty(ultima);
+if ganhou
+  maquinaGanha = ultima;
+end
+
+csvwrite('maquinaGanha.csv',maquinaGanha);
 csvwrite('Tabuleiro.csv',Tabuleiro); %Tabuleiro vai ser 3x3 durante o jogo e 1x1 no final
 
 

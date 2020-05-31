@@ -32,15 +32,25 @@ app.post('/proximaJogada', async function(req, res) {
 
   await exec('C:\\Octave\\Octave-5.2.0\\mingw64\\bin\\octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', async (err, stdout, stderr) => {
     
+    const jogada = { tabuleiro: null, estado: null };
+
     if (err) throw err;    
     console.log('( 2 ) Executando octave...');
     
-    await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+    await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, tabuleiro) => {      
       if (err) throw err;
       console.log('( 3 ) Retornando tabuleiro...');
-      console.log(data);
+      console.log(tabuleiro);
+      jogada.tabuleiro = tabuleiro;
+    });
+
+    await fs.readFile('src/scripts/maquinaGanha.csv', "utf8", (err, estado) => {      
+      if (err) throw err;
+      console.log('( 3 ) Retornando objeto da jogada...');
+      console.log(estado);
+      jogada.estado = estado;
       console.log('FIM DA JOGADA ----------------------------------------------');
-      res.send(data)
+      res.send( jogada );
     });
 
   });  

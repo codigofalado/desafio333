@@ -88,6 +88,7 @@ http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 http.onreadystatechange = function() {//Call a function when the state changes.
   if(http.readyState == 4 && http.status == 200) {
 
+    const jogada = JSON.parse( http.responseText );
    
     if(http.responseText == "1") {
       console.log("Perdeu Otario");
@@ -95,9 +96,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       console.log("Empate");
     } else {
       console.log("Vitoria carai");
-    }
-
-    
+    }    
 
     state.matrix = http.responseText
       .replace("\n", ",")
