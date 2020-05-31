@@ -10,10 +10,11 @@ const state = {
     territory: []
   },
   difficult: 0.3,
-  score: 0,
-  gameOver: false
+  score: 0
 
 }
+
+document.querySelector('.victory').textContent = 0;
 
 // let dificuldadeEscolhida;
 // let dificuldade = document.querySelector('.iniciar');

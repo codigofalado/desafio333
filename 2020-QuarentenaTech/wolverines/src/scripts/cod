@@ -1,20 +1,20 @@
-# Created by Octave 5.2.0, Sat May 30 23:29:13 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
+# Created by Octave 5.2.0, Sat May 30 23:39:29 2020 GMT <unknown@NOTE-SAMSUNG-BLUE>
 # name: A
 # type: matrix
 # rows: 3
 # columns: 3
- 1 1 0.29999999999999999
- 1 1 0.29999999999999999
- 0.29999999999999999 0.29999999999999999 0
+ 1 0 0
+ 0 1 0.29999999999999999
+ 0 0 0.29999999999999999
 
 
 # name: A0
 # type: matrix
 # rows: 3
 # columns: 3
- 1 1 0.29999999999999999
- 1 1 0.29999999999999999
- 0 0.29999999999999999 0
+ 1 0 0
+ 0 1 0.29999999999999999
+ 0 0 0
 
 
 # name: argn
@@ -28,14 +28,23 @@ k
 
 # name: cod
 # type: scalar
-14
+11
 
 
 # name: cols
 # type: matrix
 # rows: 1
 # columns: 3
- 2 2.2999999999999998 0.59999999999999998
+ 1 1 0.29999999999999999
+
+
+# name: diagA0
+# type: matrix
+# rows: 3
+# columns: 1
+ 1
+ 1
+ 0
 
 
 # name: i
@@ -43,25 +52,15 @@ k
 3
 
 
-# name: j
-# type: scalar
-1
-
-
 # name: k
 # type: scalar
-6
+1
 
 
 # name: lins
 # type: matrix
 # rows: 1
 # columns: 3
- 2.2999999999999998 2.2999999999999998 0.29999999999999999
-
-
-# name: n
-# type: scalar
-2
+ 1 1.3 0
 
 
