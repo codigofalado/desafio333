@@ -40,6 +40,7 @@ app.post('/calcularProximaJogada', function(req, res) {
 
   fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
     if (err) throw err;  
+    console.log(data)
     res.send(data);
   });
   
