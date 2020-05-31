@@ -104,35 +104,39 @@
 
 /////////////////////////////////////////////////////////////////////
 
-function estatos() {
+function estatos( videoSrc ) {
   document.querySelector('.estatos').style.display = "flex";
   document.querySelector('video').style.display = "initial";
-  document.querySelector('.btnReset').style.top = "70%";
-  document.querySelector('.btnReset').style.left = "48%";
-  document.querySelector('.btnReset').style.zIndex = "101";
+  // document.querySelector('.btnReset').style.top = "70%";
+  // document.querySelector('.btnReset').style.left = "48%";
+  // document.querySelector('.btnReset').style.zIndex = "101";
   document.querySelector('.tela').style.display = "initial";
 
   let vid = document.querySelector('video');
   function Autoplay() { 
+    vid.src = videoSrc;
     vid.autoplay = true;
     vid.load();
   }
   Autoplay()
   vid.onended = () => {
     document.querySelector('video').style.display = "none";
+    document.querySelector('.estatos').style.display = "none";
   };
 }
 
 
 const state = {
 
-  user: 1,
+  tieVideo: "../videos/Empate.mp4",
   img: "../img/miniVolvi.png",
   audio: "../trilhaSonora/WolverineGarras.mp3",
+  video: "../videos/VitoriaWolverine.mp4",
   yourTurn: true,
   enemy: {
     img: "../img/miniBlob.png",
     audio: "../trilhaSonora/WolverineGarras.mp3",
+    video: "../videos/VitoriaBlob.mp4",
     territory: []
   },
   matrix: new Array( 9 ).fill( 0 ),
@@ -141,12 +145,14 @@ const state = {
 
   reset: function () {
     
-    this.user = 1;
+    this.tieVideo = "../videos/Empate.mp4";
     this.img = "../img/miniVolvi.png";
     this.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.video = "../videos/VitoriaWolverine.mp4";
     this.yourTurn = true;
     this.enemy.img = "../img/miniBlob.png";
     this.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.enemy.video = "../videos/VitoriaBlob.mp4";
     this.enemy.territory = [];
     this.matrix = new Array( 9 ).fill( 0 );
     this.difficult = 0.3;
@@ -196,8 +202,10 @@ function choisePerson(e) {
 if (e.classList[0] == "Blob") {
   state.img = "../img/miniBlob.png";
   state.audio = "../trilhaSonora/WolverineGarras.mp3";
+  state.video = "../videos/VitoriaBlob.mp4";
   state.enemy.img = "../img/miniVolvi.png";
   state.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+  state.enemy.video = "../videos/VitoriaWolverine.mp4";
 }
 
 document.querySelector('.tela').style.display = "none";
@@ -237,11 +245,23 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       .map( m => parseFloat( m ) );
 
     if(jogada.estado.trim() == "1") {
-      console.log("Perdeu Otario");
+      
+      estatos( state.enemy.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
+      reset();
+
     } else if(jogada.estado.trim() == "-1") {
-      console.log("Empate");
+      
+      estatos( state.tieVideo );
+      document.querySelector('.fraseEstatos').innerHTML = "Empate!"
+      reset();
+
     } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
-      console.log("Vitoria carai");
+    
+      estatos( state.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"
+      reset();
+
     }    
 
     for ( let i = 0; i < celulas.length; i++ ) {      
