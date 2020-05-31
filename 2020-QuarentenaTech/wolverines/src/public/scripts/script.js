@@ -89,7 +89,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
   if(http.readyState == 4 && http.status == 200) {
 
    
-    if(http.responseText == "") {
+    if(http.responseText == "1") {
       console.log("Perdeu Otario");
     } else if(http.responseText == "-1") {
       console.log("Empate");
@@ -228,56 +228,14 @@ skin3.addEventListener('click', testColor);
 // let btn = document.querySelector('.colorOption');
 
 
-function openFlip() {
-document.getElementById('mySideFlip').style.width = "350px";
-document.getElementById('coin').style.marginRight = "350px";
-let audio = new Audio();
-audio.src =  "../trilhaSonora/moeda.mp3";
-audio.play();
-}
-
-
-function closeFlip() {
-document.getElementById('mySideFlip').style.width = "0px";
-document.getElementById('coin').style.marginRight = "0px"; 
-}
-
-function flipOption() {
-let elementWidth = document.getElementById('mySideFlip').clientWidth;
-if (elementWidth == 0) {
-  openFlip();
-  document.querySelector('.resultado').innerHTML = "...";
-} else {
-  closeFlip();
-  document.querySelector('.resultado').innerHTML = "...";
-}
-
-}
-
-
-function flip() {
-let valor = Math.floor(Math.random() * 2);
-if (valor == 0){
-  document.querySelector('.resultado').innerHTML = "Par";
-} else {
-  document.querySelector('.resultado').innerHTML = "Impar";
-}
-
-}
-
-let coin = document.getElementById('coin');
-coin.addEventListener('click', flipOption);
-
-let btnFlip = document.getElementById("btnFlip");
-btnFlip.addEventListener('click', flip);
-
-
 function choiseColorOpen() {
-document.querySelector('.op1').style.left = "70px";
+document.querySelector('.op1').style.left = "60px";
 
-document.querySelector('.op2').style.left = "120px";
+document.querySelector('.op2').style.left = "110px";
 
-document.querySelector('.op3').style.left = "170px";
+document.querySelector('.op3').style.left = "162px";
+
+document.querySelector('.colorOption').style.width = "216px";
 
 }
 
@@ -285,6 +243,7 @@ function choiseColorClose() {
 document.querySelector('.op1').style.left = "0px";
 document.querySelector('.op2').style.left = "0px";
 document.querySelector('.op3').style.left = "0px";
+document.querySelector('.colorOption').style.width = "0px";
 }
 
 function choiseColorBtn() {
@@ -300,6 +259,54 @@ else {
 
 let pickColor = document.querySelector('.pickColor')
 pickColor.addEventListener('click', choiseColorBtn)
+
+
+
+// -------------------------------------------
+//Botão Flip
+
+function openFlip() {
+  document.getElementById('mySideFlip').style.width = "350px";
+  document.getElementById('coin').style.marginRight = "350px";
+  let audio = new Audio();
+  audio.src =  "../trilhaSonora/moeda.mp3";
+  audio.play();
+  }
+  
+  
+  function closeFlip() {
+  document.getElementById('mySideFlip').style.width = "0px";
+  document.getElementById('coin').style.marginRight = "0px"; 
+  }
+  
+  function flipOption() {
+  let elementWidth = document.getElementById('mySideFlip').clientWidth;
+  if (elementWidth == 0) {
+    openFlip();
+    document.querySelector('.resultado').innerHTML = "...";
+  } else {
+    closeFlip();
+    document.querySelector('.resultado').innerHTML = "...";
+  }
+  
+  }
+  
+  
+  // function flip() {
+  // let valor = Math.floor(Math.random() * 2);
+  // if (valor == 0){
+  //   document.querySelector('.resultado').innerHTML = "Par";
+  // } else {
+  //   document.querySelector('.resultado').innerHTML = "Impar";
+  // }
+  // 
+  // }
+  
+  // let coin = document.getElementById('coin');
+  // coin.addEventListener('click', flipOption);
+  
+  // let btnFlip = document.getElementById("btnFlip");
+  // btnFlip.addEventListener('click', flip);
 
 
 function openPlacar() {
@@ -321,12 +328,12 @@ if (valor == 0){
 }
 }
 
-
-
-
 let puxaPlacar = document.querySelector('.puxaPlacar');
 puxaPlacar.addEventListener('click', choiceEventPlacar);
 
+function reset() {
+  console.log("Eu resetei tudo só que vc não viu");
+}
 
 
 

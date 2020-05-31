@@ -29,7 +29,7 @@ body {
     transform: rotateX(45deg) rotateZ(45deg);
     display: flex;
     justify-content: center;
-    margin-top:7%;
+    margin-top:10%;
 
     .lona {
       background: #376CE3;
@@ -153,29 +153,34 @@ body {
     width: 60px;
     height: 60px;
     background: #000000fd;
-    border: 1px solid #a7aab9;
+    border-top: 1px solid #a7aab9;
+    border-left: 1px solid #a7aab9;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     top: 12%;
     left: 3%;
-    z-index: 1;
+    z-index: 4;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    text-align: center;
   }
 
   .colorOption {
-    position: absolute;
-    top: 11%;
-    left: 3%;
-    width: 200px;
+    position: fixed;
+    top: 12.5%;
+    left: 4%;
+    width: 0px;
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 7px;
+    border-radius: 25px;
+    z-index: 2;
+    background-color: #000000fd;
+    transition: 250ms ease;
     
 
     p {
@@ -189,9 +194,9 @@ body {
       border: none;
       position: absolute;
       // z-index: 5;
-      left: 5%;
-      top: 35%;
-      // transition: .25ms ease;
+      left: 0%;
+      top: 8%;
+      
 
       &.op1{
         background-color: #e33737;
@@ -218,9 +223,9 @@ body {
     border-bottom: 3px solid #333;
     background: #fff;
     padding: 5px;
-    position: absolute;
+    position: fixed;
     right: 0;
-    bottom: 40%;
+    top: 35.5%;
     cursor: pointer;
     z-index: 1;
     transition: 0.5s ease;
@@ -229,14 +234,15 @@ body {
       width: 100%;
       object-fit: cover;
     }
+
   }
 
   .sideflip {
     height: 40%;
-    width: 0;
+    width: 0px;
     position: fixed;
     z-index: 1;
-    top: 32.5%;
+    top: 35.5%;
     right: 0;
     background-color: #fff;
     border-top: 3px solid #333;
@@ -245,10 +251,16 @@ body {
     overflow: hidden;
     padding-top: 50px;
     transition: 0.5s;
-    border-radius: 7px 0 0 7px;
+    border-radius: 0 0 0 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1025px){
+      height: 15%;
+      padding-top: 25px;
+    }
+    
 
     .cointImg {
       width: 70px;
@@ -268,14 +280,6 @@ body {
       font-weight: bold;
     }
 
-    #btnFlip {
-      padding: 10px 25px;
-      background: #376CE3;
-      border: none;
-      font-weight: bold;
-      color: #fff;
-      border-radius: 5px;
-    }
   }
 
   .choise {
@@ -289,15 +293,23 @@ body {
     top: 10%;
     display: none;
 
-    @media screen and (max-width: 1025px){
+    @media screen and (max-width: 1024px){
       height: 50%;
     }
+    @media screen and (max-width: 425px){
+      height: 25%;
+    }
+
 
     & span {
       display: inline-block;
       width: 100%;
       font-size: 3em;
       font-weight: bold;
+
+      @media screen and (max-width: 425px){
+        font-size: 1.3em;
+      }
     }
 
     .personagem {
@@ -327,6 +339,11 @@ body {
           }
           
         }
+        @media screen and (max-width: 425px){
+          width: 100px;
+          height: 100px;
+          
+        }
         
       }
   
@@ -349,6 +366,11 @@ body {
           }
           
         }
+        @media screen and (max-width: 425px){
+          width: 100px;
+          height: 100px;
+          
+        }
         
       }
     }
@@ -369,7 +391,7 @@ body {
     width: 70px;
     height: 70px;
     position: fixed;
-    top: 15%;
+    top: 10%;
     right: 0;
     border-radius: 50% 0 0 50%;
     transition: 250ms ease;
@@ -393,7 +415,7 @@ body {
     right: 0;
     transition: 250ms ease;
     z-index: 1;
-    border-radius: 7% 0 0 7%;
+    border-radius: 0 0 0 7%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -506,7 +528,7 @@ body {
 
   .dificuldade {
     width: 300px;
-    height: 400px;
+    height: 330px;
     background-color: rgb(61, 64, 82);
     border-radius: 7px;
     position: absolute;
@@ -543,6 +565,16 @@ body {
     }
   }
 
+  .btnReset{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #e33737;
+    color: #fff;
+    position: fixed;
+    top: 24%;
+    left: 3%;
+  }
 
 
 
