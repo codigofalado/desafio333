@@ -20,7 +20,19 @@ app.get('/', indexRouter);
 
 app.post('/proximaJogada', function(req, res) {
 
-  console.log('Gravando tabuleiro...');
+  await fs.writeFile('src/scripts/Tabuleiro.csv', req.body.csvContent, (err) => {
+    if (err) throw err;    
+    console.log('Gravando tabuleiro...');
+    console.log(req.body.csvContent);
+  });
+
+  await fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+    if (err) throw err;
+    console.log("Octave processou.")
+    console.log(data);
+    res.send(data)
+  });
+
   console.log('Executando octave...');
   console.log('Retornando tabuleiro...');
 

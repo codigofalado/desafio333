@@ -88,24 +88,24 @@ function proximaJogada(matriz) {
         .split(",");
       console.log(matriz)
 
-      // for ( let i = 0; i < celulas.length; i++ ) {
+      for ( let i = 0; i < celulas.length; i++ ) {
       
-      //     // GERAR MATRIZ DA JOGADA
+          // GERAR MATRIZ DA JOGADA
       
-      //     if(matriz[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
-      //       state.enemy.territory.push(i);
-      //       // CRIAR IMAGEM
-      //       let img = new Image( 100, 100 );
-      //       img.src = state.enemy.img;
-      //       img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
-      //       document.querySelectorAll( '.sub-box' )[i].appendChild( img );
-      //       let audio = new Audio();
-      //       audio.src =  state.enemy.audio;
-      //       audio.play();
-      //       // setTimeout(function(){ console.log("Aguarde"); }, 1000);
-      //       state.yourTurn = true;
-      //     }
-      // }
+          if(matriz[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
+            // state.enemy.territory.push(i);
+            // // CRIAR IMAGEM
+            // let img = new Image( 100, 100 );
+            // img.src = state.enemy.img;
+            // img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
+            // document.querySelectorAll( '.sub-box' )[i].appendChild( img );
+            // let audio = new Audio();
+            // audio.src =  state.enemy.audio;
+            // audio.play();
+            // setTimeout(function(){ console.log("Aguarde"); }, 1000);
+            state.yourTurn = true;
+          }
+      }
 
 
     }}
