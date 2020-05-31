@@ -105,8 +105,13 @@
 /////////////////////////////////////////////////////////////////////
 
 function estatos() {
-  document.querySelector('estados').style.display = "flex";
+  document.querySelector('.estatos').style.display = "flex";
   document.querySelector('video').style.display = "initial";
+  document.querySelector('.btnReset').style.top = "70%";
+  document.querySelector('.btnReset').style.left = "48%";
+  document.querySelector('.btnReset').style.zIndex = "101";
+  document.querySelector('.tela').style.display = "initial";
+
   let vid = document.querySelector('video');
   function Autoplay() { 
     vid.autoplay = true;
