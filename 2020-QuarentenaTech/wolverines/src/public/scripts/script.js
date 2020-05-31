@@ -81,22 +81,6 @@ function obterParametroParaScriptOctave(matriz) {
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.
     if(http.readyState == 4 && http.status == 200) {
-        console.log(http.responseText);
-    }}
-  http.send(params);
-
-}
-
-function proximaJogada() {
-
-  var http = new XMLHttpRequest();
-  var url = '/calcularProximaJogada';
-  var params = 'difficult=' + state.difficult;
-
-  http.open("POST", url);    
-  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  http.onreadystatechange = function() {//Call a function when the state changes.
-    if(http.readyState == 4 && http.status == 200) {
 
       matriz = http.responseText
         .replace("\n", ",")
@@ -129,39 +113,6 @@ function proximaJogada() {
 
 }
 
-// function lerRespostaDoOctave(matriz) {
-
-//   const Tabuleiro = [
-//     [matriz[0], matriz[1], matriz[2]],
-//     [matriz[3], matriz[4], matriz[5]],
-//     [matriz[6], matriz[7], matriz[8]]
-//   ];
-
-//   let csvContent = "";
-//   Tabuleiro.forEach(function(rowArray) {
-//       let row = rowArray.join(",");
-//       csvContent += row + "\r\n";
-//   });
-
-//   var http = new XMLHttpRequest();
-//   var url = '/lerRespostaDoOctave';
-//   http.open("GET", url);    
-//   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-//   http.onreadystatechange = function() {//Call a function when the state changes.
-//       if(http.readyState == 4 && http.status == 200) {
-
-//         matriz = http.responseText
-//           .replace("\n", ",")
-//           .replace("\n", ",")
-//           .split(",");
-
-//         console.log(matriz)
-
-//       }}
-//   http.send();
-
-// }
-
 // ----------------------------------
 const celulas = document.querySelectorAll( '.sub-box' );
 
@@ -192,8 +143,7 @@ for ( let i = 0; i < celulas.length; i++ ) {
       audio.src =  state.audio;
       audio.play();
 
-      obterParametroParaScriptOctave(matriz)
-      proximaJogada();
+      obterParametroParaScriptOctave(matriz)      
     }
     
   }

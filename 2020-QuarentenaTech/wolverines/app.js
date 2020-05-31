@@ -34,41 +34,31 @@ app.post('/obterParametroParaScriptOctave', function(req, res) {
         if (err) throw err;
         console.log("Gravado...")
         console.log(data)
-        res.send(data);
+        
+        exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
+          if (error) {
+            // console.error(`exec error: ${error}`);
+            return;
+          }
+      
+          // console.log(`stdout: ${stdout}`);
+          // console.error(`stderr: ${stderr}`);
+      
+          fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+            if (err) throw err;
+            console.log("Octave processou.")
+            console.log(data);
+            res.send(data)
+          });
+          
+        }); 
+
       });
 
     });
 
   });   
 
-})
-
-app.post('/calcularProximaJogada', function(req, res) {
-
-  fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-    if (err) throw err;
-    console.log("Octave processando...")
-    console.log(data)
-    res.send(data);
-  });
-
-  exec('octave-cli --eval "cd src/scripts; ProximaJogada_(' + req.body.difficult + ')"', (error, stdout, stderr) => {
-    if (error) {
-      // console.error(`exec error: ${error}`);
-      return;
-    }
-
-    // console.log(`stdout: ${stdout}`);
-    // console.error(`stderr: ${stderr}`);
-
-    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
-      if (err) throw err;
-      console.log("Octave processou.")
-      console.log(data)
-      res.send(data);
-    });
-    
-  });  
 })
 
 app.listen(3000, err => {
