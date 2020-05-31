@@ -176,7 +176,7 @@ function reset() {
 
 }
 
-document.querySelector('.victory').textContent = 0;
+document.querySelector('.victory').textContent = state.score;
 
 // let dificuldadeEscolhida;
 // let dificuldade = document.querySelector('.iniciar');
@@ -244,27 +244,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       .split(",")
       .map( m => parseFloat( m ) );
 
-    if(jogada.estado.trim() == "1") {
-      
-      estatos( state.enemy.video );
-      document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
-      reset();
-
-    } else if(jogada.estado.trim() == "-1") {
-      
-      estatos( state.tieVideo );
-      document.querySelector('.fraseEstatos').innerHTML = "Empate!"
-      reset();
-
-    } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
-    
-      estatos( state.video );
-      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"
-      reset();
-
-    }    
-
-    for ( let i = 0; i < celulas.length; i++ ) {      
+      for ( let i = 0; i < celulas.length; i++ ) {      
              
         if(state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
           state.enemy.territory.push(i);
@@ -283,6 +263,33 @@ http.onreadystatechange = function() {//Call a function when the state changes.
         }
     }
 
+    if(jogada.estado.trim() == "1") {
+      
+      const scorePesistence = state.score;
+      estatos( state.enemy.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
+      reset();
+      state.score = scorePesistence;
+
+    } else if(jogada.estado.trim() == "-1") {
+      
+      const scorePesistence = state.score;
+      estatos( state.tieVideo );
+      document.querySelector('.fraseEstatos').innerHTML = "Empate!"
+      reset();
+      state.score = scorePesistence;
+
+    } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
+    
+      const scorePesistence = state.score;
+      estatos( state.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"
+      state.score++;
+      document.querySelector('.victory').textContent = state.score;
+      reset();
+      state.score = scorePesistence;
+
+    }    
 
   }}
 http.send(params);
