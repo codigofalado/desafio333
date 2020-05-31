@@ -26,14 +26,7 @@ function obterParametroParaScriptOctave(matriz) {
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.
     if(http.readyState == 4 && http.status == 200) {
-
-      matriz = http.responseText
-        .replace("\n", ",")
-        .replace("\n", ",")
-        .split(",");
-
-      console.log(matriz)
-
+        console.log(http.responseText);
     }}
   http.send(params);
 
@@ -48,9 +41,16 @@ function proximaJogada() {
   http.open("POST", url);    
   http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
   http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
-          console.log(http.responseText);
-      }}
+    if(http.readyState == 4 && http.status == 200) {
+
+      matriz = http.responseText
+        .replace("\n", ",")
+        .replace("\n", ",")
+        .split(",");
+
+      console.log(matriz)
+
+    }}
   http.send(params);
 
 }
