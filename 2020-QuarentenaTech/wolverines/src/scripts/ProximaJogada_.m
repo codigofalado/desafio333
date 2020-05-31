@@ -36,6 +36,12 @@ else
  
 end
 
+ultima = testaSomas(Tabuleiro); %checando se compu deu xeque mate
+ganhou = ~isempty(ultima);
+if ganhou
+  Tabuleiro = ultima;
+end
+
 csvwrite('Tabuleiro.csv',Tabuleiro); %Tabuleiro vai ser 3x3 durante o jogo e 1x1 no final
 
 
