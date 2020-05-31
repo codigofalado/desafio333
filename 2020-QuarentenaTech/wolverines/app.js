@@ -38,14 +38,11 @@ app.post('/calcularProximaJogada', function(req, res) {
     console.log(`stdout: ${stdout}`);
     console.error(`stderr: ${stderr}`);
 
-    setTimeout(fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
+    fs.readFile('src/scripts/Tabuleiro.csv', "utf8", (err, data) => {      
       if (err) throw err;
       console.log(data)
       res.send(data);
-    }), 200, 'funky');  
-
-
-    
+    });
     
   });  
 })
