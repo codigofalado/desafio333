@@ -106,6 +106,7 @@
 
 function estatos( videoSrc ) { 
   
+  document.querySelector('.tela').style.display = "initial";
   document.querySelector('.estatos').style.display = "flex";
   document.querySelector('video').style.display = "initial";
   
@@ -178,9 +179,7 @@ function reset() {
   // document.querySelector('.btnReset').style.top = "70%";
   // document.querySelector('.btnReset').style.left = "48%";
   // document.querySelector('.btnReset').style.zIndex = "101";
-  document.querySelector('.tela').style.display = "initial";
-
-  document.querySelector('.tela').style.display = "initial";
+  
   document.querySelector('.dificuldade').style.display = "flex";
   document.querySelector('.choise').style.display = "none";
 
