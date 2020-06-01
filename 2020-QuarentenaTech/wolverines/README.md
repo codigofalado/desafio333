@@ -17,7 +17,7 @@ Baseado [nessa luta](https://www.youtube.com/watch?v=Awj8GTs1Zh8) do filme ["X-M
 Wolverines
 
 - Gabriel - Inteligência artificial em Matlab-Octave %
-- Vinícius - Backend com interface em php-node.js //
+- Vinícius - Backend com interface em Php-Node.js //
 - Wesley - Frontend, webdesign e artes -->
 
 #################
