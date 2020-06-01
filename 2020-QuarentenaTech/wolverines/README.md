@@ -4,7 +4,7 @@
 
 Clique no local do ringue para onde você quer mover seu personagem. Quem fechar a maior linha reta nocauteia o outro pelas regras do jogo da velha!!!
 
-Jogue [aqui](http://wolverinexblob.tk) .
+Acesse [aqui](http://wolverinexblob.tk) o jogo.
 
 Que vença o melhor!
 
