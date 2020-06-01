@@ -2,9 +2,9 @@
 
 <img src="https://github.com/gariandi/desafio333/blob/master/2020-QuarentenaTech/wolverines/src/public/img/os%20dois%20de%20novo.png" />
 
-Clique [aqui](http://wolverinexblob.tk) para jogar.
-
 Clique no local do ringue para onde você quer mover seu personagem. Quem fechar a maior linha reta nocauteia o outro pelas regras do jogo da velha!!!
+
+Acesse [aqui](http://wolverinexblob.tk) o jogo.
 
 Que vença o melhor!
 
