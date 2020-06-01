@@ -29,6 +29,9 @@ somaTabuleiro = testaSomas(Tabuleiro); %testes marotos de fim de jogo
 
 terminou = length(somaTabuleiro)==1 ;
 
+espera = 0.2 + 0.1*rand();
+pause(espera);
+
 if ~terminou
 
  if a < dificuldade
