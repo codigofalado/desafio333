@@ -104,46 +104,90 @@
 
 /////////////////////////////////////////////////////////////////////
 
-function estatos() {
+function estatos( videoSrc ) { 
+  
   document.querySelector('.estatos').style.display = "flex";
   document.querySelector('video').style.display = "initial";
-  document.querySelector('.btnReset').style.top = "70%";
-  document.querySelector('.btnReset').style.left = "48%";
-  document.querySelector('.btnReset').style.zIndex = "101";
-  document.querySelector('.tela').style.display = "initial";
-
+  
   let vid = document.querySelector('video');
+
   function Autoplay() { 
+    vid.src = videoSrc;
     vid.autoplay = true;
     vid.load();
   }
   Autoplay()
   vid.onended = () => {
     document.querySelector('video').style.display = "none";
+    document.querySelector('.estatos').style.display = "none";
+
+    if (videoSrc == state.tieVideo) {
+      openFlip();
+      flip();
+    }
+
   };
 }
 
 
-
-
 const state = {
 
-user: 1,
-img: "../img/miniVolvi.png",
-audio: "../trilhaSonora/WolverineGarras.mp3",
-yourTurn: true,
-enemy: {
-  img: "../img/miniBlob.png",
+  tieVideo: "../videos/Empate.mp4",
+  img: "../img/miniVolvi.png",
   audio: "../trilhaSonora/WolverineGarras.mp3",
-  territory: []
-},
-matrix: new Array( 9 ).fill( 0 ),
-difficult: 0.3,
-score: 0
+  video: "../videos/VitoriaWolverine.mp4",
+  yourTurn: true,
+  enemy: {
+    img: "../img/miniBlob.png",
+    audio: "../trilhaSonora/BlobBanha.mpeg",
+    video: "../videos/VitoriaBlob.mp4",
+    territory: []
+  },
+  matrix: new Array( 9 ).fill( 0 ),
+  difficult: 0.3,
+  score: 0,
+
+  reset: function () {
+    
+    this.tieVideo = "../videos/Empate.mp4";
+    this.img = "../img/miniVolvi.png";
+    this.audio = "../trilhaSonora/WolverineGarras.mp3";
+    this.video = "../videos/VitoriaWolverine.mp4";
+    this.yourTurn = true;
+    this.enemy.img = "../img/miniBlob.png";
+    this.enemy.audio = "../trilhaSonora/BlobBanha.mpeg";
+    this.enemy.video = "../videos/VitoriaBlob.mp4";
+    this.enemy.territory = [];
+    this.matrix = new Array( 9 ).fill( 0 );
+    this.difficult = 0.3;
+    this.score = 0;    
+
+  }
 
 }
 
-document.querySelector('.victory').textContent = 0;
+function reset() {
+  
+  state.reset();
+
+  document
+    .querySelectorAll( '.sub-box img' )
+    .forEach( x => x.remove() );
+
+   
+  
+  // document.querySelector('.btnReset').style.top = "70%";
+  // document.querySelector('.btnReset').style.left = "48%";
+  // document.querySelector('.btnReset').style.zIndex = "101";
+  document.querySelector('.tela').style.display = "initial";
+
+  document.querySelector('.tela').style.display = "initial";
+  document.querySelector('.dificuldade').style.display = "flex";
+  document.querySelector('.choise').style.display = "none";
+
+}
+
+document.querySelector('.victory').textContent = state.score;
 
 // let dificuldadeEscolhida;
 // let dificuldade = document.querySelector('.iniciar');
@@ -151,12 +195,26 @@ document.querySelector('.victory').textContent = 0;
 
 function choiceDificultOption(elem) {
 let valor = elem.className;
-if( valor == "facil" ) state.difficult = 0.3;
-else if( valor == "medio" ) state.difficult = 0.6;
-else {
-  aviso();
-  state.difficult = 0.9;
-} 
+if( valor == "facil" ) { 
+  
+  state.difficult = 0.3; 
+
+}
+else if( valor == "medio" ) { 
+  
+  state.difficult = 0.6; 
+
+}
+else { 
+  
+  state.difficult = 0.9; 
+
+  aparece = Math.round(Math.random());
+  if(aparece){
+    aviso();
+  };
+
+}
 
 // if( dificuldadeEscolhida == undefined ) {
 //   dificuldadeEscolhida = 0.3;
@@ -171,9 +229,11 @@ function choisePerson(e) {
 
 if (e.classList[0] == "Blob") {
   state.img = "../img/miniBlob.png";
-  state.audio = "../trilhaSonora/WolverineGarras.mp3";
+  state.audio = "../trilhaSonora/BlobBanha.mpeg";
+  state.video = "../videos/VitoriaBlob.mp4";
   state.enemy.img = "../img/miniVolvi.png";
   state.enemy.audio = "../trilhaSonora/WolverineGarras.mp3";
+  state.enemy.video = "../videos/VitoriaWolverine.mp4";
 }
 
 document.querySelector('.tela').style.display = "none";
@@ -204,15 +264,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
 
     const jogada = JSON.parse( http.responseText );
    
-    console.log(jogada)
-
-    // if(jogada.tabuleiro == "") {
-    //   console.log("Perdeu Otario");
-    // } else if(jogada.tabuleiro == "-1") {
-    //   console.log("Empate");
-    // } else if(jogada.tabuleiro == "0") {
-    //   console.log("Vitoria carai");
-    // }    
+    console.log(jogada)   
 
     state.matrix = jogada.tabuleiro
       .replace("\n", ",")
@@ -220,7 +272,7 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       .split(",")
       .map( m => parseFloat( m ) );
 
-    for ( let i = 0; i < celulas.length; i++ ) {      
+      for ( let i = 0; i < celulas.length; i++ ) {      
              
         if(state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
           state.enemy.territory.push(i);
@@ -239,6 +291,34 @@ http.onreadystatechange = function() {//Call a function when the state changes.
         }
     }
 
+    if(jogada.estado.trim() == "1") {
+      
+      const scorePesistence = state.score;
+      estatos( state.enemy.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
+      reset();
+      state.score = scorePesistence;
+
+    } else if(jogada.estado.trim() == "-1") {
+      
+      const scorePesistence = state.score;
+      estatos( state.tieVideo );
+      document.querySelector('.fraseEstatos').innerHTML = "Empate!"
+      // reset();
+      // state.score = scorePesistence;
+
+
+    } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
+    
+      const scorePesistence = state.score;
+      estatos( state.video );
+      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"
+      state.score++;
+      document.querySelector('.victory').textContent = state.score;
+      reset();
+      state.score = scorePesistence;
+
+    }    
 
   }}
 http.send(params);
@@ -407,21 +487,25 @@ function openFlip() {
   }
   
   
-  // function flip() {
-  // let valor = Math.floor(Math.random() * 2);
-  // if (valor == 0){
-  //   document.querySelector('.resultado').innerHTML = "Par";
-  // } else {
-  //   document.querySelector('.resultado').innerHTML = "Impar";
-  // }
-  // 
-  // }
+function flip() {
+
+  let valor = Math.floor(Math.random() * 2);
   
-  // let coin = document.getElementById('coin');
-  // coin.addEventListener('click', flipOption);
-  
-  // let btnFlip = document.getElementById("btnFlip");
-  // btnFlip.addEventListener('click', flip);
+  if (valor == 0){
+    document.querySelector('.resultado').innerHTML = "Cara";
+  } else {
+    document.querySelector('.resultado').innerHTML = "Coroa";
+  }
+
+  return valor;
+
+}
+
+// let coin = document.getElementById('coin');
+// coin.addEventListener('click', flipOption);
+
+// let btnFlip = document.getElementById("btnFlip");
+// btnFlip.addEventListener('click', flip);
 
 
 function openPlacar() {
