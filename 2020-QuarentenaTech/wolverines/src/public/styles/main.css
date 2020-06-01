@@ -312,7 +312,7 @@ body #coin img {
 
 body .sideflip {
   height: 50%;
-  width: 300px;
+  width: 0px;
   position: fixed;
   z-index: 1;
   top: 35.5%;
