@@ -7,14 +7,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Versão final da nossa IA vencedora de jogo da véia #####
-%%% feito a partir de ProximaJogada_ ,                   %%%   
+%%% feito a partir de ProximaJogada__  [dois underlines] %%%   
 %%% apenas renomeando funções                            %%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% programa principal %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function q = ProximaJogada__(dificuldade)  %% DOIS UNDERLINES!!!
+function q = ProximaJogada_(dificuldade)  %% DOIS UNDERLINES!!!
 %% Inputs: dificuldade - número de 0 a 1
 %%         Tabuleiro - csv com matriz atual do tabuleiro
 
