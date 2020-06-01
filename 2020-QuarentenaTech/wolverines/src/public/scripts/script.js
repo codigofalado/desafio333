@@ -121,10 +121,10 @@ function estatos( videoSrc ) {
     document.querySelector('video').style.display = "none";
     document.querySelector('.estatos').style.display = "none";
 
-    if (videoSrc == state.tieVideo) {
-      openFlip();
-      flip();
-    }
+    // if (videoSrc == state.tieVideo) {
+    //   openFlip();
+    //   flip();
+    // }
 
   };
 }
@@ -184,6 +184,8 @@ function reset() {
   document.querySelector('.tela').style.display = "initial";
   document.querySelector('.dificuldade').style.display = "flex";
   document.querySelector('.choise').style.display = "none";
+
+  document.querySelector('.victory').textContent = state.score;
 
 }
 
@@ -297,26 +299,30 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       estatos( state.enemy.video );
       document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
       reset();
+      
       state.score = scorePesistence;
+      document.querySelector('.victory').textContent = state.score;
 
     } else if(jogada.estado.trim() == "-1") {
       
       const scorePesistence = state.score;
       estatos( state.tieVideo );
       document.querySelector('.fraseEstatos').innerHTML = "Empate!"
-      // reset();
-      // state.score = scorePesistence;
-
+      reset();
+      
+      state.score = scorePesistence;
+      document.querySelector('.victory').textContent = state.score;
 
     } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
     
+      state.score++;
       const scorePesistence = state.score;
       estatos( state.video );
-      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"
-      state.score++;
-      document.querySelector('.victory').textContent = state.score;
+      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"      
       reset();
+
       state.score = scorePesistence;
+      document.querySelector('.victory').textContent = state.score;
 
     }    
 
