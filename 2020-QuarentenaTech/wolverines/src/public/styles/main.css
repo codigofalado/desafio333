@@ -350,6 +350,35 @@ body .sideflip .cointImg img {
      object-fit: cover;
 }
 
+body .sideflip .localCoin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .sideflip .localCoin .btnflip {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  background: #636ce4;
+  padding: 4px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+body .sideflip .localCoin .btnflip:nth-child(1) {
+  margin-right: 5px;
+}
+
 body .sideflip .resultado {
   padding: 30px;
   font-size: 1.5em;
