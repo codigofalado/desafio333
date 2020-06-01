@@ -121,10 +121,10 @@ function estatos( videoSrc ) {
     document.querySelector('video').style.display = "none";
     document.querySelector('.estatos').style.display = "none";
 
-    // if (videoSrc == state.tieVideo) {
-    //   openFlip();
-    //   flip();
-    // }
+    if (videoSrc == state.tieVideo) {
+      openFlip();
+      // flip();
+    }
 
   };
 }
@@ -241,6 +241,38 @@ document.querySelector('.tela').style.display = "none";
 document.querySelector('.choise').style.display = "none";
 }
 
+function gameOver( estado ) {
+
+  if(estado == "1") {
+    
+    const scorePesistence = state.score;
+    estatos( state.enemy.video );
+    document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
+    reset();
+    
+    state.score = scorePesistence;
+    document.querySelector('.victory').textContent = state.score;
+
+  } else if(estado == "-1") {
+
+    estatos( state.tieVideo );
+    document.querySelector('.fraseEstatos').innerHTML = "Empate!"
+
+  } else if(estado == "0" && state.matrix.length < 9) {
+    
+    state.score++;
+    const scorePesistence = state.score;
+    estatos( state.video );
+    document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"      
+    reset();
+
+    state.score = scorePesistence;
+    document.querySelector('.victory').textContent = state.score;
+
+  }
+
+}
+
 function proximaJogada() {
 
 const Tabuleiro = [
@@ -264,66 +296,35 @@ http.onreadystatechange = function() {//Call a function when the state changes.
   if(http.readyState == 4 && http.status == 200) {
 
     const jogada = JSON.parse( http.responseText );
-   
-    console.log(jogada)   
-
+       
     state.matrix = jogada.tabuleiro
       .replace("\n", ",")
       .replace("\n", ",")
       .split(",")
       .map( m => parseFloat( m ) );
 
-      for ( let i = 0; i < celulas.length; i++ ) {      
-             
-        if(state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
-          state.enemy.territory.push(i);
-          // CRIAR IMAGEM
-          
-          let img = new Image( 100, 100 );
-          img.src = state.enemy.img;
-          img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
-          document.querySelectorAll( '.sub-box' )[i].appendChild( img );
-          
-          let audio = new Audio();
-          audio.src =  state.enemy.audio;
-          audio.play();
+      gameOver( jogada.estado.trim() );   
 
-          state.yourTurn = true;
-        }
+    for ( let i = 0; i < celulas.length; i++ ) {      
+            
+      if(state.matrix[ i ] == 0.3 && state.enemy.territory.indexOf(i) == -1) {
+        state.enemy.territory.push(i);
+        // CRIAR IMAGEM
+        
+        let img = new Image( 100, 100 );
+        img.src = state.enemy.img;
+        img.style.transform = `skewX(10deg) rotateZ(-46.5deg) scale(1.5) translateY(-35px)`
+        document.querySelectorAll( '.sub-box' )[i].appendChild( img );
+        
+        let audio = new Audio();
+        audio.src =  state.enemy.audio;
+        audio.play();
+
+        state.yourTurn = true;
+      }
     }
 
-    if(jogada.estado.trim() == "1") {
-      
-      const scorePesistence = state.score;
-      estatos( state.enemy.video );
-      document.querySelector('.fraseEstatos').innerHTML = "Você perdeu!"
-      reset();
-      
-      state.score = scorePesistence;
-      document.querySelector('.victory').textContent = state.score;
-
-    } else if(jogada.estado.trim() == "-1") {
-      
-      const scorePesistence = state.score;
-      estatos( state.tieVideo );
-      document.querySelector('.fraseEstatos').innerHTML = "Empate!"
-      reset();
-      
-      state.score = scorePesistence;
-      document.querySelector('.victory').textContent = state.score;
-
-    } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
-    
-      state.score++;
-      const scorePesistence = state.score;
-      estatos( state.video );
-      document.querySelector('.fraseEstatos').innerHTML = "Você venceu!"      
-      reset();
-
-      state.score = scorePesistence;
-      document.querySelector('.victory').textContent = state.score;
-
-    }    
+     
 
   }}
 http.send(params);
@@ -466,6 +467,7 @@ pickColor.addEventListener('click', choiseColorBtn)
 //Botão Flip
 
 function openFlip() {
+  document.querySelector('.resultado').innerHTML = "Cara ou Coroa?";
   document.getElementById('mySideFlip').style.width = "350px";
   document.getElementById('coin').style.marginRight = "350px";
   let audio = new Audio();
@@ -563,7 +565,26 @@ window.onclick = function(event) {
 
 
 function valorDoFlip(param) {
+   
   let valor = param.textContent;
-  console.log(valor);
+
+  flip()
+
+  let resultado = document.querySelector('.resultado').innerHTML;
+
+  console.log(valor, resultado)
+
+  if (valor == resultado) {
+    
+    gameOver("0");
+
+  }
+  else {
+
+    gameOver("1");
+
+  }
+
+  closeFlip();
   
 }
