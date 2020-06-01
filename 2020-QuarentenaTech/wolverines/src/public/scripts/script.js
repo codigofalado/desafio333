@@ -123,7 +123,7 @@ function estatos( videoSrc ) {
 
     if (videoSrc == state.tieVideo) {
       openFlip();
-      flip();
+      // flip();
     }
 
   };
@@ -255,14 +255,9 @@ function gameOver( estado ) {
     document.querySelector('.victory').textContent = state.score;
 
   } else if(estado == "-1") {
-    
-    const scorePesistence = state.score;
+
     estatos( state.tieVideo );
     document.querySelector('.fraseEstatos').innerHTML = "Empate!"
-    // reset();
-        
-    // state.score = scorePesistence;
-    // document.querySelector('.victory').textContent = state.score;
 
   } else if(estado == "0" && state.matrix.length < 9) {
     
@@ -473,6 +468,7 @@ pickColor.addEventListener('click', choiseColorBtn)
 //Botão Flip
 
 function openFlip() {
+  document.querySelector('.resultado').innerHTML = "Cara ou Coroa?";
   document.getElementById('mySideFlip').style.width = "350px";
   document.getElementById('coin').style.marginRight = "350px";
   let audio = new Audio();
@@ -570,7 +566,26 @@ window.onclick = function(event) {
 
 
 function valorDoFlip(param) {
+   
   let valor = param.textContent;
-  console.log(valor);
+
+  flip()
+
+  let resultado = document.querySelector('.resultado').innerHTML;
+
+  console.log(valor, resultado)
+
+  if (valor == resultado) {
+    
+    gameOver("0");
+
+  }
+  else {
+
+    gameOver("1");
+
+  }
+
+  closeFlip();
   
 }
