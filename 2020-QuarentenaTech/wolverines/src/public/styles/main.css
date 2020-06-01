@@ -575,6 +575,12 @@ body .puxaPlacarSubistituto {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  body .puxaPlacarSubistituto {
+   display: none;
+  }
+}
+
 body .puxaPlacarSubistituto span {
   font-size: 1.3em;
   font-weight: bold;
