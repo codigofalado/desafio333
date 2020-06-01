@@ -25,6 +25,8 @@ a = rand(); %nro aleatorio de 0 a 1
 
 maquinaGanha = 0;
 Tabuleiro = csvread('Tabuleiro.csv');
+espera = 0.2 + 0.1*rand(); % pequeno delay em segundos, para não assunstar
+pause(espera);
 
 if a < dificuldade
   
