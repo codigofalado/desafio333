@@ -124,6 +124,7 @@ function estatos( videoSrc ) {
 
     if (videoSrc == state.tieVideo) {
       openFlip();
+      document.querySelector('.tela').style.display = "none";
     } else {
       document.querySelector('.dificuldade').style.display = "flex";
     }
@@ -565,8 +566,6 @@ window.onclick = function(event) {
 
 
 function valorDoFlip(param) {
-   
-  document.querySelector('.tela').style.display = "none";
 
   let valor = param.textContent;
 
