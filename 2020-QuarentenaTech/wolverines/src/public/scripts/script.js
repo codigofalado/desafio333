@@ -566,6 +566,8 @@ window.onclick = function(event) {
 
 function valorDoFlip(param) {
    
+  document.querySelector('.tela').style.display = "none";
+
   let valor = param.textContent;
 
   flip()
