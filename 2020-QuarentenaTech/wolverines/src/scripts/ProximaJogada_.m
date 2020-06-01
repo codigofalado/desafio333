@@ -7,14 +7,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Versão final da nossa IA vencedora de jogo da véia #####
-%%% feito a partir de ProximaJogadaFullV2 ,              %%%   
+%%% feito a partir de ProximaJogada_ ,                   %%%   
 %%% apenas renomeando funções                            %%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%% programa principal %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function q = ProximaJogada_(dificuldade)  %%OLHA O UNDERLINE!!!
+function q = ProximaJogada__(dificuldade)  %% DOIS UNDERLINES!!!
 %% Inputs: dificuldade - número de 0 a 1
 %%         Tabuleiro - csv com matriz atual do tabuleiro
 
@@ -23,33 +23,32 @@ function q = ProximaJogada_(dificuldade)  %%OLHA O UNDERLINE!!!
 
 a = rand(); %nro aleatorio de 0 a 1
 
-maquinaGanha = 0;
 Tabuleiro = csvread('Tabuleiro.csv');
-espera = 0.2 + 0.1*rand(); % pequeno delay em segundos, para não assunstar
-pause(espera);
 
-if a < dificuldade
+somaTabuleiro = testaSomas(Tabuleiro); %testes marotos de fim de jogo
+
+terminou = length(somaTabuleiro)==1 ;
+
+if ~terminou
+
+ if a < dificuldade
   
   Tabuleiro = NaoGanharas(Tabuleiro);   % IA - ganha em 90% dos casos, empata em 8%, só deixa user vencer 2%
-  load cod; disp('cod = '); disp(cod); %output da estratégia usada no servidor
 
-else
+ else
 
   Tabuleiro = SePaCeGanha(Tabuleiro);  % computador faz jogada aleatória
  
-end
+ end
 
-ultima = testaSomas(Tabuleiro); %checando se compu deu xeque mate
-ganhou = ~isempty(ultima);
-if ganhou
-  maquinaGanha = ultima;
-end
+ somaTabuleiro = testaSomas(Tabuleiro);
 
-csvwrite('maquinaGanha.csv',maquinaGanha);
+end
+ 
 csvwrite('Tabuleiro.csv',Tabuleiro); %Tabuleiro vai ser 3x3 durante o jogo e 1x1 no final
 
 
-q = 1;
+q = somaTabuleiro;
 
 end
 
@@ -61,9 +60,6 @@ end
 
 function q = SePaCeGanha(A)
 
-  if ~isempty(testaSomas(A))
-     A = testaSomas(A);
-  else   
     i = find(A==0);
     N = length(i); 
     N = nroNaturalAleatorio(N);
@@ -71,7 +67,6 @@ function q = SePaCeGanha(A)
     if ~isempty(i)
       A(i(N)) = 0.3;
     end
-  end
   
   q = A;
   
@@ -114,22 +109,7 @@ function q = NaoGanharas(A0)
   
   somas = [ diag1 diag2 lins cols ];
 
-  %II) testando possibilidades para somas  
-  k = find(somas==3*0.3); compu_vence = ~isempty(k);
-  if compu_vence
-    disp('Você perdeu');
-    A = 1; cod = 1; save cod;
-  else
-   k = find(somas==3); user_vence = ~isempty(k); 
-   if user_vence 
-      disp('Você venceu');
-      A = 0; cod = 0; save cod;
-   else 
-     k = find(A0==0); n_tem_zeros = isempty(k);
-     if n_tem_zeros
-        disp('Deu velha!');
-        A = -1; cod = -1; save cod;
-     else
+  %II) testando possibilidades para somas  (FIM DE JOGO FOI TESTADO PRIMEIRO, antes dessa função)
       k = find(somas==2);  %averiguando aonde defender (coluna, linha ou diagonal)  
       tem_brecha = ~isempty(k);
       if tem_brecha %caso usuário ataque (marque duas casas vizinhas com possibilidade de uma terceira)
@@ -139,10 +119,6 @@ function q = NaoGanharas(A0)
         %A = AtacouV3(A0,k);  % ataque!
          A = Ataque(A0);   
       endif
-      
-     endif  
-   endif
-  endif
 
  
 q = A;  
@@ -484,6 +460,8 @@ function q = testaSomas(A0)
 
   A = A0;
   
+  cod = 0;
+  
   diag1 = trace(A0);
   diag2 = trace(flip(A0));
   lins = sum(A0');
@@ -493,25 +471,27 @@ function q = testaSomas(A0)
 
   k = find(somas==3*0.3); compu_vence = ~isempty(k);
   if compu_vence
-    disp('Você perdeu');
-    A = 1;
+    %disp('Você perdeu');
+    A = 1; cod = 1;
   else
    k = find(somas==3); user_vence = ~isempty(k);  
    if user_vence 
-      disp('Você venceu');
-      A = 0;
+      %disp('Você venceu');
+      A = 0; cod =0;
    else 
      k = find(A0==0); tem_zeros = ~isempty(k); 
      if ~tem_zeros
-        disp('Deu velha!');
-        A = -1;
+        %disp('Deu velha!');
+        A = -1; cod =-1;
      else
-        disp('Jogo continua');
-        A = [];
+        %disp('jogo continua');
+        A = []; cod =[];
      end
     end
    end  
 
+   save cod;
+   
 q = A;   
         
 endfunction
