@@ -174,15 +174,11 @@ function reset() {
 
   document
     .querySelectorAll( '.sub-box img' )
-    .forEach( x => x.remove() );
+    .forEach( x => x.remove() );  
+  
+  document.querySelector('.tela').style.display = "initial";
+  document.querySelector('.dificuldade').style.display = "flex";
 
-   
-  
-  // document.querySelector('.btnReset').style.top = "70%";
-  // document.querySelector('.btnReset').style.left = "48%";
-  // document.querySelector('.btnReset').style.zIndex = "101";
-  
-  
   document.querySelector('.choise').style.display = "none";
 
   document.querySelectorAll('.victory').forEach(span => span.textContent = state.score);
