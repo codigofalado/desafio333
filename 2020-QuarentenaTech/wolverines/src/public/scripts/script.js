@@ -104,15 +104,13 @@
 
 /////////////////////////////////////////////////////////////////////
 
-function estatos( videoSrc ) {
+function estatos( videoSrc ) { 
+  
   document.querySelector('.estatos').style.display = "flex";
   document.querySelector('video').style.display = "initial";
-  // document.querySelector('.btnReset').style.top = "70%";
-  // document.querySelector('.btnReset').style.left = "48%";
-  // document.querySelector('.btnReset').style.zIndex = "101";
-  document.querySelector('.tela').style.display = "initial";
-
+  
   let vid = document.querySelector('video');
+
   function Autoplay() { 
     vid.src = videoSrc;
     vid.autoplay = true;
@@ -122,6 +120,12 @@ function estatos( videoSrc ) {
   vid.onended = () => {
     document.querySelector('video').style.display = "none";
     document.querySelector('.estatos').style.display = "none";
+
+    if (videoSrc == state.tieVideo) {
+      openFlip();
+      flip();
+    }
+
   };
 }
 
@@ -169,6 +173,13 @@ function reset() {
   document
     .querySelectorAll( '.sub-box img' )
     .forEach( x => x.remove() );
+
+   
+  
+  // document.querySelector('.btnReset').style.top = "70%";
+  // document.querySelector('.btnReset').style.left = "48%";
+  // document.querySelector('.btnReset').style.zIndex = "101";
+  document.querySelector('.tela').style.display = "initial";
 
   document.querySelector('.tela').style.display = "initial";
   document.querySelector('.dificuldade').style.display = "flex";
@@ -293,8 +304,9 @@ http.onreadystatechange = function() {//Call a function when the state changes.
       const scorePesistence = state.score;
       estatos( state.tieVideo );
       document.querySelector('.fraseEstatos').innerHTML = "Empate!"
-      reset();
-      state.score = scorePesistence;
+      // reset();
+      // state.score = scorePesistence;
+
 
     } else if(jogada.estado.trim() == "0" && state.matrix.length < 9) {
     
@@ -475,21 +487,25 @@ function openFlip() {
   }
   
   
-  // function flip() {
-  // let valor = Math.floor(Math.random() * 2);
-  // if (valor == 0){
-  //   document.querySelector('.resultado').innerHTML = "Par";
-  // } else {
-  //   document.querySelector('.resultado').innerHTML = "Impar";
-  // }
-  // 
-  // }
+function flip() {
+
+  let valor = Math.floor(Math.random() * 2);
   
-  // let coin = document.getElementById('coin');
-  // coin.addEventListener('click', flipOption);
-  
-  // let btnFlip = document.getElementById("btnFlip");
-  // btnFlip.addEventListener('click', flip);
+  if (valor == 0){
+    document.querySelector('.resultado').innerHTML = "Cara";
+  } else {
+    document.querySelector('.resultado').innerHTML = "Coroa";
+  }
+
+  return valor;
+
+}
+
+// let coin = document.getElementById('coin');
+// coin.addEventListener('click', flipOption);
+
+// let btnFlip = document.getElementById("btnFlip");
+// btnFlip.addEventListener('click', flip);
 
 
 function openPlacar() {
