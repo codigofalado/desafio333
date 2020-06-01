@@ -557,3 +557,8 @@ window.onclick = function(event) {
 }
 
 
+function valorDoFlip(param) {
+  let valor = param.textContent;
+  console.log(valor);
+  
+}

@@ -269,6 +269,27 @@ body {
       }
     }
 
+    .localCoin{
+      display: flex;
+
+      & .btnflip{
+        width: 100px;
+        height:50px;
+        border-radius: 5px;
+        color:#fff;
+        background: #636ce4;
+        padding: 4px 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+
+        &:nth-child(1) {
+          margin-right: 5px;
+        }
+      }
+    }
+
     .resultado {
       padding: 30px;
       font-size: 1.5em;
