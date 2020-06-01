@@ -185,11 +185,11 @@ function reset() {
   
   document.querySelector('.choise').style.display = "none";
 
-  document.querySelector('.victory').textContent = state.score;
+  document.querySelectorAll('.victory').forEach(span => span.textContent = state.score);
 
 }
 
-document.querySelector('.victory').textContent = state.score;
+document.querySelectorAll('.victory').forEach(span => span.textContent = state.score);
 
 // let dificuldadeEscolhida;
 // let dificuldade = document.querySelector('.iniciar');
@@ -252,7 +252,7 @@ function gameOver( estado ) {
     reset();
     
     state.score = scorePesistence;
-    document.querySelector('.victory').textContent = state.score;
+    document.querySelectorAll('.victory').forEach(span => span.textContent = state.score);
 
   } else if(estado == "-1") {
 
@@ -268,7 +268,7 @@ function gameOver( estado ) {
     reset();
 
     state.score = scorePesistence;
-    document.querySelector('.victory').textContent = state.score;
+    document.querySelectorAll('.victory').forEach(span => span.textContent = state.score);
 
   }
 
