@@ -129,7 +129,6 @@ function estatos( videoSrc ) {
   };
 }
 
-
 const state = {
 
   tieVideo: "../videos/Empate.mp4",

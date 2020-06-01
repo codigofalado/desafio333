@@ -311,8 +311,8 @@ body #coin img {
 }
 
 body .sideflip {
-  height: 40%;
-  width: 0px;
+  height: 50%;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 35.5%;
@@ -769,6 +769,13 @@ body .modal .modal-content {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
 }
 
 body .modal .modal-content .close {
@@ -776,6 +783,8 @@ body .modal .modal-content .close {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-left: 70px;
+  cursor: pointer;
 }
 
 body .modal .modal-content .close .close:hover,

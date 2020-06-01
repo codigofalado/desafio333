@@ -238,8 +238,8 @@ body {
   }
 
   .sideflip {
-    height: 40%;
-    width: 0px;
+    height: 50%;
+    width: 300px;
     position: fixed;
     z-index: 1;
     top: 35.5%;
@@ -610,12 +610,17 @@ body {
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
 
       .close {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
+        margin-left: 70px;
+        cursor: pointer;
 
         .close:hover,
         .close:focus {
