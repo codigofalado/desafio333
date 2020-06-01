@@ -541,6 +541,7 @@ body .puxaPlacar {
 }
 
 body .puxaPlacarSubistituto {
+  display: none;
   height: 150px;
   width: 0;
   background: #fff;
@@ -565,6 +566,13 @@ body .puxaPlacarSubistituto {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  
+}
+
+@media screen and (max-width: 1025px) {
+  body .puxaPlacarSubistituto {
+   display: flex;
+  }
 }
 
 body .puxaPlacarSubistituto span {
