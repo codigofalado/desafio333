@@ -124,7 +124,8 @@ function estatos( videoSrc ) {
 
     if (videoSrc == state.tieVideo) {
       openFlip();
-      // flip();
+    } else {
+      document.querySelector('.dificuldade').style.display = "flex";
     }
 
   };
@@ -180,7 +181,7 @@ function reset() {
   // document.querySelector('.btnReset').style.left = "48%";
   // document.querySelector('.btnReset').style.zIndex = "101";
   
-  document.querySelector('.dificuldade').style.display = "flex";
+  
   document.querySelector('.choise').style.display = "none";
 
   document.querySelector('.victory').textContent = state.score;
