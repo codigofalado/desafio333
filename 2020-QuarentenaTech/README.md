@@ -5,7 +5,7 @@
 **Áreas:** Full-Stack, Criatividade  
 **Data de Lançamento:** 28/03/2020  
 **Data Limite para Participação:** 30/05/2020  
-**Data de Anúncio dos Vencedores:** 13/06/2020  
+**Data de Anúncio dos Vencedores:** 18/06/2020  
 **Vencedores:** (a definir)
 
 ## TL;DR
