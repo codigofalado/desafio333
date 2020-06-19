@@ -1,3 +1,7 @@
 {
-  "prefix": "!s "
+  "prefix": "!s ",
+  "messages": {
+    "waitMessage": "Aguarde...",
+    "finishedMessage": "Finalizado!"
+  }
 }

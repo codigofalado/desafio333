@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const axios = require("axios");
 const numeral = require("numeral");
+const config = require("../config.json");
 
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
   async execute(message) {
     const apiTotal = "https://covid19-brazil-api.now.sh/api/report/v1/brazil";
 
-    const mensagem = await message.channel.send("Aguarde...");
+    const mensagem = await message.channel.send(config.messages.waitMessage);
 
     const {
       data: { data },
@@ -31,6 +32,6 @@ module.exports = {
         { name: "💀 Total de mortos", value: deaths, inline: true },
         { name: "🇨🇭 Total de recuperados", value: recovered, inline: true }
       );
-    mensagem.edit("Dados do Covid-19 do Brasil hoje: ", embed);
+    mensagem.edit(config.messages.finishedMessage, embed);
   },
 };

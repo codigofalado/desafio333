@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const axios = require("axios");
-const numeral = require("numeral");
+const config = require("../config.json");
 
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
   async execute(message) {
     const apiTotal = `https://economia.awesomeapi.com.br/json/all/USD-BRL,EUR-BRL,BTC-BRL,CAD-BRL`;
 
-    const mensagem = await message.channel.send("Aguarde...");
+    const mensagem = await message.channel.send(config.messages.waitMessage);
 
     const {
       data: { USD, EUR, BTC, CAD },
@@ -21,11 +21,11 @@ module.exports = {
       .setColor("#0099ff")
       .setURL(apiTotal)
       .addFields(
-        { name: "Dolar", value: `R$ ${USD.bid}`, inline: true },
-        { name: "Euro", value: `R$ ${EUR.bid}`, inline: true },
-        { name: "Bitcoin", value: `R$ ${BTC.bid}`, inline: true },
-        { name: "Dolar canadense", value: `R$ ${CAD.bid}`, inline: true }
+        { name: "🇺🇸 Dolar", value: `R$ ${USD.bid}`, inline: true },
+        { name: "🇪🇺 Euro", value: `R$ ${EUR.bid}`, inline: true },
+        { name: "₿ Bitcoin", value: `R$ ${BTC.bid}`, inline: true },
+        { name: "🇨🇦 Dolar canadense", value: `R$ ${CAD.bid}`, inline: true }
       );
-    mensagem.edit("Dados do Covid-19 do Brasil hoje: ", embed);
+    mensagem.edit(config.messages.finishedMessage, embed);
   },
 };
