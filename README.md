@@ -1,8 +1,8 @@
 <h1 align="center">Desafio333</h1>
-<h2 align="center"><a  href="2020-QuarentenaTech/README.md">Desafio Atual: #QuarentenaTech</a></h2>
+<h2 align="center"><a  href="2020-Bot-Discord/README.md">Desafio Atual: BOT para Discord</a></h2>
 
 O #Desafio333 é um desafio bimestral SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
-A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. O desafio atual é para participar da [#QuarentenaTech](https://quarentena.tech). Vicê montará uma equipe de 3 participantes e escolherá entre **Jogo da Velha** e **Jogo Tetris**.
+A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. No desafio atual você precisa criar um BOT para Discord.
 
 ## Como Participar
 
