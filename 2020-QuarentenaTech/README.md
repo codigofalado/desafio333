@@ -6,7 +6,14 @@
 **Data de Lançamento:** 28/03/2020  
 **Data Limite para Participação:** 30/05/2020  
 **Data de Anúncio dos Vencedores:** 18/06/2020  
-**Vencedores:** (a definir)
+**Vencedores:**
+
+1 - Henrique [@henry-ns](https://github.com/henry-ns)  
+1 - Felipe - [@felipefbs](https://github.com/felipefbs)  
+2 - Gabriel  
+2 - Vinícius  
+2 - Wesley  
+3 - Douglas d’Auriol - [@ddauriol](https://github.com/ddauriol)
 
 ## TL;DR
 
