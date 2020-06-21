@@ -3,5 +3,10 @@
   "messages": {
     "waitMessage": "Aguarde...",
     "finishedMessage": "Finalizado!"
+  },
+  "twitchNotifier": {
+    "actived": true,
+    "channelName": "codigofalado",
+    "idCanais": ["724312926093049856"]
   }
 }

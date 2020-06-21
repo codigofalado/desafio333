@@ -1,10 +1,16 @@
 require("dotenv/config");
 const fs = require("fs");
-const { prefix } = require("./config.json");
-
+const config = require("./config.json");
 const Discord = require("discord.js");
-const client = new Discord.Client();
-client.commands = new Discord.Collection();
+const bot = new Discord.Client();
+bot.commands = new Discord.Collection();
+const Twitch = require("twitch.tv-api");
+const twitch = new Twitch({
+  id: process.env.TWITCH_CLIENT_ID,
+  secret: process.env.TWITCH_SECRET_KEY,
+});
+
+let TwitchStream = false;
 
 const commandFiles = fs
   .readdirSync("./comandos")
@@ -12,23 +18,69 @@ const commandFiles = fs
 
 for (const file of commandFiles) {
   const command = require(`./comandos/${file}`);
-  client.commands.set(command.name, command);
+  bot.commands.set(command.name, command);
 }
 
-client.on("ready", () => {
+function SendMessagesToGroups(client, dataStream) {
+  const channels = config.twitchNotifier.idCanais;
+  const {
+    channel: {
+      status,
+      display_name,
+      logo,
+      url,
+      profile_banner_background_color,
+    },
+    preview: { medium },
+  } = dataStream;
+
+  channels.map((channelFromConfig) => {
+    client.channels.fetch(channelFromConfig).then((channel) => {
+      const msg = new Discord.MessageEmbed()
+        .setColor(
+          profile_banner_background_color === ""
+            ? "#0099ff"
+            : profile_banner_background_color
+        )
+        .setTitle(status)
+        .setURL(url)
+        .setAuthor(display_name, logo, url)
+        .setDescription(
+          `${display_name} está online na Twitch agora! Venha conferir.`
+        )
+        .setImage(medium);
+      channel.send(msg);
+    });
+  });
+}
+
+// Bot de notificação da twitch
+bot.on("ready", () => {
   console.log(`O bot foi iniciado`);
-  client.user.setActivity(`Bot iniciado`);
+  setInterval(async () => {
+    if (config.twitchNotifier.actived) {
+      let data = await twitch.getUser(config.twitchNotifier.channelName);
+      if (data.stream && !TwitchStream && data.stream.stream_type === "live") {
+        SendMessagesToGroups(bot, data.stream);
+        TwitchStream = true;
+        return;
+      }
+      if (!data.stream && TwitchStream) {
+        TwitchStream = false;
+      }
+    }
+  }, 1000 * 60);
 });
 
-client.on("message", (message) => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+bot.on("message", (message) => {
+  if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-  const args = message.content.slice(prefix.length).split(/ +/);
+  const args = message.content.slice(config.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  if (!client.commands.has(commandName)) return;
+  if (!bot.commands.has(commandName)) return;
 
-  const command = client.commands.get(commandName);
+  const command = bot.commands.get(commandName);
 
   try {
     command.execute(message, args);
@@ -38,4 +90,4 @@ client.on("message", (message) => {
   }
 });
 
-client.login(process.env.TOKEN);
+bot.login(process.env.TOKEN);

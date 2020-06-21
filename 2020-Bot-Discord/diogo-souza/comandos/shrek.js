@@ -1,6 +1,5 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const config = require("../config.json");
-const fs = require("fs");
 
 let cooldown = false;
 
@@ -15,7 +14,7 @@ module.exports = {
     }
     const mensagem = await message.channel.send(config.messages.waitMessage);
 
-    const embed = await new Discord.MessageEmbed()
+    const embed = await new MessageEmbed()
       .setTitle("Assista ao filme:")
       .setColor("#265C80")
       .setImage("https://i.imgur.com/t4abUaz.gif");
