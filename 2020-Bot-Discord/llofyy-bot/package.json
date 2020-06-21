@@ -1,0 +1,21 @@
+{
+  "name": "2020-bot-discord",
+  "version": "1.0.0",
+  "description": "**Tecnologia:** Livre   **Áreas:** Back-End, Criatividade   **Data de Lançamento:** 18/06/2020   **Data Limite para Participação:** 01/08/2020   **Data de Anúncio dos Vencedores:** 15/08/2020   **Vencedores:** (desafio em andamento)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "rastrojs": "^1.1.0",
+    "tenorjs": "^1.0.7",
+    "tracking-correios": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
