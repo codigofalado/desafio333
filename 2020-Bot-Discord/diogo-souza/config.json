@@ -6,7 +6,7 @@
   },
   "twitchNotifier": {
     "actived": true,
-    "channelName": "felps",
+    "channelName": "codigofalado",
     "idCanais": ["724312926093049856"],
     "delayToVerify": 60,
     "messages": {
