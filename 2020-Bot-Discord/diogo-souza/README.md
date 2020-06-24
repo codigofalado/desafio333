@@ -4,7 +4,6 @@
 
 **Prefixo:** "!s (comando)"
 
-
 ## Comandos:
 
 - !s covid - Mostra os principais números do covid no Brasil
@@ -22,4 +21,4 @@ Para configurar os dados da stream, verifique o arquivo [config.json](./config.j
 
 1. É necessário configurar as keys do Discord, Twitch e Imgflip no arquivo [.env](./.env.exemple).
 2. A key da Twitch é necessária para acessar as informações das lives. Para consegui-las, acesse o [portal de desenvolvedor](https://dev.twitch.tv/console/apps) da Twitch
-3. É necessário o usuário e senha da ImgFlip para gerar os memes. 
+3. É necessário o usuário e senha de alguma conta no ImgFlip para gerar os memes.

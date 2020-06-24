@@ -18,6 +18,7 @@
     "https": "^1.0.0",
     "numeral": "^2.0.6",
     "qs": "^6.9.4",
+    "rastrojs": "^1.1.0",
     "twitch-api-v5": "^2.0.4",
     "twitch.tv-api": "^1.2.4"
   }
