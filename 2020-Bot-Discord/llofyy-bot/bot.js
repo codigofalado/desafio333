@@ -20,6 +20,7 @@ client.on('ready', () => {
 
 // COMANDOS
 
+// MOSTRA GIFS ALEATÓRIOS COM OU SEM PALAVRA CHAVE
 client.on('message', msg => {
     if(msg.content == "!gif"){
         Tenor.Search.Random(msg.content, "1").then(Results => {
@@ -39,15 +40,19 @@ client.on('message', msg => {
         }).catch(console.error);
     }
 
+
+    // FAZ O RASTREIO DE UM CÓDIGO DOS CORREIOS E MOSTRA OS DADOS DO PACOTE
     if(msg.content.startsWith("!rastreio") && msg.content != "!rastreio"){
         async function exemplo(){
-            var content = msg.content.replace(/!rastreio/i, '');
-            var contentEspacos = content.trim(content);
-            console.log(contentEspacos);
-            const track = await rastro.track(`${contentEspacos}`);
+            const content = msg.content.replace(/!rastreio/i, '');
+            const contentEspacos = content.trim(content);
+            
+            const track = await rastro.track(contentEspacos);
             const rastreio = track.map((item, indice) => {
                 const local = item.tracks.map((item, indice) => {
-                    return msg.reply(`**${item.trackedAt}:** ${item.status} ${item.observation}`);
+                    return msg.reply(`**CÓDIGO DE RASTREIO:** ${contentEspacos}
+
+**${item.trackedAt}:** ${item.status} ${item.observation}`);
                 });
                 return local;
             });
@@ -56,6 +61,7 @@ client.on('message', msg => {
         exemplo();
     }
 
+    // MOSTRA OS DADOS GLOBAIS OU DO BRASIL DO COVID-19 
     if(msg.content == "!covid -g"){
         var url = 'https://coronavirus-19-api.herokuapp.com/all';
         xmlhttp = new XMLHttpRequest();
@@ -112,6 +118,7 @@ client.on('message', msg => {
         xmlhttp.send();
     }
 
+    // EXPLICAÇÃO SOBRE OS DADOS DA API DO COVID-19
     if(msg.content == "!covid -info"){
         msg.reply(`**Sobre esses dados**
 
