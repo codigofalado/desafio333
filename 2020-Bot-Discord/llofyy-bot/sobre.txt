@@ -1,0 +1,7 @@
+Funções do BOT:
+
+- Envia gifs aleatórios com ou sem palavra chave
+
+- Mostra os dados de rastreio de um código dos correios
+
+- Mostra dados sobre o covid 19 do Brasil e Global.

@@ -13,7 +13,8 @@
     "discord.js": "^12.2.0",
     "rastrojs": "^1.1.0",
     "tenorjs": "^1.0.7",
-    "tracking-correios": "^1.2.2"
+    "tracking-correios": "^1.2.2",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
