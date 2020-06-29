@@ -7,7 +7,7 @@ export default class LastTweet extends Command {
 		super('lastTweet', {
 			aliases: ['lastTweet', 'tweet'],
 			category: 'twitter',
-			ratelimit: 3,
+			ratelimit: 1,
 			channel: 'guild',
 			args: [
 				{
