@@ -9,6 +9,7 @@
 	},
 	"scripts": {
 		"prod": "node build/index.js",
+		"build": "tsc",
 		"dev": "ts-node-dev --ignore-watch node_modules src/index.ts"
 	},
 	"dependencies": {
