@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"target": "ES2018",
+		"outDir": "build",
+		"lib": [
+			"ESNext",
+			"ESNext.Array",
+			"ESNext.AsyncIterable",
+			"ESNext.Intl",
+			"ESNext.Symbol",
+			"DOM"
+		],
+		"sourceMap": false,
+		"inlineSourceMap": true,
+		"inlineSources": true,
+		"incremental": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}
