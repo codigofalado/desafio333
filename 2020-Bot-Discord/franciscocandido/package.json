@@ -12,6 +12,7 @@
 		"dev": "ts-node-dev --ignore-watch node_modules src/index.ts"
 	},
 	"dependencies": {
+		"axios": "^0.19.2",
 		"discord-akairo": "^8.0.0",
 		"discord.js": "^12.2.0",
 		"dotenv": "^8.2.0"
