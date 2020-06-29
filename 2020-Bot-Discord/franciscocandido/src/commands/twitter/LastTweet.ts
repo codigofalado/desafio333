@@ -40,7 +40,7 @@ export default class LastTweet extends Command {
 				.setColor('00CEB3')
 				.setTitle(`:bird: Ultima atividade de ${user}`)
 				.setDescription(tweetText)
-				.setDescription(`Comando executado por ${message.author.username}`)
+				.setFooter(`Comando executado por ${message.author.username}`)
 				.setTimestamp();
 
 			return message.channel.send(tweetEmbed);
