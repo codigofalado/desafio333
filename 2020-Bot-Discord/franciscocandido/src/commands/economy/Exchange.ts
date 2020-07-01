@@ -24,9 +24,18 @@ export default class Exchange extends Command {
 		try {
 			let coinUpper = coin.toUpperCase();
 
-			let atualExchange = await axios.get(
-				`https://economia.awesomeapi.com.br/all/${coinUpper}-BRL`
-			);
+			let atualExchange = await axios({
+				method: 'GET',
+				url: `https://economia.awesomeapi.com.br/all/${coinUpper}-BRL`,
+				validateStatus: () => true
+			});
+
+			if (atualExchange.status == 404) {
+				return message.channel.send(
+					':warning: Não encontrei essa moeda. Utilize o comando `help` para ver a lista de comandos.'
+				);
+			}
+
 			let exchange = atualExchange.data[`${coinUpper}`];
 
 			function formatCoin(number: any, coinCode: string) {
@@ -81,9 +90,13 @@ export default class Exchange extends Command {
 			return message.channel.send(exchangeEmbed);
 		} catch (erro) {
 			console.log('[ERRO]', erro);
-			return message.channel.send(
-				':confused: Algo de errado aconteceu, tente novamente mais tarde.'
-			);
+			if (erro.data.status == 404) {
+				console.log('oi');
+			} else {
+				return message.channel.send(
+					':confused: Algo de errado aconteceu, tente novamente mais tarde.'
+				);
+			}
 		}
 	}
 }
