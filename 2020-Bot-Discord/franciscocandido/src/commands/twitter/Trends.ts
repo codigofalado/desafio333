@@ -13,13 +13,13 @@ export default class Trends extends Command {
 			args: [
 				{
 					id: 'count',
-					type: Argument.range('number', 1, 6),
+					type: Argument.range('number', 1, 26),
 					match: 'content',
 					prompt: {
 						start:
-							':clipboard: Qual a quantidade de tópicos deseja ver? `1 a 5`',
+							':clipboard: Qual a quantidade de tópicos deseja ver? `1 a 25`',
 						retry:
-							':warning: Talvez você tenha passado do limite ou não digitou nada. Tente novamente.'
+							':warning: Talvez você tenha passado do limite `25`. Tente novamente.'
 					}
 				}
 			]
@@ -52,19 +52,10 @@ export default class Trends extends Command {
 					position = forSize + 1;
 				}
 
-				trendsEmbed.addFields(
-					{ name: 'Posição', value: `${position}º`, inline: true },
-					{
-						name: 'Assunto',
-						value: `${trends[forSize].name}`,
-						inline: true
-					},
-					{
-						name: 'Link',
-						value: `[Aqui](${trends[forSize].url})`,
-						inline: true
-					}
-				);
+				trendsEmbed.addFields({
+					name: `${position}º`,
+					value: `${trends[forSize].name}`
+				});
 			}
 
 			return message.channel.send(trendsEmbed);
