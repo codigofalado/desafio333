@@ -16,9 +16,12 @@ export default class RandomGifCommand extends Command {
 
 	public async exec(message: Message) {
 		try {
-			let gif = await axios.get(
-				`https://api.giphy.com/v1/gifs/random?api_key=${GIPHY_API_KEY}&rating=g`
-			);
+			let gif = await axios.get(`https://api.giphy.com/v1/gifs/random`, {
+				params: {
+					api_key: GIPHY_API_KEY,
+					rating: 'g'
+				}
+			});
 
 			let randomGif = gif.data.data.images.original.url;
 

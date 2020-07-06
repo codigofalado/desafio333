@@ -27,9 +27,13 @@ export default class SearchGIF extends Command {
 
 	public async exec(message: Message, { search }) {
 		try {
-			let gif = await axios.get(
-				`https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${search}&limit=1&rating=g`
-			);
+			let gif = await axios.get(`https://api.giphy.com/v1/gifs/search`, {
+				params: {
+					api_key: GIPHY_API_KEY,
+					q: search,
+					rating: 'g'
+				}
+			});
 			let gifObject = gif.data.data[0];
 			let gifURL = gifObject.images.original.url;
 
