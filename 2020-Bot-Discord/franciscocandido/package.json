@@ -4,9 +4,6 @@
 	"main": "build/index.js",
 	"author": "Francisco Cândido",
 	"license": "MIT",
-	"engines": {
-		"node": "0.12.x"
-	},
 	"scripts": {
 		"prod": "node build/index.js",
 		"build": "tsc",
