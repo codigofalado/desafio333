@@ -30,9 +30,14 @@ export default class Exchange extends Command {
 				validateStatus: () => true
 			});
 
+			let notCoinMessage =
+				':warning: Não encontrei essa moeda. Utilize o comando `help` para ver a lista de comandos\nAs moedas disponíveis são `USD, USDT, CAD, AUD, EUR, GBP, ARS, JPY, CHF, CNY, YLS, BTC, LTC, ETH, XRP`';
+
 			if (atualExchange.status == 404) {
+				return message.channel.send(notCoinMessage);
+			} else if (coinUpper == 'USDT') {
 				return message.channel.send(
-					':warning: Não encontrei essa moeda. Utilize o comando `help` para ver a lista de comandos.'
+					'Estamos com problema para os dados dessa moeda, tente novamente mais tarde.'
 				);
 			}
 
