@@ -3,9 +3,14 @@ import { Message } from 'discord.js';
 
 export default class RaffleCommand extends Command {
 	public constructor() {
-		super('raffle', {
-			aliases: ['raffle', 'sortear', 'giveaway'],
+		super('sorteio', {
+			aliases: ['raffle', 'sortear'],
 			category: 'utils',
+			description: {
+				content: 'Faça um sorteio entre 2 números.',
+				usage: 'raffle',
+				exemples: ['sortear 10 20', 'sortear']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

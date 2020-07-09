@@ -4,9 +4,14 @@ import axios from 'axios';
 
 export default class Exchange extends Command {
 	public constructor() {
-		super('exchange', {
-			aliases: ['exchange', 'cambio', 'moeda'],
+		super('cambio', {
+			aliases: ['cambio', 'exchange', 'moeda'],
 			category: 'economy',
+			description: {
+				content: 'Cotação das principais moedas do mundo.',
+				usage: 'cambio <moeda>',
+				exemples: ['cambio USD', 'cambio JPY']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

@@ -6,9 +6,14 @@ const GIPHY_API_KEY = process.env.GIPHY_API_KEY;
 
 export default class RandomGifCommand extends Command {
 	public constructor() {
-		super('randomGif', {
-			aliases: ['randomGif', 'gif'],
+		super('gif', {
+			aliases: ['gif'],
 			category: 'gif',
+			description: {
+				content: 'Mostrar um GIF completamente aleatório do Giphy.',
+				usage: 'gif',
+				exemples: 'gif'
+			},
 			ratelimit: 3,
 			channel: 'guild'
 		});

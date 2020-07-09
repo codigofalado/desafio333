@@ -3,9 +3,14 @@ import { Message } from 'discord.js';
 
 export default class DiceCommand extends Command {
 	public constructor() {
-		super('dice', {
-			aliases: ['dice', 'dado', 'roll'],
+		super('dado', {
+			aliases: ['dado', 'dice', 'roll'],
 			category: 'fun',
+			description: {
+				content: 'Role um dado de 6 lados.',
+				usage: 'dado',
+				exemples: ['dado']
+			},
 			ratelimit: 3,
 			channel: 'guild'
 		});

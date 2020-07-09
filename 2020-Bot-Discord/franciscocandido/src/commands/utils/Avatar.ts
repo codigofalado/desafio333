@@ -4,8 +4,13 @@ import { Message, MessageEmbed, User } from 'discord.js';
 export default class AvatarCommand extends Command {
 	constructor() {
 		super('avatar', {
-			aliases: ['avatar', 'profilePic'],
+			aliases: ['avatar'],
 			category: 'utils',
+			description: {
+				content: 'Mostrar a foto de perfil de um usuário.',
+				usage: 'avatar `<@usuário>`',
+				exemples: ['avatar', 'avatar @BMO']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

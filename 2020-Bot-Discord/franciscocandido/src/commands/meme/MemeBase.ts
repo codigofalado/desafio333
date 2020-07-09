@@ -10,11 +10,16 @@ interface randomMeme {
 	height: number;
 }
 
-export default class MemeBase extends Command {
+export default class MemeCommand extends Command {
 	public constructor() {
-		super('baseMeme', {
-			aliases: ['baseMeme', 'memeTemplate', 'bm'],
+		super('meme', {
+			aliases: ['meme', 'memeTemplate'],
 			category: 'meme',
+			description: {
+				content: 'Receba uma imagem aleatória para fazer um meme.',
+				usage: 'meme',
+				exemples: ['meme']
+			},
 			ratelimit: 2,
 			channel: 'guild'
 		});

@@ -5,8 +5,13 @@ import CepPromise from 'cep-promise';
 export default class CEP extends Command {
 	public constructor() {
 		super('cep', {
-			aliases: ['cep', 'buscarCep', 'searchCep'],
+			aliases: ['cep', 'buscarCep'],
 			category: 'correios',
+			description: {
+				content: 'Busque informações de um CEP',
+				usage: 'cep <CEP>',
+				exemples: ['cep 04180-112', 'buscarCep 27521-490', 'cep']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

@@ -4,11 +4,16 @@ import axios from 'axios';
 
 const GIPHY_API_KEY = process.env.GIPHY_API_KEY;
 
-export default class SearchGIF extends Command {
+export default class SearchGIFCommand extends Command {
 	public constructor() {
-		super('searchGif', {
-			aliases: ['searchGif', 'buscarGif', 'Sg'],
+		super('BuscarGif', {
+			aliases: ['buscarGif'],
 			category: 'gif',
+			description: {
+				content: 'Buscar um GIF do Giphy',
+				usage: 'BuscarGif <busca>',
+				exemples: ['BuscarGif code', 'BuscarGif car', 'BuscarGif bot']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

@@ -3,9 +3,14 @@ import { Message } from 'discord.js';
 
 export default class SayCommand extends Command {
 	public constructor() {
-		super('say', {
-			aliases: ['say', 'falar'],
+		super('fale', {
+			aliases: ['fale', 'say', 'falar'],
 			category: 'fun',
+			description: {
+				content: 'Faça o BMO falar algo.',
+				usage: 'fale oi',
+				exemples: ['fale oi', 'say Olá']
+			},
 			ratelimit: 3,
 			channel: 'guild',
 			args: [

@@ -3,11 +3,19 @@ import { Message } from 'discord.js';
 import fs from 'fs';
 import jimp from 'jimp';
 
-export default class Stonks extends Command {
+export default class StonksCommand extends Command {
 	public constructor() {
 		super('stonks', {
 			aliases: ['stonks', 'stonksMeme'],
 			category: 'meme',
+			description: {
+				content: 'Faça uma versão do meme Stonks',
+				usage: 'stonks',
+				exemples: [
+					'stonks',
+					'stonks Ai você aceita o troco em balas na padaria'
+				]
+			},
 			ratelimit: 1,
 			channel: 'guild',
 			args: [

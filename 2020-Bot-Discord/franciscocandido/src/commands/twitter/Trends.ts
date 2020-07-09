@@ -2,11 +2,16 @@ import { Command, Argument } from 'discord-akairo';
 import { Message, MessageEmbed } from 'discord.js';
 import twitter from '../../client/configs/TwitterLite';
 
-export default class Trends extends Command {
+export default class TrendsCommand extends Command {
 	public constructor() {
 		super('trends', {
-			aliases: ['trends', 'twitterTrends'],
+			aliases: ['trends'],
 			category: 'twitter',
+			description: {
+				content: 'Mostrar os assuntos em alta no Twitter Brasil.',
+				usage: 'trends 20',
+				exemples: ['trends 10', 'trends 25']
+			},
 			ratelimit: 1,
 			channel: 'guild',
 			cooldown: 2e4,

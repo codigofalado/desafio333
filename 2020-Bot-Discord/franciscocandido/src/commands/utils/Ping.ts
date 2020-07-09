@@ -1,11 +1,16 @@
 import { Command } from 'discord-akairo';
 import { Message } from 'discord.js';
 
-export default class Ping extends Command {
+export default class PingCommand extends Command {
 	public constructor() {
 		super('ping', {
 			aliases: ['ping', 'latencia', 'p'],
-			category: 'Utils',
+			category: 'utils',
+			description: {
+				content: 'Mostrar latência do cliente e do servidor.',
+				usage: 'ping',
+				exemples: 'ping'
+			},
 			ratelimit: 3,
 			channel: 'guild'
 		});

@@ -8,8 +8,13 @@ const API_URL = 'https://covid19-brazil-api.now.sh/api/report/v1/brazil';
 export default class CovidCommand extends Command {
 	public constructor() {
 		super('covid', {
-			aliases: ['covid', 'covid19', 'casos', 'c19', 'coronavirus'],
+			aliases: ['covid', 'covid19', 'casos', 'coronavirus'],
 			category: 'info',
+			description: {
+				content: 'Mostrar informações do coronavírus no Brasil.',
+				usage: 'covid',
+				exemples: ['covid']
+			},
 			ratelimit: 3,
 			channel: 'guild'
 		});

@@ -6,8 +6,13 @@ import twitter from '../../client/configs/TwitterLite';
 export default class TwitterUserCommand extends Command {
 	public constructor() {
 		super('twitterUser', {
-			aliases: ['twitterUser', 'tu'],
+			aliases: ['twitterUser'],
 			category: 'twitter',
+			description: {
+				content: 'Mostar informações de usuário do Twitter.',
+				usage: 'twitterUser `<@usuário>`',
+				exemples: ['twitterUser @CodigoFalado']
+			},
 			ratelimit: 1,
 			channel: 'guild',
 			args: [

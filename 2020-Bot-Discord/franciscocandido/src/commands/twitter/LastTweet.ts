@@ -2,11 +2,16 @@ import { Command } from 'discord-akairo';
 import { Message, MessageEmbed } from 'discord.js';
 import twitter from '../../client/configs/TwitterLite';
 
-export default class LastTweet extends Command {
+export default class TweetCommand extends Command {
 	public constructor() {
-		super('lastTweet', {
-			aliases: ['lastTweet', 'tweet'],
+		super('tweet', {
+			aliases: ['tweet'],
 			category: 'twitter',
+			description: {
+				content: 'Mostrar a ultima atividade de uma pessoa no Twitter.',
+				usage: 'tweet `<@usuário>`',
+				exemples: ['tweet @CodigoFalado']
+			},
 			ratelimit: 1,
 			channel: 'guild',
 			args: [

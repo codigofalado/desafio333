@@ -3,9 +3,14 @@ import { Message } from 'discord.js';
 
 export default class EightBallCommand extends Command {
 	public constructor() {
-		super('eightBall', {
-			aliases: ['eightBall', 'bola8', 'b8'],
+		super('bolaOito', {
+			aliases: ['bolaOito', 'eightBall', 'bola8'],
 			category: 'fun',
+			description: {
+				content: 'Faça uma pergunta de sim ou não.',
+				usage: 'bola8 <Pergunta>',
+				exemples: ['bola8 Sim ou Não?']
+			},
 			ratelimit: 3,
 			channel: 'guild'
 		});
