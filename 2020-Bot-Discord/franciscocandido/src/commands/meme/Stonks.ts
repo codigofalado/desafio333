@@ -36,7 +36,9 @@ export default class StonksCommand extends Command {
 			let templateUrl =
 				'https://cdn.discordapp.com/attachments/730043354661781536/730043505958715402/stonks.jpg';
 
-			let fileName = `${message.author.username}-${message.author.id}.jpg`;
+			let fileName = `${message.author.username}-${
+				message.author.id
+			}-${Date.now()}.jpg`;
 
 			let awaitMessage = await message.channel.send(
 				':hourglass_flowing_sand: Seu meme ta quase pronto...'
@@ -45,7 +47,7 @@ export default class StonksCommand extends Command {
 			await jimp.read(templateUrl).then(async (template) => {
 				let font = await jimp.loadFont(jimp.FONT_SANS_32_BLACK);
 
-				template.print(font, 0, 0, text);
+				template.print(font, 0, 0, text, 750);
 				template.write(fileName);
 			});
 
