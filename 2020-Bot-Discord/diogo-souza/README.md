@@ -31,7 +31,7 @@ Passo a passo de como criar:
 2. Preencha os campos de textos necessários
 3. Se divirta com o seu novo meme 🥳🎉
 
-### 📦 !s rastreio
+### 📦 !s rastreio (código)
 
 Com esse comando você consegue rastrear facilmente qualquer encomenda entregue pelos correios. 🚶
 
