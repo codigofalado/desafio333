@@ -34,7 +34,9 @@ module.exports = {
       .setColor("#0099ff");
     if (isDelivered) {
       // Objeto entregue
-      mensagem.edit(`${message.author}, seu pedido já foi entregue`);
+      mensagem.edit(
+        `${message.author}, seu pedido já foi entregue! :partying_face:`
+      );
     } else {
       // Objetos a caminho
       const { locale, observation } = tracks[tracks.length - 1];
@@ -46,7 +48,7 @@ module.exports = {
           inline: true,
         });
         mensagem.edit(
-          `${message.author}, seu pedido já está a caminho!`,
+          `${message.author}, seu pedido já está a caminho! :partying_face:`,
           embed
         );
       } else {
@@ -56,7 +58,10 @@ module.exports = {
           value: `Objeto postado em ${locale}`,
           inline: true,
         });
-        mensagem.edit(`${message.author}, seu pedido já foi postado`, embed);
+        mensagem.edit(
+          `${message.author}, seu pedido já foi postado :smiley:`,
+          embed
+        );
       }
     }
   },

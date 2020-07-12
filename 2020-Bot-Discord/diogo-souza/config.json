@@ -2,7 +2,8 @@
   "prefix": "!s ",
   "messages": {
     "waitMessage": "Aguarde...",
-    "finishedMessage": "Finalizado!"
+    "finishedMessage": "Finalizado!",
+    "errorMessage": "Ops! Deu algo de errado :pleading_face: :sob: :sob: . Verifique o comando e tente novamente."
   },
   "twitchNotifier": {
     "actived": true,
