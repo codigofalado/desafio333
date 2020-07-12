@@ -29,10 +29,15 @@ module.exports = {
     memes1.map((meme) => {
       embed.addField(
         `${meme.name} (${meme.box_count} campos)`,
-        `[${config.prefix}meme ${meme.id}](${meme.url})`,
+        `${config.prefix}meme ${meme.id}`,
         true
       );
     });
+    embed.addField(
+      "Lista completa dos memes:",
+      "[Clique aqui para ir ao site](https://imgflip.com/memetemplates) \n Observação: Para conseguir o ID do meme, clique em 'Blank template' no menu lateral da página do meme escolhido",
+      false
+    );
     mensagem.edit(config.messages.finishedMessage, embed);
   },
 };
