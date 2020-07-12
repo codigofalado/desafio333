@@ -1,8 +1,21 @@
 # Sozua's bot
 
-**Tipo de bot:** Auxiliar
-
+**Tipo de bot:** Auxiliar  
 **Prefixo:** "!s (comando)"
+
+# 🚀 Como instalar
+
+Siga o passo a passo e coloque a sua versão desse bot para funcionar também 😉.
+
+1. Baixe esse projeto para o seu computador  
+`git clone https://github.com/sozua/discordbot SozuaBot`
+2. Acesse a pasta do projeto e altere o arquivo '.env.example' para '.env'
+3. Crie um bot no [painel do discord](https://discord.com/developers/applications)
+4. Altere todas os valores das chaves para as dos seu Bot.
+5. Crie o link de convite do seu Bot  
+`https://discordapp.com/oauth2/authorize?=&client_id=(Id de cliente do bot)&scope=bot&permissions=(Nivel de permissão do bot, recomendo usar: 183360)`
+6. Dê start no bot e se divirta.  
+`npm start`
 
 # Comandos:
 
