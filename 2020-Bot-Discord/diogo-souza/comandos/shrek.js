@@ -6,7 +6,9 @@ let cooldown = false;
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
   name: "shrek",
-  description: "Digite este comando e receba um GIF do filme do Shrek inteiro!",
+  description: "Assista ao filme do Shrek :D",
+  aliases: ["filme", "diogoehtop"],
+  emoji: ":japanese_ogre:",
   async execute(message) {
     if (cooldown) {
       message.channel.send(`Espere para utilizar este comando novamente`);

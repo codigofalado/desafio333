@@ -5,8 +5,8 @@ const config = require("../config.json");
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
   name: "cotacao",
-  description:
-    "Digite este comando para acompanhar a cotação das moedas em Reais!",
+  description: "Acompanhe a cotação das moedas",
+  emoji: ":money_with_wings:",
   async execute(message) {
     const apiTotal = `https://economia.awesomeapi.com.br/json/all/USD-BRL,EUR-BRL,BTC-BRL,CAD-BRL`;
 

@@ -21,9 +21,13 @@ module.exports = function getCommands(message) {
   const args = message.content.slice(config.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  if (!bot.commands.has(commandName)) return;
+  const command =
+    bot.commands.get(commandName) ||
+    bot.commands.find(
+      (cmd) => cmd.aliases && cmd.aliases.includes(commandName)
+    );
 
-  const command = bot.commands.get(commandName);
+  if (!command) return;
 
   try {
     command.execute(message, args);

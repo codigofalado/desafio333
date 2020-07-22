@@ -6,6 +6,7 @@ const config = require("../config.json");
 module.exports = {
   name: "memes",
   description: "Lista todos os memes disponíveis",
+  emoji: ":notepad_spiral:",
   async execute(message) {
     const getMemes = `https://api.imgflip.com/get_memes`;
 

@@ -1,15 +1,14 @@
 const Discord = require("discord.js");
-const axios = require("axios");
-const numeral = require("numeral");
 const config = require("../config.json");
 
 const { rastro } = require("rastrojs");
 
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
-  name: "rastreio",
-  description:
-    "Digite este comando para acompanhar algum pedido feito nos correios!",
+  name: "rastrear",
+  description: "Rastreie suas encomendas do Correios",
+  aliases: ["rastreio", "correios", "encomenda"],
+  emoji: ":truck:",
   async execute(message) {
     let args = Array.from(message.content.split(" "));
     const mensagem = await message.channel.send(config.messages.waitMessage);

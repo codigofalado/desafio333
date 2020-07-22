@@ -3,7 +3,7 @@ require("dotenv/config");
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-const twitchNotifier = require("./utils/ready");
+const twitchNotifier = require("./utils/TwitchLoop");
 const getCommands = require("./utils/getCommands");
 
 bot.on("ready", async () => {

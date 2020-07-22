@@ -20,7 +20,9 @@ async function getImage(template, boxes) {
 
 module.exports = {
   name: "meme",
-  description: "Gerador de memes",
+  description: "Crie seu meme",
+  aliases: ["criar", "maker"],
+  emoji: ":zany_face:",
   async execute(message) {
     const sentMessage = await message.channel.send(config.messages.waitMessage);
     try {

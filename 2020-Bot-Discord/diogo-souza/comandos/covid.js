@@ -6,8 +6,8 @@ const config = require("../config.json");
 // Em versões do Node < 12 este comando não funciona
 module.exports = {
   name: "covid",
-  description:
-    "Digite este comando para acompanhar os casos de Covid-19 no Brasil!",
+  description: "Acompanhe a evolução do covid-19 no Brasil",
+  emoji: ":woozy_face:",
   async execute(message) {
     const apiTotal = "https://covid19-brazil-api.now.sh/api/report/v1/brazil";
 
