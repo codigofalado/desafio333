@@ -5,15 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon bot.js"
+    "dev": "nodemon bot.js",
+    "start": "node bot.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.2.0",
+    "fs": "0.0.1-security",
     "rastrojs": "^1.1.0",
+    "teemojs": "^1.5.0",
     "tenorjs": "^1.0.7",
-    "tracking-correios": "^1.2.2",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
