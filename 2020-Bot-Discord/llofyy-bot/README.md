@@ -43,13 +43,13 @@ Utilizando apenas a letra `f` ou `F` o bot retorna uma imagem de R.I.P dando ref
 
 Uma das funcionalidades mais interessantes que ajuda os jogadores de League Of Legends. Caso você queira mostrar ao canal onde está ou simplesmente quer ver os dados de um jogador específico aqui no Brasil, basta utilizar o comando `!elo [nome de invocador]` e o bot retornará os dados do jogador indicado. Trazendo algumas informações interessantes como:
 
-## Elo do jogador na SoloQ Duo e na Flex (Caso o invocador tenha).
+# - Elo do jogador na SoloQ Duo e na Flex (Caso o invocador tenha).
 
-## Nível da conta
+# - Nível da conta
 
-## Número de vitórias e derrotas.
+# - Número de vitórias e derrotas.
 
-## Quantidade de Pdl's da conta.
+# - Quantidade de Pdl's da conta.
 
 Esse é um bot desenvolvido como forma de estudo e também para a participação do [desafio333](https://github.com/codigofalado/desafio333). Meu objetivo principal não é ganhar o desafio e sim agregar mais conhecimento na minha caminhada de aprendizado. Com o término desse projeto eu pude ver um avanço muito bacana de meus conhecimentos e agradeço muito essa oportunidade. Boa sorte a todos nós, não apenas para quem vencer o desafio, mas em toda a nossa caminhada profissional. 
 
