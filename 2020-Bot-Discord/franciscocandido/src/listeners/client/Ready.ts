@@ -12,7 +12,7 @@ export default class Ready extends Listener {
 	public exec() {
 		let activities: any = [
 			{
-				text: '<b!ajuda> para ver meus comandos',
+				text: 'b!comandos para ver meus comandos',
 				type: 'WATCHING'
 			},
 			{
