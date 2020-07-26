@@ -12,7 +12,7 @@ O bot está rodando temporáriamente em um servidor do discord para teste para e
 
 Para adiconar o bot em seu servidor use o link https://discordapp.com/oauth2/authorize?=&client_id=723603552752369734&scope=bot&permissions=8
 
-Para criar sua versão do bot basta clonar o repositório, renomear o arquivo .env.example para .env e alterar as chaves do bot e dos serviços necessário, instalar as dependências do arquivo requirements.txt. Rodar com python3 botbotavel/main.py.
+Para rodar o bot localmente clone o repositório, renomei o arquivo .env.example para .env e altere as chaves do bot e dos serviços necessário, instale as dependências do arquivo requirements.txt. Rode botbotavel/main.py.
 
 # Comandos de gerenciamento
 
