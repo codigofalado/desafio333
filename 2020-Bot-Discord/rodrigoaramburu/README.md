@@ -1,6 +1,6 @@
 # BotBotavel
 
-O bot tem suas funcionalidades divididas em "subbots", ao ser adicionado a um servidor do Discord todas as funcionalidades estão por padrão desatividas e devem ser ativadas para cada canal desejado através de comandos de gerenciamento.
+O bot tem suas funcionalidades divididas em "subbots", ao ser adicionado a um servidor do Discord todas as funcionalidades estão por padrão desatividas e devem ser ativadas para em cada canal desejado através de comandos de gerenciamento.
 
 Alguns "subbots" possuem atividades em loop, que serão executados em intervalos de tempo definidos, este recurso também deve ser ativado dentro de cada canal.
 
