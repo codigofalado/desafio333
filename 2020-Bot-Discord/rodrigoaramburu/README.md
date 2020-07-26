@@ -31,7 +31,7 @@ Para rodar o bot localmente clone o repositório, renomei o arquivo .env.example
 
 # "Subbot": BotChamada
 
-# Comandos
+**Comandos**
 
 - **!botchamada**: Nosso bot é um bot limpinho, cheiroso e honesto que não tenta enganar os usuários então, toda vez que for feita uma chamada ele prontamente irá se identificar propriamente como um bot.
 
@@ -39,9 +39,9 @@ Para rodar o bot localmente clone o repositório, renomei o arquivo .env.example
 
 Este bot não é recomendável ser ativado em canais de familia, somente em ambientes tóxicos, estejam avisados :)
 
-# Comandos
+**Comandos**
 
-- **!botbobo**: Você é xingado! Esperava o que? Chama o bot de bobo e acha que vai ficar impune? :) . Sorteia um dos xingamentos cadastrados e envia para o usuário que executou o comando
+- **!botbobo**: Você é xingado! Esperava o que? Chama o bot de bobo e acha que vai ficar impune? :) . Sorteia um dos xingamentos cadastrados e envia para o membro que executou o comando
 
 - **!botbobo listar**: Lista todos os xingamentos cadastrados. Somente pode ser executado por membro administrativo do canal.
 
@@ -57,9 +57,9 @@ Para equilibrar as energias karmicas e reparar o mal feito pelo XingaBot, o Fofo
 
 Todo membro que enviar uma mensagem em um canal em que o FofoBot está ativo tem 1 chance em 20 (vulgo 5%) de receber um elogio aleatório, mas merecido.
 
-# Comandos
+**Comandos**
 
-- **!botfofo**: O bot retorna a gentileza de tão agradável elogio com outro elogio :) . Sorteia um dos elogios cadastrados e envia para o usuário que executou o comando
+- **!botfofo**: O bot retorna a gentileza de tão agradável elogio com outro elogio :) . Sorteia um dos elogios cadastrados e envia para o membro que executou o comando
 
 - **!botfofo listar**: Lista todos os elogios cadastrados. Somente pode ser executado por membro administrativo do canal.
 
@@ -74,11 +74,13 @@ Todo membro que enviar uma mensagem em um canal em que o FofoBot está ativo tem
 
 Bot para compartilhar notícias de sites. Permite cadastrar o Feed de um site e ele irá compartilhar no canal ativo cada nova publicação deste site.
 
-- **!newsbot listar**: Lista todos feeds de sites cadastrados. Somente pode ser executado por usuário administrativos do canal.
+**Comandos**
 
-- **!newsbot adicionar 'url_do_feed'**: Adiciona um feed. Somente pode ser executado por usuário administrativos do canal.
+- **!newsbot listar**: Lista todos feeds de sites cadastrados. Somente pode ser executado por membro administrativo do canal.
 
-- **!newsbot deletar 'url_do_feed'**: Remove um feed. Somente pode ser executado por usuário administrativos do canal.
+- **!newsbot adicionar 'url_do_feed'**: Adiciona um feed. Somente pode ser executado por membro administrativo do canal.
+
+- **!newsbot deletar 'url_do_feed'**: Remove um feed. Somente pode ser executado por membro administrativo do canal.
 
 - **!newsbot ultima**: Compartilha a última publicação.
 
@@ -88,6 +90,8 @@ Bot para compartilhar notícias de sites. Permite cadastrar o Feed de um site e 
 # "Subbot": BotTube 
 
 Bot para compartilhar vídeos de canais do youtube.
+
+**Comandos**
 
 - **!bottube listar**: Lista todos canais cadastrados. Somente pode ser executado por membro administrativo do canal.
 
@@ -103,6 +107,8 @@ link para pegar id de canais do youtube: https://commentpicker.com/youtube-chann
 
 Bot para rolar dados. Obs.: tive que segurar a quinta série dentro de mim para não chamar este "subbot" de RolaBot
 
+**Comandos**
+
 - **!botroll expressao_dados 'mensagem de rolagem'**: Realiza uma rolagem de dados dada uma expressão de dados, Ex. 1d6, 2d8, 3d4+3, 1d100>75. Se um dos operadores > < = for utilizado o "subbot" irá informar se a rolagem teve sucesso ou não. A mensagem de rolagem é opcional.
 
 Obs. este subbot não possui função de loop
@@ -112,6 +118,8 @@ Obs. este subbot não possui função de loop
 
 Bot para fornecer informações sobre o tempo(clima).
 
+**Comandos**
+
 - **!bottempo 'cidade_pesquisa'**: Retorna informações sobre o tempo da cidade pesquisada.
 
 Obs. este subbot não possui função de loop
@@ -119,6 +127,8 @@ Obs. este subbot não possui função de loop
 # "Subbot": BotCambista
 
 Bot para fazer converção de moedas.
+
+**Comandos**
 
 - **!botcambista formato_conversao quantidade**: Converte valores de uma moeda para outra dado um formato de conversão, Ex. BRL-USD, ARS-USD, UYU-BRL.
 
@@ -130,6 +140,8 @@ Obs. este subbot não possui função de loop
 # "Subbot": TraduBot
 
 Bot para realizar tradução de palavras e pequenas frases
+
+**Comandos**
 
 - **!tradubot formato_traducao 'frase'**: Traduz uma sentença dado um formato de tradução contendo a lingua de origem da senteça e a lingua de destino. 
 
@@ -144,7 +156,9 @@ Obs. este subbot não possui função de loop
 
 Bot para compartilhar sabedoria.
 
-- **!sabiobot**: retorna uma pérola de sabedoria para o usuário que solicitou.
+**Comandos**
+
+- **!sabiobot**: retorna uma pérola de sabedoria para o membro que solicitou.
 
 - **-função loop-**: No intervalo de tempo definido compartilha um pérola de sabedoria aleatória no canal ativo.
 
