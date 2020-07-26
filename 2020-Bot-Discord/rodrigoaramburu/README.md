@@ -4,8 +4,6 @@ O bot tem suas funcionalidades divididas em "subbots", ao ser adicionado a um se
 
 Alguns "subbots" possuem atividades em loop, que serão executados em intervalos de tempo definidos, este recurso também deve ser ativado dentro de cada canal.
 
-O nome do bot não possui relação com a funcionalidade, apenas gostei de como soa :)
-
 # Testando 
 
 O bot está rodando temporáriamente em um servidor do discord para teste para entrar segue o convite https://discord.gg/q38xHwb
