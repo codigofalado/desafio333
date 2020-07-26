@@ -1,0 +1,4 @@
+black
+pytest
+pytest-cov
+pytest-mongodb

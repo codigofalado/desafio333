@@ -1,0 +1,7 @@
+discord.py
+python-decouple
+pymongo
+feedparser
+google-api-python-client
+tabulate
+googletrans

@@ -1,0 +1,8 @@
+.venv
+*.env
+__pycache__
+.env
+botbotavel.egg-info
+Makefile
+tests
+.coverage
