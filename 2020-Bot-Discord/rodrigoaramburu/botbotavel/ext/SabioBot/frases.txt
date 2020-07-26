@@ -42,7 +42,7 @@ A velhice é um estado de repouso e de liberdade no que respeita aos sentidos. Q
 Quando a mente está pensando, está falando consigo mesma. - Platão
 Riqueza alguma poderá proporcionar a paz a um homem mau. - Platão
 Podemos facilmente perdoar uma criança que tem medo do escuro; a real tragédia da vida é quando os homens têm medo da luz. - Platão
-O que o homem pode fazer de melhor para a sua felicidade é pôr-se em harmonia constante com Deus por meio de sàplicas e orações. - Platão
+O que o homem pode fazer de melhor para a sua felicidade é pôr-se em harmonia constante com Deus por meio de suplicas e orações. - Platão
 Tenho irmãos, pai, mas não tenho mãe. Quem não tem mãe, não tem família. - Platão
 Errar é humano, mas também é humano perdoar. Perdoar é próprio de almas generosas. - Platão
 Não deverão gerar filhos quem não quer dar-se ao trabalho de criá-los e educá-los. - Platão
@@ -79,7 +79,6 @@ Não devemos de forma alguma preocupar-nos com o que diz a maioria, mas apenas c
 Pessoas normais falam sobre coisas, pessoas inteligentes falam sobre idéias, pessoas mesquinhas falam sobre pessoas - Platão
 A màsica é o meio mais poderoso do que qualquer outro porque o ritmo e a harmonia têm sua sede na alma. Ela enriquece esta àltima, confere- lhe a graça e ilumina aquele que recebe uma verdadeira educação. - Platão
 Na vida duas coisas são certas o amor e a morte! - Platão
-(...) a alma deseja voar â€œde volta para casaâ€, para o mundo das ideias. Ela quer se libertar do cárcere do corpo - Platão
 O mais belo é também o mais amável - Platão
 A cidade pode crescer até o ponto em que conserva sua unidade, mas nunca além disso. - Platão
 O amor é a busca do todo. - Platão
@@ -109,12 +108,12 @@ Toda arte é imitação da natureza. - Sêneca
 Apressa-te a viver bem e pensa que cada dia é, por si só, uma vida. - Sêneca
 A fome não é exigente: basta contentá-la; como, não importa. - Sêneca
 Cala-te primeiro se queres que os outros se calem. - Sêneca
-As coisas que nos assustam são em maior nàmero do que as que efetivamente fazem mal, e afligimo-nos mais pelas aparências do que pelos fatos reais. - Sêneca
+As coisas que nos assustam são em maior número do que as que efetivamente fazem mal, e afligimo-nos mais pelas aparências do que pelos fatos reais. - Sêneca
 A deformidade do corpo não afeia uma bela alma, mas a formosura da alma reflete-se no corpo. - Sêneca
 Os desejos da vida formam uma corrente cujos elos são as esperanças. - Sêneca
 Justamente aquelas coisas que provocam mais medo são menos temíveis. - Sêneca
 Desventurado é aquele que por tal se julga. - Sêneca
-Na vida pàblica, ninguém olha para os que estão pior, mas apenas para os que estão melhor. - Sêneca
+Na vida publica, ninguém olha para os que estão pior, mas apenas para os que estão melhor. - Sêneca
 É errado quando acreditas em cada um, mas também é errado quando não acreditas em ninguém. - Sêneca
 Possuir um bem, sem o partilhar, não tem qualquer atrativo. - Sêneca
 O fogo é a prova do ouro; a miséria, a do homem forte. - Sêneca
@@ -126,7 +125,7 @@ A principal e mais grave punição para quem cometeu uma culpa está em sentir-s
 Nisto erramos: em ver a morte à  nossa frente, como um acontecimento futuro, enquanto grande parte dela já ficou para trás. Cada hora do nosso passado pertence à  morte. - Sêneca
 Um crime bem sucedido e favorecido pela sorte / é chamado de virtude. - Sêneca
 Maior sou e para maiores coisas nasci do que para ser escravo da minha carne. - Sêneca
-É melhor saber coisas inàteis do que não saber nada. - Sêneca
+É melhor saber coisas inuteis do que não saber nada. - Sêneca
 Não há nada mais belo do que ser tão querido da tua mulher, que te tornas querido de ti mesmo. - Sêneca
 É grande quem sabe ser pobre na riqueza. - Sêneca
 Vive de tal maneira que não faças nada que não possas dizer aos teus inimigos. - Sêneca
@@ -150,9 +149,9 @@ A ignorância, ou melhor, a demência humana é tão grande que alguns são leva
 Não é da morte que temos medo, mas de pensar nela. - Sêneca
 Não temos de nos preocupar em viver muito tempo, mas em viver em pleno. - Sêneca
 O trabalho é o alimento das almas nobres. - Sêneca
-Este é o ànico motivo pelo qual não nos podemos queixar da vida: ela não segura ninguém. - Sêneca
+Este é o unico motivo pelo qual não nos podemos queixar da vida: ela não segura ninguém. - Sêneca
 O início da salvação é o conhecimento da culpa. - Sêneca
-Uma ira desmedida acaba em loucura; por isso, evita a ira, para conservares não apenas o domínio de ti mesmo, mas também a tua própria saàde. - Sêneca
+Uma ira desmedida acaba em loucura; por isso, evita a ira, para conservares não apenas o domínio de ti mesmo, mas também a tua própria saude. - Sêneca
 Tudo o que é enraizado e congénito pode ser atenuado pela educação, mas não vencido. - Sêneca
 Alguns cessam de viver antes de começar a viver. - Sêneca
 Nunca ninguém enriqueceu com dinheiro. - Sêneca
@@ -185,7 +184,7 @@ Alguns [chefes] são considerados grandes porque lhes mediram também o pedestal
 Os homens que se tornam arrogantes com o sucesso têm o mau hábito de odiarem aqueles a quem ofenderam. - Sêneca
 Presume do teu amigo que algum dia o poderás ter como inimigo. - Sêneca
 Um atleta não pode chegar à  competição muito motivado se nunca foi posto à  prova. - Sêneca
-Até mesmo de um corpàsculo disforme pode sair um espírito realmente forte e virtuoso. - Sêneca
+Até mesmo de um corpusculo disforme pode sair um espírito realmente forte e virtuoso. - Sêneca
 É preciso dizer a verdade apenas a quem está disposto a ouvi-la. - Sêneca
 Quem acolhe um benefício com gratidão, paga a primeira prestação da sua dívida. - Sêneca
 Deixarás de temer quando deixares de ter esperança. - Sêneca
@@ -211,7 +210,7 @@ Nunca a fortuna põe um homem em tal altura que não precise de um amigo. - Sên
 Se um grande homem cair, mesmo depois da queda, ele continua grande. - Sêneca
 Diz todas estas coisas aos outros, mas de modo que, ao dizê-las, tu também possas ouvi-las. - Sêneca
 Toda a felicidade é incerta e instável. - Sêneca
-Quando consideras o nàmero de homens que estão diante de ti, pensa em quantos te seguem! - Sêneca
+Quando consideras o número de homens que estão diante de ti, pensa em quantos te seguem! - Sêneca
 Aos outros perdoa sempre, a ti nunca. - Sêneca
 Não estudamos para a vida, mas para a escola. - Sêneca
 Muitas vezes uma pequena oferta produz grandes efeitos. - Sêneca
@@ -232,7 +231,7 @@ Quem pede com timidez dá ensejo à  negativa. - Sêneca
 Conversa com aqueles que possam fazer-te melhor do que és. - Sêneca
 Unus quisque mavult credere, quam judicare ( qualquer um prefere crer do que julgar por si mesmo ). - Sêneca
 Onde há alturas, há grandes precipícios. - Sêneca
-A religião é vista pelas pessoas comuns como verdadeira, pelos inteligentes como falsa, e pelos governantes como àtil - Sêneca
+A religião é vista pelas pessoas comuns como verdadeira, pelos inteligentes como falsa, e pelos governantes como util - Sêneca
 Quantas vezes o dia transcorreu como o planejado?" - Sêneca
 Depois de nos precavermos contra o frio, a fome e a sede, tudo mais não passa de vaidade e excesso. - Sêneca
 Do homem eminente podemos aprender, mesmo quando se mantém em silêncio - Sêneca
@@ -243,7 +242,7 @@ Devem ser evitados os tristes de que tudo se queixam. - Sêneca
 Sentir solidão não é estar só, é estar vazio - Sêneca
 O grau de civilização de um povo é sempre proporcional à  qualidade e à  quantidade dos vinhos que consome. - Babrius
 Odeio e amo. Talvez me perguntes por quê? Não sei mas sinto que é assim, e sofro. - Catulo
-Ainda que possas vencer, cede de vez em quando ao amigo;/ Freqà¼entemente as doces amizades são conservadas pela gentileza. - Catão, o Censor
+Ainda que possas vencer, cede de vez em quando ao amigo;/ Frequentemente as doces amizades são conservadas pela gentileza. - Catão, o Censor
 Errar é próprio do homem, mas perseverar no erro é coisa de tolos. - Cícero
 Um amigo verdadeiro é discernido durante uma matéria incerta - Cícero
 Ninguém é tão velho que não pense em poder viver mais um ano. - Cícero
@@ -258,7 +257,7 @@ Sou escravo do dever por amor à  liberdade. - Cícero
 Um coração agradecido não é somente a maior das virtudes, ele é a origem de todas as outras - Cícero
 O pensamento é livre - Cícero
 Somos todos escravos da lei, para que possamos ser livres. - Cícero
-A vida feliz consiste na tranqà¼ilidade da mente. - Cícero
+A vida feliz consiste na tranquilidade da mente. - Cícero
 Fica sabendo que você é um deus, se é deus aquele que possui força, sentimento e memória que prevê e que domina, modera e faz mover este corpo ao qual está ligado. - Cícero
 O silêncio deles é uma eloquente afirmação. - Cícero
 Nada é difícil para quem ama. - Cícero
@@ -324,12 +323,12 @@ Do nada, nada se faz - Lucrécio
 A tantos males pode a religião persuadir. - Lucrécio
 A ninguém foi dada a posse da vida, apenas o usufruto. - Lucrécio
 A pessoa capaz de sentir prazer com o próprio passado vive duas vezes. - Marcial
-Non est vivere, sed valere, vita.(A vida não é estar vivo, mas gozar de saàde.) - Marcial
+Non est vivere, sed valere, vita.(A vida não é estar vivo, mas gozar de saude.) - Marcial
 Nossa vida é o que nossos pensamentos fazem dela - Marco Aurélio
-Tenha poucas ocupações, diz o sábio, se quiser levar uma vida tranqà¼ila. - Marco Aurélio
+Tenha poucas ocupações, diz o sábio, se quiser levar uma vida tranquila. - Marco Aurélio
 Nada sucede ao homem que sua natureza não seja capaz de suportar. - Marco Aurélio
 Mantenha-se bom, puro, sério, livre de afetação, amigo da justiça, gentil, apaixonado, vigoroso em todas as suas atitudes. Lute para viver como a filosofia gostaria que vivesse - Marco Aurélio
-Aquilo que não tem utilidade para o enxame não é àtil à  abelha. - Marco Aurélio
+Aquilo que não tem utilidade para o enxame não é util à  abelha. - Marco Aurélio
 Pense há quanto tempo você vem adiando! - Marco Aurélio
 Quantos homens, outrora célebres, foram devorados pelo esquecimento! E quantos já desapareceram, dos que os celebravam. - Marco Aurélio
 Os homens desprezam-se mutuamente, e mutuamente se lisonjeiam. Querem suplantar uns aos outros, e se curvam uns perante outros! - Marco Aurélio
@@ -339,7 +338,7 @@ Sempre que te dominar a cólera ou a impaciência, lembra-te de que a vida human
 Não faças isso, se não é justo. Se não é verdade, não o digas - Marco Aurélio
 Ama a modesta profissão que aprendeste e contenta-te com ela. - Marco Aurélio
 Os homens existem uns para os outros; logo, ou instrua-os ou suporta-os. - Marco Aurélio
-Executa cada ação como se fosse a àltima da tua vida. - Marco Aurélio
+Executa cada ação como se fosse a última da tua vida. - Marco Aurélio
 Enquanto fores feliz contarás muitos amigos; quando o tempo se tornar nublado estarás só. - Ovídio
 A boa consciência ri-se das mentiras da fama. - Ovídio
 Aconteça o que acontecer, a facilidade faz-me mal; do que me persegue eu fujo; o que me foge, isso eu persigo. - Ovídio
@@ -356,7 +355,7 @@ O juiz é condenado quando o culpado é absolvido. - Públio Siro
 Discutindo-se demais, perde-se a verdade. - Públio Siro
 Grande é a força do hábito. - Públio Siro
 O plano que não pode ser mudado não presta. - Públio Siro
-Censura teus amigos particularmente, e louva-os em pàblico. - Públio Siro
+Censura teus amigos particularmente, e louva-os em publico. - Públio Siro
 Aquele que tem coragem para enfrentar os perigos vence-os antes que eles o ameacem. - Públio Siro
 Jamais se deleite com a desgraça do outro. - Públio Siro
 Ama os teus pais, se são justos e honestos; caso contrário, suporta-os. - Públio Siro
@@ -416,14 +415,14 @@ Mesmo quando as leis estiverem escritas, nem sempre deve permanecer inalteradas.
 Sobre se os juízes de causas importantes devem ocupar cargos pela vida toda é uma coisa discutível, porque a mente envelhece, assim como o corpo. - Aristóteles
 Deve governar quem é capaz de governar melhor. - Aristóteles
 O bom cidadão não precisa necessariamente possuir a virtude que faz um homem bom. - Aristóteles
-Um estado não é uma mera sociedade, ter um lugar comum, estabelecido para a prevenção màtua de crime ou pelo bem das trocas(...)A sociedade política existe para ações nobres e não de mero companheirismo - Aristóteles
+Um estado não é uma mera sociedade, ter um lugar comum, estabelecido para a prevenção mutua de crime ou pelo bem das trocas(...)A sociedade política existe para ações nobres e não de mero companheirismo - Aristóteles
 A lei é a razão não afetada pelo desejo - Aristóteles
 Os inferiores se revoltam, a fim de que eles possam ser iguais, iguais aos que lhe são superiores. Esse é o estado de espírito que gera as revoluções. - Aristóteles
 A base de um estado democrático é a liberdade. - Aristóteles
 Ambos oligarca e tirano desconfiam das pessoas e, portanto, privam-nas de seus braços. - Aristóteles
 Direito é ordem e boa lei é boa ordem. - Aristóteles
 A idade apropriada para casamento é de cerca de dezoito anos para as meninas e trinta e sete para os homens. - Aristóteles
-A felicidade e a saàde são incompatíveis com a ociosidade. - Aristóteles
+A felicidade e a saude são incompatíveis com a ociosidade. - Aristóteles
 O prazer no trabalho aperfeiçoa a obra. - Aristóteles
 O mal aproxima os homens. - Aristóteles
 Sagacidade é insolência bem-educada. - Aristóteles
@@ -451,7 +450,7 @@ Não sei. Silêncio completo parece-me tão grave quanto alarido descontrolado. 
 Não há sucesso sem grandes privações. - Sófocles
 Nada conspira quem nada ambiciona. - Sófocles
 Não se deve indagar sobre tudo: é melhor que muitas coisas permaneçam ocultas. - Sófocles
-O ânimo tranqà¼ilo de um justo pode descobrir mais coisas que todos os sábios. - Sófocles
+O ânimo tranquilo de um justo pode descobrir mais coisas que todos os sábios. - Sófocles
 Somente o tempo revela o homem justo. Basta um dia para pôr a nu um homem pérfido. - Sófocles
 Há algo de ameaçador num silêncio muito prolongado. - Sófocles
 Porque o tempo do ser vivo é breve, mas sob a terra o morto escondido vive um tempo eterno. - Sófocles
@@ -465,7 +464,7 @@ Do mesmo modo que a união faz a força, a discórdia leva a uma rápida derrota
 É perigoso agir sem refletir. - Esopo
 A gratidão é a virtude das almas nobres - Esopo
 A natureza não deu a todos os mesmos poderes. Há coisas que alguns de nós não podemos fazer. - Esopo
-A injària que fazemos e a que sofremos não são pesadas na mesma balança. - Esopo
+A injuria que fazemos e a que sofremos não são pesadas na mesma balança. - Esopo
 Agrade a todos e não agradará a ninguém. - Esopo
 Aquele que sempre cede acaba não tendo seus próprios princípios. - Esopo
 Contente-se com o que tem; ninguém pode ter tudo. - Esopo
@@ -488,7 +487,7 @@ Em caso de divergências, nunca se atreve a julgar até que você tenha ouvido o
 Autoridade nunca é sem ódio. - Eurípedes
 Dizem que presentes persuadem até os deuses. - Eurípedes
 Um mau começo faz um mau fim. - Eurípedes
-O amor é tudo que temos, o ànico caminho pelo qual um pode ajudar o outro. - Eurípedes
+O amor é tudo que temos, o unico caminho pelo qual um pode ajudar o outro. - Eurípedes
 Escravo é aquele que não pode dizer o que pensa. - Eurípedes
 Não olhes para longe, despreocupando-se do que tens perto. - Eurípedes
 O homem que criou a ideia de Deus foi um gênio. - Eurípedes
@@ -496,7 +495,7 @@ O vinho foi dado ao homem para o acalmar de suas fadigas. - Eurípedes
 Onde o vinho falta não há lugar para o amor. - Eurípedes
 Todo aquele que encobre a própria injustiça debaixo do manto lustroso da eloquência merece um grande castigo. - Eurípedes
 Projetos conjuntos têm mais chance de sucesso quando se beneficiam de ambos os lados. - Eurípedes
-Os que de uma situação desafogada caem num estado de penària que lhes é estranho, esses, sofrem mais cruelmente do que quem foi sempre miserável. - Eurípedes
+Os que de uma situação desafogada caem num estado de penuria que lhes é estranho, esses, sofrem mais cruelmente do que quem foi sempre miserável. - Eurípedes
 É mais fácil dar conselhos do que suportar com ânimo a adversidade. - Eurípedes
 Excesso de fervor onde indiretas funcionariam ofende. - Eurípedes
 Não há vento que semeie sempre a tempestade. - Eurípedes
@@ -530,13 +529,13 @@ Ocupe-se de pouco para ser feliz. - Demócrito
 Ação é uma breve loucura. - Paul VAléry
 Visão sem ação é um sonho. Ação sem visão é um pesadelo. - Provérbio japonês
 O homem que quer fazer dá um jeito; aquele que não quer dá desculpas. - Stephen Dolley Jr.
-às vezes um grito vale mais do que uma tese. - Ralph Waldo Emerson
+às vezes um grito vale mais do que uma tese. - Ralph Waldo Emerson
 Uma grama de ação vale mais do que uma tonelada de teoria. - Friedrich Egels
 A ação é uma loucura passageira. - Romain Rolland
-Uma ànica ação é melhor do que mil suspiros. - rabino Shalom Dov Ber
+Uma unica ação é melhor do que mil suspiros. - rabino Shalom Dov Ber
 Mais vale agir sem arrependimento do que se arrepender de não ter feito nada. - Boccacio
 No princípio, não existia a ação. - Sigmund Freud
-Não somos responsáveis apenas pelo que fazemos, mas também pelo que deixamos de fazer. - Molià¨re
+Não somos responsáveis apenas pelo que fazemos, mas também pelo que deixamos de fazer.
 Nós somos o que fazemos. O que não se faz não existe. Portanto, só existimos nos dias em que fazemos. Nos dias em que não fazemos apenas duramos. - padre Antonio Vieira
 Sabedoria é saber o que fazer; virtude é fazer - David Starr Jordan
 Se sabemos exatamente o que fazer, então para que fazer? - Pablo Picasso
@@ -573,7 +572,7 @@ Os muito inteligentes admiram pouca coisa; os nada inteligentes, também. - marq
 Os tolos admiram, os sensatos aprovam. - Alexander R.
 Um néscio encontra sempre outro maior que o admira. - Nicolas Boileau
 Aprende: todo adulador vive à s expensas de quem o escuta. - La Fontaine
-As pessoas podem ser persuadidas a engolir qualquer coisa, desde que venha temperada de elogios. - Jean Batiste Poquelim, Molià¨re
+As pessoas podem ser persuadidas a engolir qualquer coisa, desde que venha temperada de elogios. - Jean Batiste Poquelim
 De todas as monotonias, a pior é o sim. - Joseph Joubert
 Gosto de elogios como os meninos gostam de doces. - Gilberto Freyre
 Pode existir punhalada sem lisonja, mas poucas vezes existe lisonja sem punhalada. - Francisco de Quevedo y Villegas
@@ -581,21 +580,21 @@ Prefiro que me elogiem menos e me conheçam mais. - Michel de Montaigne
 O ideal é não esperar pelo momento ideal. - Daniel Dantas
 Prever o futuro é fácil. Difícil é dizer o que está acontecendo agora. - Fritz R. S. Dressler
 Aproveite o momento. Lembre-se de todas aquelas pessoas do Titanic que recusam a sobremesa. - Erma Bomck
-A irmã da saàde, a alegria. - Alfred de Musset
-A ànica alegria no mundo é começar. - Cesare Pavese
+A irmã da saude, a alegria. - Alfred de Musset
+A unica alegria no mundo é começar. - Cesare Pavese
 Abençoado aquele que faz com que seus companheiros riam. - O Corão
 A alegria não está nas coisas. Está em nós. - Goethe
-Não há alegria pàblica que valha uma boa alegria particular. - Machado de Assis
+Não há alegria publica que valha uma boa alegria particular. - Machado de Assis
 Toda alegria é uma vitória, e uma vitória é uma vitória, por menor que seja. - Robert Browing
 Tudo de bom acontece a pessoas com disposições alegre. - Voltaire
 Tudo no mundo é loucura, exceto a alegria. - Frederico, o Grande
-A ànica perfeição é a alegria. - Lou Andreas-Salomé
+A unica perfeição é a alegria. - Lou Andreas-Salomé
 O mundo é extremamente interessante para uma alma alegre. - Alexandra Stoddard
 Um dos maiores pecados do mundo é diminuir a alegria. - Chico Xavier
 É maravilhosa a força da alegria. A sua resistência excede tudo o que se possa imaginar. - Thomas Carlyle
 A sociedade compõe-se de duas grandes castas; a dos que têm mais comida do que apetite e a dos que têm mais apetite do que comida. - Sébastien Roch Nicolas Chamfort
 Os que se empanturram ou se embebedam não sabem nem comer nem beber - Anthelme Brillat-Savarin
-Almoça pouco e janta menos porque a saàde do corpo provém da oficina do estômago. - Miguel de Cervantes
+Almoça pouco e janta menos porque a saude do corpo provém da oficina do estômago. - Miguel de Cervantes
 Odeio pessoas que não levam refeições a sério. - Oscar Wilde
 A sorte das nações depende de seu modo de alimentar-se. - Anthelme Brillat-Savarin
 O mundo pertence a quem não tem hora fixa para as refeições. - Anna de Noailles
@@ -603,24 +602,23 @@ Comer é um ato cultural: representa um estilo de vida, aprofunda relações fam
 Os mais preciosos ingredientes de uma refeição são as pessoas que a compartilham. - Kathy Lette
 Quando nossas almas estão contentes, falam de comida. - Charles Simic
 Por que será, quando comemos demais no almoço, nós nos sentimos sonolentos a tarde toda, mas quando comemos bem no jantar, passamos a noite em claro? - Étienne Leclerc
-Beber e comer mantêm a alma e o corpo juntos. - Heinrich Theodor Bà¶ll
+Beber e comer mantêm a alma e o corpo juntos. - Heinrich Theodor
 Bem desditosa é a pessoa que à s duas da tarde ainda está em jejum. - Miguel de Cervantes
 Depois de uma boa refeição, pode-se perdoar a todos, até mesmo aos parentes. - Oscar Wilde
 Difícil coisa é, cidadãos, entrar em discussões com a barriga vazia. - Marco Catão
 Diz-me o que comes; dir-te-ei quem és. - Anthelme Brillat-Savarin
 É preciso comer e beber com tal moderação que nossas forças se restaurem e não se esgotem - Marco Túlio Cícero
 É preciso comer para viver, e não viver para comer. - Marco Túlio Cícero
-Jantar com màsica é uma ofensa tanto para o cozinheiro como para o violinista - Gilbert Keith Chersterton
+Jantar com musica é uma ofensa tanto para o cozinheiro como para o violinista - Gilbert Keith Chersterton
 Não comas o prato que impedirá de comer dos outros pratos. - Samuel ben Judah ibn Tibbon
 Nossos gostos culinários são, de todas as nossas mais tradicionais inclinações, as menos sujeitas a mudanças. - Adolf Rudnicki
 O apetite vem enquanto se come, a sede vai enquanto se bebe. - François Rebelais
 A indigestão foi encarregada por Deus para moralizar o estômago. - Victor Hugo
 O caminho para chegar ao coração do homem é o do estômago. - Fany Fern
 Uma sobremesa de muito chocolate ativará todas as suas endorfinas, conhecidas ou não. - Grant Showley
-Quem teme o açàcar é espírito que se materializou imperfeitamente. - Anthelme Brillat-Savarin
+Quem teme o açucar é espírito que se materializou imperfeitamente. - Anthelme Brillat-Savarin
 Um homem que faz caso da sobremesa após uma boa refeição é um louco que estraga seu espírito com o estômago. - François-Pierre de la Varenne
-àŠxtase: descobrir uma nova camada de bombons sob a primeira. - Bill Lyon
-O prazer de comer é o ànico que, feito com moderação, não cansa. - Anthelme Brillat-Savarin
+O prazer de comer é o unico que, feito com moderação, não cansa. - Anthelme Brillat-Savarin
 Os homem maus vivem para comer e beber, enquanto os homens bons comem e bebem para viver. - Sócrates
 Qual a melhor hora para jantar? Se você é rico, quando você quiser; se você é podre, quando puder. - Diógenes, o cínico
 Quem come e bebe não conspira. - Caetano Pinto de Miranda Montenegro
@@ -628,7 +626,7 @@ Todo mundo que faz três refeições por dia pode entender porque os livros de c
 As almas são as idéias de Deus. - Gérard de Nerval
 Cada alma é uma sociedade secreta. - Marcel Jouhandeau
 A alma humana é como a nuvem. Está sempre em movimento e mudando. - Carmen Martín Gaite
-Há na Terra uma ànica idéia superior: a imortalidade da alma. - Fiodor Dostoiévski
+Há na Terra uma unica idéia superior: a imortalidade da alma. - Fiodor Dostoiévski
 A ambição destrói seus hóspedes. - Talmude
 O muito torna-se pouco ao se desejar um pouco mais. - Francisco de Quevedo y Villegas
 O homem não deseja ser rico, mas ser mais rico que alguém. - John Stuart Mill
@@ -640,7 +638,7 @@ Aos conselhos do mar e da ambição, devemos fechar os ouvidos. - La Fontaine
 Você não será nada se quiser ser tudo. - Solomon Schechter
 Por um cravo, perde-se uma ferradura, por uma ferradura, um cavalo e, por um cavalo, um cavaleiro. - frei Luís de Granada
 Quem não sente a ânsia de ser mais, não chegará a ser nada. - Miguel de Unamuno
-Só há no mundo duas maneiras de elevar-se: ou pela própria capacidade, ou pela imbecilidade dos outros. - Jean de La Bruyà¨re
+Só há no mundo duas maneiras de elevar-se: ou pela própria capacidade, ou pela imbecilidade dos outros. 
 A primeira grande dificuldade consiste em conquistar prestígio; a segunda, em conservá-lo toda a vida e a terceira, preservá-la depois de morto. - Benjamin R. Haudon
 O prestígio aumenta com a distância - Tácito
 Há três amigos fiéis: um velho amigo, um cão e um bom dinheiro. - Benjamin Franklin
@@ -686,7 +684,7 @@ O amor é como um rolinho primavera: é gostosinho mas tem repolho dentro. - Iza
 Amar é mudar a alma de casa. - Mário Quintana
 O beijo nada mais é do que uma contração da boca provocada por uma dilatação do coração. - Max Nunes
 O amor não pede licença para entrar, surge já instalado. - Betty Milan
-O amor é a ànica matemática em que um mais um fazem um. - Rosa Marie Miraro
+O amor é a unica matemática em que um mais um fazem um. - Rosa Marie Miraro
 Dinheiro é a mola do mundo, mas o amor é a manivela. - Maria João Silva
 O melhor afrodisíaco é abrir o coração. - Maria Tereza Maldonado
 Depois de certo tempo cada um é um responsável pela cara que tem. - Clarice Lispector
@@ -706,7 +704,7 @@ O analfabeto do século 21 não será aquele que não conseguir ler ou escrever,
 Quem vive estudando, mas nunca repete o que aprendeu, se parece com quem vive semeando, mas nunca ceifa. - Talmude
 É lícito aprender com o inimigo. - Ovídio
 Aprender é, de longe, a maior recompensa. - William Hazlitt
-Se comer sem vontade dana a saàde, aprender sem querer arruína a memória. - Leonardo da Vinci
+Se comer sem vontade dana a saude, aprender sem querer arruína a memória. - Leonardo da Vinci
 Mestre não é quem sempre ensina, mas quem de repente aprende. - João Guimarâes Rosa
 Aprender muito não ensina a uma pessoa ter inteligência. - Heráclito
 Aprender sem pensar é trabalho perdido; pensar sem aprender é perigoso. - Confúcio
@@ -754,14 +752,14 @@ O mais próximo de mim sou eu. - Terêncio
 Primeiro, saiba quem você é. Depois, enfeite-se de acordo. - Epicteto
 Sabemos o que somos, mas não o que poderemos ser. - William Shakespeare
 Tornei-me eu mesmo, e não um outro, no dia em que ousei fazer certas coisas que acreditava proibidas. - César Baldacinni
-A ànica coisa que todos os seres humanos têm em comum, independentemente de idade, sexo religião ou origem étnica, é o fato de acreditarem ser motoristas acima da média. - Dave Barry
+A unica coisa que todos os seres humanos têm em comum, independentemente de idade, sexo religião ou origem étnica, é o fato de acreditarem ser motoristas acima da média. - Dave Barry
 Eu sou eu e minha circunstância. - José Ortega y Gasset
 Não há melhor amigo nem pai do que nós mesmos. - La Fontaine
 Conhece-te a ti mesmo, mas não fique íntimo. - Luis Fernando Verissimo
 É sempre recomendável perceber claramente nossa ignorância. - Charles Darwin
 O primeiro passo para conhecer-se é desconfiar de si mesmo. - Julius e Augustus Hare
 Temo conhecer-me e não me posso ignorar. - Voltaire
-Não vemos as coisas como elas são, mas como nós somos. - Anaà¯s Nà¯n
+Não vemos as coisas como elas são, mas como nós somos.
 Afinal de contas, quem sou eu? Ah, esse é o grande enigma. - Lewis Carrol
 Ele conhece todo o universo e não se conhece. - La Fontaine
 O governo mais difícil é o de si mesmo. - Sêneca
@@ -792,8 +790,6 @@ Trabalhamos com o propósito de tornar nossos produtos obsoletos, antes que noss
 Automático significa que você não pode consertar sozinho. - Frank Capra
 Depois de milhares de anos de objetos burros, agora tudo vai ter inteligência. Algum dia você vai ter uma discussão séria com seus móveis de jardim. Você dirá - porque vocês estão lá fora na chuva Porque vocês não entraram como eu mandei? - Robert Malone
 Avó é a mãe que teve uma segunda chance. - Caroline Flictroft
-Avó, mãe com açàcar. - Lauro Mà¼ller
-Avô, pai sem exigências. - Lauro Mà¼ler
 Nunca tenha filhos, só netos. - Gore Vidal
 Se Deus quisesse que os homens seguissem receitas, ele não nos daria as avós.  - Linda Henley
 Se você quer civilizar um homem, comece pela avó dele. - Victor Hugo
@@ -814,7 +810,6 @@ Alguns alcoólatras são mais jovens do que a bebida que estão ingerindo. - fot
 Beba-o com respeito. É provável que ele seja mais velho que você. - anúncio - Conhaque MArteli
 Bebe-se e come-se como se amanhã devêssemos morrer; poupa-se e acumula-se como se, depois da morte, devêssemos comer. - Jojann Fischart
 Bebendo-se um pouco de vinho, a inteligência se rejuvenesce. - Voltaire
-Beber e comer mantém a alma e o corpo juntos. - Heinrich Bà¶ll
 Beber é uma diversão cristã desconhecidas dos turcos e dos persas. - William Congreve
 Beber é uma morte lenta. Mas que é que está com pressa - Robert Benchley
 Bebi à  sua saàde pela manhã, à  tarde e a à  noite, até que arruinei a minha própria. - Almirante Halsey
@@ -845,8 +840,8 @@ Só bebo para fazer show e andar de avião. O problema é que faço muitos shows
 Só os bêbados conseguem, de fato, perceber que o mundo está girando. - Juvenal de Souza Neto
 Todo mundo precisa crer em algo. Creio que vou tomar outra cerveja. - Groucho Marx
 Todos comem e bebem, mas poucos sabem distinguir os sabores. - Anônimo
-Todos os maus são bebedores de água - está bem provado com o dilàvio. - L Ph. Ségur
-Um gênio inventou a bebida. Outro gênio disse que beber faz mal à  saàde. Eis a verdadeira incompatibilidade de gênios. - Flávio Conti
+Todos os maus são bebedores de água - está bem provado com o diluvio. - L Ph. Ségur
+Um gênio inventou a bebida. Outro gênio disse que beber faz mal à  saude. Eis a verdadeira incompatibilidade de gênios. - Flávio Conti
 Um homem que só bebe água tem um segredo a ocultar de seus semelhantes. - Charles Baudelaire
 Uma pessoa que bebe todo dia é alcoólatra, mas se você disser isso, ela fica indignada. - João Ubaldo Ribeiro
 É melhor de vodka do que tédio. - Vladimir Maiakovski
@@ -855,15 +850,15 @@ A beleza das coisas existe no espírito de quem as contempla. - David Hume
 A beleza de uma mulher alegra o olhar e excede a todos os desejos do homem. - Eclesiastes 36,22
 A beleza ideal é um fugitivo que nunca é encontrado. - Joan Rivers
 A beleza não é mais do que a promessa de felicidade. - Marie-Henri Beyle Stendhal
-A beleza não é mais do que uma equação de nàmeros. - San Buenaventura
+A beleza não é mais do que uma equação de números. - San Buenaventura
 A beleza passa... Mas a fealdade permanece. - Honoré de Balzac
 A beleza provoca o ladrão mais do que o ouro. - William Shakespeare
 A beleza é a inteligência à  flor da pele. - Millôr Fernandes
 A beleza é o esplendor da ordem. - Aristóteles
 A beleza é sempre subversiva. - Serge Guinsbourg
-A beleza é um acordo entre o conteàdo e a forma. - Herink Ibsen
+A beleza é um acordo entre o conteudo e a forma. - Herink Ibsen
 A beleza é um dom dos outros. - Bion
-A beleza é uma forma de poder é inàtil negá-lo. Cria curiosidade. E discriminação. Para mim, é apenas um momento biológico da vida. Sei que se desvanecerá. Na beleza, há uma possibilidade de prazer e dor. Eu não tenho de mim a mesma imagem que os outros têm. - Monica Bellucci
+A beleza é uma forma de poder é inutil negá-lo. Cria curiosidade. E discriminação. Para mim, é apenas um momento biológico da vida. Sei que se desvanecerá. Na beleza, há uma possibilidade de prazer e dor. Eu não tenho de mim a mesma imagem que os outros têm. - Monica Bellucci
 A beleza é uma maldição. Só me causou dor. - Isabella Rossellini
 A cirurgia plástica torna a mulher diferente do que ela é e parecida com outras mulheres. Em Hollywood dá para perceber claramente as atrizes que passaram pelas mãos do mesmo cirurgião. - Cate Blancheet
 A formosura e o pudor não costumam estar de acordo. - Ovídio
@@ -892,14 +887,13 @@ O belo não me importa. - Pablo Picasso
 O que é belo não morre: transforma-se em outra beleza. - Balley Ardrich
 Olha duas vezes se procuras a verdade. Olha uma só vez se procuras a beleza. - Madame Amiel
 Quando a formosura é o advogado, todos os oradores emudecem. - William Shakespeare
-Só há verdadeira beleza naquilo que não serve para nada; tudo o que é àtil é feio. - Théophile Gautier
+Só há verdadeira beleza naquilo que não serve para nada; tudo o que é util é feio. - Théophile Gautier
 Tantas mulheres lindas e tão pouco tempo. - John Barraymore
 Todas as herdeiras são lindas. - John Dryden
 Um homem belo é um homem insignificante. - Marcial
 Vivemos só para descobrir a beleza. Todo o resto é uma forma de espera. - Gibran Khalil Gibran
 É mais fácil ser gigante que ser belo. - Friedrich Nietzsche
 É uma grande desgraça para um homem ser demasiadamente belo. - Plauto
-à“ quanta formosura... mas não tem cérebro. - Fedro
 A bissexualidade dobra imediatamente suas chances de ter um encontro sábado à  noite. - Rodney Dangerfield
 A castidade é a mais antinatural de todas as perversões sexuais. - Aldous Huxley
 A diferença entre o sexo pago e o sexo grátis é que o pago costuma sair mais barato. - H. L. Menckem
@@ -907,8 +901,8 @@ A monogamia é a arte de sonhar com todas as mulheres, menos uma. - Sofocleto
 A necessidade é a mãe de companheiras de cama estranhas. - Robert F. Johnson
 A noite passada descobri um novo anticoncepcional oral. Pedi a uma garota que fosse comigo para a cama e ela disse não. - Woody Allen
 A virgindade é como um móvel, que perde o brilho num depósito. Quanto mais tempo se guarda, menos valor tem. - William Shakespeare
-A àltima vez em que eu tentei fazer sexo com minha mulher, não aconteceu nada. Então eu disse para ela: qual é o problema, você não consegue pensar em mais ninguém. - Rodney Dangerfield
-A ànica vez que fiz um ménage a trois foi quando namorei um esquizofrênico. - Rita Rudner
+A ultima vez em que eu tentei fazer sexo com minha mulher, não aconteceu nada. Então eu disse para ela: qual é o problema, você não consegue pensar em mais ninguém. - Rodney Dangerfield
+A unica vez que fiz um ménage a trois foi quando namorei um esquizofrênico. - Rita Rudner
 Achava que ser símbolo sexual estava ligada a sexo. Não entendia, por era virgem. - Luciana Vendramini
 Acredito que o sexo seja uma das coisas mais belas, naturais e benéficas que o dinheiro possa comprar. - Tom Clancy
 Admiro quem faz sexo bem. Tanto que comprei uma luneta. - Carlos Righi
@@ -919,9 +913,9 @@ As três fases do namoro são: mão na mão, mão na coisa e coisa na coisa. - B
 Através de minha devoção a Deus, entendi que a forma mais simples de se ligar ao Cosmo é tendo um orgasmo; é a ligação total com o universo. - Lúcia Veríssimo
 Bem-aventurado aquele a quem a mulher diz 'não quero', porque esse pelo menos ouve a verdade! - Mariano José de Larra
 Bons tempos aqueles em que 'sexo seguro' significava apenas que os seus pais tinha viajado no fim de semana. - Cacá Rosset
-Cada vez que o homem acaba de fazer amor, seu ànico problema é saber se será capaz de ter ereção. - Sharon Stone
+Cada vez que o homem acaba de fazer amor, seu unico problema é saber se será capaz de ter ereção. - Sharon Stone
 Com certeza, marcar gols é uma emoção muito forte, só não se iguala a transar comigo. - Victória Beckham
-Comida é bom, bebida é ótimo, màsica é admirável, literatura é sublime, mas só o sexo provoca ereção. - Millôr Fernandes
+Comida é bom, bebida é ótimo, musica é admirável, literatura é sublime, mas só o sexo provoca ereção. - Millôr Fernandes
 Deixe o teu corpo estender-se com outro corpo. Porque corpos se entendem; as almas, nem sempre. - Manuel Bandeira
 Deixar o sexo para as feministas é como levar seu cão para passar férias em um taxidermista. - Matt Barry
 Fazer sexo é como jogar bridge. Se não tem um bom parceiro, você precisa pelo menos ter uma boa mão. - Woody Allen
@@ -963,14 +957,14 @@ Se eu tivesse tido relações com todas as mulheres que os jornalistas disseram,
 Se o homem fala de sexo com mulher é assédio sexual. Se a mulher fala de sexo com o homem, são R$ 3,90 por minuto. - Gustavo Erlichman
 Se o sexo é um fenômeno tão natural, como se explica a quantidade de livros sobre como fazer? - Bette Midler
 Se seio fosse buzina, São Paulo não dormia. - Juca Chaves
-à€s vezes um charuto é apenas um charuto. - Sigmund Freud
+às vezes um charuto é apenas um charuto. - Sigmund Freud
 Sexo é a grande arte amadora. - David Cort
-Sexo é a grande tomada do universo. É nela que todos os seres vivos futucam para em que àltima instância, dar à  luz. - Chico Caruso
+Sexo é a grande tomada do universo. É nela que todos os seres vivos futucam para em que ultima instância, dar à  luz. - Chico Caruso
 Sexo é como fortuna - é bom de se fazer, mas não se deve ficar mencionando a toda hora. - Tonia Berg
 Sexo é hereditário. Se seus pais nunca fizeram, foce não fará. - David Drew Zingg
 Sexo é igual a restaurante: à s vezes é bom, à s vezes é ruim e à s vezes a gente tem que apelar pro self-service. - Alexandre Medina
 Sexo é o que restou da pré-história, do vil passado do homem. - Nelson Rodrigues
-Sexo é o ànico espetáculo que não é cancelado quando falta luz. - Laurence J. Peter
+Sexo é o unico espetáculo que não é cancelado quando falta luz. - Laurence J. Peter
 Sexo é sexo, amor é amor. Mesmo quem ama tem de fazer sexo de vez em quando , senão ela vai fazer com outro. - Kiko Zambianchi
 Sexo é tão importante na vida quanto comer. - Antonio Houaiss
 Sexo é um poderoso afrodisíaco. - Keith Waterhouse
@@ -989,4 +983,3 @@ Vou começar a sair com prostitutas por medida de economia. - L. A. Dias da Silv
 É completamente incompreensível o interesse em torno do assunto sexo depois de tantos milhares de anos de uso. - Millôr Fernandes
 É mais difícil fazer bem o amor do que fazer bem a guerra. - Ninon de Lenclos
 O melhor programa econômico de governo é não atrapalhar aqueles que produzem, investem, poupam, empregam, trabalham e consomem. - Barão de Mauá
-tese - tasd
