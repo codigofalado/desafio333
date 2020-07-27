@@ -24,6 +24,8 @@ You can add this bot in your sever using the link below:
 
 ### Requirements for build
 
+If you want download code and work with it, you will need:
+
 - Go
 - [Caire](https://github.com/esimov/caire) installed
 - Make a .env file only with: `TOKEN=inserthereyourtoken`
