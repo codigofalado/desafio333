@@ -7,6 +7,9 @@ I made this project for [desafio333](https://github.com/codigofalado/desafio333/
 
 `!distort`: will resize your image using [Seam Carving](https://en.wikipedia.org/w/index.php?title=Seam_carving) algorithm like [this](https://www.youtube.com/watch?v=8rK67BT6Ivw) meme.
 
+Just send a image with `!distort` command in comment:
+![](example/example-usage.png)
+
 ### Effect
 
 Before | After
