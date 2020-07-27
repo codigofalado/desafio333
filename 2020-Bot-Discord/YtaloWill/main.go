@@ -17,6 +17,7 @@ import (
 )
 
 func main() {
+
 	err := godotenv.Load(".env")
 	if err != nil { log.Fatalf("Error loading .env file") }
 	
@@ -65,7 +66,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				os.Remove(image.Filename)
 				return 
 			}
-
+			
 			caire, err := exec.LookPath("caire")
 			if err != nil { 
 				sendError(s, m) 
@@ -88,7 +89,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			os.Remove(newImage)
 			os.Remove(image.Filename)
 		} else {
-			s.ChannelMessageSend(m.ChannelID, "@" + m.Author.Username + "Eu preciso de uma imagem ;-;")
+			s.ChannelMessageSend(m.ChannelID, "<@" + m.Author.ID + "> eu preciso de uma imagem ;-;")
 		}
 	}
 }
@@ -112,13 +113,31 @@ func sendImage(filename string, m *discordgo.MessageCreate, s *discordgo.Session
 
 	defer file.Close()
 
-	message := "@" + m.Author.Username + " aqui está a sua imagem, aproveite"
+	message := "<@" + m.Author.ID + "> aqui está a sua imagem, aproveite"
 
-	s.ChannelFileSendWithMessage(m.ChannelID, message, filename, file)
+	dataMessage := &discordgo.MessageSend {
+		Content: message,
+		Embed: nil,
+		TTS: false,
+		File: &discordgo.File {
+			Name: filename,
+			ContentType: "image/jpeg",
+			Reader: file,
+		},
+		AllowedMentions: &discordgo.MessageAllowedMentions {
+			Parse: []discordgo.AllowedMentionType {
+				discordgo.AllowedMentionTypeEveryone,
+			},
+		},
+	}
+
+	msg, err := s.ChannelMessageSendComplex(m.ChannelID, dataMessage)
+	fmt.Println(err)
+	fmt.Println(msg)
 }
 
 func sendError(s *discordgo.Session, m *discordgo.MessageCreate){
-	s.ChannelMessageSend(m.ChannelID, "@" + m.Author.Username + " não consegui abrir sua imagem :(")
+	s.ChannelMessageSend(m.ChannelID, "<@" + m.Author.ID + "> não consegui abrir sua imagem :(")
 }
 
 func isImage(path string) bool{
