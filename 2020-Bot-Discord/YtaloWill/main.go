@@ -66,7 +66,9 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				os.Remove(image.Filename)
 				return 
 			}
-			
+
+			s.MessageReactionAdd(m.ChannelID, m.Message.ID, "👍")		
+
 			caire, err := exec.LookPath("caire")
 			if err != nil { 
 				sendError(s, m) 
