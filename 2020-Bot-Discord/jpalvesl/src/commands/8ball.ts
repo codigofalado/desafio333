@@ -8,7 +8,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}8ball <pergunta>\` - Entrega uma resposta da bola 8 baseada na pergunta que foi feita.` },
     { name: 'Parâmetros', value: `\`pergunta\` - A pergunta a ser respondida.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

@@ -15,6 +15,9 @@ interface Country {
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando corona', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .addFields([
+    { name: 'Modo de usar', value: `\`${prefix}corona\` - Mostra informações relacionadas ao COVID-19.` },
+  ])
   .setDescription(':ambulance: Comando que lista informações sobre o corona virus no Brasil e no mundo. São exibidos as seguintes informações: `Confirmados`, `Doentes`, `Mortos` e `Recuperados`')
   .setFooter('Não inclua <> ou [] no comando.')
 

@@ -10,7 +10,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modos de usar', value: `\`${prefix}filter <url> [<filtro>]\` - Retorna uma imagem com os filtros devidamente aplicados.\n \`!filter [<filtro>]\` - Esse comando pode ser enviado no comentário de uma imagem que você mesmo upou no discord.` },
     { name: 'Parâmetros', value: '`filtro` - Filtro a ser passados na imagem. Pode passar mais de um filtro por vez.\n *Tipos de filtro*: `greyscale`, `blur`, `sepia`, `invert-color`, `pixel`, `flip-x`, `flip-y`, `red`, `blue`, `green`.' }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

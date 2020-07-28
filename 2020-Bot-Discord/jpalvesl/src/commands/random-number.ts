@@ -8,7 +8,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}random-number <numero1> <numero2>\`` },
     { name: 'Parâmetros', value: `\`numero1\`, \`numero2\` - Numeros que vão definir o intervalo em que o número aleatório deve ser gerado. O primeiro parâmetro deve ser menor que o segundo.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

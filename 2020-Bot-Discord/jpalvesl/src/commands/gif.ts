@@ -9,9 +9,8 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Comando que retorna um gif com base na frase que você envia e caso você não pesquise nada ele retorna um gif aleatório')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}gif <frase>\` - Retorna um gif com base na frase pesquisada. Caso você não digite nenhuma frase será retornado um gif aleatório.` },
-    { name: 'Parâmetros', value: `\`frase\` - Termo a ser pesquisado.` }
-
+    { name: 'Modo de usar', value: `\`${prefix}gif <busca>\` - Retorna um gif com base na frase pesquisada. Caso você não digite nenhuma frase será retornado um gif aleatório.` },
+    { name: 'Parâmetros', value: `\`busca\` - Termo a ser pesquisado.` }
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

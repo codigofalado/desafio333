@@ -10,7 +10,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}help <comando>\`` },
     { name: 'Parâmetros', value: `\`comando\` - O nome do comando que você deseja verificar as informações sobre.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

@@ -6,7 +6,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Retorna o avatar de algum usário especifico')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}8ball [@user]\` - Retorna a URL do avatar das pessoas mencionadas, e caso ninguem seja marcado será retornado da pessoa que fez a chamada.` },
+    { name: 'Modo de usar', value: `\`${prefix}avatar [@user]\` - Retorna a URL do avatar das pessoas mencionadas, e caso ninguem seja marcado será retornado da pessoa que fez a chamada.` },
     { name: 'Parâmetros', value: `\`@user\` - Os usuários que você quer a URL do avatar. Deve ser menção.` }
 
   ])

@@ -17,7 +17,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}roleinfo <cargo>\` - Retorna informações sobre um cargo.` },
     { name: 'Parâmetros', value: `\`cargo\` - Cargo que você quer olhar as informações.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 
@@ -49,7 +48,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
       :small_blue_diamond: **Idade**: ${days}
       :small_blue_diamond: **Cor**: ${selectedRole.hexColor || 'None'}
       :small_blue_diamond: **Membros**: ${selectedRole.members.size}
-      :small_blue_diamond: **Hoisted**: ${selectedRole.hoist}
+      :small_blue_diamond: **Cargo separado**: ${selectedRole.hoist}
       `)
       .addField(`Permissions: [${rolesName.length}]`, `${rolesName.join(', ')}`)
 

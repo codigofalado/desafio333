@@ -16,7 +16,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}morse <função> <frase>\`` },
     { name: 'Parâmetros', value: `\`frase\` - frase a ser codificado ou decodificada.\n\`\`função\` - pode ser *encode* ou *decode*` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

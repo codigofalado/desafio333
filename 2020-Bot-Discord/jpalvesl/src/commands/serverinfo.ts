@@ -1,10 +1,17 @@
 import { Message, MessageEmbed } from 'discord.js';
 import { prefix } from '../../config.json';
 
+function capitalizeWord(word: string) {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando serverinfo', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Mostra as estatísticas do servidor atual.')
+  .addFields([
+    { name: 'Modo de usar', value: `\`${prefix}serverinfo\`` },
+  ])
   .setFooter('Não inclua <> ou [] no comando.')
 
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
@@ -17,7 +24,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
     const uniqueUsers = message.guild?.members.cache.map(member => member.user)
     const onlineUsers = message.guild?.presences.cache.map(user => user.user)
     const ownerName = uniqueUsers?.filter(user => user.id === message.guild?.ownerID)[0].username
-    const region = message.guild?.region.toUpperCase()
+    const region = message.guild?.region
     const createdDate = message.guild?.createdAt
     const roleNames = message.guild?.roles.cache.map(role => {
       if (role.name !== '@everyone') {
@@ -41,10 +48,10 @@ module.exports = { // como está utilizando require para importar os comandos vo
         { name: 'Data de criação', value: formatedDate, inline: true },
         { name: 'Canais Voz/Texto', value: `${voiceChannels}/${textChannels}`, inline: true },
         { name: 'Dono do servidor', value: `${ownerName}`, inline: true },
-        { name: 'Região', value: `${region}`, inline: true },
+        { name: 'Região', value: `${capitalizeWord(region)}`, inline: true },
       )
       .addField('Cargos', `${roleNames?.join(',\n')}`)
-      .setFooter(`Server ID: ${message.guild?.id}`)
+      .setFooter(`ID do servidor: ${message.guild?.id}`)
 		return message.channel.send(serverInfo);
 	},
 };

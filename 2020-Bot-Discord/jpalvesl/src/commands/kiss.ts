@@ -8,7 +8,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}kiss <@user>\`` },
     { name: 'Parâmetros', value: `\`@user\` - O usuário que você quer interagir.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

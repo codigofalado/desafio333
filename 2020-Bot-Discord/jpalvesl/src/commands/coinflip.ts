@@ -8,7 +8,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}coinflip <vezes>\` - Joga a moeda x o numero de vezes.` },
     { name: 'Parâmetros', value: `\`vezes\` - Quantidade de vezes que você quer que a moeda. Caso não seja passado nenhum valor o padrão será 1.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

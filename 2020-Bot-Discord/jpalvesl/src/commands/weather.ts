@@ -19,7 +19,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}weather <cidade>\` - Retorna informações sobre o tempo da cidade com relação a temperatura, vento, úmidade etc.` },
     { name: 'Parâmetros', value: '`cidade` - Nome da cidade que você deseja saber sobre o tempo' }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

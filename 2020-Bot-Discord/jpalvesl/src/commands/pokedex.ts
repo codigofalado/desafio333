@@ -54,12 +54,65 @@ interface Pokemon {
   height: number;
   weight: number;
   name: string;
+  base_experience: number;
+  base_happiness: number,
+  capture_rate: number;
+  growth_rate: string;
+  generation: string;
+  flavor_text: string;
   types: [string];
   imageURL: string;
+  stats: Array<{
+    name: string;
+    base_stat: number;
+    effort: number;
+  }>;
+  abilities: Array<{
+    name: string;
+    short_effect: string;
+  }>;
 }
 
 function capitalizeWord(word: string) {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
+function formatGeneration (generation: string) {
+  const arrayToFormat = generation.split('-')
+
+  return `${capitalizeWord(arrayToFormat[0])} ${arrayToFormat[1].toUpperCase()}`
+}
+
+function formatEffort(stats: Array<any>) {
+  const effortTrue = stats.map(stat => {
+    const typeStat = capitalizeWord(stat.name.split('-').join(' '))
+
+    if (stat.effort) {
+      return `${stat.effort} ${typeStat}`
+    }
+  }).filter(stat => stat)
+
+  return effortTrue.join('\n')
+}
+
+function formatGrowth(growth_rate: string) {
+  return capitalizeWord(growth_rate.split('-').join(' '))
+}
+
+function formatStats(stats: Array<any>) {
+  const formatedStats = stats.map(stat => {
+    return `**${capitalizeWord(stat.name.split('-').join(' '))}**: ${stat.base_stat}`
+  })
+
+  return formatedStats.join('\n')
+}
+
+function formatAbilities(abilities: Array<any>) {
+  const formatedAbilities = abilities.map(ability => {
+    return `**${capitalizeWord(ability.name.split('-').join(' '))}**: ${ability.short_effect}`
+  })
+
+  return formatedAbilities.join('\n')
 }
 
 const helpEmbed = new MessageEmbed()
@@ -69,7 +122,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}pokedex <busca>\`` },
     { name: 'Parâmetros', value: `\`busca\` - O nome do pokemon ou seu número na pokedex.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 
@@ -108,9 +160,15 @@ module.exports = { // como está utilizando require para importar os comandos vo
       for (const object of data.abilities) {
         const { data } = await axios.get(object.ability.url)
         
+        const shortEffect = data.effect_entries.find(entrie => entrie.language.name === 'en')?.short_effect
+
+        const objectArray = {
+          name: object.ability.name,
+          short_effect: shortEffect
+        }
+        abilities.push(objectArray)
       }
 
-      return console.log(abilities)
       pokemon = {
         id: data.id,
         height: data.height/10,
@@ -122,28 +180,31 @@ module.exports = { // como está utilizando require para importar os comandos vo
         growth_rate: speciesData.growth_rate.name,
         generation: speciesData.generation.name,
         flavor_text,
-        imageURL: `https://pokeres.bastionbot.org/images/pokemon/${data.id}.png`,
+        imageURL: `https://pokeres.bastionbot.org/images/pokemon/${data.id}.png`, // data.sprites.front_default
         types,
-        stats
-      }
+        stats,
+        abilities
+      } as Pokemon
     } catch (error) {
       return console.log('Erro ao buscar pokemon')
     }
 
-    // return console.log(pokemon)
+    // return console.log(pokemon.stats)
     const pokemonEmbed = new MessageEmbed()
       .setAuthor(capitalizeWord(pokemon.name), 'https://icon-library.com/images/pokedex-icon/pokedex-icon-21.jpg')
       .setDescription(pokemon.flavor_text)
       .setColor('#ffffff')
-      .setImage(pokemon.imageURL)
+      .setThumbnail(pokemon.imageURL)
       .addFields(
         { name: 'Tipo', value: `${pokemon.types.join(', ')}`, inline: true },
         { name: 'Número na pokedéx', value: `${pokemon.id}`, inline: true },
-        { name: 'Geração', value: `${pokemon.generation}`, inline: true },
-        { name: 'Treinamentos base', value: `**EXP**: ${pokemon.base_experience}\n**Effort**: ${'placegolder'}\n**Taxa de captura**: ${pokemon.capture_rate}\n**Base de felicidade**: ${pokemon.base_happiness}\n**Taxa de crescimento**: ${pokemon.growth_rate}`, inline: true },
+        { name: 'Geração', value: `${formatGeneration(pokemon.generation)}`, inline: true },
+        { name: 'Habilidades', value: `${formatAbilities(pokemon.abilities)}`, inline: false },
+        { name: 'Treinamentos base', value: `**EXP**: ${pokemon.base_experience}\n**Pontos de esforço**: ${formatEffort(pokemon.stats)}\n**Taxa de captura**: ${pokemon.capture_rate}\n**Base de felicidade**: ${pokemon.base_happiness}\n**Taxa de crescimento**: ${formatGrowth(pokemon.growth_rate)}`, inline: true },
+        { name: 'Status base', value: `${formatStats(pokemon.stats)}`, inline: true },
         { name: 'Informações básicas', value: `**Altura**: ${pokemon.height}m\n**Peso**: ${pokemon.weight}kg`, inline: true },
-        // { name: 'Habilidades', value: `placeholder`, inline: true },
       )
+      .setFooter('Feito com a PokeAPI')
 
     return message.channel.send(pokemonEmbed)
 	},

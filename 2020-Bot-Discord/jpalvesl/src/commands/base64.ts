@@ -4,11 +4,10 @@ import { prefix } from '../../config.json';
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando base64', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
-  .setDescription('placeholder')
+  .setDescription('Codifica e decodifica códigos base64')
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}base64 <função> <frase>\`` },
     { name: 'Parâmetros', value: `\`frase\` - frase a ser codificado ou decodificada.\n\`\`função\` - pode ser *encode* ou *decode*` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 

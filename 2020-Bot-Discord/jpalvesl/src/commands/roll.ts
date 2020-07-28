@@ -13,7 +13,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modos de usar', value: `\`${prefix}roll <tipo de dado> <vezes>\` - Rola um dado especifico a quantidade de vezes que você especificou.\n\`${prefix}roll <tipo de dado>\` - Rola o dados que você especificou apenas uma vez.\n\`${prefix}roll <vezes>\` - Rola um d6 a quantidade de vezes especificada.` },
     { name: 'Parâmetros', value: '`tipo de dado` - O tipo de dado com base na quantidade de faces.\n`vezes` - Quantidade de vezes que o dado deve se rolado.\n*tipos de dado*: `d2`, `d4`, `d6`, `d10`, `d20`, `d100`.' }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 
