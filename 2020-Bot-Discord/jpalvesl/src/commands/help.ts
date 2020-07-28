@@ -37,8 +37,8 @@ module.exports = { // como está utilizando require para importar os comandos vo
       .addFields(
         { name: 'Comandos de informações', value: `\`help\` \`avatar\` \`invite\` \`roleinfo\` \`serverinfo\`` }, 
         { name: 'Comandos de interação', value: `\`ping\` \`beep\` \`ban\` \`hug\` \`kiss\` \`highfive\`` },
-        { name: 'Comando diversos', value: `\`corona\` \`weather\`  \`coinflip\` \`roll\` \`random-number\` \`8ball\` \`search\` \`morse\` \`pokedex\`` },
-        { name: 'Comandos de imagem/gifs', value: `\`gif\` \`filter\`` }
+        { name: 'Comando diversos', value: `\`corona\` \`weather\`  \`coinflip\` \`roll\` \`random-number\` \`8ball\` \`search\` \`morse\` \`base64\` \`pokedex\`` },
+        { name: 'Comandos de imagem/gifs', value: `\`gif\` \`filter\` \`make-meme\`` }
       )
       .setFooter(`Para verificar a forma de usar o comando digite o comando ${prefix}help <comando>`, 'https://cdn.discordapp.com/avatars/724090193153622096/a02d4db5a8f5d962f2d0c1cb53bbbb1c.png')
 
