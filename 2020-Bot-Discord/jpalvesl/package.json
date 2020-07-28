@@ -7,8 +7,10 @@
     "dev": "ts-node-dev --respawn --transpileOnly --ignore-watch node_modules --no-notify src/index.ts"
   },
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "axios": "^0.19.2",
-    "discord.js": "^12.2.0"
+    "discord.js": "^12.2.0",
+    "ffmpeg-static": "^4.2.5"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",

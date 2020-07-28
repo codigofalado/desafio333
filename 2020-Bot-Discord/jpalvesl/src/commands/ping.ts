@@ -4,9 +4,9 @@ module.exports = { // como está utilizando require para importar os comandos vo
   name: 'ping',
   args: false,
   usage: '',
-  guildOnly: true,
+  guildOnly: false,
 	description: 'Ping!',
 	execute(message: Message, args: Array<string>) {
-		message.channel.send(':heart: Pong.');
+		message.channel.send(':ping_pong: Pong.');
 	},
 };

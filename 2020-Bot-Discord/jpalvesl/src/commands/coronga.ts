@@ -15,7 +15,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
   name: 'coronga',
   args: false,
   usage: '',
-  guildOnly: true,
+  guildOnly: false,
 	description: 'Get the data from corona in Brazil and all other countries!',
 	async execute(message: Message, args: Array<string>) {
     const { data } = await axios.get('https://api.covid19api.com/summary')

@@ -1,12 +1,12 @@
 import { Message } from 'discord.js';
 
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
-  name: 'beep',
+  name: 'play',
   args: false,
   usage: '',
-  guildOnly: false,
-	description: 'Beep!',
-	execute(message: Message, args: Array<string>) {
-		message.channel.send(':robot: Boop.');
+  guildOnly: true,
+	description: 'Enter inside the channel and play an audio!',
+	async execute(message: Message, args: Array<string>) {
+
 	},
 };
