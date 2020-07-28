@@ -22,7 +22,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
       .setDescription('Aqui está a URL que é utilizada para você adicionar o bot em algum dos seus servidores do discord, caso você queira. **Obrigado por usar o bot**')
       .setAuthor('Kurisu', 'https://cdn.discordapp.com/avatars/724090193153622096/a02d4db5a8f5d962f2d0c1cb53bbbb1c.png')
       .addFields(
-        { name: 'URL do convite', value: '[Convite](https://discord.com/oauth2/authorize?client_id=724090193153622096&scope=bot&permissions=8)' },
+        { name: 'URL do convite', value: '[Convite](https://discord.com/oauth2/authorize?client_id=724090193153622096&scope=bot&permissions=183296)' },
         { name: 'Site do bot', value: '[Site](https://jpalvesl.github.io/kurisu-site)' },
         { name: 'Código fonte do bot', value: '[Código fonte](https://github.com/jpalvesl/kurisu)' },
       )

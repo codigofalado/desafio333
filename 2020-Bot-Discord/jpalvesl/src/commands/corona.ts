@@ -46,7 +46,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
       .setColor('#ff0000')
       .setAuthor('Kurisu', 'https://cdn.discordapp.com/avatars/724090193153622096/a02d4db5a8f5d962f2d0c1cb53bbbb1c.png')
       .setTitle('Casos de COVID-19')
-      .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/732787369303867453/unknown.png')
+      .setThumbnail('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/765px-SARS-CoV-2_without_background.png')
       .addFields([
         { name: 'Casos ao redor do Mundo', value: `:white_check_mark: **Confirmados**: ${totalConfirmed}\n:ambulance: **Doentes**: ${totalActive} \n:skull: **Mortes**: ${totalDeaths}\n:recycle: **Recuperados**: ${totalRecovered}` },
         { name: '\u200B', value: '\u200B' },

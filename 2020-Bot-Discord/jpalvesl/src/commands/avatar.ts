@@ -8,7 +8,6 @@ const helpEmbed = new MessageEmbed()
   .addFields([
     { name: 'Modo de usar', value: `\`${prefix}avatar [@user]\` - Retorna a URL do avatar das pessoas mencionadas, e caso ninguem seja marcado será retornado da pessoa que fez a chamada.` },
     { name: 'Parâmetros', value: `\`@user\` - Os usuários que você quer a URL do avatar. Deve ser menção.` }
-
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 
@@ -20,9 +19,9 @@ module.exports = { // como está utilizando require para importar os comandos vo
 	description: 'Mostra o avatar de todas as pessoas mencionadas, e caso ninguem seja mencionado mostra o avatar de quem chamou o comando.',
 	execute(message: Message, args: Array<string>) {
     if (!message.mentions.users.size) {
-      message.channel.send(`Seu avatar é esse: <${message.author.displayAvatarURL({ format: "png", dynamic: true })}>`);
-
+      return message.channel.send(`Seu avatar é esse: <${message.author.displayAvatarURL({ format: "png", dynamic: true })}>`);
     }
+
     const avatarList = message.mentions.users.map(user => {
       return `O avatar de ${user.username} é esse: <${user.displayAvatarURL({ format: "png", dynamic: true })}>`
     })
