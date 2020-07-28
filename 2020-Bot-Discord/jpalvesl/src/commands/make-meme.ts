@@ -2,14 +2,12 @@ import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
 import qs from 'qs';
 
-import { prefix } from  '../../config.json';
-
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando make-meme', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Cria um meme baseado no template que você escolheu.')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}make-meme <template> [<frase>]\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}make-meme <template> [<frase>]\`` },
     { name: 'Parâmetros', value: `\`template\` - O template que você quer.\n\`frase\` - Cada frase presente nos espaços a serem completados, separados por pelo caractere |` },
     { name: 'Templates', value: `*1* -> [Exemplo](https://i.imgflip.com/4957ql.jpg)\n*2* -> [Exemplo](https://i.imgflip.com/4957tg.jpg)\n*3* -> [Exemplo](https://i.imgflip.com/4957tp.jpg)\n*4* -> [Exemplo](https://i.imgflip.com/4957tw.jpg)\n*5* -> [Exemplo](https://i.imgflip.com/4957ye.jpg)` }
   ])
@@ -24,7 +22,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
 	async execute(message: Message, args: Array<string>) {
     let template = Number(args.shift())
 
-    if (isNaN(template)) return message.channel.send('O template passado não é válido')
+    if (isNaN(template)) return message.reply('O template passado deve ser um número')
 
     switch (template) {
       case 1: //Drake Hotline Bling
@@ -53,8 +51,8 @@ module.exports = { // como está utilizando require para importar os comandos vo
 
     const params = qs.stringify({
       template_id: template,
-      username: 'jpalvesl',
-      password: 'jpalvesl',
+      username: process.env.LOGINMEME,
+      password: process.env.PASSWORDMEME,
       boxes
     })
     

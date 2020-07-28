@@ -1,12 +1,11 @@
 import { Message, MessageEmbed } from 'discord.js';
-import { prefix } from '../../config.json';
 
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando handshake', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Aperta a mão de outra usuário.')
     .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}handshake <@user>\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}handshake <@user>\`` },
     { name: 'Parâmetros', value: `\`@user\` - O usuário que você quer interagir.` }
   ])
   .setFooter('Não inclua <> ou [] no comando.')
@@ -17,7 +16,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
   usage: helpEmbed,
   guildOnly: false,
 	description: 'Aperta a mão do primeiro usuário marcado.',
-	execute(message: Message, args: Array<string>) {
+	execute(message: Message, _: Array<string>) {
     if (!message.mentions.users.size) {
       return message.channel.send('Você deve mencionar alguem para esse comando funcionar')
     }

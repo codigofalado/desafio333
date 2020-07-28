@@ -1,9 +1,6 @@
 import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
 
-import { prefix } from '../../config.json';
-import { newsApiKey } from '../../config.json';
-
 interface Article {
   title: string;
   description: string;
@@ -15,7 +12,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Pesquisa noticias.')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}search <frase>\` - Retorna no máximo 6 noticias. Caso a frase não seja informada, serão retornadas as princiapais manchetes` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}search <frase>\` - Retorna no máximo 6 noticias. Caso a frase não seja informada, serão retornadas as princiapais manchetes` },
     { name: 'Parâmetros', value: '`frase` - Termo a ser pesquisado.' }
   ])
   .setFooter('Não inclua <> ou [] no comando.')
@@ -35,7 +32,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
         const { data: headlines } = await axios.get('https://newsapi.org/v2/top-headlines', {
           params : {
             country: 'br',
-            apiKey: newsApiKey
+            apiKey: process.env.NEWSAPIKEY
           }
         })
         data = headlines
@@ -45,13 +42,14 @@ module.exports = { // como está utilizando require para importar os comandos vo
           params : {
             q: searchTerm,
             language: 'pt',
-            apiKey: newsApiKey
+            apiKey: process.env.NEWSAPIKEY
           }
         })
         data = everything
       }
     } catch (error) {
-      return console.log('Deu erro aqui', error)
+      console.log('Deu erro aqui', error)
+      return message.reply(':x: Ocorreu um erro ao executar o comando, tente novamente')
     }
 
     let lastItem = 6

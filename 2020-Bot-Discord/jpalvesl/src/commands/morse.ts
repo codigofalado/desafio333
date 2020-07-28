@@ -1,5 +1,4 @@
 import { Message, MessageEmbed } from 'discord.js';
-import { prefix } from '../../config.json';
 
 const wordToCode = new Map([
   ['a', '.-'], ['b', '-...'], ['c', '-.-.'], ['d', '-..'], ['e', '.'], ['f', '..-.'], ['g', '--.'], ['h', '....'], ['i', '..'], ['j', '.---'], ['k', '-.-'], ['l', '.-..'], ['m', '--'], ['n', '-.'], ['o', '---'], ['p', '.--.'], ['q', '--.-'], ['r', '.-.'], ['s', '...'], ['t', '-'], ['u', '..-'], ['v', '...-'], ['w', '.--'], ['x', '-..-'], ['y', '-.--'], ['z', '--..'], [' ', '/'], ['1', '.----'], ['2', '..---'], ['3', '...--'], ['4', '....-'], ['5', '.....'], ['6', '-....'], ['7', '--...'], ['8', '---..'], ['9', '----.'], ['0', '-----'], ['.', '.-.-.-'], [',', '--..--'], ['?', '..--..'], ['\'', '.----.'], ['!', '-.-.--'], ['/', '-..-.'], ['(', '-.--.'], [')', '-.--.-'], ['&', '.-...'], [':', '---...'], [';', '-.-.-.'], ['=', '-...-'], ['-', '-....-'], ['_', '..--.-'], ['"', '.-..-.'], ['$', '...-..-'], ['@', '.--.-.']
@@ -14,7 +13,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Transforma sua frase em código morse, ou seu código morse em frase')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}morse <função> <frase>\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}morse <função> <frase>\`` },
     { name: 'Parâmetros', value: `\`frase\` - frase a ser codificado ou decodificada.\n\`\`função\` - pode ser *encode* ou *decode*` }
   ])
   .setFooter('Não inclua <> ou [] no comando.')

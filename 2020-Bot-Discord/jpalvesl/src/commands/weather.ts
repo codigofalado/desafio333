@@ -1,9 +1,6 @@
 import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
 
-import { prefix } from '../../config.json';
-import { openWeatherKey } from '../../config.json';
-
 function kelvinToCelsius(temp: number) {
   return (temp - 273).toFixed(2);
 }
@@ -17,7 +14,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Mostra informações sobre o tempo de uma determinada cidade.')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}weather <cidade>\` - Retorna informações sobre o tempo da cidade com relação a temperatura, vento, úmidade etc.` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}weather <cidade>\` - Retorna informações sobre o tempo da cidade com relação a temperatura, vento, úmidade etc.` },
     { name: 'Parâmetros', value: '`cidade` - Nome da cidade que você deseja saber sobre o tempo' }
   ])
   .setFooter('Não inclua <> ou [] no comando.')
@@ -34,13 +31,13 @@ module.exports = { // como está utilizando require para importar os comandos vo
       const response = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
         params: {
           q: args.join(' '),
-          appid: openWeatherKey
+          appid: process.env.WEATHERAPIKEY
         }
       })
       data = response.data
-      //console.log(data)
     } catch (error) {
-      return console.log('Não foi possivel encontrar a cidade')
+      console.log('Não foi possivel encontrar a cidade')
+      return message.reply(':x: Ocorreu um erro ao executar o comando, tente novamente')
     }
 
     const weatherEmbed = new MessageEmbed()

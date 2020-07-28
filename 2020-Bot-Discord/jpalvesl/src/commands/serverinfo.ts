@@ -1,8 +1,14 @@
 import { Message, MessageEmbed } from 'discord.js';
-import { prefix } from '../../config.json';
 
 function capitalizeWord(word: string) {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
+
+function addZero(number: number) {
+  if (String(number).length == 2) {
+    return number
+  }
+  return `0${String(number)}`
 }
 
 const helpEmbed = new MessageEmbed()
@@ -10,7 +16,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Mostra as estatísticas do servidor atual.')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}serverinfo\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}serverinfo\`` },
   ])
   .setFooter('Não inclua <> ou [] no comando.')
 
@@ -20,11 +26,11 @@ module.exports = { // como está utilizando require para importar os comandos vo
   usage: helpEmbed,
   guildOnly: true,
 	description: 'Lista informações sobre o canal.',
-	execute(message: Message, args: Array<string>) {
+	execute(message: Message, _: Array<string>) {
     const uniqueUsers = message.guild?.members.cache.map(member => member.user)
     const onlineUsers = message.guild?.presences.cache.map(user => user.user)
-    const ownerName = uniqueUsers?.filter(user => user.id === message.guild?.ownerID)[0].username
-    const region = message.guild?.region
+    const ownerName = uniqueUsers?.find(user => user.id === message.guild?.ownerID)?.username
+    const region = message.guild?.region as string
     const createdDate = message.guild?.createdAt
     const roleNames = message.guild?.roles.cache.map(role => {
       if (role.name !== '@everyone') {
@@ -36,7 +42,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
     })
     const textChannels = channels?.filter(channel => channel?.type === 'text').length
     const voiceChannels = channels?.filter(channel => channel?.type === 'voice').length
-    const formatedDate = `${createdDate?.getDate()}/${createdDate?.getMonth()}/${createdDate?.getFullYear()}\n${createdDate?.getHours()}:${createdDate?.getMinutes()}`
+    const formatedDate = `${addZero(createdDate?.getDate())}/${addZero(createdDate?.getMonth())}/${createdDate?.getFullYear()}\n${createdDate?.getHours()}:${createdDate?.getMinutes()}`
 
     const serverInfo = new MessageEmbed()
       .setColor('#ffffff')

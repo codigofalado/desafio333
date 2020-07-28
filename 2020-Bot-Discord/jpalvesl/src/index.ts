@@ -1,8 +1,9 @@
 import Discord from 'discord.js';
 import fs from 'fs';
 import path from 'path';
+import dotenv from 'dotenv';
 
-import { prefix, token } from '../config.json';
+dotenv.config();
 
 export interface commandInterface {
   name: string;
@@ -26,12 +27,12 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user?.tag}!`);
-  client.user?.setActivity(`${prefix}help para mais informações`)
+  client.user?.setActivity(`${process.env.PREFIX}help para mais informações`)
 });
 
 client.on('message', message => {
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-  const args = message.content.slice(prefix.length).split(/ +/);
+  if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
+  const args = message.content.slice(process.env.PREFIX.length).split(/ +/);
   const commandName = args.shift()?.toLowerCase() as string;
   
 
@@ -45,7 +46,7 @@ client.on('message', message => {
     }
     
     if (command.args && !args.length) 
-      return message.channel.send(`Você não passou nenhum argumento, ${message.author}, para saber mais sobre o comando digite \`${prefix}help <comando>\``);
+      return message.channel.send(`Você não passou nenhum argumento, ${message.author}, para saber mais sobre o comando digite \`${process.env.PREFIX}help <comando>\``);
 
     
     command.execute(message, args, commands)
@@ -54,5 +55,5 @@ client.on('message', message => {
   }
 }); 
 
-client.login(token)
+client.login(process.env.TOKEN)
   .catch(err => console.log(err))

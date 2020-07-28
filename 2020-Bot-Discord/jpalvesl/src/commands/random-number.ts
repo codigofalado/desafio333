@@ -1,12 +1,11 @@
 import { Message, MessageEmbed } from 'discord.js';
-import { prefix } from '../../config.json';
 
 const helpEmbed = new MessageEmbed()
   .setAuthor('Ajuda do comando random-number', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Gera um número aleatório com base num intervalo determinado pelo usuário.')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}random-number <numero1> <numero2>\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}random-number <numero1> <numero2>\`` },
     { name: 'Parâmetros', value: `\`numero1\`, \`numero2\` - Numeros que vão definir o intervalo em que o número aleatório deve ser gerado. O primeiro parâmetro deve ser menor que o segundo.` }
   ])
   .setFooter('Não inclua <> ou [] no comando.')

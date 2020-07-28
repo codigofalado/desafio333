@@ -1,8 +1,6 @@
 import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
 
-import { prefix } from '../../config.json';
-
 interface PokemonInApi {
   id: number;
   base_experience: number;
@@ -120,7 +118,7 @@ const helpEmbed = new MessageEmbed()
   .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
   .setDescription('Sua pokedéx, que mostra informações sobre o pokemon procurado')
   .addFields([
-    { name: 'Modo de usar', value: `\`${prefix}pokedex <busca>\`` },
+    { name: 'Modo de usar', value: `\`${process.env.PREFIX}pokedex <busca>\`` },
     { name: 'Parâmetros', value: `\`busca\` - O nome do pokemon ou seu número na pokedex.` }
   ])
   .setFooter('Não inclua <> ou [] no comando.')
@@ -186,7 +184,8 @@ module.exports = { // como está utilizando require para importar os comandos vo
         abilities
       } as Pokemon
     } catch (error) {
-      return console.log('Erro ao buscar pokemon')
+      console.log('Erro ao buscar pokemon')
+      return message.reply(':x: Houve um erro ao executar esse comando tente novamente')
     }
 
     // return console.log(pokemon.stats)
