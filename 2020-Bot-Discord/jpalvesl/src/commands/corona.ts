@@ -1,5 +1,6 @@
 import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
+import { prefix } from '../../config.json';
 
 interface Country {
   CountryCode: string;
@@ -11,12 +12,18 @@ interface Country {
   TotalRecovered: number;
 }
 
+const helpEmbed = new MessageEmbed()
+  .setAuthor('Ajuda do comando corona', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
+  .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .setDescription(':ambulance: Comando que lista informações sobre o corona virus no Brasil e no mundo. São exibidos as seguintes informações: `Confirmados`, `Doentes`, `Mortos` e `Recuperados`')
+  .setFooter('Não inclua <> ou [] no comando.')
+
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'corona',
   args: false,
-  usage: '',
+  usage: helpEmbed,
   guildOnly: false,
-	description: 'Get the data from corona in Brazil and all other countries!',
+	description: 'Mostra informações relacionadas ao COVID-19.',
 	async execute(message: Message, args: Array<string>) {
     const { data } = await axios.get('https://api.covid19api.com/summary')
     const [brazil] = data.Countries.filter((country : Country) => country.CountryCode === 'BR')

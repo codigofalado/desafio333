@@ -1,14 +1,26 @@
-import { Message } from 'discord.js';
+import { Message, MessageEmbed } from 'discord.js';
 import { isUndefined } from 'util';
+import { prefix } from '../../config.json';
 
 function generateRandomNumber(range: number) {
   return Math.floor(Math.random() * range) + 1
 }
 
+const helpEmbed = new MessageEmbed()
+  .setAuthor('Ajuda do comando roll', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
+  .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .setDescription('Rola um dados uma ou mais vezes. Por padrão, esse comando vai rolar um `d6` uma vez.')
+  .addFields([
+    { name: 'Modos de usar', value: `\`${prefix}roll <tipo de dado> <vezes>\` - Rola um dado especifico a quantidade de vezes que você especificou.\n\`${prefix}roll <tipo de dado>\` - Rola o dados que você especificou apenas uma vez.\n\`${prefix}roll <vezes>\` - Rola um d6 a quantidade de vezes especificada.` },
+    { name: 'Parâmetros', value: '`tipo de dado` - O tipo de dado com base na quantidade de faces.\n`vezes` - Quantidade de vezes que o dado deve se rolado.\n*tipos de dado*: `d2`, `d4`, `d6`, `d10`, `d20`, `d100`.' }
+
+  ])
+  .setFooter('Não inclua <> ou [] no comando.')
+
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'roll',
   args: false,
-  usage: '<tipo> <vezes> || <vezes>',
+  usage: helpEmbed,
   guildOnly: false,
 	description: 'Rola o dado a quantidade de vezes que você especificou',
 	execute(message: Message, args: Array<string>) {

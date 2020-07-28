@@ -1,6 +1,7 @@
 import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
 
+import { prefix } from '../../config.json';
 import { openWeatherKey } from '../../config.json';
 
 function kelvinToCelsius(temp: number) {
@@ -11,16 +12,23 @@ function hpaToAtm(pressure: number) {
   return (pressure/1013).toFixed(2)
 }
 
+const helpEmbed = new MessageEmbed()
+  .setAuthor('Ajuda do comando weather', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
+  .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .setDescription('Mostra informações sobre o tempo de uma determinada cidade.')
+  .addFields([
+    { name: 'Modo de usar', value: `\`${prefix}weather <cidade>\` - Retorna informações sobre o tempo da cidade com relação a temperatura, vento, úmidade etc.` },
+    { name: 'Parâmetros', value: '`cidade` - Nome da cidade que você deseja saber sobre o tempo' }
 
-const usage = new MessageEmbed()
-  .setAuthor('Oizinho')
+  ])
+  .setFooter('Não inclua <> ou [] no comando.')
 
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'weather',
   args: true,
-  usage: usage,
+  usage: helpEmbed,
   guildOnly: false,
-	description: 'Lista os dados de clima de uma determinada cidade',
+	description: 'Lista os dados de clima de uma determinada cidade.',
 	async execute(message: Message, args: Array<string>) {
     let data;
     try {

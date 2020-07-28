@@ -1,4 +1,5 @@
-import { Message, MessageEmbed, Role, Permissions } from 'discord.js';
+import { Message, MessageEmbed, Role } from 'discord.js';
+import { prefix } from '../../config.json';
 
 function formatRoles(rolesArray: Array<string>) {
   return rolesArray.map(role => {
@@ -9,12 +10,23 @@ function formatRoles(rolesArray: Array<string>) {
   })
 }
 
+const helpEmbed = new MessageEmbed()
+  .setAuthor('Ajuda do comando roleinfo', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
+  .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .setDescription('Mostra informações sobre um determinado cargo.')
+  .addFields([
+    { name: 'Modo de usar', value: `\`${prefix}roleinfo <cargo>\` - Retorna informações sobre um cargo.` },
+    { name: 'Parâmetros', value: `\`cargo\` - Cargo que você quer olhar as informações.` }
+
+  ])
+  .setFooter('Não inclua <> ou [] no comando.')
+
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'roleinfo',
-  args: false,
-  usage: '<role>',
-  guildOnly: false,
-	description: 'Lista informações sobre o cargo',
+  args: true,
+  usage: helpEmbed,
+  guildOnly: true,
+	description: 'Lista informações sobre o cargo que você passou o nome como parâmetro.',
 	execute(message: Message, args: Array<string>) {
     const roles = message.guild?.roles.cache.map(role => role)
     const filteredRoles = roles?.filter(role => role.name.toLowerCase() === args[0].toLowerCase())

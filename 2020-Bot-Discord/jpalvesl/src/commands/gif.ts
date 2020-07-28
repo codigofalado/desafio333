@@ -1,14 +1,26 @@
-import { Message } from 'discord.js';
+import { Message, MessageEmbed } from 'discord.js';
 import axios from 'axios';
+import { prefix } from '../../config.json';
 
 import { tenorKey } from '../../config.json';
+
+const helpEmbed = new MessageEmbed()
+  .setAuthor('Ajuda do comando gif', 'https://cdn.pixabay.com/photo/2012/04/14/16/26/question-34499_960_720.png')
+  .setThumbnail('https://cdn.discordapp.com/attachments/728421824521830452/730598731132436480/682055.png')
+  .setDescription('Comando que retorna um gif com base na frase que você envia e caso você não pesquise nada ele retorna um gif aleatório')
+  .addFields([
+    { name: 'Modo de usar', value: `\`${prefix}gif <frase>\` - Retorna um gif com base na frase pesquisada. Caso você não digite nenhuma frase será retornado um gif aleatório.` },
+    { name: 'Parâmetros', value: `\`frase\` - Termo a ser pesquisado.` }
+
+  ])
+  .setFooter('Não inclua <> ou [] no comando.')
 
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'gif',
   args: false,
-  usage: '<frase>',
+  usage: helpEmbed,
   guildOnly: false,
-	description: 'Retorna um gif',
+	description: 'Retorna a url de um gif.',
 	async execute(message: Message, args: Array<string>) {
     try {
       let searchTerm;
