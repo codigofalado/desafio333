@@ -10,7 +10,8 @@
     "@discordjs/opus": "^0.3.2",
     "axios": "^0.19.2",
     "discord.js": "^12.2.0",
-    "ffmpeg-static": "^4.2.5"
+    "ffmpeg-static": "^4.2.5",
+    "jimp": "^0.14.0"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
