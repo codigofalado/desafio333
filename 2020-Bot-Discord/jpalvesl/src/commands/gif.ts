@@ -1,29 +1,46 @@
-import { Message, Channel } from 'discord.js';
+import { Message } from 'discord.js';
 import axios from 'axios';
 
 import { tenorKey } from '../../config.json';
 
 module.exports = { // como está utilizando require para importar os comandos vou usar o module.exports nessa parte
   name: 'gif',
-  args: true,
+  args: false,
   usage: '<frase>',
   guildOnly: false,
 	description: 'Retorna um gif',
 	async execute(message: Message, args: Array<string>) {
     try {
-      const { data } = await axios.get('https://api.tenor.com/v1/search', {
+      let searchTerm;
+
+      const { data: { results } } = await axios.get('https://api.tenor.com/v1/trending_terms', {
         params: {
           key: tenorKey,
-          q: args.join(' '),
           locale: 'pt_BR',
-          limit: 10,
-          contentfilter: 'low'
+          limit: 20,
         }
       })
-      // console.log(data.results)
-      const randomNumber = Math.floor(Math.random() * 10)
 
-      return message.channel.send(`${data.results[randomNumber].url}\n\`Via Tenor\``)
+      if (args.length) {
+        searchTerm = args.join(' ')
+      } else {
+        const randomPosition = Math.floor(Math.random() * 20)
+        searchTerm = results[randomPosition]
+      }
+
+
+      const { data } = await axios.get('https://api.tenor.com/v1/random', {
+        params: {
+          key: tenorKey,
+          q: searchTerm,
+          locale: 'pt_BR',
+          limit: 1,
+          contentfilter: 'off'
+        }
+      })
+
+      
+      return message.channel.send(`${data.results[0].url}\n\`Via Tenor\``)
     } catch (error) {
       console.log('Deu erro procurando gif')
     }
