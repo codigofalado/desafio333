@@ -39,7 +39,7 @@ module.exports = { // como está utilizando require para importar os comandos vo
       :small_blue_diamond: **Membros**: ${selectedRole.members.size}
       :small_blue_diamond: **Hoisted**: ${selectedRole.hoist}
       `)
-      .addField(`Permissions: [${32}]`, `${rolesName.join(', ')}`)
+      .addField(`Permissions: [${rolesName.length}]`, `${rolesName.join(', ')}`)
 
     message.channel.send(roleInfo);
 	},
