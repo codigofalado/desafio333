@@ -4,7 +4,7 @@ import path from 'path';
 
 import { prefix, token } from '../config.json';
 
-interface commandInterface {
+export interface commandInterface {
   name: string;
   args?: boolean;
   usage: string;
@@ -14,7 +14,7 @@ interface commandInterface {
 }
 
 const client = new Discord.Client();
-const commands = new Discord.Collection();
+const commands: Discord.Collection<string, commandInterface> = new Discord.Collection();
 
 const commandFiles = fs.readdirSync(path.resolve(__dirname, 'commands')).filter(file => file.endsWith('.ts'))
 
@@ -32,7 +32,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   const args = message.content.slice(prefix.length).split(/ +/);
-  const commandName = args.shift()?.toLowerCase();
+  const commandName = args.shift()?.toLowerCase() as string;
   
   // console.log(commandName)
   // console.log(args)
@@ -57,8 +57,9 @@ client.on('message', message => {
       return message.channel.send(reply);
     }
 
-    command.execute(message, args)
+    command.execute(message, args, commands)
   } catch (error) {
+    console.log(error)
     message.channel.send('Erro ao executar comando, tente novamente')
   }
 }); 

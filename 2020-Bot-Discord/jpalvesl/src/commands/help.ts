@@ -1,4 +1,6 @@
-import { Message, MessageEmbed } from 'discord.js';
+import { Message, MessageEmbed, Collection } from 'discord.js';
+import { commandInterface } from '../index';
+
 import { prefix } from '../../config.json';
 
 
@@ -8,7 +10,14 @@ module.exports = { // como está utilizando require para importar os comandos vo
   usage: '',
   guildOnly: false,
 	description: 'Comando que retorna um embed com todos os comandos presentes no bot.',
-	execute(message: Message, args: Array<string>) {
+	execute(message: Message, args: Array<string>, commands: Collection<string, commandInterface>) {
+    if (args.length) {
+      if (!commands.has(args[0])) return console.log('não tem o comando')
+      const command = commands.get(args[0])
+
+      return message.channel.send(command?.usage)
+    }
+
     const helpEmbed = new MessageEmbed()
       .setColor('#860c40')
       .setTitle('Kurisu ajuda')
