@@ -18,6 +18,10 @@ export default class Ready extends Listener {
 			{
 				text: '🎧 BMO (Adventure Time) - Friends Song',
 				type: 'LISTENING'
+			},
+			{
+				text: 'Fui criado pelo FurFles#6267',
+				type: 'WATCHING'
 			}
 		];
 
