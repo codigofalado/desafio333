@@ -42,6 +42,8 @@ func main() {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
 	<-sc
 
+	port := map[bool]string{true: os.Getenv("PORT"), false: "8080"}[ os.Getenv("PORT") != ""]
+	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }
 
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
