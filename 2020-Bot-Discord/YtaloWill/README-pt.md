@@ -8,8 +8,8 @@ Este projeto foi feito para o [desafio333](https://github.com/codigofalado/desaf
 
 `!distort`: vai redimensionar sua imagem usando o algoritmo [Seam Carving](https://en.wikipedia.org/w/index.php?title=Seam_carving) para que tenha [essa](https://www.youtube.com/watch?v=8rK67BT6Ivw) forma no final, exatamente como o meme.
 
-Apenas envie uma imagem usando o comando `!distort` em seu comentário
-:
+Apenas envie uma imagem usando o comando `!distort` em seu comentário:
+
 ![](example/example-usage.png)
 
 ### Effect
@@ -32,4 +32,9 @@ Caso você queira baixar o código e fazer suas alterações você precisará:
 
 - Go
 - [Caire](https://github.com/esimov/caire) instalado
-- Crie um arquivo .env com apenas essa linha: `TOKEN=coloqueaquiseutoken`
+- Crie um arquivo .env com apenas essa linha: 
+
+```
+TOKEN=coloqueaquiseutoken
+PORT=5000
+```

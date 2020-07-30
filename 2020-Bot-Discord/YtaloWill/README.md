@@ -10,6 +10,7 @@ I made this project for [desafio333](https://github.com/codigofalado/desafio333/
 `!distort`: will resize your image using [Seam Carving](https://en.wikipedia.org/w/index.php?title=Seam_carving) algorithm like [this](https://www.youtube.com/watch?v=8rK67BT6Ivw) meme.
 
 Just send a image with `!distort` command in comment:
+
 ![](example/example-usage.png)
 
 ### Effect
@@ -32,4 +33,9 @@ If you want download code and work with it, you will need:
 
 - Go
 - [Caire](https://github.com/esimov/caire) installed
-- Make a .env file only with: `TOKEN=inserthereyourtoken`
+- Make a .env file only with: 
+
+```
+TOKEN=inserthereyourtoken
+PORT=5000
+```
