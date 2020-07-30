@@ -42,7 +42,7 @@ func main() {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
 	<-sc
 
-	port := map[bool]string{true: os.Getenv("PORT"), false: "8080"}[ os.Getenv("PORT") != ""]
+	port := map[bool]string{true: os.Getenv("PORT"), false: "5000"}[ os.Getenv("PORT") != ""]
 	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }
 
@@ -95,6 +95,10 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		} else {
 			s.ChannelMessageSend(m.ChannelID, "<@" + m.Author.ID + "> eu preciso de uma imagem ;-;")
 		}
+	}
+
+	if m.Content == "!distort help" {
+		s.ChannelMessageSend(m.ChannelID, "<@" + m.Author.ID + "> Mande uma imagem e no comentário dela escreva !distort, em poucos minutos te mandarei a imagem toda distorcida 😃")
 	}
 }
 

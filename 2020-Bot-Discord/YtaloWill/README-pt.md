@@ -2,7 +2,9 @@
 
 Este projeto foi feito para o [desafio333](https://github.com/codigofalado/desafio333/blob/master/2020-Bot-Discord/README.md).
 
-## Comando
+## Comandos
+
+`!distort help`: o bot vai te explicar como usar o comando `!distort`
 
 `!distort`: vai redimensionar sua imagem usando o algoritmo [Seam Carving](https://en.wikipedia.org/w/index.php?title=Seam_carving) para que tenha [essa](https://www.youtube.com/watch?v=8rK67BT6Ivw) forma no final, exatamente como o meme.
 

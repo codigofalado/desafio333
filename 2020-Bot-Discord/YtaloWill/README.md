@@ -3,7 +3,9 @@
 I made this project for [desafio333](https://github.com/codigofalado/desafio333/blob/master/2020-Bot-Discord/README.md).
 
 
-## Command
+## Commands
+
+`!distort help`: the bot will explain how use `!distort` command
 
 `!distort`: will resize your image using [Seam Carving](https://en.wikipedia.org/w/index.php?title=Seam_carving) algorithm like [this](https://www.youtube.com/watch?v=8rK67BT6Ivw) meme.
 
