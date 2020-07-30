@@ -24,6 +24,8 @@ Antes | Depois
 
 Você pode usar em seu servidor apenas acessando o link abaixo:
 
+https://discord.com/oauth2/authorize?client_id=737393713759649794&scope=bot&permissions=166976
+
 ### Requisitos para build
 
 Caso você queira baixar o código e fazer suas alterações você precisará:

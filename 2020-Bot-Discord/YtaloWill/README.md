@@ -24,6 +24,8 @@ Before | After
 
 You can add this bot in your sever using the link below:
 
+https://discord.com/oauth2/authorize?client_id=737393713759649794&scope=bot&permissions=166976
+
 ### Requirements for build
 
 If you want download code and work with it, you will need:
