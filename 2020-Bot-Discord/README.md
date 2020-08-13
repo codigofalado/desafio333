@@ -3,8 +3,8 @@
 **Tecnologia:** Livre  
 **Áreas:** Back-End, Criatividade  
 **Data de Lançamento:** 18/06/2020  
-**Data Limite para Participação:** 01/08/2020  
-**Data de Anúncio dos Vencedores:** 15/08/2020  
+**Data Limite para Participação:** 20/08/2020  
+**Data de Anúncio dos Vencedores:** 03/09/2020  
 **Vencedores:** (desafio em andamento)
 
 ## TL;DR
