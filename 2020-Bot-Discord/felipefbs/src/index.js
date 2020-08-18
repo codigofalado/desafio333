@@ -51,6 +51,11 @@ client.on("message", async (message) => {
     } else if (counter === 3) {
       message.channel.send("Mermão, faz as coisas direito");
       return;
+    } else if (counter === 4) {
+      message.channel.send(
+        "Meu nome deve ter gosto bom pra tu ficar digitando ele né?"
+      );
+      return;
     } else if (counter === 5) {
       message.channel.send(
         "De novo isso? Vou sentar um pouquinho ali que já to ficando cansado"
