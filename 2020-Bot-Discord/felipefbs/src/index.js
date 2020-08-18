@@ -36,6 +36,20 @@ client.on("message", async (message) => {
     message.channel.send("Amigão, fala mais alto que não escutei direito");
     return;
   }
+  if (message.content.startsWith(`${prefix} me ajuda`)) {
+    message.channel.send(
+      `My friend, aqui é tudo simples. \n
+Só digitar \`tim toca uma musica pra mim\` que eu toco uma musica pra mim.
+Se tu digitar \`tim toca lofi\` que eu pego um lofi gostosinho pra tu escutar.
+Se tu não quer escutar a musica que ta tocando agora é só digitar \`tim passa essa musica\`.
+E se tu achar que eu tô incomodando demais é só digitar \`tim olha o breque\` que eu saio na hora.
+
+Eu também sou um grande filosofo ~~sem piadinhas sobre peso~~ . Se quiser só digitar \`tim filosofa\` que solto uma frase que vai impactar você.
+
+Agora, se você quer uma informação que vai ser muito util para sua vida é só digitar \`tim calcula de \"Montadas, PB\" para \"Rio de Janeiro, RJ\"\`. Você pode substituir o que tá em parenteses por qualquer cidade e estado brasileiro e talvez do mundo e eu digo quantas vezes você pode escutar a música \"Do Leme ao Pontal\" durante a viagem. 
+      `
+    );
+  }
   if (command[1].toLowerCase() === "filosofa") {
     const phrase = phrases[Math.floor(Math.random() * phrases.length)];
     message.channel.send(phrase);
