@@ -10,8 +10,8 @@ let { lofiList, musicList } = require("../utils/urls");
 const client = new Discord.Client();
 
 // Token to login the bot on discord
-const TOKEN = process.env.TOKEN;
-client.login(TOKEN);
+const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
+client.login(DISCORD_BOT_TOKEN);
 
 const MAPQUESTKEY = process.env.MAPQUESTKEY;
 const mapQuestURL = `http://www.mapquestapi.com/directions/v2/route?key=${MAPQUESTKEY}`;
