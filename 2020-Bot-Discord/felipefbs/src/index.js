@@ -15,6 +15,7 @@ client.login(TOKEN);
 
 const MAPQUESTKEY = process.env.MAPQUESTKEY;
 const mapQuestURL = `http://www.mapquestapi.com/directions/v2/route?key=${MAPQUESTKEY}`;
+const musicDuration = 212;
 
 // Word that invokes the bot
 const prefix = "tim";
@@ -91,7 +92,7 @@ client.on("message", async (message) => {
           `Olha, de ${locations[0].adminArea5} até ${
             locations[1].adminArea5
           } da pra escutar no mínimo ${Math.round(
-            time / 212
+            time / musicDuration
           )} vezes do Leme ao Pontal. Boa viagem, meu bem!`
         );
       } catch (e) {
