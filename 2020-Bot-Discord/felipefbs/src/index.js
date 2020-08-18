@@ -132,9 +132,9 @@ function checkPath(path) {
 }
 
 async function musicSelector(isLofi) {
-  if (isLofi) musicList = lofiList;
+  let list = isLofi ? lofiList : musicList;
 
-  const musicURL = musicList[Math.floor(Math.random() * musicList.length)];
+  const musicURL = list[Math.floor(Math.random() * list.length)];
 
   const songInfo = await ytdl.getInfo(musicURL);
 
