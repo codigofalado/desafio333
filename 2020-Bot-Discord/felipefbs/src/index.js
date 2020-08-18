@@ -19,6 +19,7 @@ const musicDuration = 212;
 
 // Word that invokes the bot
 const prefix = "tim";
+let counter = 0;
 
 const queue = new Map();
 
@@ -33,7 +34,30 @@ client.on("message", async (message) => {
     if (word) return word;
   });
   if (!command[1]) {
-    message.channel.send("Amigão, fala mais alto que não escutei direito");
+    counter++;
+    if (counter === 1) {
+      message.channel.send(
+        `Amigão, fala mais alto que não escutei direito. Se tiver muito difícil digita \`${prefix} me ajuda\``
+      );
+      return;
+    } else if (counter === 2) {
+      message.channel.send(
+        `hahahaha esse dai parece que não sabe digitar os comandos direito. Digita ai \`${prefix} me ajuda\``
+      );
+      return;
+    } else if (counter === 2) {
+      message.channel.send("Ai meu Deus do céu");
+      return;
+    } else if (counter === 3) {
+      message.channel.send("Mermão, faz as coisas direito");
+      return;
+    } else if (counter === 5) {
+      message.channel.send(
+        "De novo isso? Vou sentar um pouquinho ali que já to ficando cansado"
+      );
+      counter = 0;
+      return;
+    }
     return;
   }
   if (message.content.startsWith(`${prefix} me ajuda`)) {
