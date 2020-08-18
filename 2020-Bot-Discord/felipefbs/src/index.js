@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
+const axios = require("axios");
 
 require("dotenv").config();
 
@@ -11,6 +12,9 @@ const client = new Discord.Client();
 // Token to login the bot on discord
 const TOKEN = process.env.TOKEN;
 client.login(TOKEN);
+
+const MAPQUESTKEY = process.env.MAPQUESTKEY;
+const mapQuestURL = `http://www.mapquestapi.com/directions/v2/route?key=${MAPQUESTKEY}`;
 
 // Word that invokes the bot
 const prefix = "tim";
@@ -28,7 +32,7 @@ client.on("message", async (message) => {
     if (word) return word;
   });
 
-  if (command[1].toLowerCase() === `filosofa`) {
+  if (command[1].toLowerCase() === "filosofa") {
     const phrase = phrases[Math.floor(Math.random() * phrases.length)];
     message.channel.send(phrase);
   }
@@ -69,7 +73,63 @@ client.on("message", async (message) => {
     stop(message, serverQueue);
     return;
   }
+
+  if (command[1].toLowerCase() === "calcula") {
+    path = command.slice(2);
+
+    if (checkPath(path)) {
+      const { origin, destination } = pathExtractor(path);
+
+      try {
+        const {
+          data: {
+            route: { time, locations },
+          },
+        } = await axios.get(`${mapQuestURL}&from=${origin}&to=${destination}`);
+
+        message.channel.send(
+          `Olha, de ${locations[0].adminArea5} até ${
+            locations[1].adminArea5
+          } da pra escutar no mínimo ${Math.round(
+            time / 212
+          )} vezes do Leme ao Pontal. Boa viagem, meu bem!`
+        );
+      } catch (e) {
+        message.channel.send(
+          "Esses caras to técnico são F#!D$, só fazem besteira. Me diz de novo direitinho o que tu quer."
+        );
+      }
+    } else {
+      message.channel.send("Diz esse caminho ai direitinho, meu");
+    }
+  }
 });
+
+function pathExtractor(path) {
+  let origin = "";
+  let destination = "";
+  for (i = 1; i < path.findIndex((word) => word === "para"); i++) {
+    if (path[i]) {
+      origin += path[i];
+    }
+  }
+
+  for (
+    i = path.findIndex((word) => word === "para") + 1;
+    i < path.length;
+    i++
+  ) {
+    if (path[i]) {
+      destination += path[i];
+    }
+  }
+
+  return { origin, destination };
+}
+
+function checkPath(path) {
+  return path[0] === "de" && path.find((word) => word === "para");
+}
 
 async function musicSelector(isLofi) {
   if (isLofi) musicList = lofiList;
