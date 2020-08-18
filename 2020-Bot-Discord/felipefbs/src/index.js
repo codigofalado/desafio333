@@ -13,8 +13,8 @@ const client = new Discord.Client();
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 client.login(DISCORD_BOT_TOKEN);
 
-const MAPQUESTKEY = process.env.MAPQUESTKEY;
-const mapQuestURL = `http://www.mapquestapi.com/directions/v2/route?key=${MAPQUESTKEY}`;
+const MAPQUEST_KEY = process.env.MAPQUEST_KEY;
+const mapQuestURL = `http://www.mapquestapi.com/directions/v2/route?key=${MAPQUEST_KEY}`;
 const musicDuration = 212;
 
 // Word that invokes the bot
@@ -140,6 +140,7 @@ Agora, se você quer uma informação que vai ser muito util para sua vida é s�
         message.channel.send(
           "Esses caras to técnico são F#!D$, só fazem besteira. Me diz de novo direitinho o que tu quer."
         );
+        console.error(e);
       }
     } else {
       message.channel.send("Diz esse caminho ai direitinho, meu");
