@@ -1,32 +1,35 @@
 module.exports = {
   lofiList: [
-    "https://youtu.be/qqfMAf3IFE0",
-    "https://youtu.be/I-RgNNaF8rw",
-    "https://youtu.be/3_52H8bk9WQ",
-    "https://youtu.be/XRyF-7jYMTc",
-    "https://youtu.be/0vO5bPD5O-4",
-    "https://youtu.be/mcNOdwAtN_w",
-    "https://youtu.be/xpIQolDJ7sI",
-    "https://youtu.be/8huKsgy70Bo",
-    "https://youtu.be/bABNfwCGp4s",
-    "https://youtu.be/-r0VtFGcuOU",
-    "https://youtu.be/RXCNes55uo0",
-    "https://youtu.be/6YUh8U5oypk",
-    "https://youtu.be/9_-BAGI2EcA",
+    "https://youtu.be/qqfMAf3IFE0", // Gostava Tanto de Você
+    "https://youtu.be/I-RgNNaF8rw", // Ela Partiu
+    "https://youtu.be/3_52H8bk9WQ", // Azul da cor do Mar
+    "https://youtu.be/9_-BAGI2EcA", // Me dê motivo
+    "https://youtu.be/L8PGI-aqfSI", // Reu Confesso
+    "https://youtu.be/XRyF-7jYMTc", // Bom senso
+    "https://youtu.be/0vO5bPD5O-4", // Que beleza
+    "https://youtu.be/mcNOdwAtN_w", // Primavera
+    "https://youtu.be/-r0VtFGcuOU", // Você
   ],
   musicList: [
     "https://youtu.be/W5ZCxHBh28k",
-    "https://youtu.be/TZQsoLACMW0",
+    "https://youtu.be/cxSzri346W0",
     "https://youtu.be/A9kTV-wpiWk",
-    "https://youtu.be/_0s7qVLDiB4",
-    "https://youtu.be/NdqM_oFRbz4",
-    "https://youtu.be/Nq_AOktdhts",
-    "https://youtu.be/o4Y0iwz2Y9U",
-    "https://youtu.be/joPlzVJe2Cg",
-    "https://youtu.be/NdqM_oFRbz4",
-    "https://youtu.be/W6XHpvqHV2Q",
-    "https://youtu.be/i1GGYR3qjek",
+    "https://youtu.be/p7RCHfW2OOY",
+    "https://youtu.be/2QiD5LKphd0",
+    "https://youtu.be/GB-14MXDlas",
+    "https://youtu.be/qBBwXuEV4jA",
+    "https://youtu.be/Ubfc7gTH7vo",
+    "https://youtu.be/FM2tZnIPZUk",
+    "https://youtu.be/JbwPvNLZcBE",
+    "https://youtu.be/cl_FV32-yQU",
+    "https://youtu.be/iXyOtUoGFh4",
+    "https://youtu.be/6ugP5c8qvec",
+    "https://youtu.be/qCU39tuy0IY?t=22",
+    "https://youtu.be/PDQrcz4KUKs",
+    "https://youtu.be/8D7yIqJIMwA",
+    "https://youtu.be/njxgbSWNHr4",
     "https://youtu.be/syqJAgTQdlU",
+    "https://youtu.be/i1GGYR3qjek",
     "https://youtu.be/hwUGJXm02ZQ",
   ],
 };
