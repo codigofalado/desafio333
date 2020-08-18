@@ -22,7 +22,7 @@ const prefix = "tim";
 const queue = new Map();
 
 client.on("message", async (message) => {
-  // Bot will igonre it self messages and messages that not begin with prefix
+  // Bot will ignore it self messages and messages that not begin with prefix
   if (message.author.bot || !message.content.search(/`${prefix}`/i)) return;
 
   const serverQueue = queue.get(message.guild.id);
