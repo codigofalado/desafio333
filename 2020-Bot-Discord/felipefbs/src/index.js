@@ -32,7 +32,10 @@ client.on("message", async (message) => {
   command = command.filter((word) => {
     if (word) return word;
   });
-
+  if (!command[1]) {
+    message.channel.send("Amigão, fala mais alto que não escutei direito");
+    return;
+  }
   if (command[1].toLowerCase() === "filosofa") {
     const phrase = phrases[Math.floor(Math.random() * phrases.length)];
     message.channel.send(phrase);
