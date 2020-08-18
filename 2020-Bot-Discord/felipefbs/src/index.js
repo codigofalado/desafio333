@@ -4,7 +4,7 @@ const ytdl = require("ytdl-core");
 require("dotenv").config();
 
 const { phrases } = require("../utils/phrases");
-let { lofiList, musicList } = require("../utils/musicLists");
+let { lofiList, musicList } = require("../utils/urls");
 
 const client = new Discord.Client();
 
@@ -37,14 +37,14 @@ client.on("message", async (message) => {
     const voiceChannel = message.member.voice.channel;
     const textChannel = message.channel;
 
-    if (checkChannel(voiceChannel)) return;
-    if (command[2] || command[2] !== "lofi") {
+    if (checkChannel(message, voiceChannel)) return;
+    if (!command[2] || command[2] !== "lofi") {
       song = await musicSelector(false);
 
       message.channel.send(
         `Vou tocar essa daqui\n -> ${song.title}\n${song.video_url}`
       );
-      musicHandler(serverQueue, voiceChannel, textChannel, song);
+      musicHandler(message, serverQueue, voiceChannel, textChannel, song);
 
       return;
     }
@@ -54,7 +54,7 @@ client.on("message", async (message) => {
       message.channel.send(
         `Vou tocar esse lofi do bom aqui\n -> ${song.title}\n${song.video_url}`
       );
-      musicHandler(serverQueue, voiceChannel, textChannel, song);
+      musicHandler(message, serverQueue, voiceChannel, textChannel, song);
 
       return;
     }
@@ -82,12 +82,11 @@ async function musicSelector(isLofi) {
     title: songInfo.videoDetails.title,
     video_url: songInfo.videoDetails.video_url,
   };
-  console.log(song);
 
   return song;
 }
 
-function checkChannel(voiceChannel) {
+function checkChannel(message, voiceChannel) {
   if (!voiceChannel)
     return message.channel.send(
       "**Entra ai num canal de voz que eu canto pra tu!**"
@@ -101,7 +100,13 @@ function checkChannel(voiceChannel) {
   }
 }
 
-async function musicHandler(serverQueue, voiceChannel, textChannel, song) {
+async function musicHandler(
+  message,
+  serverQueue,
+  voiceChannel,
+  textChannel,
+  song
+) {
   if (!serverQueue) {
     const queueContract = {
       textChannel: textChannel,
@@ -119,17 +124,15 @@ async function musicHandler(serverQueue, voiceChannel, textChannel, song) {
     try {
       let connection = await voiceChannel.join();
       queueContract.connection = connection;
-
       play(message.guild, queueContract.songs[0]);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       queue.delete(message.guild.id);
       return message.channel.send(err);
     }
   } else {
     serverQueue.songs.push(song);
-    console.log(serverQueue.songs);
-    return message.channel.send(`Já já eu canto essa daqui\n->${song.title}`);
+    return message.channel.send(`Já já eu canto essa dai\n->${song.title}`);
   }
 }
 
@@ -143,7 +146,7 @@ function play(guild, song) {
   }
 
   const dispatcher = serverQueue.connection
-    .play(ytdl(song.url))
+    .play(ytdl(song.video_url))
     .on("finish", () => {
       serverQueue.songs.shift();
       play(guild, serverQueue.songs[0]);
@@ -171,6 +174,8 @@ function stop(message, serverQueue) {
       "Tu precisa ta no canal de voz pra me dizer alguma coisa!"
     );
   }
-  serverQueue.songs = [];
+  if (serverQueue.songs) {
+    serverQueue.songs = [];
+  }
   serverQueue.connection.dispatcher.end();
 }
