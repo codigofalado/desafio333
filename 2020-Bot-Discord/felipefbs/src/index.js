@@ -64,7 +64,7 @@ client.on("message", async (message) => {
     }
   }
 
-  if (message.content.startsWith(`${prefix} passa essa`)) {
+  if (command[1].toLowerCase() === "passa") {
     skip(message, serverQueue);
     return;
   }
