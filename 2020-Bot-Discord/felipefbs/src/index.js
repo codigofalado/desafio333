@@ -25,7 +25,8 @@ const queue = new Map();
 
 client.on("message", async (message) => {
   // Bot will ignore it self messages and messages that not begin with prefix
-  if (message.author.bot || !message.content.search(/`${prefix}`/i)) return;
+  message.content = message.content.toLocaleLowerCase();
+  if (message.author.bot || !message.content.startsWith(prefix)) return;
 
   const serverQueue = queue.get(message.guild.id);
 
@@ -83,7 +84,6 @@ Agora, se você quer uma informação que vai ser muito util para sua vida é s�
     const phrase = phrases[Math.floor(Math.random() * phrases.length)];
     message.channel.send(phrase);
   }
-
   if (command[1].toLowerCase() === "toca") {
     const voiceChannel = message.member.voice.channel;
     const textChannel = message.channel;
@@ -110,17 +110,14 @@ Agora, se você quer uma informação que vai ser muito util para sua vida é s�
       return;
     }
   }
-
   if (command[1].toLowerCase() === "passa") {
     skip(message, serverQueue);
     return;
   }
-
   if (message.content.startsWith(`${prefix} olha o breque`)) {
     stop(message, serverQueue);
     return;
   }
-
   if (command[1].toLowerCase() === "calcula") {
     path = command.slice(2);
 
