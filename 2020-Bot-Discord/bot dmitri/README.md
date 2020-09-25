@@ -3,7 +3,7 @@
 Um bot do discord feito para tocar musicas e usar muitas APIs haha
 
 # USO
-.help 
+.help ou
 .[comando]
 
 ## Configurando o Projeto
