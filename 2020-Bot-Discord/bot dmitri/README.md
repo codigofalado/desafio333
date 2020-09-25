@@ -2,6 +2,9 @@
 
 Um bot do discord feito para tocar musicas e usar muitas APIs haha
 
+# USO
+.help 
+.[comando]
 
 ## Configurando o Projeto
 
