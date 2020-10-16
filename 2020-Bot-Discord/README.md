@@ -4,7 +4,7 @@
 **Áreas:** Back-End, Criatividade  
 **Data de Lançamento:** 18/06/2020  
 **Data Limite para Participação:** 20/08/2020  
-**Data de Anúncio dos Vencedores:** 15/10/2020 (atraso devido à CodeCon)
+**Data de Anúncio dos Vencedores:** 22/10/2020 (atraso devido à CodeCon)
 **Vencedores:** (desafio em andamento)
 
 ## TL;DR
