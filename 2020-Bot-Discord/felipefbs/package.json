@@ -1,0 +1,23 @@
+{
+  "name": "tim-maia-bot",
+  "version": "1.0.0",
+  "description": "Um bot para Discord que toca as musicas do melhor cantor brasileiro!",
+  "main": "src/index.js",
+  "author": "Felipe Ferreira",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7",
+    "opusscript": "^0.0.7",
+    "ytdl-core": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
