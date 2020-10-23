@@ -5,7 +5,11 @@
 **Data de Lançamento:** 18/06/2020  
 **Data Limite para Participação:** 01/08/2020  
 **Data de Anúncio dos Vencedores:** 15/08/2020  
-**Vencedores:** (desafio em andamento)
+**Vencedores:**
+
+1. felipefbs com o Tim Maia BOT
+2. rn4n com o MiceBOT
+3. jpalvesl com o Kurisu Bot
 
 ## TL;DR
 

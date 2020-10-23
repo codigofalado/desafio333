@@ -1,5 +1,4 @@
 <h1 align="center">Desafio333</h1>
-<h2 align="center"><a  href="2020-Bot-Discord/README.md">Desafio Atual: BOT para Discord</a></h2>
 
 O #Desafio333 é um desafio bimestral SIMPLES com o objetivo de convidar a comunidade a conhecer novas ferramentas.
 A cada 2 meses, o desafio girará em torno de uma tecnologia diferente. No desafio atual você precisa criar um BOT para Discord.
