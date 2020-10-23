@@ -3,19 +3,13 @@
 **Tecnologia:** Livre  
 **Áreas:** Back-End, Criatividade  
 **Data de Lançamento:** 18/06/2020  
-<<<<<<< HEAD
-**Data Limite para Participação:** 01/08/2020  
-**Data de Anúncio dos Vencedores:** 15/08/2020  
+**Data Limite para Participação:** 20/08/2020  
+**Data de Anúncio dos Vencedores:** 22/10/2020 (atraso devido à CodeCon) 
 **Vencedores:**
 
 1. felipefbs com o Tim Maia BOT
 2. rn4n com o MiceBOT
 3. jpalvesl com o Kurisu Bot
-=======
-**Data Limite para Participação:** 20/08/2020  
-**Data de Anúncio dos Vencedores:** 22/10/2020 (atraso devido à CodeCon)
-**Vencedores:** (desafio em andamento)
->>>>>>> f7bd0af9267180cdec2a3b5c0f08419e469cca55
 
 ## TL;DR
 
