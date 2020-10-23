@@ -7,9 +7,10 @@
 **Data de Anúncio dos Vencedores:** 22/10/2020 (atraso devido à CodeCon) 
 **Vencedores:**
 
-1. felipefbs com o Tim Maia BOT
-2. rn4n com o MiceBOT
-3. jpalvesl com o Kurisu Bot
+1. felipefbs com o Tim Maia BOT (venceu o último desafio, portanto não pode ganhar o prêmio)
+1. rn4n com o MiceBOT
+2. jpalvesl com o Kurisu Bot
+3. sozua com o Sozua's bot
 
 ## TL;DR
 
