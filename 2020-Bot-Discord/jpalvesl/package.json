@@ -12,7 +12,7 @@
     "dotenv": "^8.2.0",
     "jimp": "^0.14.0",
     "ts-node-dev": "^1.0.0-pre.50",
-    "qs": "^6.9.4"
+    "qs": "^6.9.7"
   },
   "devDependencies": {
     "@types/node": "^14.0.14",
